@@ -1,0 +1,28 @@
+{
+  "spec_id": "AGENT-SPEC-20260224-appointed-by",
+  "name": "governance-appointed-by-agent",
+  "description": "Agent to produce APPOINTED_BY edges for governance gap",
+  "gap_type": "governance",
+  "target_edge_types": [
+    "APPOINTED_BY"
+  ],
+  "data_sources": [
+    "SEC DEF 14A proxy statements",
+    "Board announcements",
+    "OpenCorporates API"
+  ],
+  "expected_artifacts": [
+    "governance_data_*.json",
+    "governance_raw_*.html"
+  ],
+  "expected_output": {
+    "APPOINTED_BY": 50
+  },
+  "priority": 2,
+  "complexity": "moderate",
+  "dependencies": [
+    "edgar",
+    "company_name_resolution"
+  ],
+  "created_at": "2026-02-24T21:22:18.142418+00:00"
+}

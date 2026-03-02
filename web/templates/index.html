@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGIP - Forensic Graph Intelligence Platform</title>
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.27.0/cytoscape.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape-dagre/2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --border: #2a2a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #888;
+            --accent: #00ff88;
+            --accent-dim: #00cc6a;
+            --danger: #ff4757;
+            --warning: #ffaa00;
+            --info: #4da6ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+        }
+
+        .app {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .header-text h1 {
+            font-size: 1.1em;
+            color: var(--accent);
+        }
+
+        .header-text .subtitle {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+        }
+
+        /* Search */
+        .search-box {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-card {
+            background: var(--bg-tertiary);
+            padding: 10px 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.65em;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Filters */
+        .filters {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-section h4 {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .chip {
+            padding: 4px 10px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.75em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            border-color: var(--accent);
+        }
+
+        .chip.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        .chip .count {
+            opacity: 0.7;
+            margin-left: 4px;
+        }
+
+        /* Layout selector */
+        .layout-selector {
+            display: flex;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .layout-btn {
+            flex: 1;
+            padding: 6px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.7em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .layout-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .layout-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        /* Detail Panel */
+        .detail-panel {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        .detail-panel h3 {
+            font-size: 1em;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .detail-section {
+            margin-bottom: 16px;
+        }
+
+        .detail-section h4 {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .connection-list, .source-list {
+            list-style: none;
+        }
+
+        .connection-list li, .source-list li {
+            padding: 8px 10px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            margin-bottom: 4px;
+            font-size: 0.8em;
+        }
+
+        .source-list a {
+            color: var(--info);
+            text-decoration: none;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.65em;
+            margin-left: 6px;
+            font-weight: 600;
+        }
+
+        .tier-0 { background: var(--accent); color: #000; }
+        .tier-1 { background: var(--info); color: #000; }
+        .tier-2 { background: #666; color: #fff; }
+
+        /* Main Area */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.85em;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+            background: var(--bg-tertiary);
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            flex: 1;
+            display: none;
+            overflow: hidden;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Graph Tab */
+        #cy {
+            flex: 1;
+            background: var(--bg-primary);
+        }
+
+        .graph-toolbar {
+            display: flex;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toolbar-btn {
+            padding: 6px 12px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.75em;
+            cursor: pointer;
+        }
+
+        .toolbar-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        /* Analytics Tab */
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .chart-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .chart-card h4 {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .chart-card canvas {
+            max-height: 200px;
+        }
+
+        .chart-card.full-width {
+            grid-column: span 2;
+        }
+
+        /* Thesis Tab */
+        .thesis-content {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .thesis-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .thesis-score-ring {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .thesis-score-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .thesis-meta h2 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .thesis-meta p {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .factor-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .factor-card h5 {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .factor-value {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .factor-value.positive { color: var(--accent); }
+        .factor-value.negative { color: var(--danger); }
+        .factor-value.neutral { color: var(--warning); }
+
+        /* Health Tab */
+        .health-content {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .health-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .health-card h4 {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .status-dot.green { background: var(--accent); }
+        .status-dot.yellow { background: var(--warning); }
+        .status-dot.red { background: var(--danger); }
+
+        .health-metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85em;
+        }
+
+        .health-metric:last-child {
+            border-bottom: none;
+        }
+
+        /* Approvals Tab */
+        .approvals-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .approvals-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .toolbar-left, .toolbar-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 0.85em;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-refresh {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-approve-selected {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-reject-selected {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        .btn-bulk {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .bulk-dropdown {
+            position: relative;
+        }
+
+        .bulk-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            display: none;
+            min-width: 200px;
+            z-index: 100;
+        }
+
+        .bulk-dropdown:hover .bulk-menu {
+            display: block;
+        }
+
+        .bulk-menu button {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+
+        .bulk-menu button:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .bulk-menu hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 4px 0;
+        }
+
+        .approvals-stats {
+            display: flex;
+            gap: 16px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 20px;
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+        }
+
+        .approvals-list {
+            flex: 1;
+            overflow-y: auto;
+            background: var(--bg-primary);
+        }
+
+        .list-header {
+            display: flex;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border);
+            font-size: 0.75em;
+            font-weight: bold;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .checkbox-cell {
+            width: 40px;
+            flex-shrink: 0;
+        }
+
+        .col-type { width: 80px; flex-shrink: 0; }
+        .col-agent { width: 140px; flex-shrink: 0; }
+        .col-summary { flex: 1; }
+        .col-confidence { width: 100px; flex-shrink: 0; text-align: center; }
+        .col-actions { width: 140px; flex-shrink: 0; text-align: right; }
+
+        .proposal-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s;
+        }
+
+        .proposal-row:hover {
+            background: var(--bg-secondary);
+        }
+
+        .proposal-row.selected {
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .proposal-type {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .proposal-type.claim {
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+        }
+
+        .proposal-type.edge {
+            background: rgba(69, 183, 209, 0.2);
+            color: #45b7d1;
+        }
+
+        .proposal-agent {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+        }
+
+        .proposal-summary {
+            font-size: 0.85em;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .proposal-confidence {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .confidence-bar {
+            width: 50px;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .confidence-fill.high { background: var(--accent); }
+        .confidence-fill.medium { background: var(--warning); }
+        .confidence-fill.low { background: var(--danger); }
+
+        .proposal-actions {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-end;
+        }
+
+        .btn-sm {
+            padding: 4px 10px;
+            font-size: 0.75em;
+        }
+
+        .btn-approve {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-reject {
+            background: transparent;
+            border: 1px solid var(--danger);
+            color: var(--danger);
+        }
+
+        .approvals-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .btn-page {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .loading-proposals {
+            padding: 40px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .badge {
+            background: var(--danger);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            margin-left: 4px;
+        }
+
+        /* Evidence Panel */
+        .proposal-wrapper {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .expand-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 2px 6px;
+            margin-right: 6px;
+            font-size: 0.7em;
+        }
+
+        .expand-btn:hover {
+            color: var(--accent);
+        }
+
+        .evidence-panel {
+            background: var(--bg-tertiary);
+            padding: 16px 20px 16px 60px;
+            border-top: 1px solid var(--border);
+            animation: slideDown 0.2s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .evidence-section {
+            margin-bottom: 12px;
+        }
+
+        .evidence-section.warning {
+            background: rgba(255, 71, 87, 0.1);
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid var(--danger);
+        }
+
+        .evidence-label {
+            font-size: 0.75em;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .evidence-quote {
+            font-style: italic;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .evidence-link {
+            color: var(--info);
+            text-decoration: none;
+            font-size: 0.85em;
+        }
+
+        .evidence-link:hover {
+            text-decoration: underline;
+        }
+
+        .entity-chips, .reason-codes, .counter-flags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .entity-chip {
+            background: rgba(78, 205, 196, 0.15);
+            color: #4ecdc4;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        .entity-chip .conf {
+            opacity: 0.7;
+            margin-left: 4px;
+        }
+
+        .reason-chip {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+        }
+
+        .counter-chip {
+            background: rgba(255, 71, 87, 0.15);
+            color: var(--danger);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+        }
+
+        .evidence-actions {
+            margin-top: 16px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-needs-evidence {
+            background: transparent;
+            border: 1px solid var(--warning);
+            color: var(--warning);
+        }
+
+        /* Legend */
+        .legend {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.75em;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-line {
+            width: 16px;
+            height: 2px;
+        }
+
+        /* Loading */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--accent);
+            font-size: 0.9em;
+        }
+
+        /* Export Menu */
+        .export-menu {
+            position: relative;
+        }
+
+        .export-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            display: none;
+            z-index: 100;
+        }
+
+        .export-dropdown.show {
+            display: block;
+        }
+
+        .export-dropdown button {
+            display: block;
+            width: 100%;
+            padding: 8px 16px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+
+        .export-dropdown button:hover {
+            background: var(--bg-tertiary);
+        }
+
+        /* Both Sides Panel */
+        .both-sides-panel {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .both-sides-panel h4 {
+            color: var(--warning);
+            margin-bottom: 12px;
+            font-size: 0.9em;
+        }
+
+        .both-sides-entity {
+            padding: 10px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .both-sides-entity .name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .both-sides-entity .edges {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="header">
+                <div class="logo">FG</div>
+                <div class="header-text">
+                    <h1>FGIP</h1>
+                    <div class="subtitle">Forensic Graph Intelligence</div>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" class="search-input" id="search" placeholder="Search nodes, claims...">
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-nodes">-</div>
+                    <div class="stat-label">Nodes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-edges">-</div>
+                    <div class="stat-label">Edges</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-sources">-</div>
+                    <div class="stat-label">Sources</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-claims">-</div>
+                    <div class="stat-label">Claims</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-section">
+                    <h4>Node Types</h4>
+                    <div class="filter-chips" id="node-type-filters"></div>
+                </div>
+                <div class="filter-section" style="margin-top: 12px;">
+                    <h4>Layout</h4>
+                    <div class="layout-selector">
+                        <button class="layout-btn active" data-layout="cose">Force</button>
+                        <button class="layout-btn" data-layout="dagre">Hierarchy</button>
+                        <button class="layout-btn" data-layout="circle">Circle</button>
+                        <button class="layout-btn" data-layout="grid">Grid</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-panel" id="detail-panel">
+                <p style="color: var(--text-secondary); font-style: italic; font-size: 0.85em;">
+                    Click a node to see details
+                </p>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="tabs">
+                <button class="tab active" data-tab="graph">Graph</button>
+                <button class="tab" data-tab="analytics">Analytics</button>
+                <button class="tab" data-tab="thesis">Thesis</button>
+                <button class="tab" data-tab="approvals">Approvals <span class="badge" id="pending-badge">0</span></button>
+                <button class="tab" data-tab="health">Health</button>
+            </div>
+
+            <!-- Graph Tab -->
+            <div class="tab-content active" id="tab-graph">
+                <div class="graph-toolbar">
+                    <button class="toolbar-btn" id="btn-fit">Fit View</button>
+                    <button class="toolbar-btn" id="btn-reset">Reset Filters</button>
+                    <div class="export-menu">
+                        <button class="toolbar-btn" id="btn-export">Export ▾</button>
+                        <div class="export-dropdown" id="export-dropdown">
+                            <button id="export-png">Export as PNG</button>
+                            <button id="export-json">Export as JSON</button>
+                        </div>
+                    </div>
+                    <span style="flex:1"></span>
+                    <span style="color: var(--text-secondary); font-size: 0.75em;" id="graph-info">
+                        Loading...
+                    </span>
+                </div>
+                <div id="cy">
+                    <div class="loading">Loading graph...</div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Organization</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#4ecdc4"></div>Person</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#45b7d1"></div>Legislation</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#96ceb4"></div>Company</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#ffeaa7"></div>Media</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#00ff88"></div>Signal</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#ff4757"></div>Crime</div>
+                    <div class="legend-item"><div class="legend-line" style="background:#ff6b6b"></div>LOBBIED</div>
+                    <div class="legend-item"><div class="legend-line" style="background:#4ecdc4"></div>OWNS</div>
+                    <div class="legend-item"><div class="legend-line" style="background:#00ff88"></div>REPORTS</div>
+                </div>
+            </div>
+
+            <!-- Analytics Tab -->
+            <div class="tab-content" id="tab-analytics">
+                <div class="analytics-grid">
+                    <div class="chart-card">
+                        <h4>Node Types Distribution</h4>
+                        <canvas id="chart-node-types"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Edge Types Distribution</h4>
+                        <canvas id="chart-edge-types"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Source Tiers</h4>
+                        <canvas id="chart-source-tiers"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Evidence Coverage</h4>
+                        <canvas id="chart-coverage"></canvas>
+                    </div>
+                    <div class="chart-card full-width">
+                        <h4>Problem vs Correction Edges</h4>
+                        <canvas id="chart-problem-correction"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thesis Tab -->
+            <div class="tab-content" id="tab-thesis">
+                <div class="thesis-content">
+                    <div class="thesis-header">
+                        <div class="thesis-score-ring">
+                            <canvas id="thesis-ring"></canvas>
+                            <div class="thesis-score-value" id="thesis-score">-</div>
+                        </div>
+                        <div class="thesis-meta">
+                            <h2>Thesis Confidence</h2>
+                            <p id="thesis-statement">
+                                Structural capital concentration creates mechanical both-sides exposure
+                                across policy pendulum swings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="factors-grid" id="thesis-factors"></div>
+
+                    <div class="both-sides-panel">
+                        <h4>Both-Sides Entities Detected</h4>
+                        <div id="both-sides-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Tab -->
+            <div class="tab-content" id="tab-health">
+                <div class="health-content">
+                    <div class="health-grid">
+                        <div class="health-card">
+                            <h4><span class="status-dot green"></span>Database Status</h4>
+                            <div id="db-health"></div>
+                        </div>
+                        <div class="health-card">
+                            <h4><span class="status-dot" id="gaps-status"></span>Coverage Gaps</h4>
+                            <div id="gaps-list"></div>
+                        </div>
+                        <div class="health-card">
+                            <h4><span class="status-dot green"></span>Verification Status</h4>
+                            <div id="verify-status"></div>
+                        </div>
+                        <div class="health-card">
+                            <h4><span class="status-dot green"></span>Agent Recommendations</h4>
+                            <div id="agent-recs"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approvals Tab -->
+            <div class="tab-content" id="tab-approvals">
+                <div class="approvals-content">
+                    <!-- Toolbar -->
+                    <div class="approvals-toolbar">
+                        <div class="toolbar-left">
+                            <select id="filter-agent" class="filter-select">
+                                <option value="">All Agents</option>
+                            </select>
+                            <select id="filter-type" class="filter-select">
+                                <option value="">All Types</option>
+                                <option value="claim">Claims</option>
+                                <option value="edge">Edges</option>
+                            </select>
+                            <button class="btn btn-refresh" onclick="loadApprovals()">Refresh</button>
+                        </div>
+                        <div class="toolbar-right">
+                            <button class="btn btn-approve-selected" onclick="approveSelected()" disabled id="btn-approve-selected">
+                                Approve Selected (<span id="selected-count">0</span>)
+                            </button>
+                            <button class="btn btn-reject-selected" onclick="rejectSelected()" disabled id="btn-reject-selected">
+                                Reject Selected
+                            </button>
+                            <div class="bulk-dropdown">
+                                <button class="btn btn-bulk">Bulk Actions ▾</button>
+                                <div class="bulk-menu">
+                                    <button onclick="bulkApprove(null, 0.9)">Approve All (conf ≥ 0.9)</button>
+                                    <button onclick="bulkApprove(null, 0.8)">Approve All (conf ≥ 0.8)</button>
+                                    <hr>
+                                    <div id="bulk-agent-actions"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="approvals-stats">
+                        <div class="stat-card">
+                            <span class="stat-value" id="stat-pending-claims">-</span>
+                            <span class="stat-label">Pending Claims</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value" id="stat-pending-edges">-</span>
+                            <span class="stat-label">Pending Edges</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value" id="stat-agents">-</span>
+                            <span class="stat-label">Active Agents</span>
+                        </div>
+                    </div>
+
+                    <!-- Proposals List -->
+                    <div class="approvals-list">
+                        <div class="list-header">
+                            <label class="checkbox-cell">
+                                <input type="checkbox" id="select-all" onchange="toggleSelectAll()">
+                            </label>
+                            <span class="col-type">Type</span>
+                            <span class="col-agent">Agent</span>
+                            <span class="col-summary">Summary</span>
+                            <span class="col-confidence">Confidence</span>
+                            <span class="col-actions">Actions</span>
+                        </div>
+                        <div id="proposals-container">
+                            <div class="loading-proposals">Loading proposals...</div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="approvals-pagination">
+                        <button class="btn btn-page" id="btn-prev" onclick="prevPage()" disabled>← Prev</button>
+                        <span id="page-info">Page 1</span>
+                        <button class="btn btn-page" id="btn-next" onclick="nextPage()">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Global state
+        let cy;
+        let stats = {};
+        let activeFilters = new Set();
+        let currentLayout = 'cose';
+
+        // Color mappings
+        const nodeColors = {
+            ORGANIZATION: '#ff6b6b',
+            PERSON: '#4ecdc4',
+            LEGISLATION: '#45b7d1',
+            COMPANY: '#96ceb4',
+            MEDIA_OUTLET: '#ffeaa7',
+            FINANCIAL_INST: '#dfe6e9',
+            ECONOMIC_EVENT: '#fd79a8',
+            POLICY: '#a29bfe',
+            AGENCY: '#74b9ff',
+            LOCATION: '#81ecec',
+            MINING_POOL: '#ffeaa7',
+            ASSET: '#fab1a0',
+            COURT_CASE: '#e17055',
+            PROGRAM: '#00cec9'
+        };
+
+        const chartColors = ['#00ff88', '#4ecdc4', '#45b7d1', '#ff6b6b', '#ffeaa7', '#a29bfe', '#fd79a8', '#fab1a0'];
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(`tab-${tab.dataset.tab}`).classList.add('active');
+
+                // Load tab-specific data
+                if (tab.dataset.tab === 'analytics') loadAnalytics();
+                if (tab.dataset.tab === 'thesis') loadThesis();
+                if (tab.dataset.tab === 'health') loadHealth();
+            });
+        });
+
+        // Initialize graph
+        async function initGraph() {
+            const response = await fetch('/api/graph');
+            const data = await response.json();
+
+            cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: { nodes: data.nodes, edges: data.edges },
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'label': 'data(label)',
+                            'text-valign': 'bottom',
+                            'text-halign': 'center',
+                            'font-size': '9px',
+                            'color': '#aaa',
+                            'text-margin-y': 4,
+                            'width': 24,
+                            'height': 24,
+                            'background-color': '#666'
+                        }
+                    },
+                    // Dynamic node type styles
+                    ...Object.entries(nodeColors).map(([type, color]) => ({
+                        selector: `node.${type.toLowerCase()}`,
+                        style: { 'background-color': color }
+                    })),
+                    // Signal nodes
+                    {
+                        selector: 'node[?signal]',
+                        style: {
+                            'border-width': 3,
+                            'border-color': '#00ff88',
+                            'background-color': '#00ff88'
+                        }
+                    },
+                    // Crime nodes
+                    {
+                        selector: 'node[?crime]',
+                        style: {
+                            'background-color': '#ff4757',
+                            'shape': 'diamond',
+                            'border-width': 2,
+                            'border-color': '#ff0000'
+                        }
+                    },
+                    // Edges
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 1,
+                            'line-color': '#444',
+                            'target-arrow-color': '#444',
+                            'target-arrow-shape': 'triangle',
+                            'curve-style': 'bezier',
+                            'opacity': 0.5
+                        }
+                    },
+                    {
+                        selector: 'edge.lobbied-for, edge.donated-to',
+                        style: { 'line-color': '#ff6b6b', 'target-arrow-color': '#ff6b6b' }
+                    },
+                    {
+                        selector: 'edge.owns-shares, edge.owns, edge.invested-in',
+                        style: { 'line-color': '#4ecdc4', 'target-arrow-color': '#4ecdc4' }
+                    },
+                    {
+                        selector: 'edge.awarded-grant, edge.funded-project',
+                        style: { 'line-color': '#00ff88', 'target-arrow-color': '#00ff88' }
+                    },
+                    // Hidden state
+                    {
+                        selector: '.hidden',
+                        style: { 'opacity': 0.1 }
+                    },
+                    // Selected state
+                    {
+                        selector: 'node:selected',
+                        style: {
+                            'border-width': 3,
+                            'border-color': '#00ff88',
+                            'width': 32,
+                            'height': 32
+                        }
+                    }
+                ],
+                layout: getLayoutConfig('cose')
+            });
+
+            // Node click
+            cy.on('tap', 'node', evt => showNodeDetail(evt.target.data('id')));
+
+            // Update info
+            document.getElementById('graph-info').textContent =
+                `${data.nodes.length} nodes, ${data.edges.length} edges`;
+
+            document.querySelector('.loading')?.remove();
+        }
+
+        function getLayoutConfig(name) {
+            const configs = {
+                cose: {
+                    name: 'cose',
+                    idealEdgeLength: 80,
+                    nodeOverlap: 20,
+                    nodeRepulsion: 300000,
+                    gravity: 80,
+                    numIter: 1000
+                },
+                dagre: {
+                    name: 'dagre',
+                    rankDir: 'TB',
+                    nodeSep: 50,
+                    rankSep: 80
+                },
+                circle: {
+                    name: 'circle',
+                    padding: 30
+                },
+                grid: {
+                    name: 'grid',
+                    rows: Math.ceil(Math.sqrt(cy?.nodes().length || 100))
+                }
+            };
+            return configs[name] || configs.cose;
+        }
+
+        // Layout buttons
+        document.querySelectorAll('.layout-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentLayout = btn.dataset.layout;
+                cy.layout(getLayoutConfig(currentLayout)).run();
+            });
+        });
+
+        // Toolbar buttons
+        document.getElementById('btn-fit').addEventListener('click', () => cy.fit());
+        document.getElementById('btn-reset').addEventListener('click', () => {
+            activeFilters.clear();
+            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            cy.nodes().removeClass('hidden');
+            cy.edges().removeClass('hidden');
+        });
+
+        // Export
+        document.getElementById('btn-export').addEventListener('click', () => {
+            document.getElementById('export-dropdown').classList.toggle('show');
+        });
+
+        document.getElementById('export-png').addEventListener('click', () => {
+            const png = cy.png({ full: true, scale: 2 });
+            const link = document.createElement('a');
+            link.href = png;
+            link.download = 'fgip-graph.png';
+            link.click();
+            document.getElementById('export-dropdown').classList.remove('show');
+        });
+
+        document.getElementById('export-json').addEventListener('click', () => {
+            const json = JSON.stringify(cy.json(), null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'fgip-graph.json';
+            link.click();
+            document.getElementById('export-dropdown').classList.remove('show');
+        });
+
+        // Load stats
+        async function loadStats() {
+            const response = await fetch('/api/stats');
+            stats = await response.json();
+
+            document.getElementById('stat-nodes').textContent = stats.nodes;
+            document.getElementById('stat-edges').textContent = stats.edges;
+            document.getElementById('stat-sources').textContent = stats.sources;
+            document.getElementById('stat-claims').textContent = stats.claims;
+
+            // Build node type filters
+            const filterContainer = document.getElementById('node-type-filters');
+            filterContainer.innerHTML = '';
+
+            const nodeTypes = stats.node_types || {};
+            Object.entries(nodeTypes).slice(0, 8).forEach(([type, count]) => {
+                const chip = document.createElement('button');
+                chip.className = 'chip';
+                chip.innerHTML = `${type}<span class="count">${count}</span>`;
+                chip.addEventListener('click', () => toggleFilter(type, chip));
+                filterContainer.appendChild(chip);
+            });
+        }
+
+        function toggleFilter(type, chip) {
+            if (activeFilters.has(type)) {
+                activeFilters.delete(type);
+                chip.classList.remove('active');
+            } else {
+                activeFilters.add(type);
+                chip.classList.add('active');
+            }
+            applyFilters();
+        }
+
+        function applyFilters() {
+            if (activeFilters.size === 0) {
+                cy.nodes().removeClass('hidden');
+                cy.edges().removeClass('hidden');
+                return;
+            }
+
+            cy.nodes().forEach(node => {
+                const type = node.data('type');
+                if (activeFilters.has(type)) {
+                    node.removeClass('hidden');
+                } else {
+                    node.addClass('hidden');
+                }
+            });
+
+            cy.edges().forEach(edge => {
+                const sourceHidden = edge.source().hasClass('hidden');
+                const targetHidden = edge.target().hasClass('hidden');
+                if (sourceHidden && targetHidden) {
+                    edge.addClass('hidden');
+                } else {
+                    edge.removeClass('hidden');
+                }
+            });
+        }
+
+        // Node detail
+        async function showNodeDetail(nodeId) {
+            const response = await fetch(`/api/node/${encodeURIComponent(nodeId)}`);
+            const data = await response.json();
+            if (data.error) return;
+
+            const panel = document.getElementById('detail-panel');
+            let html = `<h3>${data.node.name}</h3>`;
+            html += `<div class="detail-section"><h4>Type</h4><p>${data.node.node_type}</p></div>`;
+
+            if (data.edges.length > 0) {
+                html += `<div class="detail-section"><h4>Connections (${data.edges.length})</h4><ul class="connection-list">`;
+                data.edges.slice(0, 8).forEach(edge => {
+                    const dir = edge.from_node_id === nodeId ? '→' : '←';
+                    const other = edge.from_node_id === nodeId ? edge.to_name : edge.from_name;
+                    html += `<li>${dir} <strong>${edge.edge_type}</strong> ${other}</li>`;
+                });
+                if (data.edges.length > 8) html += `<li><em>+${data.edges.length - 8} more</em></li>`;
+                html += '</ul></div>';
+            }
+
+            if (data.sources.length > 0) {
+                html += `<div class="detail-section"><h4>Sources (${data.sources.length})</h4><ul class="source-list">`;
+                data.sources.slice(0, 5).forEach(src => {
+                    const tierClass = `tier-${src.tier}`;
+                    html += `<li><a href="${src.url}" target="_blank">${src.domain}</a><span class="tier-badge ${tierClass}">T${src.tier}</span></li>`;
+                });
+                html += '</ul></div>';
+            }
+
+            panel.innerHTML = html;
+        }
+
+        // Search
+        let searchTimeout;
+        document.getElementById('search').addEventListener('input', e => {
+            clearTimeout(searchTimeout);
+            const query = e.target.value.trim();
+            if (query.length < 2) {
+                cy.nodes().removeClass('hidden');
+                cy.edges().removeClass('hidden');
+                return;
+            }
+
+            searchTimeout = setTimeout(async () => {
+                const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                const matchIds = new Set(data.results.map(r => r.id));
+
+                cy.nodes().forEach(node => {
+                    if (matchIds.has(node.data('id'))) {
+                        node.removeClass('hidden');
+                        node.select();
+                    } else {
+                        node.addClass('hidden');
+                    }
+                });
+
+                if (data.results.length > 0) showNodeDetail(data.results[0].id);
+            }, 300);
+        });
+
+        // Analytics
+        async function loadAnalytics() {
+            // Node types chart
+            const nodeTypeCtx = document.getElementById('chart-node-types');
+            if (nodeTypeCtx._chart) nodeTypeCtx._chart.destroy();
+
+            const nodeTypes = stats.node_types || {};
+            nodeTypeCtx._chart = new Chart(nodeTypeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(nodeTypes).slice(0, 8),
+                    datasets: [{
+                        data: Object.values(nodeTypes).slice(0, 8),
+                        backgroundColor: chartColors
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { position: 'right', labels: { color: '#888', font: { size: 10 } } } }
+                }
+            });
+
+            // Edge types chart
+            const edgeTypeCtx = document.getElementById('chart-edge-types');
+            if (edgeTypeCtx._chart) edgeTypeCtx._chart.destroy();
+
+            const edgeTypes = stats.edge_types || {};
+            edgeTypeCtx._chart = new Chart(edgeTypeCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(edgeTypes).slice(0, 10),
+                    datasets: [{
+                        data: Object.values(edgeTypes).slice(0, 10),
+                        backgroundColor: '#00ff88'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: '#888' }, grid: { color: '#2a2a3a' } },
+                        y: { ticks: { color: '#888', font: { size: 9 } }, grid: { display: false } }
+                    }
+                }
+            });
+
+            // Source tiers chart
+            const tierCtx = document.getElementById('chart-source-tiers');
+            if (tierCtx._chart) tierCtx._chart.destroy();
+
+            const tiers = stats.source_tiers || {};
+            tierCtx._chart = new Chart(tierCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Tier 0 (Gov)', 'Tier 1 (Official)', 'Tier 2 (Commentary)'],
+                    datasets: [{
+                        data: [tiers.tier_0 || 0, tiers.tier_1 || 0, tiers.tier_2 || 0],
+                        backgroundColor: ['#00ff88', '#4da6ff', '#888']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { position: 'bottom', labels: { color: '#888', font: { size: 10 } } } }
+                }
+            });
+
+            // Coverage chart
+            const coverageCtx = document.getElementById('chart-coverage');
+            if (coverageCtx._chart) coverageCtx._chart.destroy();
+
+            const coverage = {
+                'With Sources': stats.sources || 0,
+                'With Claims': stats.claims || 0,
+                'Total Nodes': stats.nodes || 0
+            };
+            coverageCtx._chart = new Chart(coverageCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(coverage),
+                    datasets: [{
+                        data: Object.values(coverage),
+                        backgroundColor: ['#00ff88', '#4ecdc4', '#45b7d1']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#888' }, grid: { color: '#2a2a3a' } },
+                        x: { ticks: { color: '#888' }, grid: { display: false } }
+                    }
+                }
+            });
+
+            // Problem vs Correction
+            const pcCtx = document.getElementById('chart-problem-correction');
+            if (pcCtx._chart) pcCtx._chart.destroy();
+
+            // Fetch thesis data for this
+            const thesisRes = await fetch('/api/risk/thesis');
+            const thesis = await thesisRes.json();
+
+            pcCtx._chart = new Chart(pcCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Problem Layer', 'Correction Layer', 'Neutral'],
+                    datasets: [{
+                        label: 'Edges',
+                        data: [
+                            thesis.factors?.problem_edges || 0,
+                            thesis.factors?.correction_edges || 0,
+                            (stats.edges || 0) - (thesis.factors?.problem_edges || 0) - (thesis.factors?.correction_edges || 0)
+                        ],
+                        backgroundColor: ['#ff6b6b', '#00ff88', '#666']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#888' }, grid: { color: '#2a2a3a' } },
+                        x: { ticks: { color: '#888' }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Thesis
+        async function loadThesis() {
+            const response = await fetch('/api/risk/thesis');
+            const data = await response.json();
+
+            document.getElementById('thesis-score').textContent = `${data.score}%`;
+
+            // Ring chart
+            const ringCtx = document.getElementById('thesis-ring');
+            if (ringCtx._chart) ringCtx._chart.destroy();
+
+            ringCtx._chart = new Chart(ringCtx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [data.score, 100 - data.score],
+                        backgroundColor: ['#00ff88', '#2a2a3a'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    cutout: '75%',
+                    responsive: true,
+                    plugins: { legend: { display: false }, tooltip: { enabled: false } }
+                }
+            });
+
+            // Factors
+            const factors = data.factors || {};
+            const factorsHtml = `
+                <div class="factor-card">
+                    <h5>Problem Edges</h5>
+                    <div class="factor-value negative">${factors.problem_edges || 0}</div>
+                </div>
+                <div class="factor-card">
+                    <h5>Correction Edges</h5>
+                    <div class="factor-value positive">${factors.correction_edges || 0}</div>
+                </div>
+                <div class="factor-card">
+                    <h5>Both-Sides Entities</h5>
+                    <div class="factor-value neutral">${factors.both_sides || 0}</div>
+                </div>
+                <div class="factor-card">
+                    <h5>Tier-0 Sources</h5>
+                    <div class="factor-value positive">${factors.tier0_sources || stats.source_tiers?.tier_0 || 0}</div>
+                </div>
+                <div class="factor-card">
+                    <h5>Signal Nodes</h5>
+                    <div class="factor-value positive">${stats.signal_nodes || 0}</div>
+                </div>
+                <div class="factor-card">
+                    <h5>Crime Events</h5>
+                    <div class="factor-value negative">${stats.crime_nodes || 0}</div>
+                </div>
+            `;
+            document.getElementById('thesis-factors').innerHTML = factorsHtml;
+
+            // Both sides patterns
+            try {
+                const bsResponse = await fetch('/api/both-sides');
+                const bsData = await bsResponse.json();
+
+                if (bsData.patterns && bsData.patterns.length > 0) {
+                    const bsHtml = bsData.patterns.slice(0, 5).map(p => `
+                        <div class="both-sides-entity">
+                            <div class="name">${p.name}</div>
+                            <div class="edges">Problem: ${p.problem_edges} | Correction: ${p.correction_edges}</div>
+                        </div>
+                    `).join('');
+                    document.getElementById('both-sides-list').innerHTML = bsHtml;
+                } else {
+                    document.getElementById('both-sides-list').innerHTML = '<p style="color:#666;font-size:0.85em">No both-sides patterns detected</p>';
+                }
+            } catch {
+                document.getElementById('both-sides-list').innerHTML = '<p style="color:#666;font-size:0.85em">Unable to load patterns</p>';
+            }
+        }
+
+        // Health
+        async function loadHealth() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+
+                // DB Health
+                document.getElementById('db-health').innerHTML = `
+                    <div class="health-metric"><span>Nodes</span><span>${data.db?.nodes || stats.nodes}</span></div>
+                    <div class="health-metric"><span>Edges</span><span>${data.db?.edges || stats.edges}</span></div>
+                    <div class="health-metric"><span>Sources</span><span>${data.db?.sources || stats.sources}</span></div>
+                    <div class="health-metric"><span>Claims</span><span>${data.db?.claims || stats.claims}</span></div>
+                `;
+
+                // Gaps
+                const gaps = data.gaps || {};
+                const gapStatus = document.getElementById('gaps-status');
+                gapStatus.className = 'status-dot ' + (gaps.total_gaps > 10 ? 'yellow' : 'green');
+
+                document.getElementById('gaps-list').innerHTML = `
+                    <div class="health-metric"><span>Missing Sources</span><span>${gaps.missing_sources || 0}</span></div>
+                    <div class="health-metric"><span>Weak Assertions</span><span>${gaps.weak_assertions || 0}</span></div>
+                    <div class="health-metric"><span>Orphan Nodes</span><span>${gaps.orphan_nodes || 0}</span></div>
+                `;
+
+                // Verification
+                const verify = data.verification || {};
+                document.getElementById('verify-status').innerHTML = `
+                    <div class="health-metric"><span>Easter Eggs</span><span>${verify.passed || 0}/${verify.total || 0}</span></div>
+                    <div class="health-metric"><span>Status</span><span style="color:${verify.status === 'PASS' ? 'var(--accent)' : 'var(--danger)'}">${verify.status || 'UNKNOWN'}</span></div>
+                `;
+
+                // Agent recs
+                const agents = data.agent_recommendations || [];
+                if (agents.length > 0) {
+                    document.getElementById('agent-recs').innerHTML = agents.slice(0, 4).map(a => `
+                        <div class="health-metric"><span>${a.agent}</span><span>${a.reason}</span></div>
+                    `).join('');
+                } else {
+                    document.getElementById('agent-recs').innerHTML = '<p style="color:#666;font-size:0.85em">No recommendations</p>';
+                }
+            } catch (e) {
+                console.error('Health load error:', e);
+            }
+        }
+
+        // ============================================================================
+        // APPROVALS FUNCTIONALITY
+        // ============================================================================
+
+        let approvalsData = { claims: [], edges: [], stats: {} };
+        let selectedProposals = new Set();
+        let currentPage = 1;
+        const perPage = 50;
+
+        async function loadApprovals() {
+            const container = document.getElementById('proposals-container');
+            container.innerHTML = '<div class="loading-proposals">Loading proposals...</div>';
+
+            const agent = document.getElementById('filter-agent').value;
+            const type = document.getElementById('filter-type').value;
+
+            try {
+                const params = new URLSearchParams({
+                    page: currentPage,
+                    per_page: perPage,
+                });
+                if (agent) params.append('agent', agent);
+                if (type) params.append('type', type);
+
+                const response = await fetch(`/api/approvals?${params}`);
+                approvalsData = await response.json();
+
+                // Update stats
+                document.getElementById('stat-pending-claims').textContent = approvalsData.stats.total_pending_claims;
+                document.getElementById('stat-pending-edges').textContent = approvalsData.stats.total_pending_edges;
+                document.getElementById('stat-agents').textContent = approvalsData.stats.agents?.length || 0;
+
+                // Update badge
+                const total = approvalsData.stats.total_pending_claims + approvalsData.stats.total_pending_edges;
+                document.getElementById('pending-badge').textContent = total > 999 ? '999+' : total;
+
+                // Populate agent filter
+                const agentSelect = document.getElementById('filter-agent');
+                const currentValue = agentSelect.value;
+                agentSelect.innerHTML = '<option value="">All Agents</option>';
+                (approvalsData.stats.agents || []).forEach(a => {
+                    agentSelect.innerHTML += `<option value="${a}" ${a === currentValue ? 'selected' : ''}>${a}</option>`;
+                });
+
+                // Populate bulk agent actions
+                const bulkAgentActions = document.getElementById('bulk-agent-actions');
+                bulkAgentActions.innerHTML = (approvalsData.stats.agents || []).slice(0, 5).map(a =>
+                    `<button onclick="bulkApprove('${a}')">Approve all from ${a}</button>`
+                ).join('');
+
+                // Render proposals
+                renderProposals();
+                updateSelectedCount();
+
+            } catch (e) {
+                console.error('Load approvals error:', e);
+                container.innerHTML = '<div class="loading-proposals">Error loading proposals</div>';
+            }
+        }
+
+        function renderProposals() {
+            const container = document.getElementById('proposals-container');
+            const allProposals = [
+                ...approvalsData.claims.map(c => ({ ...c, _type: 'claim' })),
+                ...approvalsData.edges.map(e => ({ ...e, _type: 'edge' }))
+            ];
+
+            if (allProposals.length === 0) {
+                container.innerHTML = '<div class="loading-proposals">No pending proposals</div>';
+                return;
+            }
+
+            container.innerHTML = allProposals.map(p => {
+                const isSelected = selectedProposals.has(p.proposal_id);
+                const confidence = p.confidence || p.se_score || 0.5;
+                const confClass = confidence >= 0.9 ? 'high' : confidence >= 0.7 ? 'medium' : 'low';
+
+                let summary = '';
+                if (p._type === 'claim') {
+                    summary = p.claim_text || '';
+                } else {
+                    summary = `${p.from_node || '?'} → ${p.relationship || p.edge_type || '?'} → ${p.to_node || '?'}`;
+                }
+
+                // Parse evidence and reason codes
+                const evidenceSpan = p.evidence_span || '';
+                const reasonCodes = tryParseJSON(p.reason_codes, []);
+                const entityCandidates = tryParseJSON(p.entity_candidates, []);
+                const counterEvidence = tryParseJSON(p.counter_evidence, []);
+                const sourceUrl = p.source_url || '';
+
+                // Build evidence panel content
+                const hasEvidence = evidenceSpan || reasonCodes.length || entityCandidates.length;
+
+                return `
+                    <div class="proposal-wrapper">
+                        <div class="proposal-row ${isSelected ? 'selected' : ''}" data-id="${p.proposal_id}">
+                            <label class="checkbox-cell">
+                                <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleProposal('${p.proposal_id}')">
+                            </label>
+                            <span class="col-type">
+                                <span class="proposal-type ${p._type}">${p._type}</span>
+                            </span>
+                            <span class="col-agent proposal-agent">${p.agent_name || 'unknown'}</span>
+                            <span class="col-summary proposal-summary" title="${escapeHtml(summary)}">
+                                ${hasEvidence ? '<button class="expand-btn" onclick="toggleEvidence(\'' + p.proposal_id + '\')">▶</button>' : ''}
+                                ${escapeHtml(summary.substring(0, 80))}${summary.length > 80 ? '...' : ''}
+                            </span>
+                            <span class="col-confidence proposal-confidence">
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill ${confClass}" style="width: ${confidence * 100}%"></div>
+                                </div>
+                                <span style="font-size:0.75em">${(confidence * 100).toFixed(0)}%</span>
+                            </span>
+                            <span class="col-actions proposal-actions">
+                                <button class="btn btn-sm btn-approve" onclick="approveOne('${p.proposal_id}')">Approve</button>
+                                <button class="btn btn-sm btn-reject" onclick="rejectOne('${p.proposal_id}')">Reject</button>
+                            </span>
+                        </div>
+                        ${hasEvidence ? `
+                        <div class="evidence-panel" id="evidence-${p.proposal_id}" style="display: none;">
+                            ${evidenceSpan ? `
+                            <div class="evidence-section">
+                                <div class="evidence-label">Evidence:</div>
+                                <div class="evidence-quote">"${escapeHtml(evidenceSpan)}"</div>
+                            </div>` : ''}
+                            ${sourceUrl ? `
+                            <div class="evidence-section">
+                                <div class="evidence-label">Source:</div>
+                                <a href="${sourceUrl}" target="_blank" class="evidence-link">${sourceUrl.substring(0, 60)}...</a>
+                            </div>` : ''}
+                            ${entityCandidates.length ? `
+                            <div class="evidence-section">
+                                <div class="evidence-label">Entities:</div>
+                                <div class="entity-chips">
+                                    ${entityCandidates.map(e => `<span class="entity-chip">${e.entity || e} <span class="conf">${((e.confidence || 0.7) * 100).toFixed(0)}%</span></span>`).join('')}
+                                </div>
+                            </div>` : ''}
+                            ${reasonCodes.length ? `
+                            <div class="evidence-section">
+                                <div class="evidence-label">Why:</div>
+                                <div class="reason-codes">
+                                    ${reasonCodes.map(r => `<span class="reason-chip">${r}</span>`).join('')}
+                                </div>
+                            </div>` : ''}
+                            ${counterEvidence.length ? `
+                            <div class="evidence-section warning">
+                                <div class="evidence-label">Counter-evidence:</div>
+                                <div class="counter-flags">
+                                    ${counterEvidence.map(c => `<span class="counter-chip">${c}</span>`).join('')}
+                                </div>
+                            </div>` : ''}
+                            <div class="evidence-actions">
+                                <button class="btn btn-sm btn-approve" onclick="approveOne('${p.proposal_id}')">Approve</button>
+                                <button class="btn btn-sm btn-reject" onclick="rejectOne('${p.proposal_id}')">Reject</button>
+                                <button class="btn btn-sm btn-needs-evidence" onclick="needsMoreEvidence('${p.proposal_id}')">Needs Evidence</button>
+                            </div>
+                        </div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function tryParseJSON(str, defaultVal) {
+            if (!str) return defaultVal;
+            if (typeof str === 'object') return str;
+            try {
+                return JSON.parse(str);
+            } catch (e) {
+                return defaultVal;
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function toggleEvidence(proposalId) {
+            const panel = document.getElementById('evidence-' + proposalId);
+            const btn = panel.previousElementSibling.querySelector('.expand-btn');
+            if (panel.style.display === 'none') {
+                panel.style.display = 'block';
+                btn.textContent = '▼';
+            } else {
+                panel.style.display = 'none';
+                btn.textContent = '▶';
+            }
+        }
+
+        async function needsMoreEvidence(proposalId) {
+            await rejectProposals([proposalId], 'Needs more evidence before approval');
+        }
+
+        function toggleProposal(id) {
+            if (selectedProposals.has(id)) {
+                selectedProposals.delete(id);
+            } else {
+                selectedProposals.add(id);
+            }
+            renderProposals();
+            updateSelectedCount();
+        }
+
+        function toggleSelectAll() {
+            const selectAll = document.getElementById('select-all');
+            const allProposals = [
+                ...approvalsData.claims.map(c => c.proposal_id),
+                ...approvalsData.edges.map(e => e.proposal_id)
+            ];
+
+            if (selectAll.checked) {
+                allProposals.forEach(id => selectedProposals.add(id));
+            } else {
+                allProposals.forEach(id => selectedProposals.delete(id));
+            }
+            renderProposals();
+            updateSelectedCount();
+        }
+
+        function updateSelectedCount() {
+            const count = selectedProposals.size;
+            document.getElementById('selected-count').textContent = count;
+            document.getElementById('btn-approve-selected').disabled = count === 0;
+            document.getElementById('btn-reject-selected').disabled = count === 0;
+        }
+
+        async function approveOne(id) {
+            await approveProposals([id]);
+        }
+
+        async function rejectOne(id) {
+            await rejectProposals([id]);
+        }
+
+        async function approveSelected() {
+            await approveProposals(Array.from(selectedProposals));
+            selectedProposals.clear();
+        }
+
+        async function rejectSelected() {
+            await rejectProposals(Array.from(selectedProposals));
+            selectedProposals.clear();
+        }
+
+        async function approveProposals(ids) {
+            try {
+                const response = await fetch('/api/approvals/approve', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ proposal_ids: ids })
+                });
+                const result = await response.json();
+                console.log('Approved:', result);
+                await loadApprovals();
+            } catch (e) {
+                console.error('Approve error:', e);
+                alert('Error approving proposals');
+            }
+        }
+
+        async function rejectProposals(ids, reason = 'Rejected via UI') {
+            try {
+                const response = await fetch('/api/approvals/reject', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ proposal_ids: ids, reason: reason })
+                });
+                const result = await response.json();
+                console.log('Rejected:', result);
+                await loadApprovals();
+            } catch (e) {
+                console.error('Reject error:', e);
+                alert('Error rejecting proposals');
+            }
+        }
+
+        async function bulkApprove(agent, minConfidence = 0.8) {
+            if (!confirm(`Bulk approve proposals${agent ? ` from ${agent}` : ''} with confidence >= ${minConfidence}?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/approvals/bulk-approve', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        agent: agent,
+                        min_confidence: minConfidence,
+                        limit: 500
+                    })
+                });
+                const result = await response.json();
+                alert(`Approved ${result.approved} proposals`);
+                await loadApprovals();
+            } catch (e) {
+                console.error('Bulk approve error:', e);
+                alert('Error in bulk approve');
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadApprovals();
+            }
+        }
+
+        function nextPage() {
+            const total = approvalsData.stats.total_pending_claims + approvalsData.stats.total_pending_edges;
+            if (currentPage * perPage < total) {
+                currentPage++;
+                loadApprovals();
+            }
+        }
+
+        // Load approvals when tab is activated
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                if (tab.dataset.tab === 'approvals') {
+                    loadApprovals();
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            await Promise.all([initGraph(), loadStats()]);
+            // Load approval count for badge
+            try {
+                const response = await fetch('/api/approvals?per_page=1');
+                const data = await response.json();
+                const total = data.stats.total_pending_claims + data.stats.total_pending_edges;
+                document.getElementById('pending-badge').textContent = total > 999 ? '999+' : total;
+            } catch (e) {}
+        });
+    </script>
+</body>
+</html>

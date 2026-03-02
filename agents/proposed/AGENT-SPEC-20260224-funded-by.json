@@ -1,0 +1,23 @@
+{
+  "spec_id": "AGENT-SPEC-20260224-funded-by",
+  "name": "unknown-funded-by-agent",
+  "description": "Agent to produce FUNDED_BY edges for unknown gap",
+  "gap_type": "unknown",
+  "target_edge_types": [
+    "FUNDED_BY"
+  ],
+  "data_sources": [
+    "TBD - research needed"
+  ],
+  "expected_artifacts": [
+    "unknown_data_*.json",
+    "unknown_raw_*.html"
+  ],
+  "expected_output": {
+    "FUNDED_BY": 50
+  },
+  "priority": 2,
+  "complexity": "moderate",
+  "dependencies": [],
+  "created_at": "2026-02-24T21:22:18.142460+00:00"
+}

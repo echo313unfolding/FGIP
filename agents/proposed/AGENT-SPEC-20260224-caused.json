@@ -1,0 +1,28 @@
+{
+  "spec_id": "AGENT-SPEC-20260224-caused",
+  "name": "causal-caused-agent",
+  "description": "Agent to produce CAUSED edges for causal gap",
+  "gap_type": "causal",
+  "target_edge_types": [
+    "CAUSED"
+  ],
+  "data_sources": [
+    "Academic papers",
+    "Congressional testimony",
+    "GAO reports"
+  ],
+  "expected_artifacts": [
+    "causal_data_*.json",
+    "causal_raw_*.html"
+  ],
+  "expected_output": {
+    "CAUSED": 50
+  },
+  "priority": 2,
+  "complexity": "complex",
+  "dependencies": [
+    "reasoning_agent",
+    "academic_paper_access"
+  ],
+  "created_at": "2026-02-24T21:22:18.142438+00:00"
+}

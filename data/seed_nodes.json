@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {"node_id": "org_us_chamber", "node_type": "ORGANIZATION", "name": "US Chamber of Commerce", "description": "Largest lobbying organization, $1.8B+ lobbying spend"},
+    {"node_id": "org_blackrock", "node_type": "ORGANIZATION", "name": "BlackRock", "description": "World's largest asset manager, $10T+ AUM"},
+    {"node_id": "org_vanguard", "node_type": "ORGANIZATION", "name": "Vanguard", "description": "Second largest asset manager"},
+    {"node_id": "org_state_street", "node_type": "ORGANIZATION", "name": "State Street", "description": "Major asset manager"},
+    {"node_id": "org_heritage_foundation", "node_type": "ORGANIZATION", "name": "Heritage Foundation", "description": "Conservative think tank"},
+    {"node_id": "org_federalist_society", "node_type": "ORGANIZATION", "name": "Federalist Society", "description": "Conservative legal organization"},
+    {"node_id": "org_america_works", "node_type": "ORGANIZATION", "name": "Chamber America Works", "description": "Chamber immigration lobbying arm"},
+
+    {"node_id": "fin_ny_fed", "node_type": "FINANCIAL_INST", "name": "NY Federal Reserve", "description": "Most powerful regional Fed, executed $29T bailout 2007-2010"},
+    {"node_id": "fin_citibank", "node_type": "FINANCIAL_INST", "name": "Citibank", "description": "Major bank, 42.8% NY Fed ownership"},
+    {"node_id": "fin_jpmorgan", "node_type": "FINANCIAL_INST", "name": "JPMorgan Chase", "description": "Major bank, 29.5% NY Fed ownership"},
+    {"node_id": "fin_goldman", "node_type": "FINANCIAL_INST", "name": "Goldman Sachs", "description": "Major bank, 4.0% NY Fed ownership"},
+    {"node_id": "fin_hsbc", "node_type": "FINANCIAL_INST", "name": "HSBC Bank USA", "description": "Foreign bank with 6.1% NY Fed ownership"},
+    {"node_id": "fin_deutsche", "node_type": "FINANCIAL_INST", "name": "Deutsche Bank Trust", "description": "Foreign bank with NY Fed ownership"},
+    {"node_id": "fin_bny_mellon", "node_type": "FINANCIAL_INST", "name": "Bank of NY Mellon", "description": "Major bank, 3.5% NY Fed ownership"},
+    {"node_id": "fin_bis", "node_type": "FINANCIAL_INST", "name": "BIS (Bank for International Settlements)", "description": "Central bank of central banks, 63 members, 95% world GDP"},
+
+    {"node_id": "person_ginni_thomas", "node_type": "PERSON", "name": "Ginni Thomas", "aliases": ["Virginia Lamp"], "description": "Former Chamber lobbyist, wife of Clarence Thomas"},
+    {"node_id": "person_clarence_thomas", "node_type": "PERSON", "name": "Clarence Thomas", "description": "Supreme Court Justice"},
+    {"node_id": "person_harlan_crow", "node_type": "PERSON", "name": "Harlan Crow", "description": "Real estate developer, donor to Thomas"},
+    {"node_id": "person_larry_fink", "node_type": "PERSON", "name": "Larry Fink", "description": "BlackRock CEO"},
+
+    {"node_id": "leg_pntr_2000", "node_type": "LEGISLATION", "name": "PNTR 2000 (H.R. 4444)", "description": "Permanent Normal Trade Relations with China, passed May 24, 2000"},
+    {"node_id": "leg_chips_act", "node_type": "LEGISLATION", "name": "CHIPS Act", "description": "Semiconductor manufacturing incentives"},
+    {"node_id": "leg_genius_act", "node_type": "LEGISLATION", "name": "GENIUS Act", "description": "Stablecoin framework, 100% Treasury backing, signed 2025"},
+    {"node_id": "leg_anti_cbdc", "node_type": "LEGISLATION", "name": "Anti-CBDC Act", "description": "Banned Fed digital dollar, passed House July 2025"},
+
+    {"node_id": "case_learning_resources", "node_type": "COURT_CASE", "name": "Learning Resources v. Trump", "description": "Anti-tariff case, 37 amicus against, 7 for"},
+    {"node_id": "case_citizens_united", "node_type": "COURT_CASE", "name": "Citizens United v. FEC", "description": "Campaign finance case"},
+
+    {"node_id": "company_caterpillar", "node_type": "COMPANY", "name": "Caterpillar", "description": "Heavy equipment manufacturer, +28% YTD, $51B backlog"},
+    {"node_id": "company_intel", "node_type": "COMPANY", "name": "Intel", "description": "Semiconductor, +80% 2025, US govt 9.9% equity"},
+    {"node_id": "company_nucor", "node_type": "COMPANY", "name": "Nucor", "description": "Domestic steel, 95% data center steel"},
+    {"node_id": "company_eaton", "node_type": "COMPANY", "name": "Eaton", "description": "Grid modernization, backlog through 2027"},
+    {"node_id": "company_constellation", "node_type": "COMPANY", "name": "Constellation Energy", "description": "Nuclear baseload, largest US nuclear fleet"},
+    {"node_id": "company_freeport", "node_type": "COMPANY", "name": "Freeport-McMoRan", "description": "Copper mining, Bagdad mine expansion"},
+    {"node_id": "company_ge_aerospace", "node_type": "COMPANY", "name": "GE Aerospace", "description": "Domestic manufacturing, +87.5%, 5000 new US jobs"},
+    {"node_id": "company_oracle", "node_type": "COMPANY", "name": "Oracle", "description": "Infrastructure sovereignty, 1.2GW Abilene TX"},
+    {"node_id": "company_gannett", "node_type": "COMPANY", "name": "Gannett", "description": "Media conglomerate"},
+    {"node_id": "company_sinclair", "node_type": "COMPANY", "name": "Sinclair Broadcasting", "description": "Media conglomerate"},
+
+    {"node_id": "media_gannett", "node_type": "MEDIA_OUTLET", "name": "Gannett", "description": "Largest US newspaper publisher"},
+    {"node_id": "media_sinclair", "node_type": "MEDIA_OUTLET", "name": "Sinclair", "description": "Conservative broadcast network"},
+
+    {"node_id": "event_pntr_impact", "node_type": "ECONOMIC_EVENT", "name": "PNTR Job Losses", "description": "2.4M manufacturing jobs lost post-PNTR"},
+    {"node_id": "event_china_shock", "node_type": "ECONOMIC_EVENT", "name": "China Shock", "description": "Increased mortality, disability, opioid deaths in exposed communities"},
+    {"node_id": "event_reshoring_2025", "node_type": "ECONOMIC_EVENT", "name": "Reshoring Wave 2025", "description": "3.8M manufacturing jobs needed over next decade"},
+    {"node_id": "event_semi_reshoring", "node_type": "ECONOMIC_EVENT", "name": "Semiconductor Reshoring", "description": "$102.6B, 2/3 of all foreign capital Oct 2024-Apr 2025"},
+    {"node_id": "event_great_rotation", "node_type": "ECONOMIC_EVENT", "name": "Great Rotation 2026", "description": "Russell 2000 outperforming S&P 500 by 4% in 6 weeks"},
+    {"node_id": "event_ny_fed_bailout", "node_type": "ECONOMIC_EVENT", "name": "NY Fed Bailout 2007-2010", "description": "$29T executed through NY Fed"},
+
+    {"node_id": "etf_rsho", "node_type": "ETF_FUND", "name": "RSHO", "description": "Reshoring ETF"},
+    {"node_id": "etf_made", "node_type": "ETF_FUND", "name": "MADE", "description": "Manufacturing ETF"},
+    {"node_id": "etf_iwm", "node_type": "ETF_FUND", "name": "IWM", "description": "Russell 2000 ETF"},
+
+    {"node_id": "org_supreme_court", "node_type": "ORGANIZATION", "name": "US Supreme Court", "description": "6-3 conservative majority"},
+    {"node_id": "org_reshoring_initiative", "node_type": "ORGANIZATION", "name": "Reshoring Initiative", "description": "Tracks manufacturing job creation"},
+    {"node_id": "fin_ncua", "node_type": "FINANCIAL_INST", "name": "NCUA", "description": "Credit union regulator"},
+    {"node_id": "fin_credit_unions", "node_type": "FINANCIAL_INST", "name": "Credit Unions", "description": "Alternative circuit, not Fed members, NCUA regulated"}
+  ],
+  "is_synthetic": false
+}

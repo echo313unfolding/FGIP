@@ -1,0 +1,182 @@
+# GENIUS Act S.394 Section 4(a) - Extracted Text
+# SOURCE: https://www.govinfo.gov/content/pkg/BILLS-119s394is/html/BILLS-119s394is.htm
+# TIER: 0 (Official GPO/GovInfo)
+# EXTRACTED: 2026-02-24T15:40:42.954785Z
+# LENGTH: 7392 chars
+
+======================================================================
+
+(a) Standards for the Issuance of Payment Stablecoins.--
+(1) In general.--Permitted payment stablecoin issuers
+shall--
+(A) maintain reserves backing the issuer's payment
+stablecoins outstanding on an at least 1 to 1 basis,
+with reserves comprising--
+(i) United States coins and currency
+(including Federal reserve notes);
+(ii) funds held as demand deposits (or
+other deposits that may be withdrawn upon
+request at any time) at insured depository
+institutions, regulated foreign depository
+institutions, or insured shares at insured
+depository institutions, subject to limitations
+established by the Corporation and the National
+Credit Union Administration, respectively, to
+address safety and soundness risks of such
+insured depository institutions;
+(iii) Treasury bills, notes, or bonds--
+(I) with a remaining maturity of 93
+days or less; or
+(II) issued with a maturity of 93
+days or less;
+(iv) repurchase agreements with a maturity
+of 7 days or less that are backed by Treasury
+bills with a maturity of 90 days or less;
+(v) reverse repurchase agreements with a
+maturity of 7 days or less that are
+collateralized by Treasury notes, bills, or
+bonds on an overnight basis, subject to
+overcollateralization in line with standard
+market terms, that are--
+(I) tri-party;
+(II) centrally cleared through a
+clearing house; or
+(III) bilateral with a counterparty
+that the issuer has determined to be
+adequately creditworthy even in the
+event of severe market stress;
+(vi) money market funds, invested solely in
+underlying assets described in clauses (i)
+through (iv) of subparagraph (A); or
+(vii) Central Bank reserve deposits;
+(B) publicly disclose the issuer's redemption
+policy;
+(C) establish procedures for timely redemption of
+outstanding payment stablecoins; and
+(D) publish the monthly composition of the issuer's
+reserves on the website of the issuer, containing--
+(i) the total number of outstanding payment
+stablecoins issued by the issuer; and
+(ii) the amount and composition of the
+reserves described under subparagraph (A).
+(2) Prohibition on rehypothecation.--Reserves described
+under paragraph (1)(A) may not be pledged, rehypothecated, or
+reused, except for the purpose of creating liquidity to meet
+reasonable expectations of requests to redeem payment
+stablecoins, such that reserves in the form of Treasury bills
+may be pledged as collateral for repurchase agreements with a
+maturity of 90 days or less, provided that either--
+(A) the repurchase agreements are cleared by a
+central clearing counterparty that is approved by the
+primary Federal or State payment stablecoin regulator;
+or
+(B) the permitted payment stablecoin issuer
+receives the prior approval of the primary Federal or
+State payment stablecoin regulator.
+(3) Monthly certification; examination of reports by
+registered public accounting firm.--
+(A) In general.--A permitted payment stablecoin
+issuer shall, each month, have the information
+disclosed in the previous month-end report required
+under paragraph (1)(D) examined by a registered public
+accounting firm.
+(B) Certification.--Each month, the Chief Executive
+Officer and Chief Financial Officer of a permitted
+payment stablecoin issuer shall submit a certification
+as to the accuracy of the monthly report to--
+(i) the primary Federal payment stablecoin
+regulator; or
+(ii) in the case of a State qualified
+payment stablecoin issuer, to the State payment
+stablecoin regulator.
+(C) Criminal penalty.--Any person who submits a
+certification required under subparagraph (B) knowing
+that such certification is false shall be subject to
+the criminal penalties set forth under section 1350(c)
+of title 18, United States Code.
+(4) Capital, liquidity, and risk management requirements.--
+(A) In general.--The primary Federal payment
+stablecoin regulators shall, jointly, or in the case of
+a State qualified payment stablecoin issuer, the State
+payment stablecoin regulator shall, issue--
+(i) capital requirements applicable to
+permitted payment stablecoin issuers, which may
+not exceed what is sufficient to ensure the
+permitted payment stablecoin issuer's ongoing
+operations;
+(ii) appropriate liquidity and interest
+rate risk management standards applicable to
+permitted payment stablecoin issuers, which may
+not exceed what is sufficient to ensure the
+financial integrity of the permitted payment
+stablecoin issuer and the ability of the issuer
+to meet the financial obligations of the
+issuer, including redemptions; and
+(iii) appropriate operational, compliance,
+and information technology risk management
+standards, including Bank Secrecy Act and
+sanctions compliance, tailored to the business
+model and risk profile of the permitted payment
+stablecoin issuer, consistent with other legal
+authorities.
+(B) Rule of construction.--Nothing in this
+paragraph shall be construed to limit--
+(i) the authority of the primary Federal
+regulators, in prescribing standards under this
+paragraph, to tailor or differentiate among
+issuers on an individual basis or by category,
+taking into consideration their capital
+structure, riskiness, complexity, financial
+activities (including financial activities of
+their subsidiaries), size, and any other risk
+related factors that the primary Federal
+regulator determines appropriate; or
+(ii) the supervisory, regulatory, or
+enforcement authority of an appropriate Federal
+banking agency to further the safe and sound
+operation of an institution under the
+supervision of the appropriate Federal banking
+agency.
+(C) Applicability of existing capital standards.--
+With respect to the promulgation of rules under
+subsection (a)(1)(A), section 171 of the Financial
+Stability Act of 2010 (12 U.S.C. 5371(a)(1)(A)) shall
+not apply.
+(5) Treatment under the bank secrecy act.--A permitted
+payment stablecoin issuer shall be treated as a financial
+institution for purposes of the Bank Secrecy Act.
+(6) Limitation on stablecoin activities.--
+(A) In general.--A permitted payment stablecoin
+issuer may only--
+(i) issue payment stablecoins;
+(ii) redeem payment stablecoins;
+(iii) manage related reserves (including
+purchasing and holding reserve assets);
+(iv) provide custodial or safekeeping
+services for payment stablecoins, required
+reserves, or private keys of payment
+stablecoins; and
+(v) undertake other functions that directly
+support the work of issuing and redeeming
+payment stablecoins.
+(B) Rule of construction.--Nothing in subparagraph
+(A) shall prevent a permitted stablecoin issuer from
+engaging in non-stablecoin activities that are
+explicitly allowed by the relevant regulator.
+(7) Regulation by the comptroller.--
+(A) In general.--A Federal qualified nonbank
+payment stablecoin issuer shall be regulated and
+supervised exclusively by the Comptroller, which shall
+have authority, in coordination with other relevant
+regulators, to issue such regulations and orders as
+necessary to ensure the safety and soundness of the
+issuers, consistent with the provisions of this Act.
+(B) Conforming amendment.--Section 324(b) of the
+Revised Statutes (12 U.S.C. 1(b)) is amended by adding
+at the end the following:
+``(3) Regulation of federal qualified nonbank payment
+stablecoin issuers.--The Comptroller of the Currency shall, in
+coordination with other relevant regulators, issue such
+regulations and orders as necessary to ensure the safety and
+soundness of any nonbank entity approved by the Comptroller to
+issue payment stablecoins.''.

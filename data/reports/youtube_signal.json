@@ -1,0 +1,1350 @@
+{
+  "timestamp": "2026-02-24T19:28:11.460480Z",
+  "total_videos": 6941,
+  "unique_channels": 2997,
+  "fgip_matches": [
+    {
+      "node_id": "media-shawn-ryan-show",
+      "node_name": "Shawn Ryan Show",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "guest",
+      "video_count": 164,
+      "video_ids": [
+        "fccBZ6Q9Ys8",
+        "zolJAJqhEvk",
+        "slAGP37Olks",
+        "1d8R6sd4sas",
+        "GqwBT9pkNy8",
+        "p9Q8Xwl0ucY",
+        "ceoZN9At74s",
+        "MYo9C9dn1sI",
+        "gmtRU-IqPZk",
+        "RYSwa3_fiyk"
+      ],
+      "guest_count": 2,
+      "topic_count": 164
+    },
+    {
+      "node_id": "media-joe-rogan",
+      "node_name": "Joe Rogan Experience",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "guest",
+      "video_count": 53,
+      "video_ids": [
+        "nJZV0k6LwvQ",
+        "ddjU8NHbGiY",
+        "R8TqBrrqL4U",
+        "C81bFx8CSA8",
+        "nrOaFxNex7U",
+        "yg8aTu1cyCw",
+        "Z7shjsOnamU",
+        "HwyAX69xG1Q",
+        "dre-5Zy4f7c",
+        "Rc7OHXJtWco"
+      ],
+      "guest_count": 7,
+      "topic_count": 46
+    },
+    {
+      "node_id": "google",
+      "node_name": "Google",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 36,
+      "video_ids": [
+        "VnyMzQ34uk0",
+        "E5qmrufSFRo",
+        "U_4oAS8i5ZM",
+        "6qEy9fXiecQ",
+        "61uvXxbhuzU",
+        "S9a1nLw70p0",
+        "gH4SsABvqP0",
+        "2sy6aIaoI64",
+        "x4ZY25OU4Ys",
+        "_E7gdHtKbjw"
+      ],
+      "guest_count": 0,
+      "topic_count": 36
+    },
+    {
+      "node_id": "samsung",
+      "node_name": "Samsung",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 14,
+      "video_ids": [
+        "u-HY7r6HWSI",
+        "_IJQwvHvuuY",
+        "Fpcny6clWPU",
+        "QoQ5XaPD8mM",
+        "mF2Nxck4FtM",
+        "UbkNi2UZIu0",
+        "IGocDpsogxQ",
+        "I-CRNheumK4",
+        "6mVPPctVJuQ",
+        "2fEX9Ati2KU"
+      ],
+      "guest_count": 0,
+      "topic_count": 14
+    },
+    {
+      "node_id": "bloomberg",
+      "node_name": "Bloomberg",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 14,
+      "video_ids": [
+        "KxBLbo0w3PI",
+        "9REsGQCE1Bk",
+        "DCkQq9REQgQ",
+        "x5-k3_tLa50",
+        "iVJ94tM7pNA",
+        "_pMO-zHHXDk",
+        "6ydFDwv-n8w",
+        "gOP8ECgCqVg",
+        "GhIJs4zbH0o",
+        "W_NIfGL1pEE"
+      ],
+      "guest_count": 0,
+      "topic_count": 14
+    },
+    {
+      "node_id": "white-house",
+      "node_name": "White House",
+      "node_type": "AGENCY",
+      "match_type": "topic",
+      "video_count": 11,
+      "video_ids": [
+        "MzWNeLgl9zo",
+        "si19rPJi5NQ",
+        "Cfg7wh8mXUQ",
+        "o2bBGGYy9Mg",
+        "I_ZyNoKPFZM",
+        "Dr8REfoxAFU",
+        "pstThfHDXdU",
+        "Dx37JTVKhRk",
+        "mYvZV2nInvg",
+        "rWjuq_sJjQI"
+      ],
+      "guest_count": 0,
+      "topic_count": 11
+    },
+    {
+      "node_id": "amazon",
+      "node_name": "Amazon",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 11,
+      "video_ids": [
+        "mIbXv6u1Rsw",
+        "WsGJxXN-Y3I",
+        "gPfriiHBBek",
+        "KpxgdtPOikg",
+        "sTl5b4Rlxt0",
+        "tMakrd-fQek",
+        "RVVfJVj5z8s",
+        "EGyjdYuSMeU",
+        "vxs08jbIQnI",
+        "hWlYEaxubRY"
+      ],
+      "guest_count": 0,
+      "topic_count": 11
+    },
+    {
+      "node_id": "media-tucker-carlson",
+      "node_name": "Tucker Carlson Network",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "guest",
+      "video_count": 8,
+      "video_ids": [
+        "uElaHUSM7fI",
+        "f_lRdkH_QoY",
+        "AFSjb4MrkHQ",
+        "SgcpRH8XASQ",
+        "1hXEnQvVtmI",
+        "Qzlt1VVBcg8",
+        "MoG_Ng77KXw",
+        "QLE3tLFKRbM"
+      ],
+      "guest_count": 4,
+      "topic_count": 4
+    },
+    {
+      "node_id": "jurisdiction-us",
+      "node_name": "United States",
+      "node_type": "JURISDICTION",
+      "match_type": "topic",
+      "video_count": 7,
+      "video_ids": [
+        "9LxPahgF4TI",
+        "unDS_lBHxwQ",
+        "sm_3B6MiZ0Y",
+        "y-1RZML5FnE",
+        "kaUemcqIQ-k",
+        "-TIovSCsUhw",
+        "sIw8LatGO7Y"
+      ],
+      "guest_count": 0,
+      "topic_count": 7
+    },
+    {
+      "node_id": "anduril",
+      "node_name": "Anduril",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 6,
+      "video_ids": [
+        "qvjkE2z8H2k",
+        "f3EtEYE8QWE",
+        "az81MHug0Nw",
+        "rJ7BQmS39EM",
+        "tnsyM3NPy1c",
+        "CDYWg5otSYk"
+      ],
+      "guest_count": 0,
+      "topic_count": 6
+    },
+    {
+      "node_id": "media-all-in-podcast",
+      "node_name": "All-In Podcast",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "topic",
+      "video_count": 5,
+      "video_ids": [
+        "zuZ12bkNTdA",
+        "182ckTL2KBA",
+        "HjHP1SnG_mo",
+        "tKqJ5-kkUGk",
+        "MfVbysoSQNQ"
+      ],
+      "guest_count": 0,
+      "topic_count": 5
+    },
+    {
+      "node_id": "twitter",
+      "node_name": "Twitter",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "topic",
+      "video_count": 5,
+      "video_ids": [
+        "RNuCFgO8MXg",
+        "pNhwwykkWnw",
+        "uJBNYd-tO4Q",
+        "pbnKuVr4n-M",
+        "0kwtVbM5o-o"
+      ],
+      "guest_count": 0,
+      "topic_count": 5
+    },
+    {
+      "node_id": "hyundai",
+      "node_name": "Hyundai",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 4,
+      "video_ids": [
+        "53iQZ5krY6s",
+        "_FlRvVq9jnM",
+        "Fv3uC5gSze4",
+        "FB70XtM5bJE"
+      ],
+      "guest_count": 0,
+      "topic_count": 4
+    },
+    {
+      "node_id": "blackrock",
+      "node_name": "BlackRock",
+      "node_type": "FINANCIAL_INST",
+      "match_type": "topic",
+      "video_count": 4,
+      "video_ids": [
+        "nDS0e6CF9-k",
+        "-HUMbzdQ-oM",
+        "uKNK0TT5fW0",
+        "Mvh4o6x3-GQ"
+      ],
+      "guest_count": 0,
+      "topic_count": 4
+    },
+    {
+      "node_id": "heritage-foundation",
+      "node_name": "Heritage Foundation",
+      "node_type": "ORGANIZATION",
+      "match_type": "topic",
+      "video_count": 4,
+      "video_ids": [
+        "lBIxgHiwWX8",
+        "DbykB3DA5X0",
+        "DccqdCURaf8",
+        "v5rV5aVRYeg"
+      ],
+      "guest_count": 0,
+      "topic_count": 4
+    },
+    {
+      "node_id": "person-sarah-adams",
+      "node_name": "Sarah Adams",
+      "node_type": "PERSON",
+      "match_type": "guest",
+      "video_count": 2,
+      "video_ids": [
+        "GEj_MbMDciY",
+        "qSn-hC9H-EM"
+      ],
+      "guest_count": 2,
+      "topic_count": 0
+    },
+    {
+      "node_id": "facebook",
+      "node_name": "Facebook",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "topic",
+      "video_count": 2,
+      "video_ids": [
+        "7ZzxxLqWKOE",
+        "f3DAnORfgB8"
+      ],
+      "guest_count": 0,
+      "topic_count": 2
+    },
+    {
+      "node_id": "supreme-court",
+      "node_name": "Supreme Court",
+      "node_type": "ORGANIZATION",
+      "match_type": "topic",
+      "video_count": 2,
+      "video_ids": [
+        "nJrH6Z6-hAc",
+        "_Ba4-fAr-FE"
+      ],
+      "guest_count": 0,
+      "topic_count": 2
+    },
+    {
+      "node_id": "larry-fink",
+      "node_name": "Larry Fink",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "hXb1k59w3M8"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "rep-schweikert",
+      "node_name": "Schweikert",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "cYj51ZLGi-8"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "rep-kilpatrick",
+      "node_name": "Kilpatrick",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "M8KYZSTJGA4"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "media-palantir-luckey",
+      "node_name": "Palantir / Palmer Luckey Public Statements",
+      "node_type": "MEDIA_OUTLET",
+      "match_type": "guest",
+      "video_count": 1,
+      "video_ids": [
+        "bwSycrvcwAs"
+      ],
+      "guest_count": 1,
+      "topic_count": 0
+    },
+    {
+      "node_id": "micron",
+      "node_name": "Micron",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "S3geK7xVDQU"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "rep-kirkpatrick",
+      "node_name": "Kirkpatrick",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "NtilGOcNmgY"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "oracle",
+      "node_name": "Oracle",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "LCn6FwdsLLw"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "sen-rockefeller",
+      "node_name": "Rockefeller",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "K0SnX-iJU5s"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "clarence-thomas",
+      "node_name": "Clarence Thomas",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "4D5EWYviezQ"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "rep-strickland",
+      "node_name": "Strickland",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "1jGpYmf4FWs"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "commerce",
+      "node_name": "Commerce",
+      "node_type": "AGENCY",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "v2fqQ4rk4tc"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "sen-blumenthal",
+      "node_name": "Blumenthal",
+      "node_type": "PERSON",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "sG5I9Zc5p-4"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "arizona-fab",
+      "node_name": "Arizona Fab",
+      "node_type": "LOCATION",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "WHat_LYrpQE"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    },
+    {
+      "node_id": "microsoft",
+      "node_name": "Microsoft",
+      "node_type": "COMPANY",
+      "match_type": "topic",
+      "video_count": 1,
+      "video_ids": [
+        "Y2Xn4jnK5qQ"
+      ],
+      "guest_count": 0,
+      "topic_count": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Zeihan on Geopolitics",
+      "videos": 186,
+      "total_watches": 248,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "geopolitics",
+        "china",
+        "politics",
+        "military",
+        "energy"
+      ],
+      "guests": [
+        "The Self",
+        "Intel Keeps Playing Catch"
+      ]
+    },
+    {
+      "channel": "Spacialize",
+      "videos": 23,
+      "total_watches": 25,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence",
+        "politics"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "iHipHopDistribution",
+      "videos": 20,
+      "total_watches": 21,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Netflix Is A Joke",
+      "videos": 13,
+      "total_watches": 13,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "finance"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "FutureVEVO",
+      "videos": 11,
+      "total_watches": 14,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "The Weeknd"
+      ]
+    },
+    {
+      "channel": "Real Hip Hop Lives! (The Official Hip Hop Channel)",
+      "videos": 10,
+      "total_watches": 10,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Explain America",
+      "videos": 6,
+      "total_watches": 6,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "politics",
+        "intelligence",
+        "fed"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "WuTangClanVEVO",
+      "videos": 5,
+      "total_watches": 5,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "MiguelVEVO",
+      "videos": 5,
+      "total_watches": 13,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Travis Scott"
+      ]
+    },
+    {
+      "channel": "KhalidVEVO",
+      "videos": 5,
+      "total_watches": 22,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "6LACKVEVO",
+      "videos": 5,
+      "total_watches": 23,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "FRONTLINE PBS | Official",
+      "videos": 5,
+      "total_watches": 8,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence",
+        "china"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "8 News Now \u2014 Las Vegas",
+      "videos": 5,
+      "total_watches": 5,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "energy"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Naomi Sharon",
+      "videos": 4,
+      "total_watches": 7,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Naomi Sharon"
+      ]
+    },
+    {
+      "channel": "The Trump Report",
+      "videos": 4,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "politics",
+        "geopolitics"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Democracy Now!",
+      "videos": 4,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence",
+        "politics",
+        "geopolitics"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "dojacatVEVO",
+      "videos": 4,
+      "total_watches": 10,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Doja Cat",
+        "Gucci Mane"
+      ]
+    },
+    {
+      "channel": "The Infographics Show",
+      "videos": 4,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence",
+        "energy"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Red Hot Chili Peppers",
+      "videos": 4,
+      "total_watches": 5,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Red Hot Chili Peppers"
+      ]
+    },
+    {
+      "channel": "Mystical Kung Fu Video",
+      "videos": 4,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "military",
+        "china"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "McNallyOfficial",
+      "videos": 4,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence",
+        "military"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "SPY Network",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "CGTN Europe",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "military",
+        "china"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "WSJ News",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "geopolitics",
+        "military",
+        "politics",
+        "energy"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Business Basics",
+      "videos": 3,
+      "total_watches": 4,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "china",
+        "geopolitics"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Brent Faiyaz",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "BRENT FAIYAZ",
+        "Brent Faiyaz"
+      ]
+    },
+    {
+      "channel": "GloRillaVEVO",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Moneybagg Yo"
+      ]
+    },
+    {
+      "channel": "Pipe Jacking Association",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "Caskey",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": []
+    },
+    {
+      "channel": "TPainVEVO",
+      "videos": 3,
+      "total_watches": 3,
+      "fgip_relevance": 1.0,
+      "topics": [
+        "intelligence"
+      ],
+      "guests": [
+        "Yung Joc"
+      ]
+    }
+  ],
+  "topic_distribution": {
+    "politics": 538,
+    "military": 272,
+    "china": 140,
+    "intelligence": 816,
+    "geopolitics": 317,
+    "energy": 118,
+    "fed": 35,
+    "finance": 27,
+    "stablecoin": 4,
+    "tariffs": 28,
+    "bitcoin": 7,
+    "reshoring": 2
+  },
+  "extracted_guests_sample": [
+    {
+      "name": "Raul Bilecky",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Carrie Dunks",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "The Anti",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Ron Paul Predicted War",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Forget About Drinking",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Shane Gillis",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Alice In Chains",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Shane Gillis",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Shane Gillis",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Joe Biden",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Theo Von",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Big Jay Oakerson",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Soul For Real",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Tevin Campbell",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Morgan Wallen",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Red Clay Strays",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Red Clay Strays",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Michael Lester",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Fleetwood Mac",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Temple Of The Dog",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Jay Yu",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Tim Ferriss",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Dire Straits",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Mazzy Star",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Simply Red",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Crowded House",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "No Name",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Cars",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Cranberries",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Pink Floyd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Phil Collins",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "DO IT ANYWAY",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Left ATTACKS Christians",
+      "confidence": 0.85,
+      "matched_node": null
+    },
+    {
+      "name": "The Most Forbidden Place",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Aliia Roza",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Matt Bissonnette",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Elizabeth Phillips",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Steve Robinson",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Mark Kelly HUMILIATED Live",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Ross Coulthart",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Verve",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Black Pumas",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Mazzy Star",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Michael Kiwanuka",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Goo Goo Dolls",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Billy Idol",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Chris Isaak",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Chris Isaak",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Still Corners",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Sunrise High",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Ro Khanna",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Nick Shirley",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "The Smashing Pumpkins",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Shane Gillis",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Adam Bry",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Hunter Biden",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Hippie Sabotage",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Ancient History Expert",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Lee Strobel",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "UFO Gatekeepers",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Piers PRESSES Nick Fuentes",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Denzel Washington",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Cops Witness Drive",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Orlando Brown",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Bannon Dunks",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Tim Stiefler",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Alex Jones GOES OFF",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Piers GRILLS Nick Fuentes",
+      "confidence": 0.75,
+      "matched_node": null
+    },
+    {
+      "name": "Duncan Trussell",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Chase Hughes",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Jocko Willink",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Most Old",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Tom Segura",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Provocative Wardrobe",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Tucker Carlson",
+      "confidence": 0.9,
+      "matched_node": "media-tucker-carlson"
+    },
+    {
+      "name": "Tony Hinchcliffe",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Young Kid Roasts Tony",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Jason Calacanis",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Brian Harpole",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Ryan Montgomery",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Jon Delaney",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Ruslan KD",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Steve Robinson",
+      "confidence": 0.9,
+      "matched_node": null
+    },
+    {
+      "name": "Top Astronomer Beatriz Villarroel",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Counting Crows",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Outfield",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Pearl Jam",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Counting Crows",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Counting Crows",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Adam Ray",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Big Jay Oakerson",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Tom Segura",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Weeknd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Louis La Roche",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Weeknd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Foster The People",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Weeknd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Weeknd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "The Weeknd",
+      "confidence": 0.8,
+      "matched_node": null
+    },
+    {
+      "name": "Majid Jordan",
+      "confidence": 0.8,
+      "matched_node": null
+    }
+  ]
+}

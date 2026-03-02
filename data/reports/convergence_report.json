@@ -1,0 +1,290 @@
+{
+  "timestamp": "2026-02-24T15:30:30.549283",
+  "claims": [
+    {
+      "claim_id": "PA-001",
+      "claim": "136 factories breaking ground in single month",
+      "date": "2026-01-04",
+      "verification_type": "economic_data",
+      "status": "CONFIRMED",
+      "evidence": {
+        "direction": "up",
+        "change_pct": 4.81,
+        "start_value": 12890.0,
+        "end_value": 13510.0,
+        "start_date": "2024-01-01",
+        "end_date": "2026-01-01"
+      }
+    },
+    {
+      "claim_id": "PA-002",
+      "claim": "Trade deficits plunging",
+      "date": "2026-01-04",
+      "verification_type": "economic_data",
+      "status": "CONFIRMED",
+      "evidence": {
+        "direction": "up",
+        "change_pct": 29.44,
+        "start_value": -64.2,
+        "end_value": -45.3,
+        "start_date": "2024-01-01",
+        "end_date": "2026-01-01"
+      }
+    },
+    {
+      "claim_id": "PA-003",
+      "claim": "Federal deficit cut by $390B",
+      "date": "2026-01-04",
+      "verification_type": "fiscal_data",
+      "status": "UNVERIFIED",
+      "evidence": null
+    },
+    {
+      "claim_id": "PA-004",
+      "claim": "Kevin Warsh nominated as Fed Chair",
+      "date": "2026-01-31",
+      "verification_type": "potus_action",
+      "status": "CONFIRMED",
+      "evidence": {
+        "action_id": "POTUS-003",
+        "date": "2026-01-25",
+        "type": "nomination",
+        "description": "Kevin Warsh nominated for Federal Reserve Chair",
+        "details": "Former Fed Governor, known for hawkish monetary policy",
+        "source": "whitehouse.gov"
+      }
+    },
+    {
+      "claim_id": "PA-005",
+      "claim": "Bessent declared Hamilton's system foundation of sovereignty at Davos",
+      "date": "2026-01-21",
+      "verification_type": "potus_action",
+      "status": "UNVERIFIED",
+      "evidence": null
+    },
+    {
+      "claim_id": "PA-006",
+      "claim": "Trump fires Fed Governor Lisa Cook",
+      "date": "2025-08-27",
+      "verification_type": "potus_action",
+      "status": "CONFIRMED",
+      "evidence": {
+        "action_id": "POTUS-004",
+        "date": "2025-08-27",
+        "type": "personnel",
+        "description": "Fed Governor Lisa Cook removed",
+        "details": "First removal of Fed governor in modern history",
+        "source": "reuters.com"
+      }
+    },
+    {
+      "claim_id": "PA-007",
+      "claim": "Chamber of Commerce and Cato Institute filed amicus briefs defending free trade in Learning Resources v. Trump",
+      "date": "2026-02-21",
+      "verification_type": "scotus_data",
+      "status": "CONFIRMED",
+      "evidence": {
+        "case": "Learning Resources v. Trump",
+        "docket": "24-1287",
+        "amicus_filers_against": [
+          "US Chamber of Commerce",
+          "Cato Institute",
+          "National Foreign Trade Council",
+          "Business Roundtable"
+        ],
+        "source": "supremecourt.gov docket"
+      }
+    },
+    {
+      "claim_id": "PA-008",
+      "claim": "Tariffs continuing under other laws after SCOTUS ruling",
+      "date": "2026-02-21",
+      "verification_type": "potus_action",
+      "status": "CONFIRMED",
+      "evidence": {
+        "action_id": "POTUS-002",
+        "date": "2026-01-20",
+        "type": "executive_order",
+        "description": "America First Trade Policy",
+        "details": "Directed USTR to investigate trade practices and implement tariffs",
+        "source": "whitehouse.gov"
+      }
+    },
+    {
+      "claim_id": "PA-009",
+      "claim": "Trump withdrawing from 66 international organizations",
+      "date": "2026-01-10",
+      "verification_type": "potus_action",
+      "status": "UNVERIFIED",
+      "evidence": null
+    },
+    {
+      "claim_id": "PA-010",
+      "claim": "Rubio banned 5 British agents for interfering in US elections",
+      "date": "2025-12-24",
+      "verification_type": "state_dept_action",
+      "status": "UNVERIFIED",
+      "evidence": null
+    },
+    {
+      "claim_id": "GA-001",
+      "claim": "GENIUS Act signed - stablecoins must hold 1:1 Treasuries",
+      "date": "2025-07-18",
+      "verification_type": "legislation",
+      "status": "CONFIRMED",
+      "evidence": {
+        "legislation": "GENIUS Act",
+        "signed": "2025-07-18",
+        "senate_vote": "68-30",
+        "house_vote": "308-122",
+        "mechanism": "debt_domestication",
+        "source": "congress.gov"
+      }
+    },
+    {
+      "claim_id": "GA-002",
+      "claim": "Stablecoin holders receive 0% yield by law - issuers capture 4.5%",
+      "date": "2025-07-18",
+      "verification_type": "legislation",
+      "status": "CONFIRMED",
+      "evidence": {
+        "legislation": "GENIUS Act",
+        "signed": "2025-07-18",
+        "senate_vote": "68-30",
+        "house_vote": "308-122",
+        "mechanism": "debt_domestication",
+        "source": "congress.gov"
+      }
+    },
+    {
+      "claim_id": "GA-003",
+      "claim": "Stablecoin Treasury absorption domesticates debt, reduces foreign leverage",
+      "date": "2026-02-24",
+      "verification_type": "graph_data",
+      "status": "CONFIRMED",
+      "evidence": {
+        "current_value": 1.35,
+        "projected_2028": 23.53,
+        "stablecoin_treasury": "$115B",
+        "foreign_holdings": "$8.5T",
+        "source": "TIC + Stablecoin agents"
+      }
+    },
+    {
+      "claim_id": "GA-004",
+      "claim": "Foreign Treasury holdings create leverage - China $759B, Japan $1.06T",
+      "date": "2026-02-24",
+      "verification_type": "graph_data",
+      "status": "CONFIRMED",
+      "evidence": {
+        "china_holdings": "$759B",
+        "japan_holdings": "$1.06T",
+        "total_foreign": "$8500.0B",
+        "leverage_mechanism": "Treasury dump \u2192 yield spike \u2192 rate spike \u2192 market crash",
+        "source": "Treasury TIC data"
+      }
+    },
+    {
+      "claim_id": "GA-005",
+      "claim": "GENIUS Act enables tariff policy by removing bond market retaliation threat",
+      "date": "2026-02-24",
+      "verification_type": "causal_chain",
+      "status": "CONFIRMED",
+      "evidence": {
+        "chain": "genius-act \u2192 debt-domestication \u2192 foreign-leverage \u2192 tariff-enablement",
+        "edges_in_graph": 12,
+        "mechanism": "GENIUS Act domesticates debt \u2192 removes foreign leverage \u2192 enables tariffs",
+        "source": "FGIP graph edges"
+      }
+    }
+  ],
+  "potus_alignment": {
+    "total_actions": 9,
+    "aligned_with_predictions": 7,
+    "details": [
+      {
+        "action": "Kevin Warsh nominated for Federal Reserve Chair",
+        "date": "2026-01-25",
+        "aligned_prediction": "Trump will challenge Fed independence and make personnel changes"
+      },
+      {
+        "action": "Fed Governor Lisa Cook removed",
+        "date": "2025-08-27",
+        "aligned_prediction": "Trump will challenge Fed independence and make personnel changes"
+      },
+      {
+        "action": "Treasury Secretary Bessent Davos speech",
+        "date": "2026-01-21",
+        "aligned_prediction": "Administration will explicitly invoke Hamilton/American System"
+      },
+      {
+        "action": "25% tariffs on Canada and Mexico imports",
+        "date": "2026-02-04",
+        "aligned_prediction": "Trump will continue tariffs despite legal challenges"
+      },
+      {
+        "action": "10% additional tariffs on China imports",
+        "date": "2026-02-04",
+        "aligned_prediction": "Trump will continue tariffs despite legal challenges"
+      },
+      {
+        "action": "GENIUS Act signed into law",
+        "date": "2025-07-18",
+        "aligned_prediction": "Administration will explicitly invoke Hamilton/American System"
+      },
+      {
+        "action": "Treasury stablecoin final rule",
+        "date": "2025-09-15",
+        "aligned_prediction": "GENIUS Act domesticates Treasury debt to enable tariff policy"
+      }
+    ],
+    "alignment_rate": 77.8
+  },
+  "market_response": {
+    "sectors": [
+      {
+        "sector": "Reshoring Index",
+        "6mo_return": 18.4,
+        "1yr_return": 34.2,
+        "thesis_prediction": "outperform",
+        "thesis_confirmed": true
+      },
+      {
+        "sector": "Big Tech",
+        "6mo_return": -4.2,
+        "1yr_return": 8.1,
+        "thesis_prediction": "underperform",
+        "thesis_confirmed": true
+      },
+      {
+        "sector": "Financials",
+        "6mo_return": 2.1,
+        "1yr_return": 11.3,
+        "thesis_prediction": "mixed",
+        "thesis_confirmed": false
+      }
+    ],
+    "thesis_alignment": 2,
+    "total_sectors": 3,
+    "alignment_rate": 66.7
+  },
+  "overall": {
+    "promethean_claims": {
+      "total": 15,
+      "confirmed": 11,
+      "partial": 0,
+      "rate": 73.3
+    },
+    "potus_alignment": {
+      "total": 9,
+      "aligned": 7,
+      "rate": 77.8
+    },
+    "market_response": {
+      "sectors": 3,
+      "aligned": 2,
+      "rate": 66.7
+    }
+  },
+  "convergence_score": 72.7
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fgip": {
+      "command": "/home/voidstr3m33/fgip-engine/mcp_wrapper.sh",
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,752 @@
+{
+  "timestamp": "2026-02-24T16:45:12.492905Z",
+  "seed": 42,
+  "impl_sha256": "03b1aa30d55c599c666cfc8f96c4730b9a277841fd2740a2e569f8693e4bd21e",
+  "total_nodes": 1152,
+  "total_edges": 1344,
+  "evidence_level": "DEMONSTRATED",
+  "motif_matches": [
+    {
+      "pattern_id": "4b39b681ac8fd09f737ed545a1a85e8a2cf738b2",
+      "pattern_name": "Both Sides Ownership",
+      "nodes_involved": [
+        "vanguard",
+        "jpmorgan",
+        "ny-fed"
+      ],
+      "edges_involved": [
+        "owns_shares_vanguard_jpmorgan",
+        "owns_shares_jpmorgan_ny-fed"
+      ],
+      "supporting_evidence": {
+        "0": 1
+      },
+      "confidence": 0.5738345864661655,
+      "description_length": 118,
+      "baseline_length": 133,
+      "compression_ratio": 0.8872180451127819
+    },
+    {
+      "pattern_id": "81d19781dde077597a140aa8ff9f54b2c343adf1",
+      "pattern_name": "Both Sides Ownership",
+      "nodes_involved": [
+        "blackrock",
+        "jpmorgan",
+        "ny-fed"
+      ],
+      "edges_involved": [
+        "edge_owns_shares_blackrock_jpmorgan",
+        "owns_shares_jpmorgan_ny-fed"
+      ],
+      "supporting_evidence": {
+        "0": 1
+      },
+      "confidence": 0.5693233082706768,
+      "description_length": 120,
+      "baseline_length": 133,
+      "compression_ratio": 0.9022556390977443
+    },
+    {
+      "pattern_id": "a2c8bb6565adad614c54f71709cddb9988ec9959",
+      "pattern_name": "Both Sides Ownership",
+      "nodes_involved": [
+        "state-street",
+        "jpmorgan",
+        "ny-fed"
+      ],
+      "edges_involved": [
+        "edge_owns_shares_state-street_jpmorgan",
+        "owns_shares_jpmorgan_ny-fed"
+      ],
+      "supporting_evidence": {
+        "0": 1
+      },
+      "confidence": 0.5557894736842106,
+      "description_length": 126,
+      "baseline_length": 133,
+      "compression_ratio": 0.9473684210526315
+    },
+    {
+      "pattern_id": "de0581f1d95aee182de41124f1618491b57b9129",
+      "pattern_name": "Both Sides Ownership",
+      "nodes_involved": [
+        "vanguard",
+        "blackrock",
+        "jpmorgan"
+      ],
+      "edges_involved": [
+        "owns_shares_vanguard_blackrock",
+        "edge_owns_shares_blackrock_jpmorgan"
+      ],
+      "supporting_evidence": {
+        "1": 1
+      },
+      "confidence": 0.5480451127819549,
+      "description_length": 125,
+      "baseline_length": 133,
+      "compression_ratio": 0.9398496240601504
+    },
+    {
+      "pattern_id": "f1845eee1446411ec526849462012f5d80f79540",
+      "pattern_name": "Revolving Door",
+      "nodes_involved": [
+        "ginni-thomas",
+        "us-chamber-of-commerce",
+        "pntr-2000"
+      ],
+      "edges_involved": [
+        "e-ginni-thomas-us-chamber-of-c-employed",
+        "lobbied_for_us-chamber-of-commerce_pntr-2000"
+      ],
+      "supporting_evidence": {
+        "1": 1
+      },
+      "confidence": 0.53,
+      "description_length": 171,
+      "baseline_length": 133,
+      "compression_ratio": 1.2857142857142858
+    },
+    {
+      "pattern_id": "0bdffe4d0fb3654ba97ad3a3cc1c5767ef58705a",
+      "pattern_name": "Revolving Door",
+      "nodes_involved": [
+        "trent-lott",
+        "squire-patton-boggs",
+        "hikvision"
+      ],
+      "edges_involved": [
+        "e-trent-lott-squire-patton-b-employed",
+        "e-squire-patton-b-hikvision-lobbied_fo"
+      ],
+      "supporting_evidence": {},
+      "confidence": 0.5,
+      "description_length": 158,
+      "baseline_length": 133,
+      "compression_ratio": 1.1879699248120301
+    },
+    {
+      "pattern_id": "4f61e8c60fe23cf8fa5e10750965a85a1b812049",
+      "pattern_name": "Revolving Door",
+      "nodes_involved": [
+        "john-breaux",
+        "squire-patton-boggs",
+        "hikvision"
+      ],
+      "edges_involved": [
+        "e-john-breaux-squire-patton-b-employed",
+        "e-squire-patton-b-hikvision-lobbied_fo"
+      ],
+      "supporting_evidence": {},
+      "confidence": 0.5,
+      "description_length": 160,
+      "baseline_length": 133,
+      "compression_ratio": 1.2030075187969924
+    }
+  ],
+  "similar_entities": [
+    {
+      "node_a": "hsbc",
+      "node_b": "deutsche-bank",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "hsbc",
+      "node_b": "bank-of-ny-mellon",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "deutsche-bank",
+      "node_b": "bank-of-ny-mellon",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "bill-archer",
+      "node_b": "dick-gephardt",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "EMPLOYED"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "genius-act",
+      "node_b": "banking-regulation",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "RULEMAKING_FOR",
+        "IMPLEMENTED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "genius-act",
+      "node_b": "securities-regulation",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "RULEMAKING_FOR",
+        "IMPLEMENTED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "caterpillar",
+      "node_b": "nucor",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "BENEFITS_FROM"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "eaton",
+      "node_b": "cleveland-cliffs",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "BENEFITS_FROM"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "eaton",
+      "node_b": "us-steel",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "BENEFITS_FROM"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "constellation-energy",
+      "node_b": "freeport-mcmoran",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "OWNS_MEDIA",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "constellation-energy",
+      "node_b": "oracle",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "OWNS_MEDIA",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "freeport-mcmoran",
+      "node_b": "oracle",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "OWNS_MEDIA",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "whirlpool",
+      "node_b": "mp-materials",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "OWNS_MEDIA"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "cleveland-cliffs",
+      "node_b": "us-steel",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "BENEFITS_FROM"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "gannett",
+      "node_b": "sinclair",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "OWNS_SHARES",
+        "OWNS_MEDIA",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "bgr-government-affairs",
+      "node_b": "mercury-public-affairs",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "REGISTERED_AS_AGENT",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "cusef",
+      "node_b": "prc",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "REGISTERED_AS_AGENT",
+        "LOBBIED_FOR"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "arizona",
+      "node_b": "texas",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "FUNDED_PROJECT",
+        "BUILT_IN",
+        "AWARDED_GRANT"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "fdic",
+      "node_b": "treasury",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "CORRECTS",
+        "RULEMAKING_FOR",
+        "IMPLEMENTED_BY",
+        "ENABLES"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "samsung",
+      "node_b": "tsmc",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "BENEFITS_FROM",
+        "RULEMAKING_FOR",
+        "FUNDED_PROJECT",
+        "REDUCES",
+        "AUTHORIZED_BY",
+        "AWARDED_GRANT",
+        "BUILT_IN",
+        "VOTED_AGAINST",
+        "VOTED_FOR",
+        "ANALYZES",
+        "IMPLEMENTED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "banking-regulation",
+      "node_b": "securities-regulation",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "RULEMAKING_FOR",
+        "IMPLEMENTED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "america-s-supply-chains",
+      "node_b": "domestic-manufacturing-tax-credits",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "AUTHORIZED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "america-s-supply-chains",
+      "node_b": "national-ev-charging-network",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "AUTHORIZED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "hyundai",
+      "node_b": "eli-lilly",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "FUNDED_PROJECT",
+        "BUILT_IN"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "arizona-fab",
+      "node_b": "taylor-texas-fab",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "FUNDED_PROJECT",
+        "BUILT_IN",
+        "AWARDED_GRANT"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "georgia",
+      "node_b": "indiana",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "FUNDED_PROJECT",
+        "BUILT_IN"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "tsmc-arizona",
+      "node_b": "samsung-texas",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "BENEFITS_FROM",
+        "RULEMAKING_FOR",
+        "REDUCES",
+        "AUTHORIZED_BY",
+        "AWARDED_GRANT",
+        "VOTED_AGAINST",
+        "VOTED_FOR",
+        "ANALYZES",
+        "IMPLEMENTED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "domestic-manufacturing-tax-credits",
+      "node_b": "national-ev-charging-network",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "AUTHORIZED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "iija",
+      "node_b": "ira",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "AUTHORIZED_BY"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    },
+    {
+      "node_a": "georgia-ev-plant",
+      "node_b": "indiana-manufacturing",
+      "similarity": 1.0,
+      "shared_edge_types": [
+        "FUNDED_PROJECT",
+        "BUILT_IN"
+      ],
+      "assertion_level": "HYPOTHESIS"
+    }
+  ],
+  "anomalies": [
+    {
+      "node_id": "federal-reserve",
+      "node_name": "Federal Reserve",
+      "node_type": "FINANCIAL_INST",
+      "anomaly_score": 1.0,
+      "cohort_size": 17,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "NOMINATED_TO_LEAD",
+        "HOSTS"
+      ]
+    },
+    {
+      "node_id": "bis",
+      "node_name": "BIS",
+      "node_type": "FINANCIAL_INST",
+      "anomaly_score": 1.0,
+      "cohort_size": 17,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": []
+    },
+    {
+      "node_id": "sec",
+      "node_name": "SEC",
+      "node_type": "ORGANIZATION",
+      "anomaly_score": 1.0,
+      "cohort_size": 26,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "RULEMAKING_FOR",
+        "IMPLEMENTED_BY"
+      ]
+    },
+    {
+      "node_id": "banking-regulation",
+      "node_name": "Banking Regulation",
+      "node_type": "POLICY",
+      "anomaly_score": 1.0,
+      "cohort_size": 11,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "RULEMAKING_FOR"
+      ]
+    },
+    {
+      "node_id": "indiana-manufacturing",
+      "node_name": "Indiana Manufacturing",
+      "node_type": "PROGRAM",
+      "anomaly_score": 1.0,
+      "cohort_size": 5,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": []
+    },
+    {
+      "node_id": "national-ev-charging-network",
+      "node_name": "National EV Charging Network",
+      "node_type": "ORGANIZATION",
+      "anomaly_score": 1.0,
+      "cohort_size": 26,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "AUTHORIZED_BY"
+      ]
+    },
+    {
+      "node_id": "lobbied-for-pntr-while-in-office",
+      "node_name": "Lobbied For Pntr While In Office",
+      "node_type": "POLICY",
+      "anomaly_score": 1.0,
+      "cohort_size": 11,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "bond-market",
+      "node_name": "US Bond Market",
+      "node_type": "ECONOMIC_EVENT",
+      "anomaly_score": 1.0,
+      "cohort_size": 22,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "HAS_LEVERAGE_OVER",
+        "HOLDS_TREASURY"
+      ]
+    },
+    {
+      "node_id": "us-treasury",
+      "node_name": "US Treasury",
+      "node_type": "AGENCY",
+      "anomaly_score": 1.0,
+      "cohort_size": 6,
+      "cohort_similarity_mean": 0.0,
+      "cohort_similarity_std": 0.0,
+      "unusual_edges": [
+        "LEADS",
+        "HOLDS_TREASURY",
+        "HAS_LEVERAGE_OVER"
+      ]
+    },
+    {
+      "node_id": "gephardt-group-lobbying",
+      "node_name": "Gephardt Group (lobbying)",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9998669328010645,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0001330671989354624,
+      "cohort_similarity_std": 0.004212160157377089,
+      "unusual_edges": [
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "scotus-conservative-block",
+      "node_name": "scotus-conservative-block",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9987133194996154,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0012866805003845902,
+      "cohort_similarity_std": 0.011642454322502062,
+      "unusual_edges": [
+        "CONTRIBUTED_TO",
+        "DONATED_TO"
+      ]
+    },
+    {
+      "node_id": "club-for-growth",
+      "node_name": "Club for Growth",
+      "node_type": "ORGANIZATION",
+      "anomaly_score": 0.9982978723404256,
+      "cohort_size": 26,
+      "cohort_similarity_mean": 0.001702127659574468,
+      "cohort_similarity_std": 0.00851063829787234,
+      "unusual_edges": []
+    },
+    {
+      "node_id": "robert-matsui",
+      "node_name": "Robert Matsui",
+      "node_type": "PERSON",
+      "anomaly_score": 0.998074665408441,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.001925334591558945,
+      "cohort_similarity_std": 0.02957793660789149,
+      "unusual_edges": [
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "clarence-thomas",
+      "node_name": "Clarence Thomas",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9976991001909279,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.002300899809072149,
+      "cohort_similarity_std": 0.013825992755864469,
+      "unusual_edges": [
+        "MARRIED_TO",
+        "DONATED_TO",
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "harlan-crow",
+      "node_name": "Harlan Crow",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9975142262282938,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0024857737717062373,
+      "cohort_similarity_std": 0.023595620953678523,
+      "unusual_edges": [
+        "DONATED_TO",
+        "CONTRIBUTED_TO",
+        "MARRIED_TO"
+      ]
+    },
+    {
+      "node_id": "charles-koch",
+      "node_name": "Charles Koch",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9973919505413886,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0026080494586113306,
+      "cohort_similarity_std": 0.02426497043435988,
+      "unusual_edges": [
+        "DONATED_TO"
+      ]
+    },
+    {
+      "node_id": "bill-archer",
+      "node_name": "Bill Archer",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9971352255962384,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0028647744037616466,
+      "cohort_similarity_std": 0.042487164318258705,
+      "unusual_edges": [
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "dick-gephardt",
+      "node_name": "Dick Gephardt",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9971352255962384,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.0028647744037616466,
+      "cohort_similarity_std": 0.042487164318258705,
+      "unusual_edges": [
+        "EMPLOYED"
+      ]
+    },
+    {
+      "node_id": "trent-lott",
+      "node_name": "Trent Lott",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9960306270131718,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.003969372986828204,
+      "cohort_similarity_std": 0.04051207739956413,
+      "unusual_edges": [
+        "EMPLOYED",
+        "REGISTERED_AS_AGENT"
+      ]
+    },
+    {
+      "node_id": "john-breaux",
+      "node_name": "John Breaux",
+      "node_type": "PERSON",
+      "anomaly_score": 0.9960306270131718,
+      "cohort_size": 1003,
+      "cohort_similarity_mean": 0.003969372986828204,
+      "cohort_similarity_std": 0.04051207739956413,
+      "unusual_edges": [
+        "EMPLOYED",
+        "REGISTERED_AS_AGENT"
+      ]
+    }
+  ],
+  "random_baseline_stats": {
+    "path_2": {
+      "mean": 133.19569892473118,
+      "std": 11.725597495790833,
+      "p25": 129.0,
+      "p50": 133,
+      "p75": 139.0
+    },
+    "path_3": {
+      "mean": 148.54741379310346,
+      "std": 25.808354872057528,
+      "p25": 131.0,
+      "p50": 139.0,
+      "p75": 173.0
+    },
+    "path_4": {
+      "mean": 165.4494623655914,
+      "std": 48.79100977033169,
+      "p25": 131.0,
+      "p50": 141,
+      "p75": 225.0
+    },
+    "path_5": {
+      "mean": 169.82937365010798,
+      "std": 61.57330338250236,
+      "p25": 131.0,
+      "p50": 139,
+      "p75": 222.0
+    }
+  },
+  "receipt": {
+    "receipt_id": "a7a066bd-9cf2-44cc-ad1a-283db9343ccc",
+    "operation": "compression_analysis",
+    "timestamp": "2026-02-24T16:45:12.492905Z",
+    "seed": 42,
+    "impl_sha256": "03b1aa30d55c599c666cfc8f96c4730b9a277841fd2740a2e569f8693e4bd21e",
+    "input_hash": "337d36526bc079949ce291d7282e25959814e9d2198e21716e275fd37fbe1e27",
+    "output_hash": "5ebf697a298717feb74fcc8a485fb85d7f86776a45f226635e59c9e59eed6ec3",
+    "evidence_level": "DEMONSTRATED"
+  }
+}

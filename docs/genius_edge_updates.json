@@ -1,0 +1,75 @@
+[
+  {
+    "action": "UPDATE",
+    "edge_id": "genius-to-treasury-demand",
+    "field": "status",
+    "old_value": "HEURISTIC",
+    "new_value": "WEAKENED",
+    "evidence_citation": "12 USC 5903(a)(1)(A)",
+    "reason": "Enacted text permits Fed account reserves (clause i) and regulator-approved assets (clause vii)"
+  },
+  {
+    "action": "UPDATE",
+    "edge_id": "genius-forced-treasury-demand",
+    "field": "confidence",
+    "old_value": 0.55,
+    "new_value": 0.35,
+    "evidence_citation": "12 USC 5903(a)(1)(A)(i)",
+    "reason": "Fed account option provides yield-competitive alternative to Treasuries"
+  },
+  {
+    "action": "CREATE",
+    "edge_id": "genius-enables-fed-reserves",
+    "from_node": "genius-act-enacted",
+    "to_node": "fed-account-reserves",
+    "edge_type": "ENABLES",
+    "confidence": 0.95,
+    "tier": 0,
+    "evidence_citation": "12 USC 5903(a)(1)(A)(i)",
+    "evidence_text": "money standing to the credit of an account with a Federal Reserve Bank"
+  },
+  {
+    "action": "CREATE",
+    "edge_id": "genius-enables-regulator-approved",
+    "from_node": "genius-act-enacted",
+    "to_node": "regulator-approved-reserves",
+    "edge_type": "ENABLES",
+    "confidence": 0.9,
+    "tier": 0,
+    "evidence_citation": "12 USC 5903(a)(1)(A)(vii)",
+    "evidence_text": "any other similarly liquid Federal Government-issued asset approved by the primary Federal payment stablecoin regulator"
+  },
+  {
+    "action": "CREATE",
+    "edge_id": "fed-reserve-parking-mechanism",
+    "from_node": "genius-act-enacted",
+    "to_node": "fed-reserve-parking",
+    "edge_type": "ENABLES",
+    "confidence": 0.95,
+    "tier": 0,
+    "evidence_citation": "12 USC 5903(a)(1)(A)(i)",
+    "evidence_text": "Stablecoin issuers may park reserves at Federal Reserve accounts instead of purchasing Treasuries"
+  },
+  {
+    "action": "CREATE",
+    "edge_id": "fed-parking-blocks-treasury-absorption",
+    "from_node": "fed-reserve-parking",
+    "to_node": "treasury-absorption",
+    "edge_type": "BLOCKS",
+    "confidence": 0.85,
+    "tier": 0,
+    "evidence_citation": "12 USC 5903(a)(1)(A)",
+    "evidence_text": "Fed account reserves provide yield-competitive alternative to Treasury purchases, reducing forced Treasury demand"
+  },
+  {
+    "action": "CREATE",
+    "edge_id": "treasury-absorption-yield-dependent",
+    "from_node": "treasury-absorption",
+    "to_node": "iorb-vs-tbill-spread",
+    "edge_type": "CORRELATES",
+    "confidence": 0.8,
+    "tier": 1,
+    "evidence_citation": "Fed IORB rate vs T-Bill rate spread",
+    "evidence_text": "Treasury absorption by stablecoins depends on IORB vs T-Bill yield spread - when IORB > T-Bill, Fed accounts preferred"
+  }
+]

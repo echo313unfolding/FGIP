@@ -1,0 +1,14 @@
+[Unit]
+Description=FGIP Conviction Engine - Thesis Evaluation
+After=network.target
+
+[Service]
+Type=oneshot
+User=voidstr3m33
+WorkingDirectory=/home/voidstr3m33/fgip-engine
+ExecStart=/usr/bin/python3 tools/schedule_runner.py --tier 4 --db fgip.db
+StandardOutput=append:/home/voidstr3m33/fgip-engine/receipts/schedule/conviction.log
+StandardError=append:/home/voidstr3m33/fgip-engine/receipts/schedule/conviction.log
+
+[Install]
+WantedBy=multi-user.target

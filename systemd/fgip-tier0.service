@@ -1,0 +1,12 @@
+[Unit]
+Description=FGIP Tier 0 Agents (EDGAR, USASpending, GAO, etc.)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/voidstr3m33/fgip-engine
+Environment="PYTHONPATH=/home/voidstr3m33/fgip-engine"
+ExecStart=/usr/bin/python3 tools/schedule_runner.py --tier 0 --db fgip.db
+StandardOutput=append:/home/voidstr3m33/fgip-engine/receipts/schedule/tier0.log
+StandardError=append:/home/voidstr3m33/fgip-engine/receipts/schedule/tier0.log

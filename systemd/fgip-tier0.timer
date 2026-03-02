@@ -1,0 +1,10 @@
+[Unit]
+Description=Run FGIP Tier 0 agents daily at 2:00 AM
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Persistent=true
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target

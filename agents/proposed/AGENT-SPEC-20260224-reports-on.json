@@ -1,0 +1,23 @@
+{
+  "spec_id": "AGENT-SPEC-20260224-reports-on",
+  "name": "unknown-reports-on-agent",
+  "description": "Agent to produce REPORTS_ON edges for unknown gap",
+  "gap_type": "unknown",
+  "target_edge_types": [
+    "REPORTS_ON"
+  ],
+  "data_sources": [
+    "TBD - research needed"
+  ],
+  "expected_artifacts": [
+    "unknown_data_*.json",
+    "unknown_raw_*.html"
+  ],
+  "expected_output": {
+    "REPORTS_ON": 50
+  },
+  "priority": 1,
+  "complexity": "moderate",
+  "dependencies": [],
+  "created_at": "2026-02-24T21:22:18.142477+00:00"
+}

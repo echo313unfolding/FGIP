@@ -1,0 +1,10 @@
+[Unit]
+Description=Run FGIP Tier 2 agents every 6 hours (offset from Tier 1)
+
+[Timer]
+OnCalendar=*-*-* 03,09,15,21:00:00
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target

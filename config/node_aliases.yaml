@@ -1,0 +1,288 @@
+# FGIP Node Alias Map
+# Version: 1.0.0
+# Updated: 2026-02-23
+#
+# Maps common aliases/variations to canonical node_id values.
+# Used by citation_loader and future agents for entity normalization.
+#
+# Format: alias (lowercase) → canonical node_id
+
+# Organizations
+chamber: us-chamber-of-commerce
+chamber of commerce: us-chamber-of-commerce
+us chamber: us-chamber-of-commerce
+us chamber of commerce: us-chamber-of-commerce
+the chamber: us-chamber-of-commerce
+
+cato: cato-institute
+cato institute: cato-institute
+the cato institute: cato-institute
+
+heritage: heritage-foundation
+heritage foundation: heritage-foundation
+the heritage foundation: heritage-foundation
+
+federalist society: federalist-society
+the federalist society: federalist-society
+fed soc: federalist-society
+
+business roundtable: business-roundtable
+the business roundtable: business-roundtable
+brt: business-roundtable
+
+house ccp committee: house-ccp-committee
+select committee on ccp: house-ccp-committee
+house select committee on china: house-ccp-committee
+
+# Financial Institutions
+jpmorgan chase: jpmorgan
+jp morgan: jpmorgan
+jp morgan chase: jpmorgan
+chase: jpmorgan
+jpm: jpmorgan
+
+goldman: goldman-sachs
+goldman sachs: goldman-sachs
+gs: goldman-sachs
+
+citi: citibank
+citigroup: citibank
+citibank: citibank
+
+bank of america: bank-of-america
+boa: bank-of-america
+bofa: bank-of-america
+
+bank of new york mellon: bank-of-ny-mellon
+bny mellon: bank-of-ny-mellon
+bnym: bank-of-ny-mellon
+
+deutsche bank: deutsche-bank
+db: deutsche-bank
+
+new york fed: ny-fed
+federal reserve bank of new york: ny-fed
+frbny: ny-fed
+new york federal reserve: ny-fed
+
+the fed: federal-reserve
+federal reserve: federal-reserve
+fed: federal-reserve
+frb: federal-reserve
+
+bank for international settlements: bis
+bank of international settlements: bis
+
+# Asset Managers
+blackrock: blackrock
+black rock: blackrock
+blk: blackrock
+
+vanguard: vanguard
+vanguard group: vanguard
+
+state street: state-street
+state street corporation: state-street
+stt: state-street
+
+# Legislation
+pntr: pntr-2000
+permanent normal trade relations: pntr-2000
+hr 4444: pntr-2000
+h.r. 4444: pntr-2000
+
+chips act: chips-act
+chips and science act: chips-act
+
+genius act: genius-act
+
+# Court Cases
+learning resources v trump: learning-resources-v-trump
+learning resources v. trump: learning-resources-v-trump
+learning resources: learning-resources-v-trump
+
+vos selections v trump: vos-selections-v-trump
+v.o.s. selections v. trump: vos-selections-v-trump
+vos selections: vos-selections-v-trump
+
+citizens united: citizens-united
+citizens united v fec: citizens-united
+
+# People
+clarence thomas: clarence-thomas
+justice thomas: clarence-thomas
+thomas: clarence-thomas
+
+ginni thomas: ginni-thomas
+virginia thomas: ginni-thomas
+virginia lamp: ginni-thomas
+virginia lamp thomas: ginni-thomas
+
+harlan crow: harlan-crow
+crow: harlan-crow
+
+bill archer: bill-archer
+rep archer: bill-archer
+congressman archer: bill-archer
+
+john danforth: john-danforth
+senator danforth: john-danforth
+jack danforth: john-danforth
+
+marco rubio: marco-rubio
+secretary rubio: marco-rubio
+senator rubio: marco-rubio
+
+larry fink: larry-fink
+laurence fink: larry-fink
+
+frances haugen: frances-haugen
+
+# Government Agencies
+securities and exchange commission: sec
+sec: sec
+
+government accountability office: gao
+gao: gao
+
+department of homeland security: dhs
+dhs: dhs
+
+cisa: cisa
+cybersecurity and infrastructure security agency: cisa
+
+supreme court: supreme-court
+scotus: supreme-court
+the supreme court: supreme-court
+us supreme court: supreme-court
+
+# Media
+facebook: facebook
+meta: facebook
+
+twitter: twitter
+x: twitter
+
+bloomberg: bloomberg
+bloomberg lp: bloomberg
+bloomberg terminal: bloomberg
+
+# Companies (Correction Portfolio)
+intel: intel
+intel corporation: intel
+intc: intel
+
+caterpillar: caterpillar
+cat: caterpillar
+
+nucor: nucor
+nue: nucor
+
+oracle: oracle
+orcl: oracle
+
+ge aerospace: ge-aerospace
+ge: ge-aerospace
+general electric aerospace: ge-aerospace
+
+whirlpool: whirlpool
+whr: whirlpool
+
+freeport mcmoran: freeport-mcmoran
+freeport-mcmoran: freeport-mcmoran
+fcx: freeport-mcmoran
+
+constellation energy: constellation-energy
+ceg: constellation-energy
+
+eaton: eaton
+etn: eaton
+
+cleveland cliffs: cleveland-cliffs
+clf: cleveland-cliffs
+
+us steel: us-steel
+united states steel: us-steel
+x: us-steel
+
+mp materials: mp-materials
+mp: mp-materials
+
+anduril: anduril
+anduril industries: anduril
+
+# Economic Events
+china shock: china-shock
+the china shock: china-shock
+
+great rotation: great-rotation-2026
+great rotation 2026: great-rotation-2026
+
+reshoring: reshoring-2025
+reshoring 2025: reshoring-2025
+
+# Foreign Principals (FARA tracking)
+people's republic of china: prc
+prc: prc
+chinese government: prc
+china government: prc
+
+hong kong: hong-kong
+hk: hong-kong
+
+russian federation: russia
+russian government: russia
+
+saudi arabia: saudi-arabia
+kingdom of saudi arabia: saudi-arabia
+ksa: saudi-arabia
+
+united arab emirates: uae
+uae: uae
+
+qatar: qatar
+
+# Lobbying Firms (FARA registrants)
+bgr government affairs: bgr-government-affairs
+bgr: bgr-government-affairs
+
+squire patton boggs: squire-patton-boggs
+spb: squire-patton-boggs
+
+mercury public affairs: mercury-public-affairs
+mercury: mercury-public-affairs
+
+podesta group: podesta-group
+
+# Chinese-linked entities
+hikvision: hikvision
+hikvision usa: hikvision
+hangzhou hikvision: hikvision
+
+china-united states exchange foundation: cusef
+cusef: cusef
+
+# Revolving door names
+charles boustany: charles-boustany
+boustany: charles-boustany
+rep boustany: charles-boustany
+
+david vitter: david-vitter
+vitter: david-vitter
+senator vitter: david-vitter
+
+dick gephardt: dick-gephardt
+gephardt: dick-gephardt
+rep gephardt: dick-gephardt
+
+tom daschle: tom-daschle
+daschle: tom-daschle
+senator daschle: tom-daschle
+
+trent lott: trent-lott
+lott: trent-lott
+senator lott: trent-lott
+
+john breaux: john-breaux
+breaux: john-breaux
+senator breaux: john-breaux

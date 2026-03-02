@@ -1,0 +1,12 @@
+[Unit]
+Description=FGIP Tier 3 Agents (Meta-analysis: GapDetector, SupplyChainExtractor)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/voidstr3m33/fgip-engine
+Environment="PYTHONPATH=/home/voidstr3m33/fgip-engine"
+ExecStart=/usr/bin/python3 tools/schedule_runner.py --tier 3 --db fgip.db
+StandardOutput=append:/home/voidstr3m33/fgip-engine/receipts/schedule/tier3.log
+StandardError=append:/home/voidstr3m33/fgip-engine/receipts/schedule/tier3.log

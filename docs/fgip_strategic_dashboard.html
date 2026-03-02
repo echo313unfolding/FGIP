@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FGIP Strategic Intelligence — GENIUS Act Analysis</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #0a0b0d;
+    --bg-secondary: #111318;
+    --bg-tertiary: #181b22;
+    --bg-card: #13151a;
+    --border: #1e2128;
+    --border-accent: #2a2e38;
+    --text-primary: #e8e9ec;
+    --text-secondary: #8b8f9a;
+    --text-muted: #555963;
+    --says-color: #4a9eff;
+    --says-bg: rgba(74, 158, 255, 0.08);
+    --says-border: rgba(74, 158, 255, 0.2);
+    --does-color: #ff6b4a;
+    --does-bg: rgba(255, 107, 74, 0.08);
+    --does-border: rgba(255, 107, 74, 0.2);
+    --diverge-color: #ffd444;
+    --diverge-bg: rgba(255, 212, 68, 0.08);
+    --fingerprint-color: #a855f7;
+    --fingerprint-bg: rgba(168, 85, 247, 0.08);
+    --nlp-color: #22d3ee;
+    --critical: #ef4444;
+    --high: #f97316;
+    --medium: #eab308;
+    --low: #22c55e;
+    --accent-green: #10b981;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.015;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+
+  /* Header */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--fingerprint-color);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+  }
+
+  .badge.live {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--critical);
+    border-color: rgba(239, 68, 68, 0.3);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .header-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+  .header-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); }
+
+  /* Disclaimer bar */
+  .disclaimer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  /* Two-Track Section */
+  .dual-track {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 900px) {
+    .dual-track { grid-template-columns: 1fr; }
+  }
+
+  .track {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .track-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .track-header h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .track.says .track-header { border-top: 2px solid var(--says-color); }
+  .track.says .track-header h2 { color: var(--says-color); }
+  .track.does .track-header { border-top: 2px solid var(--does-color); }
+  .track.does .track-header h2 { color: var(--does-color); }
+
+  .track-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .track-body { padding: 8px; }
+
+  .track-item {
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .track.says .track-item:hover { background: var(--says-bg); }
+  .track.does .track-item:hover { background: var(--does-bg); }
+
+  .track-item-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .track-item-actor {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  .track-item-text {
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .track-item-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  .track-item-source a {
+    color: var(--says-color);
+    text-decoration: none;
+  }
+  .track-item-source a:hover { text-decoration: underline; }
+
+  .does .track-item-source a { color: var(--does-color); }
+
+  .nlp-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .nlp-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: rgba(34, 211, 238, 0.1);
+    color: var(--nlp-color);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    letter-spacing: 0.3px;
+  }
+
+  .impact-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: var(--does-bg);
+    color: var(--does-color);
+    border: 1px solid var(--does-border);
+    margin-top: 8px;
+    display: inline-block;
+    line-height: 1.4;
+  }
+
+  .beneficiary-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: rgba(255, 212, 68, 0.08);
+    color: var(--diverge-color);
+    border: 1px solid rgba(255, 212, 68, 0.15);
+    margin-top: 4px;
+    display: inline-block;
+    line-height: 1.4;
+  }
+
+  /* Divergence Section */
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title .icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .divergence-grid { margin-bottom: 40px; }
+
+  .divergence-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--diverge-color);
+  }
+
+  .divergence-card.critical { border-left-color: var(--critical); }
+  .divergence-card.high { border-left-color: var(--high); }
+  .divergence-card.medium { border-left-color: var(--medium); }
+  .divergence-card.low { border-left-color: var(--low); }
+
+  .divergence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .divergence-topic {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .severity-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .severity-badge.critical { background: rgba(239, 68, 68, 0.15); color: var(--critical); }
+  .severity-badge.high { background: rgba(249, 115, 22, 0.15); color: var(--high); }
+  .severity-badge.medium { background: rgba(234, 179, 8, 0.15); color: var(--medium); }
+  .severity-badge.low { background: rgba(34, 197, 94, 0.15); color: var(--low); }
+
+  .divergence-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .divergence-compare { grid-template-columns: 1fr; }
+  }
+
+  .compare-box {
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .compare-box.says-box {
+    background: var(--says-bg);
+    border: 1px solid var(--says-border);
+  }
+
+  .compare-box.does-box {
+    background: var(--does-bg);
+    border: 1px solid var(--does-border);
+  }
+
+  .compare-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .compare-box.says-box .compare-label { color: var(--says-color); }
+  .compare-box.does-box .compare-label { color: var(--does-color); }
+
+  .compare-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* Fingerprint Section */
+  .fingerprint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .fingerprint-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 2px solid var(--fingerprint-color);
+  }
+
+  .fingerprint-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .confidence-bar {
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .confidence-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--fingerprint-color), #c084fc);
+    transition: width 1.5s ease;
+  }
+
+  .confidence-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+  }
+
+  .indicator-list {
+    list-style: none;
+    margin-bottom: 12px;
+  }
+
+  .indicator-list li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .indicator-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--fingerprint-color);
+    font-weight: 700;
+  }
+
+  .parallel-box {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--fingerprint-bg);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    line-height: 1.5;
+  }
+
+  .parallel-box strong {
+    color: var(--fingerprint-color);
+    font-weight: 600;
+  }
+
+  /* Credibility Backtest */
+  .credibility-section { margin-bottom: 40px; }
+
+  .credibility-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .cred-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .cred-actor {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+  }
+
+  .cred-bars { display: flex; flex-direction: column; gap: 12px; }
+
+  .cred-bar-group label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .cred-bar {
+    height: 24px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cred-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 2s ease;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .cred-bar-fill.says-fill {
+    background: linear-gradient(90deg, rgba(74, 158, 255, 0.6), rgba(74, 158, 255, 0.3));
+  }
+
+  .cred-bar-fill.does-fill {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.7), rgba(16, 185, 129, 0.4));
+  }
+
+  /* Alternatives Section */
+  .alternatives {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .alt-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .alt-item {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .alt-item::before {
+    content: attr(data-num);
+    position: absolute;
+    left: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 20px;
+  }
+
+  .footer-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .footer-text .accent { color: var(--accent-green); }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header fade-in">
+    <div class="header-top">
+      <span class="badge">FGIP STRATEGIC INTELLIGENCE</span>
+      <span class="badge live">PROOF OF CONCEPT</span>
+    </div>
+    <h1>GENIUS Act (S.1582) — Says vs Does Analysis</h1>
+    <div class="header-meta">
+      <span>Analysis Date: 2026-02-23</span>
+      <span class="dot"></span>
+      <span>Documents Cited: 12</span>
+      <span class="dot"></span>
+      <span>Divergence Points: 4</span>
+      <span class="dot"></span>
+      <span>Strategic Doctrines Matched: 4</span>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer fade-in stagger-1">
+    All data sourced from government databases and public filings. No editorial assertions of causation are made. Strategic fingerprint matching is pattern recognition, not accusation. Alternative explanations are provided. Documents linked for independent verification. Reader draws own conclusions.
+  </div>
+
+  <!-- ============================================ -->
+  <!-- DUAL TRACK: SAYS vs DOES -->
+  <!-- ============================================ -->
+  <div class="dual-track fade-in stagger-2">
+
+    <!-- SAYS Track -->
+    <div class="track says">
+      <div class="track-header">
+        <h2>Track A — What They Said</h2>
+        <span class="track-count">5 statements</span>
+      </div>
+      <div class="track-body" id="says-track"></div>
+    </div>
+
+    <!-- DOES Track -->
+    <div class="track does">
+      <div class="track-header">
+        <h2>Track B — What They Did</h2>
+        <span class="track-count">7 actions</span>
+      </div>
+      <div class="track-body" id="does-track"></div>
+    </div>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- DIVERGENCE ANALYSIS -->
+  <!-- ============================================ -->
+  <div class="section-title fade-in stagger-3">
+    <div class="icon" style="background: var(--diverge-bg); color: var(--diverge-color);">⚡</div>
+    Divergence Analysis — Where Says ≠ Does
+  </div>
+  <div class="divergence-grid fade-in stagger-3" id="divergence-grid"></div>
+
+  <!-- ============================================ -->
+  <!-- STRATEGIC FINGERPRINTS -->
+  <!-- ============================================ -->
+  <div class="section-title fade-in stagger-4">
+    <div class="icon" style="background: var(--fingerprint-bg); color: var(--fingerprint-color);">🔍</div>
+    Strategic Fingerprint Analysis
+  </div>
+  <div class="fingerprint-grid fade-in stagger-4" id="fingerprint-grid"></div>
+
+  <!-- ============================================ -->
+  <!-- CREDIBILITY BACKTEST -->
+  <!-- ============================================ -->
+  <div class="section-title fade-in stagger-5">
+    <div class="icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">📊</div>
+    Credibility Backtest — Says Track vs Does Track Prediction Accuracy
+  </div>
+  <div class="credibility-section fade-in stagger-5">
+    <div class="credibility-cards" id="credibility-cards"></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- ALTERNATIVE EXPLANATIONS -->
+  <!-- ============================================ -->
+  <div class="section-title fade-in stagger-6">
+    <div class="icon" style="background: rgba(139, 143, 154, 0.1); color: var(--text-secondary);">⚖️</div>
+    Alternative Explanations — Offered in the Interest of Fairness
+  </div>
+  <div class="alternatives fade-in stagger-6" id="alternatives"></div>
+
+  <!-- Footer -->
+  <div class="footer fade-in stagger-6">
+    <div class="footer-text">
+      <span class="accent">All data sourced from government databases and public filings.</span><br>
+      No editorial assertions of causation are made in this analysis.<br>
+      Strategic fingerprint matching is pattern recognition, not accusation.<br>
+      Alternative explanations are provided. Reader draws own conclusions.<br>
+      <br>
+      Sources: Congressional Record · S.1582 Bill Text · White House Fact Sheet · FEC Filings via OpenSecrets · Federal Reserve Annual Report · FRED M2SL · BLS CPI-U · Bankrate · Senate Banking Committee · Senate Lobbying Database
+    </div>
+  </div>
+
+</div>
+
+<script>
+const DATA = {
+  says: [
+    {
+      date: "2025-02-04",
+      actor: "Sen. Bill Hagerty (R-TN)",
+      text: "The GENIUS Act provides a clear regulatory framework for payment stablecoins that will promote innovation and protect consumers.",
+      source: "Senate Banking Committee Press Release",
+      url: "https://www.banking.senate.gov/newsroom/majority/",
+      frames: ["reframe_extraction_as_protection", "presupposition", "euphemism_substitution"]
+    },
+    {
+      date: "2025-07-18",
+      actor: "White House",
+      text: "The GENIUS Act will generate increased demand for U.S. debt and cement the dollar's status as the global reserve currency by requiring stablecoin issuers to back their assets with Treasuries and U.S. dollars.",
+      source: "White House Fact Sheet",
+      url: "https://www.whitehouse.gov/fact-sheets/2025/07/",
+      frames: ["presupposition", "deletion"]
+    },
+    {
+      date: "2025-05-19",
+      actor: "Senate Floor (Multiple)",
+      text: "This bipartisan legislation establishes commonsense guardrails for digital dollar instruments while maintaining America's competitive edge in financial innovation.",
+      source: "Congressional Record — Senate Vote 68-30",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582",
+      frames: ["euphemism_substitution", "presupposition"]
+    },
+    {
+      date: "2025-06-12",
+      actor: "House Floor (Multiple)",
+      text: "Payment stablecoins represent the future of digital commerce and this framework ensures American leadership in that future.",
+      source: "Congressional Record — House Vote 308-122",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582",
+      frames: ["presupposition"]
+    },
+    {
+      date: "2025-03-15",
+      actor: "Industry Coalition",
+      text: "The stablecoin framework will democratize access to dollar-denominated savings instruments for the global unbanked population.",
+      source: "Industry testimony, Senate Banking Committee",
+      url: "https://www.banking.senate.gov/hearings/",
+      frames: ["reframe_extraction_as_protection", "deletion"]
+    }
+  ],
+  does: [
+    {
+      date: "2025-07-18",
+      actor: "119th Congress / President Trump",
+      text: "Signed S.1582 into law. Section 4(a) PROHIBITS payment stablecoin issuers from offering any yield or interest to holders.",
+      source: "S.1582 Bill Text, Section 4(a)",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      impact: "Holders earn 0% while issuers earn ~4.5% on Treasury reserves",
+      beneficiary: "Stablecoin issuers (private capital)"
+    },
+    {
+      date: "2025-07-18",
+      actor: "119th Congress / President Trump",
+      text: "Section 4(b) requires 1:1 backing with U.S. Treasuries, Treasury repos, or dollar deposits — creating mandatory Treasury buyer pool.",
+      source: "S.1582 Bill Text, Section 4(b)",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      impact: "Current stablecoin market ~$170B, projected $2T+. All must hold Treasuries.",
+      beneficiary: "U.S. Treasury (new debt funding mechanism)"
+    },
+    {
+      date: "2025-07-18",
+      actor: "119th Congress / President Trump",
+      text: "Section 6 sets $10B threshold — issuers above federally regulated, below state-regulated. Creates two-tier system.",
+      source: "S.1582 Bill Text, Section 6",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      impact: "Large incumbents get federal oversight; small competitors face state-level fragmentation",
+      beneficiary: "Large established issuers (Tether, Circle)"
+    },
+    {
+      date: "2024 Cycle",
+      actor: "Digital Asset Industry PACs",
+      text: "Digital asset industry spent $134M+ on 2024 federal elections — largest crypto election spend in history.",
+      source: "OpenSecrets / FEC Filings",
+      url: "https://www.opensecrets.org/industries/indus.php?ind=F2600",
+      impact: "$134M spent on elections preceding stablecoin legislation",
+      beneficiary: "Candidates supporting digital asset frameworks"
+    },
+    {
+      date: "2023",
+      actor: "Federal Reserve",
+      text: "Fed remitted $58.4B to Treasury from yield on holdings. Stablecoin framework partially shifts yield capture from Fed (public) to private issuers.",
+      source: "Federal Reserve Annual Report 2023",
+      url: "https://www.federalreserve.gov/publications/annual-report.htm",
+      impact: "Yield on government debt shifts from public institution to private issuers",
+      beneficiary: "Private stablecoin issuers"
+    },
+    {
+      date: "2025-07-18",
+      actor: "119th Congress / President Trump",
+      text: "Holders given insolvency priority BUT cannot earn yield. Protection applies only to nominal principal — purchasing power erodes at real inflation rate.",
+      source: "S.1582 Bill Text, Insolvency Provisions",
+      url: "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      impact: "At 6.3% real inflation, $1 stablecoin loses ~$0.063 purchasing power annually",
+      beneficiary: "Nominal protection masks real value transfer"
+    },
+    {
+      date: "2026-02-23",
+      actor: "Financial System (measured)",
+      text: "National avg savings: 0.6% APY. M2-based real inflation: 6.3%. Real purchasing power loss: -5.7% annually.",
+      source: "Bankrate / FRED M2SL / BLS CPI-U",
+      url: "https://fred.stlouisfed.org/series/M2SL",
+      impact: "Average American loses 5.7% purchasing power annually in savings",
+      beneficiary: "Financial institutions capturing spread"
+    }
+  ],
+  divergences: [
+    {
+      topic: "Consumer Protection",
+      severity: "high",
+      says: "Framework 'protects consumers' (Senate Banking Committee, multiple floor statements)",
+      does: "Section 4(a) prohibits yield to holders. Issuers earn ~4.5% on reserves. Holders lose 6.3% purchasing power annually. Net transfer: ~10.8%/year.",
+      saysSource: "Congressional Record, Senate Banking Committee",
+      doesSource: "S.1582 §4(a), FRED M2SL, Treasury yield data"
+    },
+    {
+      topic: "Innovation & Democratization",
+      severity: "medium",
+      says: "Framework 'promotes innovation' and 'democratizes access to dollar-denominated instruments'",
+      does: "§6 creates $10B threshold. Only permitted issuers allowed. BSA/AML compliance = barriers to entry. Market consolidates.",
+      saysSource: "Industry testimony, Senate floor statements",
+      doesSource: "S.1582 §6, regulatory compliance requirements"
+    },
+    {
+      topic: "Treasury Demand Generation",
+      severity: "low",
+      says: "'Generate increased demand for U.S. debt' — White House Fact Sheet (stated openly)",
+      does: "Mandatory Treasury backing creates captive buyer pool. $170B current → $2T+ projected. Replaces portion of Fed monetization.",
+      saysSource: "White House Fact Sheet, July 18, 2025",
+      doesSource: "S.1582 §4(b), stablecoin market data, Fed Annual Report"
+    },
+    {
+      topic: "Yield Distribution",
+      severity: "critical",
+      says: "Not addressed in public messaging. Framed as 'payment instrument, not investment.' Systematic absence.",
+      does: "Issuers hold 4.5% yielding Treasuries, pay holders 0%. On $170B = ~$7.65B/year captured. On $2T = ~$90B/year.",
+      saysSource: "Absence of discussion — deletion pattern",
+      doesSource: "S.1582 §4(a), Treasury yield data, market projections"
+    }
+  ],
+  fingerprints: [
+    {
+      name: "Linguistic Framing Architecture (NLP/Persuasion)",
+      confidence: 0.91,
+      indicators: [
+        "'Payment stablecoin' replaces 'zero-yield Treasury funding instrument'",
+        "'Consumer protection' replaces 'yield prohibition benefiting issuers'",
+        "'Cement dollar's reserve status' assumes threat + solution without evidence",
+        "Extraction (yield capture) presented as protection (consumer safety)",
+        "WH fact sheet: 'generate demand for U.S. debt' without noting yield shift from public to private",
+        "'Innovation' converts specific profit mechanism into abstract positive"
+      ],
+      parallel: "'Quantitative Easing' replacing 'money printing' (2008), 'Owner Equivalent Rent' replacing housing costs (1983)"
+    },
+    {
+      name: "Colonial Extraction (East India Company)",
+      confidence: 0.85,
+      indicators: [
+        "Legal framework creates mandatory participation",
+        "Private entities granted extraction rights by government charter",
+        "Population technically 'consents' by participating",
+        "Wealth flows directional: holder → issuer, citizen → Treasury",
+        "Benefits described as mutual while flows are one-directional",
+        "Government outsources debt funding to private sector"
+      ],
+      parallel: "Crown grants charter → Company extracts via legal framework → local population participates 'voluntarily'"
+    },
+    {
+      name: "Eastern Indirect Strategy (Sun Tzu / Go)",
+      confidence: 0.78,
+      indicators: [
+        "Multiple seemingly unrelated provisions connect in retrospect",
+        "18-month implementation timeline — territory enclosed gradually",
+        "Each provision individually defensible under different framing",
+        "Stated objectives diverge from structural outcomes"
+      ],
+      parallel: "Belt and Road: each project justified individually, collectively creates dependency network"
+    },
+    {
+      name: "Power Law Dynamics (Robert Greene)",
+      confidence: 0.72,
+      indicators: [
+        "Law 3: Zero-yield provision concealed in consumer protection framing",
+        "Law 11: Holders dependent on issuer for dollar access while earning nothing",
+        "Law 31: All options serve designers — stablecoins, cash, or direct Treasuries all lose",
+        "Law 12: Insolvency priority = appearance of protection during real value transfer"
+      ],
+      parallel: "$134M election spend → favorable framework → yield capture pipeline"
+    }
+  ],
+  credibility: [
+    {
+      actor: "GENIUS Act Proponents",
+      saysAccuracy: 0.20,
+      doesAccuracy: 0.86,
+      claims: 5
+    },
+    {
+      actor: "Official Inflation (BLS CPI)",
+      saysAccuracy: 0.00,
+      doesAccuracy: 0.933,
+      claims: 7
+    }
+  ],
+  alternatives: [
+    "Legislators may have genuinely believed zero-yield protects consumers from volatile DeFi yields, without analyzing spread dynamics.",
+    "$134M in digital asset spending may have raised awareness without influencing specific provisions.",
+    "Convergence of yield prohibition + Treasury backing + market thresholds may represent independent policy judgments.",
+    "Purchasing power transfer may be an unintended consequence of provisions legislators did not model.",
+    "Absence of yield discussion may reflect topic complexity rather than deliberate omission.",
+    "Staff and lobbyists may have drafted provisions that legislators relied upon in good faith.",
+    "Structural similarity to East India Company model may be coincidental pattern-matching."
+  ]
+};
+
+// Render SAYS track
+const saysContainer = document.getElementById('says-track');
+DATA.says.forEach(s => {
+  const frameHTML = s.frames.map(f => `<span class="nlp-tag">${f.replace(/_/g, ' ')}</span>`).join('');
+  saysContainer.innerHTML += `
+    <div class="track-item">
+      <div class="track-item-date">${s.date}</div>
+      <div class="track-item-actor">${s.actor}</div>
+      <div class="track-item-text">"${s.text}"</div>
+      <div class="track-item-source">Source: <a href="${s.url}" target="_blank">${s.source}</a></div>
+      <div class="nlp-tags">${frameHTML}</div>
+    </div>
+  `;
+});
+
+// Render DOES track
+const doesContainer = document.getElementById('does-track');
+DATA.does.forEach(d => {
+  const impactHTML = d.impact ? `<div class="impact-tag">💰 ${d.impact}</div>` : '';
+  const beneficiaryHTML = d.beneficiary ? `<div class="beneficiary-tag">→ ${d.beneficiary}</div>` : '';
+  doesContainer.innerHTML += `
+    <div class="track-item">
+      <div class="track-item-date">${d.date}</div>
+      <div class="track-item-actor">${d.actor}</div>
+      <div class="track-item-text">${d.text}</div>
+      <div class="track-item-source">Source: <a href="${d.url}" target="_blank">${d.source}</a></div>
+      ${impactHTML}
+      ${beneficiaryHTML}
+    </div>
+  `;
+});
+
+// Render Divergences
+const divGrid = document.getElementById('divergence-grid');
+// Sort: critical first
+const severityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
+DATA.divergences.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
+
+DATA.divergences.forEach(d => {
+  divGrid.innerHTML += `
+    <div class="divergence-card ${d.severity}">
+      <div class="divergence-header">
+        <span class="divergence-topic">${d.topic}</span>
+        <span class="severity-badge ${d.severity}">${d.severity}</span>
+      </div>
+      <div class="divergence-compare">
+        <div class="compare-box says-box">
+          <div class="compare-label">Says</div>
+          ${d.says}
+          <div class="compare-source">${d.saysSource}</div>
+        </div>
+        <div class="compare-box does-box">
+          <div class="compare-label">Does</div>
+          ${d.does}
+          <div class="compare-source">${d.doesSource}</div>
+        </div>
+      </div>
+    </div>
+  `;
+});
+
+// Render Fingerprints
+const fpGrid = document.getElementById('fingerprint-grid');
+DATA.fingerprints.forEach(fp => {
+  const indicators = fp.indicators.map(i => `<li>${i}</li>`).join('');
+  fpGrid.innerHTML += `
+    <div class="fingerprint-card">
+      <div class="fingerprint-name">${fp.name}</div>
+      <div class="confidence-bar"><div class="confidence-fill" style="width: ${fp.confidence * 100}%"></div></div>
+      <div class="confidence-label">Confidence: ${(fp.confidence * 100).toFixed(0)}%</div>
+      <ul class="indicator-list">${indicators}</ul>
+      <div class="parallel-box"><strong>Historical parallel:</strong> ${fp.parallel}</div>
+    </div>
+  `;
+});
+
+// Render Credibility
+const credCards = document.getElementById('credibility-cards');
+DATA.credibility.forEach(c => {
+  credCards.innerHTML += `
+    <div class="cred-card">
+      <div class="cred-actor">${c.actor}</div>
+      <div class="cred-bars">
+        <div class="cred-bar-group">
+          <label>
+            <span>Says Track Accuracy</span>
+            <span>${(c.saysAccuracy * 100).toFixed(0)}%</span>
+          </label>
+          <div class="cred-bar">
+            <div class="cred-bar-fill says-fill" style="width: ${Math.max(c.saysAccuracy * 100, 2)}%">
+              ${c.saysAccuracy > 0.05 ? (c.saysAccuracy * 100).toFixed(0) + '%' : ''}
+            </div>
+          </div>
+        </div>
+        <div class="cred-bar-group">
+          <label>
+            <span>Does Track Prediction</span>
+            <span>${(c.doesAccuracy * 100).toFixed(1)}%</span>
+          </label>
+          <div class="cred-bar">
+            <div class="cred-bar-fill does-fill" style="width: ${c.doesAccuracy * 100}%">
+              ${(c.doesAccuracy * 100).toFixed(1)}%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+});
+
+// Render Alternatives
+const altContainer = document.getElementById('alternatives');
+const altHeader = `<div class="alt-header">These interpretations are offered in the interest of fairness. All are technically possible.</div>`;
+const altItems = DATA.alternatives.map((a, i) => `<div class="alt-item" data-num="${i + 1}.">${a}</div>`).join('');
+altContainer.innerHTML = altHeader + altItems;
+</script>
+
+</body>
+</html>

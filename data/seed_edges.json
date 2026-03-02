@@ -1,0 +1,47 @@
+{
+  "edges": [
+    {"edge_id": "edge_citi_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_citibank", "to_node_id": "fin_ny_fed", "notes": "42.8% (87.9M shares, 2018)", "source": "Institutional Investor FOIA", "source_url": "https://www.institutionalinvestor.com/article/b1c3fmfp6nkm6f/the-new-york-fed-is-doing-something-about-its-diversity-problem", "confidence": 1.0},
+    {"edge_id": "edge_jpm_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_jpmorgan", "to_node_id": "fin_ny_fed", "notes": "29.5% (60.6M shares, 2018)", "source": "Institutional Investor FOIA", "confidence": 1.0},
+    {"edge_id": "edge_goldman_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_goldman", "to_node_id": "fin_ny_fed", "notes": "4.0% (8.3M shares)", "source": "Institutional Investor FOIA", "confidence": 1.0},
+    {"edge_id": "edge_hsbc_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_hsbc", "to_node_id": "fin_ny_fed", "notes": "6.1% (12.6M shares)", "source": "Institutional Investor FOIA", "confidence": 1.0},
+    {"edge_id": "edge_deutsche_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_deutsche", "to_node_id": "fin_ny_fed", "notes": "0.87% combined", "source": "Institutional Investor FOIA", "confidence": 1.0},
+    {"edge_id": "edge_bnym_nyfed", "edge_type": "OWNS_SHARES", "from_node_id": "fin_bny_mellon", "to_node_id": "fin_ny_fed", "notes": "3.5% (7.2M shares)", "source": "Institutional Investor FOIA", "confidence": 1.0},
+
+    {"edge_id": "edge_vanguard_jpm", "edge_type": "OWNS_SHARES", "from_node_id": "org_vanguard", "to_node_id": "fin_jpmorgan", "notes": "9.84% (270.7M shares)", "source": "SEC 13F", "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000102909&type=13F&dateb=&owner=include&count=40", "confidence": 1.0},
+    {"edge_id": "edge_blackrock_jpm", "edge_type": "OWNS_SHARES", "from_node_id": "org_blackrock", "to_node_id": "fin_jpmorgan", "notes": "4.82% (132.6M shares)", "source": "SEC 13F", "confidence": 1.0},
+    {"edge_id": "edge_state_jpm", "edge_type": "OWNS_SHARES", "from_node_id": "org_state_street", "to_node_id": "fin_jpmorgan", "notes": "4.56% (125.3M shares)", "source": "SEC 13F", "confidence": 1.0},
+    {"edge_id": "edge_vanguard_blackrock", "edge_type": "OWNS_SHARES", "from_node_id": "org_vanguard", "to_node_id": "org_blackrock", "notes": "~9.04% (13.9M shares)", "source": "SEC 13F", "confidence": 1.0},
+    {"edge_id": "edge_blackrock_self", "edge_type": "OWNS_SHARES", "from_node_id": "org_blackrock", "to_node_id": "org_blackrock", "notes": "Self-holding (second largest)", "source": "SEC 13F", "confidence": 1.0},
+    {"edge_id": "edge_bv_gannett", "edge_type": "OWNS_SHARES", "from_node_id": "org_blackrock", "to_node_id": "media_gannett", "notes": "Insider-level ownership", "source": "Harvard analysis", "confidence": 0.9},
+    {"edge_id": "edge_bv_sinclair", "edge_type": "OWNS_SHARES", "from_node_id": "org_vanguard", "to_node_id": "media_sinclair", "notes": "Insider-level ownership", "source": "Harvard analysis", "confidence": 0.9},
+
+    {"edge_id": "edge_chamber_pntr", "edge_type": "LOBBIED_FOR", "from_node_id": "org_us_chamber", "to_node_id": "leg_pntr_2000", "notes": "Part of $1.8B+ total lobbying", "source": "OpenSecrets", "source_url": "https://www.opensecrets.org/federal-lobbying/clients/summary?cycle=2000&id=D000019798", "confidence": 1.0, "date_occurred": "2000-05-24"},
+    {"edge_id": "edge_chamber_immigration", "edge_type": "LOBBIED_FOR", "from_node_id": "org_us_chamber", "to_node_id": "org_america_works", "notes": "$1.5B on immigration 2008-2012", "source": "OpenSecrets", "confidence": 1.0},
+    {"edge_id": "edge_chamber_tariff_amicus", "edge_type": "FILED_AMICUS", "from_node_id": "org_us_chamber", "to_node_id": "case_learning_resources", "notes": "Part of 37 anti-tariff briefs", "source": "Court filings", "confidence": 1.0},
+    {"edge_id": "edge_america_works_lobby", "edge_type": "LOBBIED_FOR", "from_node_id": "org_america_works", "to_node_id": "leg_pntr_2000", "notes": "$17.6M lobbying 2021, double immigrant visas", "source": "Chamber public filings", "confidence": 1.0},
+
+    {"edge_id": "edge_ginni_clarence", "edge_type": "MARRIED_TO", "from_node_id": "person_ginni_thomas", "to_node_id": "person_clarence_thomas", "source": "Public record", "confidence": 1.0},
+    {"edge_id": "edge_ginni_chamber", "edge_type": "EMPLOYED", "from_node_id": "org_us_chamber", "to_node_id": "person_ginni_thomas", "notes": "Immigration/labor lobbyist", "source": "ProPublica", "source_url": "https://www.propublica.org/article/clarence-thomas-gift-disclosure-rules-entertainment", "confidence": 1.0},
+    {"edge_id": "edge_crow_thomas", "edge_type": "DONATED_TO", "from_node_id": "person_harlan_crow", "to_node_id": "person_clarence_thomas", "notes": "Undisclosed financial benefits", "source": "ProPublica", "source_url": "https://www.propublica.org/article/clarence-thomas-harlan-crow-billionaire-friendship-supreme-court", "confidence": 1.0},
+    {"edge_id": "edge_crow_heritage", "edge_type": "DONATED_TO", "from_node_id": "person_harlan_crow", "to_node_id": "org_heritage_foundation", "source": "Tax filings", "confidence": 1.0},
+    {"edge_id": "edge_heritage_federalist", "edge_type": "MEMBER_OF", "from_node_id": "org_heritage_foundation", "to_node_id": "org_federalist_society", "notes": "Judicial pipeline", "source": "Public record", "confidence": 1.0},
+    {"edge_id": "edge_federalist_scotus", "edge_type": "MEMBER_OF", "from_node_id": "org_federalist_society", "to_node_id": "org_supreme_court", "notes": "6 current justices from pipeline", "source": "Public record", "confidence": 1.0},
+    {"edge_id": "edge_scotus_tariff", "edge_type": "RULED_ON", "from_node_id": "org_supreme_court", "to_node_id": "case_learning_resources", "notes": "6-3 against tariffs", "source": "Court records", "confidence": 1.0},
+
+    {"edge_id": "edge_pntr_jobloss", "edge_type": "CAUSED", "from_node_id": "leg_pntr_2000", "to_node_id": "event_pntr_impact", "notes": "2.4M manufacturing jobs lost", "source": "Pierce & Schott (academic)", "source_url": "https://doi.org/10.1257/aer.20131578", "confidence": 1.0},
+    {"edge_id": "edge_pntr_chinashock", "edge_type": "CAUSED", "from_node_id": "leg_pntr_2000", "to_node_id": "event_china_shock", "notes": "Increased mortality, disability, opioid deaths", "source": "Autor, Dorn, Hanson", "confidence": 1.0},
+    {"edge_id": "edge_chips_semi", "edge_type": "CORRECTS", "from_node_id": "leg_chips_act", "to_node_id": "event_semi_reshoring", "notes": "$102.6B investment", "source": "Commerce Dept", "source_url": "https://www.commerce.gov/news/press-releases/2024/09/commerce-department-announces-preliminary-terms-intel-corporation", "confidence": 1.0},
+
+    {"edge_id": "edge_cat_corrects", "edge_type": "CORRECTS", "from_node_id": "company_caterpillar", "to_node_id": "event_reshoring_2025", "notes": "+28% YTD, $51B backlog, $725M Lafayette IN", "source": "Earnings/filings", "confidence": 1.0},
+    {"edge_id": "edge_intel_corrects", "edge_type": "CORRECTS", "from_node_id": "company_intel", "to_node_id": "event_reshoring_2025", "notes": "+80% 2025, US govt 9.9% equity, 18A node", "source": "CHIPS Act/filings", "confidence": 1.0},
+    {"edge_id": "edge_nucor_corrects", "edge_type": "CORRECTS", "from_node_id": "company_nucor", "to_node_id": "event_reshoring_2025", "notes": "Nucor Data Systems 95% data center steel", "source": "Company reports", "confidence": 1.0},
+    {"edge_id": "edge_eaton_corrects", "edge_type": "CORRECTS", "from_node_id": "company_eaton", "to_node_id": "event_reshoring_2025", "notes": "Grid modernization, backlog through late 2027", "source": "Earnings calls", "confidence": 1.0},
+    {"edge_id": "edge_const_corrects", "edge_type": "CORRECTS", "from_node_id": "company_constellation", "to_node_id": "event_reshoring_2025", "notes": "Largest US nuclear fleet", "source": "Company data", "confidence": 1.0},
+    {"edge_id": "edge_freeport_corrects", "edge_type": "CORRECTS", "from_node_id": "company_freeport", "to_node_id": "event_reshoring_2025", "notes": "Copper supercycle, Bagdad mine expansion", "source": "Filings", "confidence": 1.0},
+    {"edge_id": "edge_ge_corrects", "edge_type": "CORRECTS", "from_node_id": "company_ge_aerospace", "to_node_id": "event_reshoring_2025", "notes": "+87.5%, 5000 new US jobs", "source": "Announcements", "confidence": 1.0},
+    {"edge_id": "edge_oracle_corrects", "edge_type": "CORRECTS", "from_node_id": "company_oracle", "to_node_id": "event_reshoring_2025", "notes": "1.2GW Abilene TX, outside BV cross-ownership", "source": "Public filings", "confidence": 1.0},
+
+    {"edge_id": "edge_nyfed_bailout", "edge_type": "CAUSED", "from_node_id": "fin_ny_fed", "to_node_id": "event_ny_fed_bailout", "notes": "$29T executed 2007-2010", "source": "GAO audit", "source_url": "https://www.gao.gov/products/gao-11-696", "confidence": 1.0}
+  ],
+  "is_synthetic": false
+}

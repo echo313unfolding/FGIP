@@ -1,0 +1,253 @@
+{
+  "policy_name": "GENIUS Act (S.1582) \u2014 Guiding and Establishing National Innovation for U.S. Stablecoins",
+  "analysis_date": "2026-02-23",
+  "says_timeline": [
+    {
+      "date": "2025-02-04",
+      "actor": "Sen. Bill Hagerty (R-TN)",
+      "text": "The GENIUS Act provides a clear regulatory framework for payment stablecoins that will promote innovation and protect co...",
+      "source": "Senate Banking Committee Press Release",
+      "url": "https://www.banking.senate.gov/newsroom/majority/",
+      "frames": [
+        "reframe_extraction_as_protection",
+        "presupposition",
+        "euphemism_substitution"
+      ]
+    },
+    {
+      "date": "2025-07-18",
+      "actor": "White House",
+      "text": "The GENIUS Act will generate increased demand for U.S. debt and cement the dollar's status as the global reserve currenc...",
+      "source": "White House Fact Sheet",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
+      "frames": [
+        "presupposition",
+        "deletion"
+      ]
+    },
+    {
+      "date": "2025-05-19",
+      "actor": "Senate Floor (Multiple)",
+      "text": "This bipartisan legislation establishes commonsense guardrails for digital dollar instruments while maintaining America'...",
+      "source": "Congressional Record - Senate Vote 68-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582",
+      "frames": [
+        "euphemism_substitution",
+        "presupposition"
+      ]
+    },
+    {
+      "date": "2025-06-12",
+      "actor": "House Floor (Multiple)",
+      "text": "Payment stablecoins represent the future of digital commerce and this framework ensures American leadership in that futu...",
+      "source": "Congressional Record - House Vote 308-122",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582",
+      "frames": [
+        "presupposition"
+      ]
+    },
+    {
+      "date": "2025-03-15",
+      "actor": "Industry Coalition",
+      "text": "The stablecoin framework will democratize access to dollar-denominated savings instruments for the global unbanked popul...",
+      "source": "Industry testimony, Senate Banking Committee",
+      "url": "https://www.banking.senate.gov/hearings/",
+      "frames": [
+        "reframe_extraction_as_protection",
+        "deletion"
+      ]
+    }
+  ],
+  "does_timeline": [
+    {
+      "date": "2025-07-18",
+      "actor": "119th Congress / President Trump",
+      "text": "Signed S.1582 into law. Section 4(a) PROHIBITS payment stablecoin issuers from offering any yield or interest to holders...",
+      "source": "S.1582 Bill Text, Section 4(a)",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      "impact": "Holders earn 0% while issuers earn ~4.5% on Treasury reserves",
+      "beneficiary": "Stablecoin issuers (private capital)"
+    },
+    {
+      "date": "2025-07-18",
+      "actor": "119th Congress / President Trump",
+      "text": "Section 4(b) requires 1:1 backing with U.S. Treasuries, Treasury repos, or dollar deposits \u2014 creating mandatory Treasury...",
+      "source": "S.1582 Bill Text, Section 4(b)",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      "impact": "Current stablecoin market ~$170B, projected $2T+. All must hold Treasuries.",
+      "beneficiary": "U.S. Treasury (new debt funding mechanism)"
+    },
+    {
+      "date": "2025-07-18",
+      "actor": "119th Congress / President Trump",
+      "text": "Section 6 sets $10B threshold \u2014 issuers above must be federally regulated, below can be state-regulated. Creates two-tie...",
+      "source": "S.1582 Bill Text, Section 6",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      "impact": "Large incumbents face federal oversight with higher barriers; small competitors face state-level fragmentation",
+      "beneficiary": "Large established issuers (Tether, Circle)"
+    },
+    {
+      "date": "2024-01-01:2024-12-31",
+      "actor": "Digital Asset Industry PACs",
+      "text": "Digital asset industry spent $134M+ on 2024 federal elections \u2014 largest crypto election spend in history.",
+      "source": "OpenSecrets / FEC Filings",
+      "url": "https://www.opensecrets.org/industries/indus.php?ind=F2600",
+      "impact": "$134M spent on elections preceding stablecoin legislation",
+      "beneficiary": "Candidates supporting digital asset frameworks"
+    },
+    {
+      "date": "2023-01-01:2025-07-18",
+      "actor": "Federal Reserve",
+      "text": "Fed remitted $58.4B to Treasury in 2023 from yield on holdings. Stablecoin framework partially shifts this yield capture...",
+      "source": "Federal Reserve Annual Report 2023",
+      "url": "https://www.federalreserve.gov/publications/annual-report.htm",
+      "impact": "Yield on government debt shifts from public institution (Fed) to private issuers",
+      "beneficiary": "Private stablecoin issuers"
+    },
+    {
+      "date": "2025-07-18",
+      "actor": "119th Congress / President Trump",
+      "text": "Stablecoin holders given priority in insolvency BUT cannot earn yield. Protection applies only to principal, not to purc...",
+      "source": "S.1582 Bill Text, Insolvency Provisions",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582/text",
+      "impact": "At 6.3% real inflation, $1 stablecoin loses ~$0.063 purchasing power annually. 'Protected' principal buys less each year.",
+      "beneficiary": "Framework preserves nominal value while real value transfers to issuers via yield spread"
+    },
+    {
+      "date": "2026-02-23",
+      "actor": "Financial System (measured)",
+      "text": "National average savings rate: 0.6% APY. M2-based real inflation: 6.3%. Real purchasing power loss for average saver: -5...",
+      "source": "Bankrate (savings) / FRED M2SL (money supply) / BLS CPI-U (official inflation)",
+      "url": "https://fred.stlouisfed.org/series/M2SL",
+      "impact": "Average American loses 5.7% purchasing power annually in savings",
+      "beneficiary": "Financial institutions capturing spread between deposit rate and lending/investment rate"
+    }
+  ],
+  "fingerprints": [
+    {
+      "doctrine": "Linguistic Framing Architecture (NLP/Persuasion)",
+      "confidence": 0.91,
+      "indicators": [
+        "Euphemism: 'Payment stablecoin' replaces 'zero-yield Treasury funding instrument'",
+        "Euphemism: 'Consumer protection' replaces 'yield prohibition benefiting issuers'",
+        "Presupposition: 'Cement dollar's reserve status' assumes threat and solution without evidence for either",
+        "Reframe: Extraction mechanism (yield capture) presented as protection mechanism (consumer safety)",
+        "Deletion: White House fact sheet states 'generate demand for U.S. debt' without noting this replaces Fed monetization and shifts yield from public to private",
+        "Nominalization: 'Innovation' converts specific corporate profit mechanism into abstract positive concept"
+      ],
+      "parallel": "'Quantitative Easing' replacing 'money printing' (2008), 'Owner Equivalent Rent' replacing actual housing costs (1983)",
+      "sophistication": "Institutional communications capability",
+      "time_horizon": "Ongoing, per-communication"
+    },
+    {
+      "doctrine": "Colonial Extraction Model (East India Company)",
+      "confidence": 0.85,
+      "indicators": [
+        "Legal framework creates mandatory participation \u2014 all stablecoin issuers MUST hold Treasuries",
+        "Private entities granted extraction rights by government charter \u2014 issuers capture 4.5% yield while paying holders 0%",
+        "Population technically 'consents' by choosing to hold stablecoins",
+        "Wealth flows directional: holder \u2192 issuer (yield spread), citizen \u2192 Treasury (debt funding)",
+        "Benefits described as mutual: 'protects consumers AND promotes innovation' while structural flows are one-directional",
+        "Government outsources debt funding to private sector while private sector captures yield \u2014 mirrors East India Company chartered trade"
+      ],
+      "parallel": "East India Company: Crown grants charter, Company extracts wealth through legal trade framework, local population participates 'voluntarily' within imposed structure",
+      "sophistication": "Institutional capability required",
+      "time_horizon": "5-50 years"
+    },
+    {
+      "doctrine": "Eastern Indirect Strategy (Sun Tzu / Go)",
+      "confidence": 0.78,
+      "indicators": [
+        "Multiple seemingly unrelated provisions that connect in retrospect \u2014 yield control, Treasury demand creation, market structure, consumer framing, and monetary impact all in single bill",
+        "18-month implementation timeline built into law (effective Nov 2026) \u2014 territory enclosed gradually",
+        "Each provision individually defensible \u2014 yield prohibition framed as 'consumer protection,' Treasury backing framed as 'safety,' threshold framed as 'regulatory clarity'",
+        "Stated objectives (consumer protection, innovation, dollar strength) diverge from structural outcomes (yield capture, mandatory Treasury buying, market consolidation)"
+      ],
+      "parallel": "Belt and Road infrastructure: each project individually justified, collectively creates dependency network",
+      "sophistication": "State-level capability required",
+      "time_horizon": "3-10 years"
+    },
+    {
+      "doctrine": "Power Law Dynamics (Robert Greene)",
+      "confidence": 0.72,
+      "indicators": [
+        "Law 3 (Conceal Intentions): Zero-yield provision buried in consumer protection framing",
+        "Law 11 (Keep People Dependent): Framework makes stablecoin holders dependent on issuer for dollar access while earning nothing",
+        "Law 31 (Control Options): All options within framework serve designers \u2014 hold stablecoins (lose to inflation), hold cash (lose to inflation), buy Treasuries directly (accessible but less convenient than stablecoins for daily use)",
+        "Law 12 (Selective Generosity): Insolvency priority for holders creates appearance of protection while real value transfers through yield prohibition"
+      ],
+      "parallel": "Standard lobbying-to-legislation pipeline: $134M election spend \u2192 favorable framework \u2192 yield capture",
+      "sophistication": "Individual or organizational capability",
+      "time_horizon": "6 months - 5 years"
+    }
+  ],
+  "divergences": [
+    {
+      "topic": "Consumer Protection",
+      "says": "Framework 'protects consumers' (Senate Banking Committee, multiple floor statements)",
+      "does": "Section 4(a) prohibits yield to holders. Issuers earn ~4.5% on Treasury reserves. Holders lose 6.3% purchasing power annually (M2-adjusted). Net transfer from holder to issuer: ~10.8% annually.",
+      "says_source": "Congressional Record, Senate Banking Committee press releases",
+      "does_source": "S.1582 Section 4(a), FRED M2SL, Treasury yield data",
+      "divergence_magnitude": "HIGH \u2014 stated protection produces measurable extraction"
+    },
+    {
+      "topic": "Innovation & Democratization",
+      "says": "Framework 'promotes innovation' and 'democratizes access to dollar-denominated instruments'",
+      "does": "Section 6 creates $10B threshold separating federal/state oversight. Only permitted issuers may issue stablecoins. BSA/AML compliance creates significant barriers to entry. Market consolidates to established players.",
+      "says_source": "Industry testimony, Senate floor statements",
+      "does_source": "S.1582 Section 6, regulatory compliance requirements",
+      "divergence_magnitude": "MEDIUM \u2014 framework restricts rather than opens market"
+    },
+    {
+      "topic": "Treasury Demand Generation",
+      "says": "'Generate increased demand for U.S. debt' (White House Fact Sheet \u2014 stated openly)",
+      "does": "Mandatory Treasury/dollar backing creates new captive buyer pool. $170B current, projected $2T+. Replaces portion of Fed monetization (which expanded M2) with private capital (which theoretically doesn't).",
+      "says_source": "White House Fact Sheet, July 18, 2025",
+      "does_source": "S.1582 Section 4(b), stablecoin market data, Fed Annual Report",
+      "divergence_magnitude": "LOW \u2014 this one was stated openly. Rare case of SAYS matching DOES."
+    },
+    {
+      "topic": "Yield Distribution",
+      "says": "Not explicitly addressed in public messaging. Framed as 'payment instrument, not investment.'",
+      "does": "Issuers hold ~4.5% yielding Treasuries, pay holders 0%. On $170B current market, that's ~$7.65B annual yield captured by issuers. On projected $2T market: ~$90B annually.",
+      "says_source": "Absence of discussion in public record \u2014 deletion pattern",
+      "does_source": "S.1582 Section 4(a), Treasury yield data, market size projections",
+      "divergence_magnitude": "CRITICAL \u2014 largest financial transfer mechanism in the bill was systematically absent from public narrative"
+    }
+  ],
+  "credibility": [
+    {
+      "actor": "GENIUS Act Proponents (Aggregate)",
+      "says_accuracy": 0.2,
+      "does_accuracy": 0.86,
+      "claims_tested": 5
+    },
+    {
+      "actor": "Official Inflation Narrative (BLS CPI)",
+      "says_accuracy": 0.0,
+      "does_accuracy": 0.933,
+      "claims_tested": 7
+    }
+  ],
+  "alternatives": [
+    "Legislators may have genuinely believed zero-yield provision protects consumers from volatile DeFi yields, without analyzing the spread dynamics that benefit issuers.",
+    "The $134M in digital asset election spending may have raised awareness of stablecoin policy without influencing specific legislative provisions.",
+    "The convergence of yield prohibition, mandatory Treasury backing, and market consolidation thresholds may represent independent policy judgments by different committees rather than coordinated design.",
+    "Legislators may not have modeled the interaction between zero-yield prohibition and real inflation rates, and the resulting purchasing power transfer may be an unintended consequence.",
+    "The absence of yield distribution discussion in public narrative may reflect genuine complexity of the topic rather than deliberate omission.",
+    "Staff and lobbyists who drafted specific provisions may have had technical expertise that legislators relied upon in good faith, without legislators independently verifying the spread dynamics.",
+    "The structural similarity to historical extraction frameworks (East India Company chartered trade model) may be coincidental pattern-matching rather than intentional design."
+  ],
+  "nlp_analysis": {
+    "total_statements_analyzed": 5,
+    "frames_detected": {
+      "euphemism_substitution": 2,
+      "presupposition": 4,
+      "reframe_extraction_as_protection": 2,
+      "deletion": 2
+    },
+    "dominant_frame": "reframe_extraction_as_protection",
+    "frame_description": "Extraction mechanism consistently presented using protection language. Zero-yield prohibition framed as consumer safety. Mandatory Treasury backing framed as stability. Market threshold framed as regulatory clarity."
+  },
+  "total_sources": 12
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=FGIP Conviction Engine - Daily Thesis Evaluation
+
+[Timer]
+# Run every day at 6 AM after Tier 0 agents have collected
+OnCalendar=*-*-* 06:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
