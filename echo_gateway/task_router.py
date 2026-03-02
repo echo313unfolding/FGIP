@@ -205,6 +205,10 @@ class TaskRouter:
             else:
                 result = {"error": "No response from LLM"}
 
+            # Detect backend from URL (cdna vs ollama)
+            backend_name = "cdna" if "7778" in self.llm_client.base_url else "ollama"
+            router_path = f"chat->llmclient->{backend_name}"
+
             return TaskResult(
                 success=True,
                 result=result,
@@ -216,10 +220,13 @@ class TaskRouter:
                     outputs=result,
                     llm_base_url=self.llm_client.base_url,
                     llm_model=self.llm_client.model,
-                    router_path="chat->llmclient->ollama",
+                    router_path=router_path,
                 ),
             )
         except Exception as e:
+            backend_name = "cdna" if "7778" in self.llm_client.base_url else "ollama"
+            router_path = f"chat->llmclient->{backend_name}"
+
             return TaskResult(
                 success=False,
                 result=None,
@@ -231,7 +238,7 @@ class TaskRouter:
                     outputs=None,
                     llm_base_url=self.llm_client.base_url,
                     llm_model=self.llm_client.model,
-                    router_path="chat->llmclient->ollama",
+                    router_path=router_path,
                 ),
                 errors=[str(e)],
             )

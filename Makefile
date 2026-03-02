@@ -292,3 +292,40 @@ echo-smoke:
 echo-reset:
 	@echo "Resetting Echo state..." && \
 	curl -s http://localhost:7777/v1/health | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'Status: {d.get(\"status\")}'); print(f'Warmed: {d.get(\"warmed\")}')"
+
+# ---------- CDNA Server (OpenAI-compatible inference) ----------
+
+.PHONY: cdna-up cdna-health echo-up-cdna
+
+# Start CDNA server on port 7778
+cdna-up:
+	python3 -m uvicorn cdna_server.app:app --host 0.0.0.0 --port 7778
+
+# Check CDNA server health
+cdna-health:
+	@curl -s http://localhost:7778/v1/health | python3 -m json.tool
+
+# Start Echo with CDNA backend instead of Ollama
+echo-up-cdna:
+	ECHO_LLM_BASE_URL=http://127.0.0.1:7778/v1 \
+	ECHO_MODEL=qwen2.5:3b-cdna-stub \
+	FGIP_DB_PATH=$${FGIP_DB_PATH:-fgip.db} \
+	KAT_MODE=$${KAT_MODE:-trust_cached} \
+	python3 -m uvicorn echo_gateway.app:app --host 0.0.0.0 --port 7777
+
+# Full CDNA smoke test: start both servers, verify routing
+cdna-smoke:
+	@echo "=== CDNA Smoke Test ===" && \
+	echo "1. CDNA health..." && \
+	curl -s http://localhost:7778/v1/health | python3 -m json.tool && \
+	echo "" && \
+	echo "2. Echo health (should show cdna model)..." && \
+	curl -s http://localhost:7777/v1/health | python3 -m json.tool && \
+	echo "" && \
+	echo "3. Chat via CDNA..." && \
+	curl -s -X POST http://localhost:7777/v1/task \
+		-H "Content-Type: application/json" \
+		-d '{"task_type": "chat", "payload": {"messages": [{"role": "user", "content": "ping"}]}}' \
+		| python3 -m json.tool && \
+	echo "" && \
+	echo "=== Smoke Test Complete (check router_path in receipt) ==="
