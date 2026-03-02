@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data artifacts (large/generated)
+data/artifacts/
+receipts/
+
+# Secrets
+*.pem
+*.key
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log
