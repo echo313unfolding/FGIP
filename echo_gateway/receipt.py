@@ -23,6 +23,10 @@ class Receipt:
     outputs_hash: str  # SHA256[:16]
     task_type: str
     metadata: Optional[dict] = None
+    # Inference provenance (for tracing ollama vs cdna vs future backends)
+    llm_base_url: Optional[str] = None
+    llm_model: Optional[str] = None
+    router_path: Optional[str] = None  # e.g., 'chat->llmclient->ollama'
 
     def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary for JSON serialization."""
@@ -36,6 +40,13 @@ class Receipt:
         }
         if self.metadata:
             result["metadata"] = self.metadata
+        # Inference provenance
+        if self.llm_base_url:
+            result["llm_base_url"] = self.llm_base_url
+        if self.llm_model:
+            result["llm_model"] = self.llm_model
+        if self.router_path:
+            result["router_path"] = self.router_path
         return result
 
 
@@ -59,6 +70,9 @@ def generate_receipt(
     inputs: Any,
     outputs: Any,
     metadata: Optional[dict] = None,
+    llm_base_url: Optional[str] = None,
+    llm_model: Optional[str] = None,
+    router_path: Optional[str] = None,
 ) -> Receipt:
     """
     Generate verifiable receipt for task execution.
@@ -70,6 +84,9 @@ def generate_receipt(
         inputs: Task inputs (will be hashed)
         outputs: Task outputs (will be hashed)
         metadata: Optional additional metadata
+        llm_base_url: URL of LLM endpoint used (for provenance)
+        llm_model: Model name used (for provenance)
+        router_path: Path through router (e.g., 'chat->llmclient->ollama')
 
     Returns:
         Receipt with timestamps and hashes
@@ -84,6 +101,9 @@ def generate_receipt(
         outputs_hash=hash_content(outputs),
         task_type=task_type,
         metadata=metadata,
+        llm_base_url=llm_base_url,
+        llm_model=llm_model,
+        router_path=router_path,
     )
 
 

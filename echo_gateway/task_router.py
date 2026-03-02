@@ -214,6 +214,9 @@ class TaskRouter:
                     start_time=start_time,
                     inputs=payload,
                     outputs=result,
+                    llm_base_url=self.llm_client.base_url,
+                    llm_model=self.llm_client.model,
+                    router_path="chat->llmclient->ollama",
                 ),
             )
         except Exception as e:
@@ -226,6 +229,9 @@ class TaskRouter:
                     start_time=start_time,
                     inputs=payload,
                     outputs=None,
+                    llm_base_url=self.llm_client.base_url,
+                    llm_model=self.llm_client.model,
+                    router_path="chat->llmclient->ollama",
                 ),
                 errors=[str(e)],
             )
