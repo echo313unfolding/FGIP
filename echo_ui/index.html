@@ -515,28 +515,37 @@
             showThinking();
 
             try {
-                const response = await fetch('/v1/chat', {
+                // Use unified /v1/task endpoint for routing + receipts
+                const response = await fetch('/v1/task', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        messages: messages,
-                        session_id: sessionId
+                        task_type: 'chat',
+                        payload: { messages: messages },
+                        require_kat: false
                     })
                 });
 
                 const data = await response.json();
 
-                // Update session ID
-                if (data.session_id) {
-                    sessionId = data.session_id;
+                // Store receipt for debugging (visible in console)
+                if (data.receipt) {
+                    console.log('Receipt:', data.receipt);
                 }
 
                 // Add assistant message
-                messages.push({
-                    role: 'assistant',
-                    content: data.message.content,
-                    tool_calls: data.tool_calls
-                });
+                if (data.success && data.result) {
+                    messages.push({
+                        role: 'assistant',
+                        content: data.result.content,
+                        receipt: data.receipt
+                    });
+                } else {
+                    messages.push({
+                        role: 'assistant',
+                        content: `Error: ${data.errors?.join(', ') || 'Unknown error'}`,
+                    });
+                }
 
             } catch (e) {
                 messages.push({
