@@ -154,7 +154,7 @@ def run_hf_oracle(prompt: str, gguf_path: Path) -> np.ndarray:
     return hf_logits[0, -1, :]
 
 
-def verify_stage1(prompt: str, verbose: bool = True) -> dict:
+def verify_stage1(prompt: str, verbose: bool = True, strict: bool = False) -> dict:
     """
     Run Stage 1 verification: compare CDNA forward pass with HF oracle.
 
@@ -241,25 +241,40 @@ def verify_stage1(prompt: str, verbose: bool = True) -> dict:
             print(f"    {i+1}. CDNA: {cdna_text!r} vs HF: {hf_text!r} {match}")
 
     # Verdict
-    # Stage 1 criteria (CDNA is lossy compression):
-    # - Top-1 match required (behavioral equivalence)
-    # - Cosine >= 0.95 (lossy compression tolerance)
-    # Note: Full 0.9999 cosine only possible with uncompressed weights
-    passed = top1_match and cosine >= 0.95
+    if strict:
+        # Strict criteria: for uncompressed weights (lossless parity)
+        cosine_threshold = 0.9999
+        require_top5 = True
+        passed = top5_match and cosine >= cosine_threshold
+    else:
+        # Lossy criteria: for CDNAv2 compressed weights (behavioral equivalence)
+        cosine_threshold = 0.95
+        require_top5 = False
+        passed = top1_match and cosine >= cosine_threshold
 
     if verbose:
         print()
         print("=" * 70)
-        print(f"VERDICT: {'PASS' if passed else 'FAIL'}")
+        mode_str = "STRICT (lossless)" if strict else "LOSSY (behavioral)"
+        print(f"VERDICT: {'PASS' if passed else 'FAIL'} [{mode_str}]")
         print("=" * 70)
         if passed:
-            print("  CDNA streaming behavioral equivalence verified!")
-            print("  Note: CDNA uses lossy compression (CDNAv2 format)")
+            if strict:
+                print("  Lossless parity verified!")
+            else:
+                print("  CDNA streaming behavioral equivalence verified!")
+                print("  Note: CDNA uses lossy compression (CDNAv2 format)")
         else:
-            if not top1_match:
-                print("  Failed: Top-1 token does not match")
-            if cosine < 0.95:
-                print(f"  Failed: Cosine {cosine:.6f} < 0.95 (lossy threshold)")
+            if strict:
+                if not top5_match:
+                    print("  Failed: Top-5 tokens do not match")
+                if cosine < cosine_threshold:
+                    print(f"  Failed: Cosine {cosine:.6f} < {cosine_threshold}")
+            else:
+                if not top1_match:
+                    print("  Failed: Top-1 token does not match")
+                if cosine < cosine_threshold:
+                    print(f"  Failed: Cosine {cosine:.6f} < {cosine_threshold} (lossy threshold)")
 
     # Build receipt
     receipt = {
@@ -277,9 +292,11 @@ def verify_stage1(prompt: str, verbose: bool = True) -> dict:
             "hf_top5": [int(x) for x in hf_top5],
         },
         "acceptance_criteria": {
-            "cosine_threshold": 0.95,  # Lossy compression tolerance
-            "top1_match_required": True,
-            "note": "CDNA uses CDNAv2 lossy compression. Full 0.9999 cosine only with uncompressed weights.",
+            "mode": "strict" if strict else "lossy",
+            "cosine_threshold": cosine_threshold,
+            "top5_match_required": require_top5,
+            "top1_match_required": not require_top5,
+            "note": "Strict mode for uncompressed weights, lossy mode for CDNAv2 compressed.",
         },
         "status": "PASS" if passed else "FAIL",
     }
@@ -303,6 +320,11 @@ def main():
         help="Suppress progress output",
     )
     parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Use strict criteria (cosine >= 0.9999, top-5 match) for uncompressed weights",
+    )
+    parser.add_argument(
         "--output-dir",
         type=str,
         default="receipts/cdna_stage1",
@@ -311,7 +333,7 @@ def main():
     args = parser.parse_args()
 
     # Run verification
-    receipt = verify_stage1(args.prompt, verbose=not args.quiet)
+    receipt = verify_stage1(args.prompt, verbose=not args.quiet, strict=args.strict)
 
     # Save receipt
     output_dir = Path(args.output_dir)

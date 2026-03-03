@@ -342,3 +342,33 @@ cdna-verify-stage1:
 # Quick CDNA forward pass test (no oracle comparison)
 cdna-forward-test:
 	python3 -c "from cdna_server import cdna_forward_topk; topk, r = cdna_forward_topk('Hello'); print(f'Status: {r.status}'); [print(f'  {i+1}. [{t[0]}] {t[2]!r}') for i,t in enumerate(topk)]"
+
+# Strict Stage 1 verification (for uncompressed weights)
+cdna-verify-stage1-strict:
+	python3 cdna_server/verify_stage1.py --prompt "Paris is the capital of" --strict
+
+# ---------- CDNA Stage 2 Verification ----------
+
+.PHONY: cdna-verify-stage2 cdna-generate-test cdna-up-real
+
+# Run Stage 2 acceptance gate: generation + KV cache + API
+# Creates receipt in receipts/cdna_stage2/
+cdna-verify-stage2:
+	python3 cdna_server/verify_stage2.py --prompt "Paris is the capital of" --tokens 32
+
+# Quick generation test
+cdna-generate-test:
+	python3 -c "from cdna_server import generate; text, r = generate('Hello', max_tokens=8); print(f'Status: {r.status}'); print(f'Generated: {text!r}'); print(f'Tokens/sec: {r.tokens_per_sec:.2f}')"
+
+# Start CDNA server with real inference (not stub)
+cdna-up-real:
+	CDNA_MODE=real python3 -m uvicorn cdna_server.app:app --host 0.0.0.0 --port 7778
+
+# Start Echo with real CDNA backend
+echo-up-cdna-real:
+	ECHO_LLM_BASE_URL=http://127.0.0.1:7778/v1 \
+	ECHO_MODEL=mistral-7b-cdna \
+	ECHO_LLM_BACKEND=cdna \
+	FGIP_DB_PATH=$${FGIP_DB_PATH:-fgip.db} \
+	KAT_MODE=$${KAT_MODE:-trust_cached} \
+	python3 -m uvicorn echo_gateway.app:app --host 0.0.0.0 --port 7777

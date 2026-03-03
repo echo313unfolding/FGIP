@@ -14,8 +14,10 @@ Modules:
 from .model_loader import CDNAModelLoader, DEFAULT_MANIFEST_PATH, DEFAULT_GGUF_PATH
 from .tokenizer import CDNATokenizer
 from .cdna_forward import cdna_forward_pass, cdna_forward_topk, CDNAForwardReceipt
+from .generate import generate, CDNAGenerator, GenerationReceipt, KVCache
 
 __all__ = [
+    # Stage 1: Forward pass
     "CDNAModelLoader",
     "CDNATokenizer",
     "cdna_forward_pass",
@@ -23,4 +25,9 @@ __all__ = [
     "CDNAForwardReceipt",
     "DEFAULT_MANIFEST_PATH",
     "DEFAULT_GGUF_PATH",
+    # Stage 2: Generation
+    "generate",
+    "CDNAGenerator",
+    "GenerationReceipt",
+    "KVCache",
 ]
