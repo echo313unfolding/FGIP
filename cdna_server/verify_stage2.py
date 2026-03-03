@@ -200,7 +200,13 @@ def test_api_format(prompt: str, max_tokens: int, verbose: bool = True) -> dict:
     }
 
 
-def verify_stage2(prompt: str, max_tokens: int, verbose: bool = True) -> dict:
+def verify_stage2(
+    prompt: str,
+    max_tokens: int,
+    verbose: bool = True,
+    fast: bool = False,
+    skip_determinism: bool = False,
+) -> dict:
     """
     Run all Stage 2 verification tests.
 
@@ -208,24 +214,34 @@ def verify_stage2(prompt: str, max_tokens: int, verbose: bool = True) -> dict:
         prompt: Test prompt
         max_tokens: Max tokens to generate
         verbose: Print progress
+        fast: Fast gate mode (1 token, skip determinism)
+        skip_determinism: Skip determinism test
 
     Returns:
         Receipt dictionary with all test results
     """
+    # Fast mode overrides
+    if fast:
+        max_tokens = 1
+        skip_determinism = True
+
     if verbose:
         print("=" * 70)
         print("WO-ECHO-CDNA-BACKEND-02 Stage 2 Verification")
         print("=" * 70)
         print(f"Prompt: '{prompt}'")
         print(f"Max tokens: {max_tokens}")
+        if fast:
+            print("Mode: FAST (1 token, no determinism check)")
         print()
 
     tests = []
 
-    # Test 1: Determinism
-    if verbose:
-        print()
-    tests.append(test_determinism(prompt, max_tokens, verbose))
+    # Test 1: Determinism (skip in fast mode)
+    if not skip_determinism:
+        if verbose:
+            print()
+        tests.append(test_determinism(prompt, max_tokens, verbose))
 
     # Test 2: KV cache speed
     if verbose:
@@ -291,6 +307,16 @@ def main():
         help="Max tokens to generate",
     )
     parser.add_argument(
+        "--fast",
+        action="store_true",
+        help="Fast gate mode: 1 token, skip determinism (for quick sanity check)",
+    )
+    parser.add_argument(
+        "--skip-determinism",
+        action="store_true",
+        help="Skip determinism test (saves one full generation)",
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Suppress progress output",
@@ -304,7 +330,13 @@ def main():
     args = parser.parse_args()
 
     # Run verification
-    receipt = verify_stage2(args.prompt, args.tokens, verbose=not args.quiet)
+    receipt = verify_stage2(
+        args.prompt,
+        args.tokens,
+        verbose=not args.quiet,
+        fast=args.fast,
+        skip_determinism=args.skip_determinism,
+    )
 
     # Save receipt
     output_dir = Path(args.output_dir)
