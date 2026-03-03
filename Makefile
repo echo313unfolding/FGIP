@@ -329,3 +329,16 @@ cdna-smoke:
 		| python3 -m json.tool && \
 	echo "" && \
 	echo "=== Smoke Test Complete (check router_path in receipt) ==="
+
+# ---------- CDNA Stage 1 Verification ----------
+
+.PHONY: cdna-verify-stage1 cdna-forward-test
+
+# Run Stage 1 acceptance gate: CDNA forward must match HF oracle
+# Creates receipt in receipts/cdna_stage1/
+cdna-verify-stage1:
+	python3 cdna_server/verify_stage1.py --prompt "Paris is the capital of"
+
+# Quick CDNA forward pass test (no oracle comparison)
+cdna-forward-test:
+	python3 -c "from cdna_server import cdna_forward_topk; topk, r = cdna_forward_topk('Hello'); print(f'Status: {r.status}'); [print(f'  {i+1}. [{t[0]}] {t[2]!r}') for i,t in enumerate(topk)]"

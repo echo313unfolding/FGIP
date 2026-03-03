@@ -6,6 +6,7 @@ Routes incoming tasks to the appropriate backend:
 - swarm: Multiple agents via ThreadPoolExecutor for parallel collection
 """
 
+import os
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
@@ -13,6 +14,10 @@ from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 import importlib
 import json
+
+# Explicit backend detection (WO-ECHO-CDNA-BACKEND-02)
+# Set ECHO_LLM_BACKEND=cdna to use CDNA inference, otherwise ollama
+ECHO_LLM_BACKEND = os.environ.get("ECHO_LLM_BACKEND", "ollama")
 
 from .llm_client import LLMClient
 from .receipt import Receipt, generate_receipt
@@ -205,8 +210,8 @@ class TaskRouter:
             else:
                 result = {"error": "No response from LLM"}
 
-            # Detect backend from URL (cdna vs ollama)
-            backend_name = "cdna" if "7778" in self.llm_client.base_url else "ollama"
+            # Use explicit backend detection (WO-ECHO-CDNA-BACKEND-02)
+            backend_name = ECHO_LLM_BACKEND
             router_path = f"chat->llmclient->{backend_name}"
 
             return TaskResult(
@@ -224,7 +229,8 @@ class TaskRouter:
                 ),
             )
         except Exception as e:
-            backend_name = "cdna" if "7778" in self.llm_client.base_url else "ollama"
+            # Use explicit backend detection (WO-ECHO-CDNA-BACKEND-02)
+            backend_name = ECHO_LLM_BACKEND
             router_path = f"chat->llmclient->{backend_name}"
 
             return TaskResult(
