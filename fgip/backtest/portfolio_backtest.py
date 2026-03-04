@@ -72,6 +72,7 @@ class BacktestConfig:
     min_conviction_to_trade: int = 3  # Minimum conviction level to take position
     stop_loss_pct: Optional[float] = 0.15  # 15% stop loss
     trailing_stop_pct: Optional[float] = None  # Optional trailing stop
+    backtest_mode: bool = True  # If True, trade thesis tickers regardless of live signals
 
     def to_dict(self) -> dict:
         return {
@@ -87,6 +88,7 @@ class BacktestConfig:
             "min_conviction_to_trade": self.min_conviction_to_trade,
             "stop_loss_pct": self.stop_loss_pct,
             "trailing_stop_pct": self.trailing_stop_pct,
+            "backtest_mode": self.backtest_mode,
         }
 
 
@@ -455,7 +457,9 @@ class PortfolioBacktest:
                 # For now, we accept this limitation
                 report = self.conviction_engine.evaluate_thesis(thesis_id)
 
-                if report.conviction_level >= self.config.min_conviction_to_trade:
+                # In backtest_mode, include all theses regardless of conviction
+                # In live mode, filter by min_conviction_to_trade
+                if self.config.backtest_mode or report.conviction_level >= self.config.min_conviction_to_trade:
                     signals.append({
                         "thesis_id": thesis_id,
                         "conviction_level": report.conviction_level,
@@ -488,7 +492,9 @@ class PortfolioBacktest:
         total_allocation = 0.0
 
         for signal in signals:
-            if signal["recommendation"] != "BUY":
+            # In backtest_mode, trade thesis tickers regardless of live signal recommendation
+            # In live mode, only act on BUY recommendations
+            if not self.config.backtest_mode and signal["recommendation"] != "BUY":
                 continue
 
             conviction = signal["conviction_level"]
@@ -497,6 +503,10 @@ class PortfolioBacktest:
                 self.config.max_position_pct,
                 self.config.min_conviction_to_trade
             )
+
+            # In backtest_mode with equal sizing, use max_position_pct regardless of conviction
+            if self.config.backtest_mode and base_size == 0.0:
+                base_size = self.config.max_position_pct * 0.5  # Use 50% of max for low-conviction in backtest
 
             # Distribute across thesis tickers
             thesis_tickers = [t for t in signal["tickers"] if t.isupper()]
