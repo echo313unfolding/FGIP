@@ -102,6 +102,9 @@ class LLMClient:
         messages: list[dict[str, Any]],
         tools: Optional[list[dict[str, Any]]] = None,
         temperature: float = 0.0,
+        max_tokens: Optional[int] = None,
+        top_p: float = 1.0,
+        seed: Optional[int] = None,
         tool_choice: str = "auto",
     ) -> dict[str, Any]:
         """
@@ -111,6 +114,9 @@ class LLMClient:
             messages: List of message dicts with 'role' and 'content'
             tools: Optional list of tool definitions in OpenAI format
             temperature: Sampling temperature (0.0 for deterministic)
+            max_tokens: Maximum tokens to generate (None = backend default)
+            top_p: Nucleus sampling parameter (1.0 = disabled)
+            seed: Random seed for reproducibility
             tool_choice: Tool choice mode ('auto', 'none', 'required')
 
         Returns:
@@ -123,6 +129,14 @@ class LLMClient:
             "messages": messages,
             "temperature": temperature,
         }
+
+        # WO-ECHO-PASSTHROUGH-01: Forward OpenAI params to backend
+        if max_tokens is not None:
+            payload["max_tokens"] = max_tokens
+        if top_p != 1.0:
+            payload["top_p"] = top_p
+        if seed is not None:
+            payload["seed"] = seed
 
         if tools:
             payload["tools"] = tools

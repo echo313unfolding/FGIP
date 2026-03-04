@@ -195,12 +195,19 @@ class TaskRouter:
         messages = payload.get("messages", [])
         tools = payload.get("tools")
         temperature = payload.get("temperature", 0.0)
+        # WO-ECHO-PASSTHROUGH-01: Forward OpenAI params to backend
+        max_tokens = payload.get("max_tokens")
+        top_p = payload.get("top_p", 1.0)
+        seed = payload.get("seed")
 
         try:
             response = await self.llm_client.chat(
                 messages=messages,
                 tools=tools,
                 temperature=temperature,
+                max_tokens=max_tokens,
+                top_p=top_p,
+                seed=seed,
             )
 
             # Extract content from response
