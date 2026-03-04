@@ -30,9 +30,12 @@ from helix_cdc.regrow.cdna_stream_v2 import load_cdna_auto
 CACHE_MAX_MB = int(os.environ.get("CDNA_TENSOR_CACHE_MAX_MB", "28000"))
 CACHE_MAX_BYTES = CACHE_MAX_MB * 1024 * 1024
 
+# Default dtype for cached weights (future-proofs for float16 support)
+CACHE_DTYPE = os.environ.get("CDNA_CACHE_DTYPE", "f32")
+
 # Process-global weight cache (LRU via OrderedDict)
-# Key: "{manifest_hash}:{tensor_name}"
-# Value: np.ndarray (float32 weight tensor)
+# Key: "{manifest_hash}:{tensor_name}:{dtype}"
+# Value: np.ndarray weight tensor
 _weight_cache: OrderedDict[str, np.ndarray] = OrderedDict()
 _cache_lock = threading.Lock()
 
@@ -163,7 +166,8 @@ def cached_matmul(
     Returns:
         (Y, cache_hit) - output and whether cache was hit
     """
-    cache_key = f"{manifest_hash}:{tensor_name}"
+    # Include dtype in cache key for future float16 support
+    cache_key = f"{manifest_hash}:{tensor_name}:{CACHE_DTYPE}"
 
     # Check cache
     with _cache_lock:
@@ -216,3 +220,84 @@ def cached_matmul(
         Y = Y.reshape(batch, seq, -1)
 
     return Y, cache_hit
+
+
+def prewarm_cache(
+    manifest: Dict[str, Any],
+    base_path: Path,
+    manifest_hash: str,
+) -> Dict[str, Any]:
+    """
+    Materialize all weight tensors at startup to eliminate cold start penalty.
+
+    This loads all 224 tensors (~26GB) into the cache so the first request
+    doesn't pay the 90s decompression cost.
+
+    Args:
+        manifest: Parsed manifest dict
+        base_path: Base path for resolving paths
+        manifest_hash: Hash for cache key
+
+    Returns:
+        Dict with prewarm stats (tensors loaded, time, size)
+    """
+    import time
+
+    start_time = time.time()
+    tensors_loaded = 0
+    tensors_skipped = 0
+    bytes_loaded = 0
+
+    shards = manifest.get("shards", [])
+    total_shards = len(shards)
+
+    for i, shard in enumerate(shards):
+        tensor_name = shard.get("tensor_name")
+        if not tensor_name:
+            continue
+
+        cache_key = f"{manifest_hash}:{tensor_name}:{CACHE_DTYPE}"
+
+        # Skip if already cached
+        with _cache_lock:
+            if cache_key in _weight_cache:
+                tensors_skipped += 1
+                continue
+
+        # Materialize and cache
+        try:
+            W = _materialize_weight_from_cdna(tensor_name, manifest, base_path)
+
+            with _cache_lock:
+                # Evict if needed
+                if _cache_stats["size_bytes"] + W.nbytes > CACHE_MAX_BYTES:
+                    _evict_until_under_budget(W.nbytes)
+
+                _weight_cache[cache_key] = W
+                _weight_cache.move_to_end(cache_key)
+
+            with _stats_lock:
+                _cache_stats["misses"] += 1
+                _cache_stats["size_bytes"] += W.nbytes
+
+            tensors_loaded += 1
+            bytes_loaded += W.nbytes
+
+            # Progress indicator every 20 tensors
+            if (i + 1) % 20 == 0:
+                elapsed = time.time() - start_time
+                print(f"[prewarm] {i+1}/{total_shards} tensors, {bytes_loaded / (1024**3):.1f} GB, {elapsed:.1f}s")
+
+        except Exception as e:
+            print(f"[prewarm] Failed to load {tensor_name}: {e}")
+
+    elapsed_time = time.time() - start_time
+
+    return {
+        "tensors_loaded": tensors_loaded,
+        "tensors_skipped": tensors_skipped,
+        "bytes_loaded": bytes_loaded,
+        "size_mb": bytes_loaded / (1024 * 1024),
+        "elapsed_seconds": round(elapsed_time, 2),
+        "cache_stats": get_cache_stats(),
+    }

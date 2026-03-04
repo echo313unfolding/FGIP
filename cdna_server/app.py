@@ -345,6 +345,42 @@ async def debug_forward_topk(prompt: str, k: int = 5) -> dict[str, Any]:
     }
 
 
+@app.post("/v1/prewarm")
+async def prewarm() -> dict[str, Any]:
+    """
+    Prewarm the tensor cache by materializing all weight tensors.
+
+    This eliminates the ~90s cold start penalty. After prewarm completes,
+    the first real request will be fast (~6s instead of ~90s).
+
+    Only available in real mode.
+    """
+    if CDNA_MODE != "real":
+        raise HTTPException(
+            status_code=400,
+            detail="Prewarm endpoint only available in CDNA_MODE=real"
+        )
+
+    generator = _get_generator()
+    if generator is None:
+        raise HTTPException(status_code=500, detail="Generator not initialized")
+
+    from .tensor_cache import prewarm_cache
+
+    # Get manifest and base_path from generator (uses private attrs from model_loader)
+    manifest = generator._manifest
+    base_path = generator._base_path
+    manifest_hash = generator.model_loader.manifest_hash
+
+    result = prewarm_cache(manifest, base_path, manifest_hash)
+
+    return {
+        "status": "ok",
+        "prewarm": result,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=7778)
