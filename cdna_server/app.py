@@ -381,6 +381,26 @@ async def prewarm() -> dict[str, Any]:
     }
 
 
+@app.get("/v1/cache_stats")
+async def cache_stats() -> dict[str, Any]:
+    """
+    Return current tensor cache statistics without triggering inference.
+
+    Useful for monitoring cache warmth and health.
+    """
+    if CDNA_MODE != "real":
+        return {"status": "mock", "cache_enabled": False}
+
+    from .tensor_cache import get_cache_stats
+
+    stats = get_cache_stats()
+    return {
+        "status": "ok",
+        "cache_stats": stats,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=7778)

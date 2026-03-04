@@ -418,6 +418,115 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--text-secondary);
         }
+
+        /* Trace toggle and cache pill */
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trace-toggle {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px 8px;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .trace-toggle:hover {
+            border-color: var(--text-secondary);
+        }
+
+        .trace-toggle.active {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .cache-pill {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .cache-pill.hot { background: var(--accent); color: #000; }
+        .cache-pill.warm { background: var(--warning); color: #000; }
+        .cache-pill.cold { background: #444; color: #aaa; }
+        .cache-pill.unknown { background: #333; color: #666; }
+
+        /* Trace panel */
+        .trace-panel {
+            margin-top: 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 12px;
+            background: var(--bg-primary);
+            overflow: hidden;
+        }
+
+        .trace-header {
+            padding: 6px 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-secondary);
+        }
+
+        .trace-header:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .trace-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .trace-summary {
+            color: var(--accent);
+            font-family: monospace;
+            font-size: 11px;
+        }
+
+        .trace-content {
+            display: none;
+            padding: 8px 10px;
+            border-top: 1px solid var(--border);
+        }
+
+        .trace-panel.expanded .trace-content {
+            display: block;
+        }
+
+        .trace-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            border-bottom: 1px solid var(--bg-secondary);
+        }
+
+        .trace-row:last-child {
+            border-bottom: none;
+        }
+
+        .trace-row span:first-child {
+            color: var(--text-secondary);
+        }
+
+        .trace-row span:last-child {
+            font-family: monospace;
+            color: var(--text-primary);
+        }
+
+        .trace-row .hash {
+            color: var(--text-secondary);
+            font-size: 10px;
+        }
     </style>
 </head>
 <body>
@@ -430,6 +539,10 @@
         <div class="status">
             <span class="status-dot" id="status-dot"></span>
             <span id="status-text">Connecting...</span>
+        </div>
+        <div class="header-controls">
+            <span id="cachePill" class="cache-pill unknown">?</span>
+            <button id="traceToggle" class="trace-toggle" onclick="toggleTrace()" title="Show/Hide Trace">Trace</button>
         </div>
     </header>
 
@@ -470,6 +583,7 @@
         let sessionId = null;
         let isLoading = false;
         let messages = [];
+        let showTrace = false;
 
         // Elements
         const messagesEl = document.getElementById('messages');
@@ -493,6 +607,45 @@
                 }
             } catch (e) {
                 statusText.textContent = 'Offline';
+            }
+        }
+
+        // Toggle trace visibility
+        function toggleTrace() {
+            showTrace = !showTrace;
+            document.getElementById('traceToggle').classList.toggle('active', showTrace);
+            renderMessages();
+        }
+
+        // Update cache status pill
+        async function updateCacheStatus() {
+            const pill = document.getElementById('cachePill');
+            try {
+                const resp = await fetch('/v1/cache_stats');
+                const data = await resp.json();
+
+                if (data.cache_stats && data.cache_stats.utilization_pct !== undefined) {
+                    const pct = data.cache_stats.utilization_pct;
+                    if (pct > 90) {
+                        pill.textContent = 'HOT';
+                        pill.className = 'cache-pill hot';
+                    } else if (pct > 50) {
+                        pill.textContent = 'WARM';
+                        pill.className = 'cache-pill warm';
+                    } else {
+                        pill.textContent = 'COLD';
+                        pill.className = 'cache-pill cold';
+                    }
+                } else if (data.cache_enabled === false) {
+                    pill.textContent = 'N/A';
+                    pill.className = 'cache-pill unknown';
+                } else {
+                    pill.textContent = 'COLD';
+                    pill.className = 'cache-pill cold';
+                }
+            } catch (e) {
+                pill.textContent = '?';
+                pill.className = 'cache-pill unknown';
             }
         }
 
@@ -571,6 +724,29 @@
                 const roleClass = msg.role;
                 const roleLabel = msg.role === 'user' ? 'You' : 'Echo';
 
+                // Build trace panel if enabled and receipt exists
+                let traceHtml = '';
+                if (showTrace && msg.receipt && msg.role === 'assistant') {
+                    const r = msg.receipt;
+                    traceHtml = `
+                        <div class="trace-panel" onclick="this.classList.toggle('expanded')">
+                            <div class="trace-header">
+                                <span class="trace-label">Trace</span>
+                                <span class="trace-summary">${r.duration_ms ? r.duration_ms.toFixed(0) + 'ms' : '?'} | ${r.router_path || r.backend_used || 'unknown'}</span>
+                            </div>
+                            <div class="trace-content">
+                                <div class="trace-row"><span>Backend:</span><span>${r.backend_used || 'N/A'}</span></div>
+                                <div class="trace-row"><span>Duration:</span><span>${r.duration_ms ? r.duration_ms.toFixed(2) + 'ms' : 'N/A'}</span></div>
+                                <div class="trace-row"><span>Router:</span><span>${r.router_path || 'N/A'}</span></div>
+                                <div class="trace-row"><span>Model:</span><span>${r.llm_model || 'N/A'}</span></div>
+                                <div class="trace-row"><span>Timestamp:</span><span>${r.timestamp || 'N/A'}</span></div>
+                                <div class="trace-row"><span>Input Hash:</span><span class="hash">${r.inputs_hash || 'N/A'}</span></div>
+                                <div class="trace-row"><span>Output Hash:</span><span class="hash">${r.outputs_hash || 'N/A'}</span></div>
+                            </div>
+                        </div>
+                    `;
+                }
+
                 html += `
                     <div class="message">
                         <div class="message-header">
@@ -580,6 +756,7 @@
                         <div class="message-content">
                             ${formatContent(msg.content)}
                             ${msg.tool_calls ? renderToolCalls(msg.tool_calls) : ''}
+                            ${traceHtml}
                         </div>
                     </div>
                 `;
@@ -721,6 +898,10 @@
 
         // Initialize
         checkHealth();
+        updateCacheStatus();
+
+        // Poll cache status every 30 seconds
+        setInterval(updateCacheStatus, 30000);
     </script>
 </body>
 </html>

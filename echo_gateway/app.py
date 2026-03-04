@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, List, Optional
 
+import httpx
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
@@ -431,6 +432,41 @@ async def list_sessions() -> dict[str, Any]:
         "sessions": sessions,
         "count": len(sessions),
     }
+
+
+@app.get("/v1/cache_stats")
+async def cache_stats() -> dict[str, Any]:
+    """
+    Proxy cache stats from CDNA backend.
+
+    Returns tensor cache statistics for monitoring warmth and health.
+    """
+    backend = os.environ.get("ECHO_LLM_BACKEND", "ollama")
+
+    # Only CDNA backend has tensor cache
+    if backend != "cdna":
+        return {
+            "status": "ok",
+            "backend": backend,
+            "cache_enabled": False,
+            "message": "Tensor cache only available with CDNA backend",
+        }
+
+    try:
+        # Extract base URL (remove /v1 suffix if present)
+        base_url = LLM_BASE_URL.rstrip("/")
+        if base_url.endswith("/v1"):
+            base_url = base_url[:-3]
+
+        async with httpx.AsyncClient(timeout=5.0) as client:
+            resp = await client.get(f"{base_url}/v1/cache_stats")
+            if resp.status_code == 200:
+                data = resp.json()
+                data["backend"] = backend
+                return data
+            return {"status": "error", "code": resp.status_code, "backend": backend}
+    except Exception as e:
+        return {"status": "unavailable", "error": str(e), "backend": backend}
 
 
 if __name__ == "__main__":
