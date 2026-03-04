@@ -28,6 +28,11 @@ class NodeType(str, Enum):
     LOCATION = "LOCATION"          # Geographic location
     PROJECT = "PROJECT"            # Funded project/initiative
     PROGRAM = "PROGRAM"            # Government program (CHIPS funding, etc.)
+    # Regime detection node types
+    REGIME_STATE = "REGIME_STATE"  # Economic regime @YYYY-MM (LOW/NORMAL/STRESS/CRISIS)
+    # Hypothesis / thesis node types
+    THESIS = "THESIS"              # Investment thesis with falsifiability criteria
+    HYPOTHESIS = "HYPOTHESIS"      # Testable prediction with expiration
 
 
 class EdgeType(str, Enum):
@@ -98,6 +103,27 @@ class EdgeType(str, Enum):
     REPLACES = "REPLACES"                  # mechanism replaces another (Fed printing)
     CORRELATES = "CORRELATES"              # variable correlates with another
     DERIVES_FROM = "DERIVES_FROM"          # variable computed from others
+    # Regime impact edges (for regime → thesis relationships)
+    MODULATES = "MODULATES"                # regime modulates thesis conviction
+    INCREASES_RISK_FOR = "INCREASES_RISK_FOR"  # regime increases risk for thesis
+    AFFECTS_CONVICTION = "AFFECTS_CONVICTION"  # regime affects conviction level
+    # Temporal relationship edges (sequence and lead/lag)
+    LEADS = "LEADS"                        # X leads Y by N months (with lag metadata)
+    PRECEDES = "PRECEDES"                  # X precedes Y in time sequence
+    FOLLOWS = "FOLLOWS"                    # X follows Y in time sequence
+    # Belief revision edges (graph admits it was wrong)
+    SUPERSEDES = "SUPERSEDES"              # new version replaces old (FRED revisions, etc.)
+    INVALIDATES = "INVALIDATES"            # evidence invalidates prior claim
+    CONFIRMS = "CONFIRMS"                  # new evidence confirms prior hypothesis
+    WEAKENS = "WEAKENS"                    # evidence weakens hypothesis confidence
+    # Negative space edges (predictions that didn't happen)
+    PREDICTS = "PREDICTS"                  # hypothesis predicts event/outcome
+    DID_NOT_MATERIALIZE = "DID_NOT_MATERIALIZE"  # expected event failed to occur
+    FALSIFIED_BY = "FALSIFIED_BY"          # hypothesis falsified by observation
+    EVALUATED_AT = "EVALUATED_AT"          # hypothesis evaluated in regime context (factual)
+    # Entity resolution edges
+    SAME_AS = "SAME_AS"                    # proposed entity match (inferential - needs approval)
+    MERGED_INTO = "MERGED_INTO"            # confirmed entity merge (factual - post-approval)
 
 
 class SourceType(str, Enum):
@@ -144,6 +170,16 @@ INFERENTIAL_EDGE_TYPES = {
     'EXPANDED_CAPACITY', 'RESHORING_SIGNAL',
     # Economic mechanism types (dynamic scenario modeling)
     'REDUCES', 'BLOCKS', 'REPLACES', 'CORRELATES', 'DERIVES_FROM',
+    # Regime impact types (regime → thesis relationships)
+    'MODULATES', 'INCREASES_RISK_FOR', 'AFFECTS_CONVICTION',
+    # Temporal relationships (derived from data patterns)
+    'LEADS',
+    # Belief revision (interpretation of evidence)
+    'CONFIRMS', 'WEAKENS', 'INVALIDATES',
+    # Negative space (predictions about future)
+    'PREDICTS', 'DID_NOT_MATERIALIZE', 'FALSIFIED_BY',
+    # Entity resolution (proposals require approval)
+    'SAME_AS',
 }
 
 # Edge types that are factual by nature (reporting/documenting relationships)
@@ -160,6 +196,14 @@ FACTUAL_EDGE_TYPES = {
     'SIGNED_CONTRACT', 'OPENED_FACILITY', 'INCREASED_POSITION',
     'DECREASED_POSITION', 'SITS_ON_BOARD', 'RELATED_PARTY_TXN',
     'SUBCONTRACTED_TO',
+    # Temporal (observable sequence)
+    'PRECEDES', 'FOLLOWS',
+    # Belief revision (observable replacement)
+    'SUPERSEDES',
+    # Negative space (observable evaluation context)
+    'EVALUATED_AT',
+    # Entity resolution (post-approval merges)
+    'MERGED_INTO',
 }
 
 
