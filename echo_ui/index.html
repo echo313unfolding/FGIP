@@ -674,7 +674,12 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         task_type: 'chat',
-                        payload: { messages: messages },
+                        payload: {
+                            messages: messages,
+                            max_tokens: 256,        // Reasonable default, prevents runaway
+                            temperature: 0.7,       // Slight creativity
+                            top_p: 0.9
+                        },
                         require_kat: false
                     })
                 });
