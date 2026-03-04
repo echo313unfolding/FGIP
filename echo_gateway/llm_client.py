@@ -1,14 +1,19 @@
 """Async LLM client for OpenAI-compatible endpoints (Ollama, LM Studio, etc.)."""
 
 import httpx
+import os
 import time
 from typing import Any, Optional
+
+# Configurable timeout via environment variable
+# Default 120s, but CDNA needs 600+ for slow generation
+DEFAULT_LLM_TIMEOUT = float(os.environ.get("ECHO_LLM_TIMEOUT", "120"))
 
 
 class LLMClient:
     """Async client for OpenAI-compatible chat completions."""
 
-    def __init__(self, base_url: str, model: str, timeout: float = 120.0):
+    def __init__(self, base_url: str, model: str, timeout: float = DEFAULT_LLM_TIMEOUT):
         """
         Initialize the LLM client.
 

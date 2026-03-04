@@ -30,6 +30,7 @@ from helix_cdc.regrow.stream_transformer_block import rms_norm, load_norm_weight
 
 from .model_loader import CDNAModelLoader, DEFAULT_MANIFEST_PATH, DEFAULT_GGUF_PATH
 from .tokenizer import CDNATokenizer
+from .tensor_cache import cached_matmul, get_cache_stats, clear_cache
 
 
 # Architecture constants (Mistral 7B)
@@ -40,6 +41,10 @@ N_HEADS = 32
 N_KV_HEADS = 8
 NORM_EPS = 1e-5
 ROPE_THETA = 1000000.0
+
+# Stage 3: Enable tensor caching (set to False to disable)
+import os
+USE_TENSOR_CACHE = os.environ.get("CDNA_USE_TENSOR_CACHE", "1") == "1"
 
 
 def _hash_text(text: str) -> str:
@@ -85,6 +90,11 @@ class GenerationReceipt:
     prefill_ms: float = 0.0
     decode_ms: float = 0.0
 
+    # Cache stats (Stage 3 performance engineering)
+    tensor_cache_hits: int = 0
+    tensor_cache_misses: int = 0
+    tensor_cache_size_mb: float = 0.0
+
     # Model info
     manifest_hash: str = ""
     tokenizer_hash: str = ""
@@ -125,6 +135,9 @@ class GenerationReceipt:
                 "tokens_per_sec": round(self.tokens_per_sec, 3),
                 "prefill_ms": round(self.prefill_ms, 2),
                 "decode_ms": round(self.decode_ms, 2),
+                "tensor_cache_hits": self.tensor_cache_hits,
+                "tensor_cache_misses": self.tensor_cache_misses,
+                "tensor_cache_size_mb": round(self.tensor_cache_size_mb, 2),
             },
             "model": {
                 "manifest_hash": self.manifest_hash,
@@ -318,9 +331,18 @@ class CDNAGenerator:
         o_name = f"blk.{block_idx}.attn_output.weight"
 
         X_2d = X_norm.reshape(-1, d_model)
-        Q, _ = stream_xw_from_manifest(X_2d, q_name, manifest, base_path, "trust_cached")
-        K_new, _ = stream_xw_from_manifest(X_2d, k_name, manifest, base_path, "trust_cached")
-        V_new, _ = stream_xw_from_manifest(X_2d, v_name, manifest, base_path, "trust_cached")
+
+        if USE_TENSOR_CACHE:
+            # Stage 3: Use cached weights for faster decode
+            manifest_hash = self.model_loader.manifest_hash
+            Q, _ = cached_matmul(X_2d, q_name, manifest, base_path, manifest_hash)
+            K_new, _ = cached_matmul(X_2d, k_name, manifest, base_path, manifest_hash)
+            V_new, _ = cached_matmul(X_2d, v_name, manifest, base_path, manifest_hash)
+        else:
+            # Original streaming path (for comparison/debugging)
+            Q, _ = stream_xw_from_manifest(X_2d, q_name, manifest, base_path, "trust_cached")
+            K_new, _ = stream_xw_from_manifest(X_2d, k_name, manifest, base_path, "trust_cached")
+            V_new, _ = stream_xw_from_manifest(X_2d, v_name, manifest, base_path, "trust_cached")
 
         # Reshape for attention
         Q = Q.reshape(batch, seq, N_HEADS, D_HEAD)
@@ -389,7 +411,10 @@ class CDNAGenerator:
 
         # Output projection
         context_2d = context.reshape(-1, N_HEADS * D_HEAD)
-        attn_out, _ = stream_xw_from_manifest(context_2d, o_name, manifest, base_path, "trust_cached")
+        if USE_TENSOR_CACHE:
+            attn_out, _ = cached_matmul(context_2d, o_name, manifest, base_path, manifest_hash)
+        else:
+            attn_out, _ = stream_xw_from_manifest(context_2d, o_name, manifest, base_path, "trust_cached")
         attn_out = attn_out.reshape(batch, seq, d_model)
 
         # Residual connection 1
@@ -403,14 +428,21 @@ class CDNAGenerator:
         down_name = f"blk.{block_idx}.ffn_down.weight"
 
         X_mid_2d = X_mid_norm.reshape(-1, d_model)
-        gate, _ = stream_xw_from_manifest(X_mid_2d, gate_name, manifest, base_path, "trust_cached")
-        up, _ = stream_xw_from_manifest(X_mid_2d, up_name, manifest, base_path, "trust_cached")
+        if USE_TENSOR_CACHE:
+            gate, _ = cached_matmul(X_mid_2d, gate_name, manifest, base_path, manifest_hash)
+            up, _ = cached_matmul(X_mid_2d, up_name, manifest, base_path, manifest_hash)
+        else:
+            gate, _ = stream_xw_from_manifest(X_mid_2d, gate_name, manifest, base_path, "trust_cached")
+            up, _ = stream_xw_from_manifest(X_mid_2d, up_name, manifest, base_path, "trust_cached")
 
         # SiLU(gate) * up
         hidden = silu(gate) * up
 
         # Down projection
-        ffn_out, _ = stream_xw_from_manifest(hidden, down_name, manifest, base_path, "trust_cached")
+        if USE_TENSOR_CACHE:
+            ffn_out, _ = cached_matmul(hidden, down_name, manifest, base_path, manifest_hash)
+        else:
+            ffn_out, _ = stream_xw_from_manifest(hidden, down_name, manifest, base_path, "trust_cached")
         ffn_out = ffn_out.reshape(batch, seq, d_model)
 
         # Residual connection 2
@@ -573,6 +605,13 @@ class CDNAGenerator:
             receipt.total_ms = (time.perf_counter() - t0_total) * 1000
             if receipt.generated_tokens > 0:
                 receipt.tokens_per_sec = receipt.generated_tokens / (receipt.total_ms / 1000)
+
+            # Stage 3: Add cache stats
+            if USE_TENSOR_CACHE:
+                cache_stats = get_cache_stats()
+                receipt.tensor_cache_hits = cache_stats["hits"]
+                receipt.tensor_cache_misses = cache_stats["misses"]
+                receipt.tensor_cache_size_mb = cache_stats["size_mb"]
 
             receipt.status = "PASS"
             return generated_text, receipt
