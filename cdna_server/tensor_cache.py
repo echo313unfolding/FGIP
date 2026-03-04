@@ -17,22 +17,32 @@ This is acceptable since we're trading memory for speed.
 
 from pathlib import Path
 from typing import Any, Dict, Optional, Tuple
+from collections import OrderedDict
 import threading
+import os
 import numpy as np
 
 from helix_cdc.regrow.cdna_stream_v2 import load_cdna_auto
 
-# Process-global weight cache
+# Stage 4: Cache size limit (default 28GB, configurable via env)
+# Full model needs ~26GB; 28GB provides headroom
+# On 64GB system, this leaves ~36GB for KV cache, page cache, and system
+CACHE_MAX_MB = int(os.environ.get("CDNA_TENSOR_CACHE_MAX_MB", "28000"))
+CACHE_MAX_BYTES = CACHE_MAX_MB * 1024 * 1024
+
+# Process-global weight cache (LRU via OrderedDict)
 # Key: "{manifest_hash}:{tensor_name}"
 # Value: np.ndarray (float32 weight tensor)
-_weight_cache: Dict[str, np.ndarray] = {}
+_weight_cache: OrderedDict[str, np.ndarray] = OrderedDict()
 _cache_lock = threading.Lock()
 
 # Stats for receipts
 _cache_stats = {
     "hits": 0,
     "misses": 0,
+    "evictions": 0,
     "size_bytes": 0,
+    "max_bytes": CACHE_MAX_BYTES,
 }
 _stats_lock = threading.Lock()
 
@@ -43,7 +53,10 @@ def get_cache_stats() -> Dict[str, Any]:
         return {
             "hits": _cache_stats["hits"],
             "misses": _cache_stats["misses"],
+            "evictions": _cache_stats["evictions"],
             "size_mb": _cache_stats["size_bytes"] / (1024 * 1024),
+            "max_mb": _cache_stats["max_bytes"] / (1024 * 1024),
+            "utilization_pct": round(100 * _cache_stats["size_bytes"] / _cache_stats["max_bytes"], 1) if _cache_stats["max_bytes"] > 0 else 0,
             "cached_tensors": len(_weight_cache),
         }
 
@@ -52,11 +65,28 @@ def clear_cache():
     """Clear the tensor cache (for testing)."""
     global _weight_cache
     with _cache_lock:
-        _weight_cache = {}
+        _weight_cache = OrderedDict()
     with _stats_lock:
         _cache_stats["hits"] = 0
         _cache_stats["misses"] = 0
+        _cache_stats["evictions"] = 0
         _cache_stats["size_bytes"] = 0
+
+
+def _evict_until_under_budget(new_tensor_bytes: int):
+    """
+    Evict oldest cache entries (LRU) until there's room for new_tensor_bytes.
+    Must be called with _cache_lock held.
+    """
+    target_bytes = CACHE_MAX_BYTES - new_tensor_bytes
+
+    while _cache_stats["size_bytes"] > target_bytes and _weight_cache:
+        # Pop oldest entry (FIFO order in OrderedDict)
+        oldest_key, oldest_tensor = _weight_cache.popitem(last=False)
+        evicted_bytes = oldest_tensor.nbytes
+        with _stats_lock:
+            _cache_stats["size_bytes"] -= evicted_bytes
+            _cache_stats["evictions"] += 1
 
 
 def _materialize_weight_from_cdna(
@@ -139,6 +169,8 @@ def cached_matmul(
     with _cache_lock:
         if cache_key in _weight_cache:
             W = _weight_cache[cache_key]
+            # Move to end (mark as recently used for LRU)
+            _weight_cache.move_to_end(cache_key)
             cache_hit = True
             with _stats_lock:
                 _cache_stats["hits"] += 1
@@ -149,9 +181,16 @@ def cached_matmul(
         # Materialize weight
         W = _materialize_weight_from_cdna(tensor_name, manifest, base_path)
 
-        # Cache it
+        # Cache it (with eviction if over budget)
         with _cache_lock:
+            # Evict oldest entries if needed to make room
+            if _cache_stats["size_bytes"] + W.nbytes > CACHE_MAX_BYTES:
+                _evict_until_under_budget(W.nbytes)
+
             _weight_cache[cache_key] = W
+            # Move to end (mark as recently used)
+            _weight_cache.move_to_end(cache_key)
+
         with _stats_lock:
             _cache_stats["misses"] += 1
             _cache_stats["size_bytes"] += W.nbytes

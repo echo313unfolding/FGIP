@@ -366,13 +366,15 @@ cdna-generate-test:
 
 # Start CDNA server with real inference (not stub)
 # Stage 3: Tensor cache + C++ kernel with AVX2
+# Stage 4: Multi-core CPU utilization (nproc --all bypasses OMP_NUM_THREADS=1)
 cdna-up-real:
 	CDNA_MODE=real \
 	CDNA_USE_TENSOR_CACHE=1 \
 	HELIX_USE_CPP_KERNEL=1 \
 	HELIX_USE_FUSED_MATMUL=1 \
-	OMP_NUM_THREADS=$$(nproc) \
-	OPENBLAS_NUM_THREADS=$$(nproc) \
+	OMP_NUM_THREADS=$$(nproc --all) \
+	OPENBLAS_NUM_THREADS=$$(nproc --all) \
+	MKL_NUM_THREADS=$$(nproc --all) \
 	python3 -m uvicorn cdna_server.app:app --host 0.0.0.0 --port 7778
 
 # Start Echo with real CDNA backend
