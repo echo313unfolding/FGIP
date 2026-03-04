@@ -155,6 +155,36 @@ def count_tokens_approx(text: str) -> int:
 
 # ============ Real Inference ============
 
+def _build_mistral_prompt(messages: List[Message]) -> str:
+    """
+    Build Mistral [INST] format prompt.
+
+    Mistral instruct format:
+    [INST] user message [/INST] assistant response </s>[INST] user message [/INST]
+
+    Note: BOS token (<s>) is added by tokenizer.encode(add_bos=True), not here.
+    """
+    parts = []
+    system_prefix = ""
+
+    for msg in messages:
+        if msg.role == "system":
+            # Mistral has no system role - prepend to first user message
+            system_prefix = msg.content.strip() + "\n\n"
+        elif msg.role == "user":
+            content = msg.content.strip()
+            if system_prefix:
+                content = system_prefix + content
+                system_prefix = ""
+            parts.append(f"[INST] {content} [/INST]")
+        elif msg.role == "assistant":
+            parts.append(f" {msg.content.strip()} </s>")
+
+    # Don't add <s> here - tokenizer adds BOS automatically
+    prompt = "".join(parts)
+    return prompt
+
+
 def real_inference(
     messages: List[Message],
     temperature: float,
@@ -171,20 +201,8 @@ def real_inference(
     if generator is None:
         raise HTTPException(status_code=500, detail="Generator not initialized")
 
-    # Build prompt from messages
-    # Simple format: concatenate all messages
-    prompt_parts = []
-    for msg in messages:
-        if msg.role == "system":
-            prompt_parts.append(f"System: {msg.content}")
-        elif msg.role == "user":
-            prompt_parts.append(f"User: {msg.content}")
-        elif msg.role == "assistant":
-            prompt_parts.append(f"Assistant: {msg.content}")
-
-    prompt = "\n".join(prompt_parts)
-    if messages[-1].role == "user":
-        prompt += "\nAssistant:"
+    # Build prompt with Mistral [INST] template
+    prompt = _build_mistral_prompt(messages)
 
     # Generate
     response_text, receipt = generator.generate(

@@ -535,9 +535,16 @@ class CDNAGenerator:
             generated_ids: List[int] = []
             kv_cache: Optional[KVCache] = None
 
-            # Prefill
+            # Prefill - Use proven Stage 1 forward pass (WO-CDNA-TEMPLATE-FIX workaround)
+            # Stage 2's _forward_with_cache has a bug causing wrong token predictions
             t0_prefill = time.perf_counter()
-            logits, kv_cache = self._forward_with_cache(prompt_ids, kv_cache)
+            from .cdna_forward import cdna_forward_pass
+            logits, forward_receipt = cdna_forward_pass(
+                prompt,
+                model_loader=self.model_loader,
+                tokenizer=self.tokenizer,
+            )
+            kv_cache = None  # Disable KV caching until Stage 2 forward is fixed
             receipt.prefill_ms = (time.perf_counter() - t0_prefill) * 1000
             receipt.ttft_ms = receipt.prefill_ms
 
@@ -588,8 +595,15 @@ class CDNAGenerator:
                     if stop_reason == "stop_string":
                         break
 
-                # Forward pass for next token (incremental)
-                logits, kv_cache = self._forward_with_cache([next_id], kv_cache)
+                # Forward pass for next token
+                # WO-CDNA-TEMPLATE-FIX workaround: use Stage 1 forward (no KV cache)
+                # This is slower but produces correct logits
+                full_text, _ = self.tokenizer.decode(list(prompt_ids) + generated_ids)
+                logits, _ = cdna_forward_pass(
+                    full_text,
+                    model_loader=self.model_loader,
+                    tokenizer=self.tokenizer,
+                )
 
             receipt.decode_ms = (time.perf_counter() - t0_decode) * 1000
             receipt.stop_reason = stop_reason

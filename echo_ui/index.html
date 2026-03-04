@@ -676,9 +676,10 @@
                         task_type: 'chat',
                         payload: {
                             messages: messages,
-                            max_tokens: 256,        // Reasonable default, prevents runaway
-                            temperature: 0.7,       // Slight creativity
-                            top_p: 0.9
+                            max_tokens: 16,         // Short for debugging
+                            temperature: 0.0,       // Deterministic
+                            top_p: 1.0,
+                            seed: 123
                         },
                         require_kat: false
                     })
