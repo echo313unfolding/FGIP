@@ -365,10 +365,14 @@ cdna-generate-test:
 	python3 -c "from cdna_server import generate; text, r = generate('Hello', max_tokens=8); print(f'Status: {r.status}'); print(f'Generated: {text!r}'); print(f'Tokens/sec: {r.tokens_per_sec:.2f}')"
 
 # Start CDNA server with real inference (not stub)
-# Stage 3: Tensor cache enabled by default (CDNA_USE_TENSOR_CACHE=1)
+# Stage 3: Tensor cache + C++ kernel with AVX2
 cdna-up-real:
 	CDNA_MODE=real \
 	CDNA_USE_TENSOR_CACHE=1 \
+	HELIX_USE_CPP_KERNEL=1 \
+	HELIX_USE_FUSED_MATMUL=1 \
+	OMP_NUM_THREADS=$$(nproc) \
+	OPENBLAS_NUM_THREADS=$$(nproc) \
 	python3 -m uvicorn cdna_server.app:app --host 0.0.0.0 --port 7778
 
 # Start Echo with real CDNA backend
