@@ -31,9 +31,10 @@ from helix_cdc.regrow.stream_transformer_block import rms_norm, load_norm_weight
 from .model_loader import CDNAModelLoader, DEFAULT_MANIFEST_PATH, DEFAULT_GGUF_PATH
 from .tokenizer import CDNATokenizer
 from .tensor_cache import cached_matmul, get_cache_stats, clear_cache
+from .satellite import SatelliteCorrection
 
 
-# Architecture constants (Mistral 7B)
+# Architecture constants - defaults for Mistral 7B (overridden at runtime from GGUF)
 N_LAYERS = 32
 D_MODEL = 4096
 D_HEAD = 128
@@ -42,9 +43,54 @@ N_KV_HEADS = 8
 NORM_EPS = 1e-5
 ROPE_THETA = 1000000.0
 
+
+def get_architecture_from_gguf(gguf_path: str) -> dict:
+    """
+    Read architecture parameters from GGUF metadata.
+
+    WO-TINYLLAMA-SETUP-01: Supports any Llama-family model.
+    """
+    from gguf import GGUFReader
+
+    reader = GGUFReader(gguf_path)
+    arch = {}
+
+    for field_name in reader.fields:
+        field = reader.fields[field_name]
+        if hasattr(field, 'parts') and len(field.parts) > 0:
+            val = field.parts[-1]
+            if hasattr(val, 'tolist'):
+                val = val.tolist()
+
+            # Map GGUF fields to our architecture params
+            if field_name == "llama.block_count":
+                arch["n_layers"] = int(val[0]) if isinstance(val, list) else int(val)
+            elif field_name == "llama.embedding_length":
+                arch["d_model"] = int(val[0]) if isinstance(val, list) else int(val)
+            elif field_name == "llama.attention.head_count":
+                arch["n_heads"] = int(val[0]) if isinstance(val, list) else int(val)
+            elif field_name == "llama.attention.head_count_kv":
+                arch["n_kv_heads"] = int(val[0]) if isinstance(val, list) else int(val)
+            elif field_name == "llama.rope.freq_base":
+                arch["rope_theta"] = float(val[0]) if isinstance(val, list) else float(val)
+            elif field_name == "llama.attention.layer_norm_rms_epsilon":
+                arch["norm_eps"] = float(val[0]) if isinstance(val, list) else float(val)
+
+    # Compute d_head from d_model / n_heads
+    if "d_model" in arch and "n_heads" in arch:
+        arch["d_head"] = arch["d_model"] // arch["n_heads"]
+
+    return arch
+
 # Stage 3: Enable tensor caching (set to False to disable)
 import os
 USE_TENSOR_CACHE = os.environ.get("CDNA_USE_TENSOR_CACHE", "1") == "1"
+
+# WO-CDNA-STAGE2-DEBUG: Safe forward mode toggle
+# Stage 2 (CDNA_SAFE_FORWARD=0): Use cached_matmul + _forward_with_cache - CORRECT, matches HuggingFace
+# Stage 1 (CDNA_SAFE_FORWARD=1): Use stream_xw_from_manifest - HAS BUG, produces wrong logits
+# Default to Stage 2 (fast + correct)
+CDNA_SAFE_FORWARD = os.environ.get("CDNA_SAFE_FORWARD", "0") == "1"
 
 
 def _hash_text(text: str) -> str:
@@ -99,6 +145,11 @@ class GenerationReceipt:
     manifest_hash: str = ""
     tokenizer_hash: str = ""
 
+    # WO-SATELLITE-LAYER-01: Satellite correction info
+    satellite_applied: bool = False
+    satellite_type: str = ""
+    satellite_hash: str = ""
+
     # Status
     timestamp: str = field(
         default_factory=lambda: datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -142,6 +193,11 @@ class GenerationReceipt:
             "model": {
                 "manifest_hash": self.manifest_hash,
                 "tokenizer_hash": self.tokenizer_hash,
+            },
+            "satellite": {
+                "applied": self.satellite_applied,
+                "type": self.satellite_type,
+                "hash": self.satellite_hash,
             },
             "timestamp": self.timestamp,
             "status": self.status,
@@ -270,6 +326,19 @@ class CDNAGenerator:
         self.model_loader = model_loader or CDNAModelLoader()
         self.tokenizer = tokenizer or CDNATokenizer()
 
+        # WO-TINYLLAMA-SETUP-01: Load architecture from GGUF
+        arch = get_architecture_from_gguf(str(self.model_loader.gguf_path))
+        self.n_layers = arch.get("n_layers", N_LAYERS)
+        self.d_model = arch.get("d_model", D_MODEL)
+        self.d_head = arch.get("d_head", D_HEAD)
+        self.n_heads = arch.get("n_heads", N_HEADS)
+        self.n_kv_heads = arch.get("n_kv_heads", N_KV_HEADS)
+        self.norm_eps = arch.get("norm_eps", NORM_EPS)
+        self.rope_theta = arch.get("rope_theta", ROPE_THETA)
+
+        print(f"[CDNAGenerator] Loaded architecture: layers={self.n_layers}, d_model={self.d_model}, "
+              f"heads={self.n_heads}, kv_heads={self.n_kv_heads}, d_head={self.d_head}")
+
         # Load manifest for streaming
         self._manifest = self.model_loader._manifest
         self._manifest_path = Path(self.model_loader.manifest_path)
@@ -277,11 +346,21 @@ class CDNAGenerator:
         # e.g. "seeds/cdna_v2_fullblocks/..." so base is helix-cdc, not helix-cdc/seeds
         self._base_path = self._manifest_path.parent.parent  # helix-cdc root
 
-        # KV cache
+        # KV cache (architecture-aware)
         self._kv_cache: Optional[KVCache] = None
 
         # Preload norm weights (tiny, can keep in memory)
         self._norm_weights: Dict[str, Tuple[np.ndarray, np.ndarray]] = {}
+
+        # WO-SATELLITE-LAYER-01: Load satellite correction if present in manifest
+        self._satellite: Optional[SatelliteCorrection] = None
+        try:
+            self._satellite = self.model_loader.load_satellite(verify=True)
+            if self._satellite is not None:
+                print(f"[CDNAGenerator] Loaded satellite correction: type={self._satellite.correction_type}, "
+                      f"improvement={self._satellite.improvement_pct:.1f}%")
+        except ValueError as e:
+            print(f"[CDNAGenerator] Warning: Satellite verification failed: {e}")
 
     def _get_norm_weights(self, block_idx: int) -> Tuple[np.ndarray, np.ndarray]:
         """Get cached norm weights for a block."""
@@ -322,7 +401,7 @@ class CDNAGenerator:
         attn_norm, ffn_norm = self._get_norm_weights(block_idx)
 
         # Attention norm
-        X_norm = rms_norm(X, attn_norm, NORM_EPS)
+        X_norm = rms_norm(X, attn_norm, self.norm_eps)
 
         # Project Q, K, V using streaming matmul
         q_name = f"blk.{block_idx}.attn_q.weight"
@@ -334,10 +413,11 @@ class CDNAGenerator:
 
         if USE_TENSOR_CACHE:
             # Stage 3: Use cached weights for faster decode
+            # CDNA weights are [out, in] format, need transpose for matmul
             manifest_hash = self.model_loader.manifest_hash
-            Q, _ = cached_matmul(X_2d, q_name, manifest, base_path, manifest_hash)
-            K_new, _ = cached_matmul(X_2d, k_name, manifest, base_path, manifest_hash)
-            V_new, _ = cached_matmul(X_2d, v_name, manifest, base_path, manifest_hash)
+            Q, _ = cached_matmul(X_2d, q_name, manifest, base_path, manifest_hash, transpose_w=True)
+            K_new, _ = cached_matmul(X_2d, k_name, manifest, base_path, manifest_hash, transpose_w=True)
+            V_new, _ = cached_matmul(X_2d, v_name, manifest, base_path, manifest_hash, transpose_w=True)
         else:
             # Original streaming path (for comparison/debugging)
             Q, _ = stream_xw_from_manifest(X_2d, q_name, manifest, base_path, "trust_cached")
@@ -345,15 +425,15 @@ class CDNAGenerator:
             V_new, _ = stream_xw_from_manifest(X_2d, v_name, manifest, base_path, "trust_cached")
 
         # Reshape for attention
-        Q = Q.reshape(batch, seq, N_HEADS, D_HEAD)
-        K_new = K_new.reshape(batch, seq, N_KV_HEADS, D_HEAD)
-        V_new = V_new.reshape(batch, seq, N_KV_HEADS, D_HEAD)
+        Q = Q.reshape(batch, seq, self.n_heads, self.d_head)
+        K_new = K_new.reshape(batch, seq, self.n_kv_heads, self.d_head)
+        V_new = V_new.reshape(batch, seq, self.n_kv_heads, self.d_head)
 
         # Apply RoPE to Q and K
-        for h in range(N_HEADS):
-            Q[0, :, h, :] = apply_rope_single_head(Q[0, :, h, :], pos_offset)
-        for h in range(N_KV_HEADS):
-            K_new[0, :, h, :] = apply_rope_single_head(K_new[0, :, h, :], pos_offset)
+        for h in range(self.n_heads):
+            Q[0, :, h, :] = apply_rope_single_head(Q[0, :, h, :], pos_offset, self.rope_theta)
+        for h in range(self.n_kv_heads):
+            K_new[0, :, h, :] = apply_rope_single_head(K_new[0, :, h, :], pos_offset, self.rope_theta)
 
         # Transpose for attention: [batch, heads, seq, d_head]
         Q = Q.transpose(0, 2, 1, 3)
@@ -368,11 +448,11 @@ class CDNAGenerator:
         full_seq = K_full.shape[2]
 
         # GQA attention
-        scale = 1.0 / np.sqrt(D_HEAD)
-        group_size = N_HEADS // N_KV_HEADS
-        context_heads = np.zeros((batch, N_HEADS, seq, D_HEAD), dtype=np.float32)
+        scale = 1.0 / np.sqrt(self.d_head)
+        group_size = self.n_heads // self.n_kv_heads
+        context_heads = np.zeros((batch, self.n_heads, seq, self.d_head), dtype=np.float32)
 
-        for hkv in range(N_KV_HEADS):
+        for hkv in range(self.n_kv_heads):
             h0 = hkv * group_size
             h1 = (hkv + 1) * group_size
 
@@ -407,12 +487,12 @@ class CDNAGenerator:
             context_heads[:, h0:h1, :, :] = ctx
 
         # Reshape context
-        context = context_heads.transpose(0, 2, 1, 3).reshape(batch, seq, N_HEADS * D_HEAD)
+        context = context_heads.transpose(0, 2, 1, 3).reshape(batch, seq, self.n_heads * self.d_head)
 
         # Output projection
-        context_2d = context.reshape(-1, N_HEADS * D_HEAD)
+        context_2d = context.reshape(-1, self.n_heads * self.d_head)
         if USE_TENSOR_CACHE:
-            attn_out, _ = cached_matmul(context_2d, o_name, manifest, base_path, manifest_hash)
+            attn_out, _ = cached_matmul(context_2d, o_name, manifest, base_path, manifest_hash, transpose_w=True)
         else:
             attn_out, _ = stream_xw_from_manifest(context_2d, o_name, manifest, base_path, "trust_cached")
         attn_out = attn_out.reshape(batch, seq, d_model)
@@ -421,7 +501,7 @@ class CDNAGenerator:
         X_mid = X + attn_out
 
         # FFN
-        X_mid_norm = rms_norm(X_mid, ffn_norm, NORM_EPS)
+        X_mid_norm = rms_norm(X_mid, ffn_norm, self.norm_eps)
 
         gate_name = f"blk.{block_idx}.ffn_gate.weight"
         up_name = f"blk.{block_idx}.ffn_up.weight"
@@ -429,8 +509,8 @@ class CDNAGenerator:
 
         X_mid_2d = X_mid_norm.reshape(-1, d_model)
         if USE_TENSOR_CACHE:
-            gate, _ = cached_matmul(X_mid_2d, gate_name, manifest, base_path, manifest_hash)
-            up, _ = cached_matmul(X_mid_2d, up_name, manifest, base_path, manifest_hash)
+            gate, _ = cached_matmul(X_mid_2d, gate_name, manifest, base_path, manifest_hash, transpose_w=True)
+            up, _ = cached_matmul(X_mid_2d, up_name, manifest, base_path, manifest_hash, transpose_w=True)
         else:
             gate, _ = stream_xw_from_manifest(X_mid_2d, gate_name, manifest, base_path, "trust_cached")
             up, _ = stream_xw_from_manifest(X_mid_2d, up_name, manifest, base_path, "trust_cached")
@@ -440,7 +520,7 @@ class CDNAGenerator:
 
         # Down projection
         if USE_TENSOR_CACHE:
-            ffn_out, _ = cached_matmul(hidden, down_name, manifest, base_path, manifest_hash)
+            ffn_out, _ = cached_matmul(hidden, down_name, manifest, base_path, manifest_hash, transpose_w=True)
         else:
             ffn_out, _ = stream_xw_from_manifest(hidden, down_name, manifest, base_path, "trust_cached")
         ffn_out = ffn_out.reshape(batch, seq, d_model)
@@ -465,9 +545,9 @@ class CDNAGenerator:
         Returns:
             (logits [vocab_size], updated kv_cache)
         """
-        # Initialize cache if needed
+        # Initialize cache if needed (architecture-aware)
         if kv_cache is None:
-            kv_cache = KVCache()
+            kv_cache = KVCache(n_layers=self.n_layers, n_kv_heads=self.n_kv_heads, d_head=self.d_head)
             pos_offset = 0
         else:
             pos_offset = kv_cache.seq_len
@@ -477,8 +557,13 @@ class CDNAGenerator:
         X = embeddings.reshape(1, len(token_ids), -1).astype(np.float32)
 
         # Run through all blocks
-        for block_idx in range(N_LAYERS):
+        for block_idx in range(self.n_layers):
             X = self._forward_block_with_cache(X, block_idx, kv_cache, pos_offset)
+
+        # WO-SATELLITE-LAYER-01: Apply satellite correction if loaded
+        # Satellite sees the whole model output and applies global correction
+        if self._satellite is not None:
+            X = self._satellite.apply(X)
 
         # Project to logits (last token only)
         last_hidden = X[0, -1, :]
@@ -511,6 +596,15 @@ class CDNAGenerator:
         """
         t0_total = time.perf_counter()
 
+        # WO-SATELLITE-LAYER-01: Capture satellite info for receipt
+        satellite_applied = self._satellite is not None
+        satellite_type = self._satellite.correction_type if self._satellite else ""
+        satellite_hash = ""
+        if self._satellite:
+            sat_info = self.model_loader.get_satellite_info()
+            if sat_info:
+                satellite_hash = sat_info.get("sha256", "")[:16]
+
         receipt = GenerationReceipt(
             prompt=prompt,
             prompt_hash=_hash_text(prompt),
@@ -520,6 +614,9 @@ class CDNAGenerator:
             seed=seed,
             manifest_hash=self.model_loader.manifest_hash,
             tokenizer_hash=self.tokenizer.model_hash,
+            satellite_applied=satellite_applied,
+            satellite_type=satellite_type,
+            satellite_hash=satellite_hash,
         )
 
         # Set random seed if provided
@@ -535,16 +632,20 @@ class CDNAGenerator:
             generated_ids: List[int] = []
             kv_cache: Optional[KVCache] = None
 
-            # Prefill - Use proven Stage 1 forward pass (WO-CDNA-TEMPLATE-FIX workaround)
-            # Stage 2's _forward_with_cache has a bug causing wrong token predictions
+            # Prefill
             t0_prefill = time.perf_counter()
-            from .cdna_forward import cdna_forward_pass
-            logits, forward_receipt = cdna_forward_pass(
-                prompt,
-                model_loader=self.model_loader,
-                tokenizer=self.tokenizer,
-            )
-            kv_cache = None  # Disable KV caching until Stage 2 forward is fixed
+            if CDNA_SAFE_FORWARD:
+                # WO-CDNA-STAGE2-DEBUG: Use proven Stage 1 forward (slow but correct)
+                from .cdna_forward import cdna_forward_pass
+                logits, forward_receipt = cdna_forward_pass(
+                    prompt,
+                    model_loader=self.model_loader,
+                    tokenizer=self.tokenizer,
+                )
+                kv_cache = None  # Disable KV caching in safe mode
+            else:
+                # Stage 2: Use KV-cached forward (fast but has bug - for debugging)
+                logits, kv_cache = self._forward_with_cache(prompt_ids, kv_cache)
             receipt.prefill_ms = (time.perf_counter() - t0_prefill) * 1000
             receipt.ttft_ms = receipt.prefill_ms
 
@@ -596,14 +697,17 @@ class CDNAGenerator:
                         break
 
                 # Forward pass for next token
-                # WO-CDNA-TEMPLATE-FIX workaround: use Stage 1 forward (no KV cache)
-                # This is slower but produces correct logits
-                full_text, _ = self.tokenizer.decode(list(prompt_ids) + generated_ids)
-                logits, _ = cdna_forward_pass(
-                    full_text,
-                    model_loader=self.model_loader,
-                    tokenizer=self.tokenizer,
-                )
+                if CDNA_SAFE_FORWARD:
+                    # WO-CDNA-STAGE2-DEBUG: Use Stage 1 forward (no KV cache, slow)
+                    full_text, _ = self.tokenizer.decode(list(prompt_ids) + generated_ids)
+                    logits, _ = cdna_forward_pass(
+                        full_text,
+                        model_loader=self.model_loader,
+                        tokenizer=self.tokenizer,
+                    )
+                else:
+                    # Stage 2: Incremental decode with KV cache (fast)
+                    logits, kv_cache = self._forward_with_cache([next_id], kv_cache)
 
             receipt.decode_ms = (time.perf_counter() - t0_decode) * 1000
             receipt.stop_reason = stop_reason

@@ -54,6 +54,7 @@ from .risk_metrics import (
 from .position_sizing import (
     conviction_based_size,
     volatility_adjusted_size,
+    position_sizer,
 )
 
 
@@ -106,6 +107,7 @@ class Trade:
     commission: float
     conviction_level: int
     reason: str
+    sizing_method: str = "conviction"
 
     @property
     def total_value(self) -> float:
@@ -124,6 +126,7 @@ class Trade:
             "commission": self.commission,
             "conviction_level": self.conviction_level,
             "reason": self.reason,
+            "sizing_method": self.sizing_method,
             "total_value": self.total_value,
         }
 
@@ -320,6 +323,63 @@ class PortfolioBacktest:
         self.positions_history: List[Dict] = []
         self._trade_counter = 0
 
+    def _get_trailing_volatility(self, symbol: str, date: str, lookback_days: int = 60) -> Optional[float]:
+        """Compute annualized trailing volatility from cached prices."""
+        conn = self.db.connect()
+        rows = conn.execute(
+            """SELECT adj_close FROM price_history
+               WHERE symbol = ? AND date <= ?
+               ORDER BY date DESC LIMIT ?""",
+            (symbol.upper(), date, lookback_days + 1)
+        ).fetchall()
+        if len(rows) < 10:
+            return None
+        prices = [r[0] for r in reversed(rows)]
+        returns = [(prices[i] / prices[i - 1]) - 1 for i in range(1, len(prices))]
+        if not returns:
+            return None
+        mean_r = sum(returns) / len(returns)
+        var = sum((r - mean_r) ** 2 for r in returns) / (len(returns) - 1)
+        std = var ** 0.5
+        return std * (252 ** 0.5)
+
+    def _get_avg_volume(self, symbol: str, date: str, lookback_days: int = 20) -> Optional[int]:
+        """Get average daily volume from cached prices."""
+        conn = self.db.connect()
+        row = conn.execute(
+            """SELECT AVG(volume) FROM (
+                SELECT volume FROM price_history
+                WHERE symbol = ? AND date <= ?
+                ORDER BY date DESC LIMIT ?
+            )""",
+            (symbol.upper(), date, lookback_days)
+        ).fetchone()
+        return int(row[0]) if row and row[0] else None
+
+    def _get_running_win_stats(self) -> Tuple[Optional[float], Optional[float]]:
+        """Compute win probability and win/loss ratio from completed trades so far."""
+        buys: Dict[str, Trade] = {}
+        wins = []
+        losses = []
+        for trade in self.trade_log:
+            if trade.side == "BUY":
+                buys[trade.symbol] = trade
+            elif trade.side == "SELL" and trade.symbol in buys:
+                buy = buys.pop(trade.symbol)
+                ret = (trade.price - buy.price) / buy.price
+                if ret > 0:
+                    wins.append(ret)
+                else:
+                    losses.append(abs(ret))
+        total = len(wins) + len(losses)
+        if total < 5:
+            return (None, None)
+        win_prob = len(wins) / total
+        avg_win = sum(wins) / len(wins) if wins else 0.0
+        avg_loss = sum(losses) / len(losses) if losses else 1.0
+        win_loss_ratio = avg_win / avg_loss if avg_loss > 0 else 0.0
+        return (win_prob, win_loss_ratio)
+
     def run(self, thesis_ids: List[str]) -> BacktestResult:
         """
         Execute backtest for given theses.
@@ -481,6 +541,9 @@ class PortfolioBacktest:
         """
         Convert signals to target position sizes.
 
+        Routes through position_sizer() using config.position_size_method,
+        applying volatility and liquidity adjustments per ticker.
+
         Args:
             signals: List of conviction signals
             date: Current date
@@ -490,46 +553,58 @@ class PortfolioBacktest:
         """
         targets = {}
         total_allocation = 0.0
+        portfolio_value = self._calculate_portfolio_value(date)
+        win_prob, win_loss_ratio = self._get_running_win_stats()
 
         for signal in signals:
-            # In backtest_mode, trade thesis tickers regardless of live signal recommendation
-            # In live mode, only act on BUY recommendations
             if not self.config.backtest_mode and signal["recommendation"] != "BUY":
                 continue
 
             conviction = signal["conviction_level"]
-            base_size = conviction_based_size(
-                conviction,
-                self.config.max_position_pct,
-                self.config.min_conviction_to_trade
-            )
-
-            # In backtest_mode with equal sizing, use max_position_pct regardless of conviction
-            if self.config.backtest_mode and base_size == 0.0:
-                base_size = self.config.max_position_pct * 0.5  # Use 50% of max for low-conviction in backtest
-
-            # Distribute across thesis tickers
             thesis_tickers = [t for t in signal["tickers"] if t.isupper()]
             if not thesis_tickers:
                 continue
 
-            size_per_ticker = base_size / len(thesis_tickers)
+            # Per-ticker max ensures thesis total <= max_position_pct
+            per_ticker_max = self.config.max_position_pct / len(thesis_tickers)
 
             for ticker in thesis_tickers:
-                if total_allocation + size_per_ticker > 1.0:
+                price = self.price_manager.get_price_at(ticker, date)
+                vol = self._get_trailing_volatility(ticker, date)
+                avg_vol = self._get_avg_volume(ticker, date)
+
+                sizing = position_sizer(
+                    conviction_level=conviction,
+                    win_prob=win_prob,
+                    win_loss_ratio=win_loss_ratio,
+                    asset_volatility=vol,
+                    portfolio_value=portfolio_value,
+                    avg_daily_volume=avg_vol,
+                    avg_price=price,
+                    max_position_pct=per_ticker_max,
+                    method=self.config.position_size_method,
+                )
+                size = sizing["final_size"]
+
+                # Backtest mode fallback for zero-sized positions
+                if self.config.backtest_mode and size == 0.0:
+                    size = per_ticker_max * 0.5
+
+                if total_allocation + size > 1.0:
                     break
 
                 if ticker not in targets:
                     targets[ticker] = {
                         "symbol": ticker,
                         "thesis_id": signal["thesis_id"],
-                        "target_pct": size_per_ticker,
+                        "target_pct": size,
                         "conviction_level": conviction,
+                        "sizing_method": self.config.position_size_method,
+                        "sizing_adjustments": sizing["adjustments"],
                     }
-                    total_allocation += size_per_ticker
+                    total_allocation += size
                 else:
-                    # Average if multiple theses point to same ticker
-                    targets[ticker]["target_pct"] = (targets[ticker]["target_pct"] + size_per_ticker) / 2
+                    targets[ticker]["target_pct"] = (targets[ticker]["target_pct"] + size) / 2
                     targets[ticker]["conviction_level"] = max(
                         targets[ticker]["conviction_level"], conviction
                     )
@@ -561,6 +636,8 @@ class PortfolioBacktest:
 
             target_shares = target_value / price
 
+            sizing_method = target.get("sizing_method", self.config.position_size_method)
+
             if symbol in self.positions:
                 # Adjust existing position
                 current_shares = self.positions[symbol].shares
@@ -571,7 +648,7 @@ class PortfolioBacktest:
                         self._execute_buy(
                             symbol, date, delta_shares, price,
                             target["thesis_id"], target["conviction_level"],
-                            "rebalance_add"
+                            "rebalance_add", sizing_method
                         )
                     else:
                         self._execute_sell(
@@ -584,7 +661,7 @@ class PortfolioBacktest:
                     self._execute_buy(
                         symbol, date, target_shares, price,
                         target["thesis_id"], target["conviction_level"],
-                        "new_position"
+                        "new_position", sizing_method
                     )
 
     def _execute_buy(
@@ -595,7 +672,8 @@ class PortfolioBacktest:
         price: float,
         thesis_id: str,
         conviction_level: int,
-        reason: str
+        reason: str,
+        sizing_method: str = "conviction"
     ):
         """Execute a buy order."""
         slippage = (price * shares * self.config.slippage_bps / 10000)
@@ -623,6 +701,7 @@ class PortfolioBacktest:
             commission=commission,
             conviction_level=conviction_level,
             reason=reason,
+            sizing_method=sizing_method,
         )
         self.trade_log.append(trade)
 
@@ -709,17 +788,25 @@ class PortfolioBacktest:
                     pos.high_water_mark = price
 
     def _check_stop_losses(self, date: str):
-        """Check and execute stop losses."""
-        if self.config.stop_loss_pct is None:
-            return
-
+        """Check and execute fixed and trailing stop losses."""
         symbols_to_close = []
-        for symbol, pos in self.positions.items():
-            if pos.unrealized_pnl_pct < -self.config.stop_loss_pct:
-                symbols_to_close.append(symbol)
 
-        for symbol in symbols_to_close:
-            self._close_position(symbol, date, "stop_loss")
+        for symbol, pos in self.positions.items():
+            # Fixed stop loss (from cost basis)
+            if self.config.stop_loss_pct is not None:
+                if pos.unrealized_pnl_pct < -self.config.stop_loss_pct:
+                    symbols_to_close.append((symbol, "stop_loss"))
+                    continue
+
+            # Trailing stop (from high water mark)
+            if self.config.trailing_stop_pct is not None and pos.high_water_mark > 0:
+                drop_from_high = (pos.high_water_mark - pos.current_price) / pos.high_water_mark
+                if drop_from_high > self.config.trailing_stop_pct:
+                    symbols_to_close.append((symbol, "trailing_stop"))
+                    continue
+
+        for symbol, reason in symbols_to_close:
+            self._close_position(symbol, date, reason)
 
     def _calculate_portfolio_value(self, date: str) -> float:
         """Calculate total portfolio value."""

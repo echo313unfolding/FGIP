@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-03-03T11:20:00Z",
+  "version": "3.0.0",
+  "summary": {
+    "total_claims": 45,
+    "PROVEN": 23,
+    "EVIDENCED": 5,
+    "HEURISTIC": 12,
+    "UNVERIFIED": 5,
+    "proven_percentage": 51.1
+  },
+  "taxonomy": {
+    "PROVEN": "Tier-0 artifact exists locally + SHA256 hash + repro command",
+    "EVIDENCED": "Tier-1 citation exists but no Tier-0 artifact yet",
+    "HEURISTIC": "Inference from proven facts",
+    "UNVERIFIED": "Claim exists, no acceptable evidence"
+  },
+  "tier0_artifacts": {
+    "backtest": {
+      "count": 9,
+      "files": ["backtest_*.json", "SUMMARY.json"],
+      "status": "PROVEN"
+    },
+    "inflation": {
+      "count": 4,
+      "files": ["fred_M2SL.csv", "fred_CPIAUCSL.csv", "fred_PCEPI.csv", "fred_CSUSHPINSA.csv"],
+      "status": "PROVEN"
+    },
+    "genius_act": {
+      "count": 1,
+      "files": ["GENIUS_Act_S1582_Enrolled.pdf"],
+      "sha256": "e38737772f78b13a343fa9dfad7454d51426cdca7f661dfc2687a8bc585ff32a",
+      "status": "PROVEN"
+    },
+    "reshoring_etfs": {
+      "count": 4,
+      "files": [
+        "RSHO_NPORT_P_Nov2025.xml",
+        "RSHO_NPORT_EX_Nov2025.htm",
+        "MADE_N1A_485APOS_Aug2024.htm",
+        "MADE_FactSheet_Dec2025.pdf"
+      ],
+      "status": "PROVEN"
+    },
+    "industrial_base": {
+      "count": 5,
+      "files": [
+        "fred_VAPGDPMA.csv",
+        "usgs_mcs2025.pdf",
+        "CRS_RL33153_China_Naval_Modernization.pdf",
+        "ONI_232x_WarZone_Article.html",
+        "CSIS_Empty_Bins_Jones_Jan2023.pdf"
+      ],
+      "status": "PROVEN"
+    }
+  },
+  "proven_computations": {
+    "inflation": {
+      "m2_cagr_full": "6.72% (1959-2026)",
+      "cpi_cagr_full": "3.51% (1947-2026)",
+      "m2_cpi_gap": "3.05-3.46%",
+      "case_shiller_post_covid": "7.59% (2020-2025)"
+    },
+    "reshoring": {
+      "rsho_net_assets": "$178.3M (Nov 2025 N-PORT)",
+      "rsho_growth": "From $6M (May 2023) to $178M = 29x growth"
+    },
+    "manufacturing": {
+      "gdp_share": "13.1% → 9.5% (2005-2025)"
+    }
+  },
+  "by_category": {
+    "backtest_results": {
+      "PROVEN": 9,
+      "EVIDENCED": 0,
+      "HEURISTIC": 3,
+      "UNVERIFIED": 0,
+      "status": "STRONG"
+    },
+    "genius_act": {
+      "PROVEN": 1,
+      "EVIDENCED": 4,
+      "HEURISTIC": 2,
+      "UNVERIFIED": 1,
+      "status": "PARTIAL - Bill PDF proven, vote counts need roll call pages"
+    },
+    "reshoring_etfs": {
+      "PROVEN": 4,
+      "EVIDENCED": 0,
+      "HEURISTIC": 2,
+      "UNVERIFIED": 0,
+      "status": "STRONG - RSHO N-PORT + MADE N-1A proven"
+    },
+    "industrial_base": {
+      "PROVEN": 5,
+      "EVIDENCED": 6,
+      "HEURISTIC": 2,
+      "UNVERIFIED": 0,
+      "status": "STRONG - CSIS/ONI/CRS/USGS/FRED all proven"
+    },
+    "inflation_proxy": {
+      "PROVEN": 4,
+      "EVIDENCED": 0,
+      "HEURISTIC": 2,
+      "UNVERIFIED": 2,
+      "status": "STRONG"
+    }
+  },
+  "key_findings_proven": {
+    "genius_act_signed": "S.1582 enrolled bill PDF exists",
+    "rsho_aum": "$178.3M net assets (Nov 2025) - exceeds claimed $101.5M",
+    "made_exists": "N-1A registration + fact sheet prove launch",
+    "232x_shipbuilding": "ONI source article archived",
+    "csis_munitions": "Empty Bins report PDF (Seth Jones, Jan 2023)",
+    "rare_earth_dependency": "USGS MCS 2025 + CRS report",
+    "m2_cpi_gap": "3.05% full history, 3.46% modern regime (FRED CSVs)"
+  },
+  "remaining_gaps": [
+    "GENIUS Act vote counts (need clerk.house.gov / senate.gov roll calls)",
+    "Saylor house deed (anecdotal, may remain UNVERIFIED)",
+    "Exact 16% → 10% manufacturing decline (VAPGDPMA starts 2005)"
+  ],
+  "manifest_path": "receipts/MANIFEST.json"
+}

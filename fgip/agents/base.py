@@ -20,7 +20,15 @@ from datetime import datetime
 from typing import List, Optional, Tuple, Dict, Any
 import hashlib
 import json
+import logging
 import uuid
+
+from fgip.fsa import (
+    FSAEnforcer, PIPELINE_FSA, PIPELINE_STATES, PIPELINE_EVENTS,
+    PIPELINE_VIOLATIONS,
+)
+
+log = logging.getLogger(__name__)
 
 
 @dataclass
@@ -204,18 +212,24 @@ class FGIPAgent(ABC):
         - promote(), verify(), or direct writes to claims/edges tables
     """
 
-    def __init__(self, db, name: str, description: str = ""):
+    def __init__(self, db, name: str, description: str = "", fsa_enabled: bool = False):
         """Initialize agent with database connection.
 
         Args:
             db: FGIPDatabase instance
             name: Agent name (e.g., 'edgar', 'scotus')
             description: Human-readable description
+            fsa_enabled: Enable MorphSAT FSA enforcement on run()
         """
         self.db = db
         self.name = name
         self.description = description
         self._proposal_counter = 0
+        self._fsa_enabled = fsa_enabled
+        self._fsa = FSAEnforcer(
+            PIPELINE_FSA, PIPELINE_STATES, PIPELINE_EVENTS,
+            violations=PIPELINE_VIOLATIONS, agent_name=name,
+        )
 
     @property
     def agent_name(self) -> str:
@@ -317,6 +331,8 @@ class FGIPAgent(ABC):
         """Execute the full agent pipeline: collect → extract → propose.
 
         This is the main entry point for running an agent.
+        When fsa_enabled=True, every step boundary emits an FSA event.
+        Illegal transitions are logged and block the pipeline.
 
         Returns:
             Dict with run statistics
@@ -331,20 +347,50 @@ class FGIPAgent(ABC):
             "errors": [],
         }
 
+        # --- FSA gate: begin ---
+        if self._fsa_enabled:
+            self._fsa.reset()
+            legal, _ = self._fsa.step(0)  # begin → COLLECTING
+            if not legal:
+                vtype = self._fsa.violations[-1].violation_type
+                log.warning("FSA BLOCKED %s at begin: %s", self.name, vtype)
+                results["errors"].append(f"FSA: {vtype}")
+                results["fsa"] = self._fsa.summary()
+                return results
+
         try:
             # Step 1: Collect artifacts
             artifacts = self.collect()
             results["artifacts_collected"] = len(artifacts)
 
             if not artifacts:
+                if self._fsa_enabled:
+                    self._fsa.step(8)  # error — no artifacts
                 return results
+
+            # --- FSA gate: artifact_in → integrity_ok ---
+            if self._fsa_enabled:
+                self._fsa.step(1)  # artifact_in → VALIDATING
+                self._fsa.step(2)  # integrity_ok → EXTRACTING (auto: base.py has no FilterAgent)
 
             # Step 2: Extract facts
             facts = self.extract(artifacts)
             results["facts_extracted"] = len(facts)
 
             if not facts:
+                if self._fsa_enabled:
+                    self._fsa.step(8)  # error — no facts
                 return results
+
+            # --- FSA gate: facts_out ---
+            if self._fsa_enabled:
+                legal, _ = self._fsa.step(4)  # facts_out → PROPOSING
+                if not legal:
+                    vtype = self._fsa.violations[-1].violation_type
+                    log.warning("FSA BLOCKED %s at facts_out: %s", self.name, vtype)
+                    results["errors"].append(f"FSA: {vtype}")
+                    results["fsa"] = self._fsa.summary()
+                    return results
 
             # Step 3: Generate proposals
             propose_result = self.propose(facts)
@@ -359,6 +405,11 @@ class FGIPAgent(ABC):
             results["edges_proposed"] = len(edges)
             results["nodes_proposed"] = len(nodes)
 
+            # --- FSA gate: claim_formed → evidence_attached ---
+            if self._fsa_enabled:
+                self._fsa.step(5)  # claim_formed → CITING
+                self._fsa.step(6)  # evidence_attached → WRITING (auto: base.py attaches in propose)
+
             # Step 4: Write to staging tables
             self._write_proposals(claims, edges)
 
@@ -366,8 +417,17 @@ class FGIPAgent(ABC):
             if nodes:
                 self._write_node_proposals(nodes)
 
+            # --- FSA gate: write_ok ---
+            if self._fsa_enabled:
+                self._fsa.step(7)  # write_ok → COMPLETE
+
         except Exception as e:
             results["errors"].append(str(e))
+            if self._fsa_enabled:
+                self._fsa.step(8)  # error
+
+        if self._fsa_enabled:
+            results["fsa"] = self._fsa.summary()
 
         return results
 

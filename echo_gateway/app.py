@@ -24,6 +24,7 @@ from .tools import dispatch_tool, get_tool_schemas
 from .task_router import TaskRouter
 from .kat_gate import KATMode
 from .receipt import ReceiptWriter
+from .agentic_loop import AgenticReasoningLoop
 
 # Configuration from environment
 LLM_BASE_URL = os.environ.get("ECHO_LLM_BASE_URL", "http://127.0.0.1:11434/v1")
@@ -177,6 +178,25 @@ class TaskResponse(BaseModel):
     receipt: dict[str, Any]
     kat_gate: Optional[dict[str, Any]] = None
     errors: Optional[List[str]] = None
+
+
+class AgenticRequest(BaseModel):
+    """Agentic reasoning request payload."""
+    task: str
+    max_iterations: int = 10
+    require_reflection: bool = True
+
+
+class AgenticResponse(BaseModel):
+    """Agentic reasoning response payload."""
+    final_answer: Optional[str] = None
+    confidence: float
+    iterations: int
+    status: str
+    scratchpad: List[dict[str, Any]]
+    tool_calls: List[dict[str, Any]]
+    reflections: List[dict[str, Any]]
+    receipt_id: str
 
 
 def log_session_entry(session_id: str, entry_type: str, content: Any) -> None:
@@ -467,6 +487,62 @@ async def cache_stats() -> dict[str, Any]:
             return {"status": "error", "code": resp.status_code, "backend": backend}
     except Exception as e:
         return {"status": "unavailable", "error": str(e), "backend": backend}
+
+
+@app.post("/v1/agentic")
+async def agentic_reasoning(request: AgenticRequest) -> AgenticResponse:
+    """
+    Agentic reasoning endpoint.
+
+    Executes a multi-step reasoning loop with:
+    - Chain-of-thought prompting
+    - Tool calling (graph queries, calculations, causal chains)
+    - Self-reflection and error correction
+    - Iteration until solved or max iterations
+
+    The ReAct pattern: Think → Act → Observe → Reflect → Repeat
+
+    Request:
+        task: The question/task to solve
+        max_iterations: Maximum reasoning iterations (default: 10)
+        require_reflection: Whether to require periodic self-reflection (default: True)
+
+    Response:
+        final_answer: The concluded answer (if reached)
+        confidence: Confidence score (0.0 - 1.0)
+        iterations: Number of iterations used
+        status: 'complete', 'error', or 'max_iterations'
+        scratchpad: Full reasoning trace
+        tool_calls: All tool calls made
+        reflections: All self-reflections
+        receipt_id: Audit receipt ID
+    """
+    # Initialize reasoning loop
+    loop = AgenticReasoningLoop(
+        llm_client=llm_client,
+        db_path=DB_PATH,
+    )
+
+    # Execute reasoning
+    try:
+        state = await loop.run(
+            task=request.task,
+            max_iterations=request.max_iterations,
+            require_reflection=request.require_reflection,
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Reasoning error: {str(e)}")
+
+    return AgenticResponse(
+        final_answer=state.final_answer,
+        confidence=state.confidence,
+        iterations=state.iteration,
+        status=state.status,
+        scratchpad=[s.to_dict() for s in state.scratchpad],
+        tool_calls=[t.to_dict() for t in state.tool_results],
+        reflections=[r.to_dict() for r in state.reflections],
+        receipt_id=state.receipt_id,
+    )
 
 
 if __name__ == "__main__":

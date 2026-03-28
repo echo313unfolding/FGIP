@@ -5,17 +5,33 @@ Stage 1 of WO-ECHO-CDNA-BACKEND-02.
 
 This module loads the CDNA shard manifest and provides weight access
 for the forward pass. It wraps the proven helix-cdc primitives.
+
+WO-SATELLITE-LAYER-01: Also loads satellite corrections if specified in manifest.
 """
 
 import hashlib
 import json
+import os
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, TYPE_CHECKING
 
-# Paths - relative to helix-cdc root
-HELIX_CDC_ROOT = Path.home() / "helix-cdc"
-DEFAULT_MANIFEST_PATH = HELIX_CDC_ROOT / "seeds/hybrid_manifest_v2_cdna2_fullblocks.json"
-DEFAULT_GGUF_PATH = HELIX_CDC_ROOT / "tmp/mistral_fp8combined_canonical.gguf"
+if TYPE_CHECKING:
+    from .satellite import SatelliteCorrection
+
+# WO-TINYLLAMA-SETUP-01: Environment-driven model paths
+# Allows switching between Mistral, TinyLlama, or any other model
+CDNA_BASE_PATH = Path(os.environ.get("CDNA_BASE_PATH", str(Path.home() / "helix-cdc")))
+HELIX_CDC_ROOT = CDNA_BASE_PATH  # Alias for compatibility
+
+# Default paths (Mistral) - overrideable via env vars
+DEFAULT_GGUF_PATH = Path(os.environ.get(
+    "CDNA_GGUF_PATH",
+    str(CDNA_BASE_PATH / "tmp/mistral_fp8combined_canonical.gguf")
+))
+DEFAULT_MANIFEST_PATH = Path(os.environ.get(
+    "CDNA_MANIFEST_PATH",
+    str(CDNA_BASE_PATH / "seeds/hybrid_manifest_v2_cdna2_fullblocks.json")
+))
 
 
 class CDNAModelLoader:
@@ -109,9 +125,9 @@ class CDNAModelLoader:
         if info is None:
             return None
 
-        # Path in manifest is relative to helix-cdc root
+        # Path in manifest is relative to CDNA_BASE_PATH (helix-cdc root)
         rel_path = info.get("path", "")
-        return HELIX_CDC_ROOT / rel_path
+        return CDNA_BASE_PATH / rel_path
 
     def verify_shard(self, tensor_name: str) -> bool:
         """
@@ -154,6 +170,53 @@ class CDNAModelLoader:
             "total_bytes": self.total_bytes,
             "schema": self.schema,
         }
+
+    def get_satellite_info(self) -> Optional[Dict[str, Any]]:
+        """
+        Get satellite correction info from manifest.
+
+        Returns:
+            Dict with path, sha256, correction_type, etc. or None if not in manifest
+        """
+        return self._manifest.get("satellite_correction")
+
+    def load_satellite(self, verify: bool = True) -> Optional["SatelliteCorrection"]:
+        """
+        Load satellite correction if specified in manifest.
+
+        WO-SATELLITE-LAYER-01: Satellite corrections apply model-wide
+        corrections to compensate for accumulated quantization errors.
+
+        Args:
+            verify: If True, verify SHA256 matches manifest
+
+        Returns:
+            SatelliteCorrection if present and valid, None otherwise
+
+        Raises:
+            ValueError: If SHA256 verification fails
+        """
+        from .satellite import load_satellite, load_satellite_with_verification
+
+        sat_info = self.get_satellite_info()
+        if sat_info is None:
+            return None
+
+        # Resolve path relative to CDNA_BASE_PATH
+        rel_path = sat_info.get("path", "")
+        if not rel_path:
+            return None
+
+        sat_path = CDNA_BASE_PATH / rel_path
+
+        if not sat_path.exists():
+            return None
+
+        if verify:
+            expected_sha = sat_info.get("sha256")
+            return load_satellite_with_verification(sat_path, expected_sha)
+        else:
+            return load_satellite(sat_path)
 
 
 if __name__ == "__main__":
