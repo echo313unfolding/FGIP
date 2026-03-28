@@ -1,0 +1,82 @@
+{
+  "memo_id": "memo-test-fail-closed-20260225004038",
+  "thesis_id": "test-fail-closed",
+  "symbol": "INTC",
+  "direction": "BULLISH",
+  "created_at": "2026-02-25T00:40:38.350745",
+  "decision": "HOLD",
+  "decision_confidence": 0.23,
+  "provenance": {
+    "tape": {
+      "verified": true,
+      "source_type": "yfinance",
+      "retrieved_at": "2026-02-25T00:40:38.346786",
+      "content_hash": "c33115b294351717"
+    },
+    "forecast": {
+      "verified": true,
+      "source_type": "forecast_db",
+      "source_ref": "forecast-test-fail-closed-20260225004038"
+    }
+  },
+  "conviction": {
+    "level": 1,
+    "triangulation_met": false,
+    "source_count": 0
+  },
+  "gates": [
+    {
+      "name": "PROVENANCE",
+      "passed": false,
+      "score": 0.0,
+      "reason": "0 Tier-0/1 sources (need 1)"
+    },
+    {
+      "name": "TRIANGULATION",
+      "passed": false,
+      "score": 0.0,
+      "reason": "0 source types (need 2): "
+    },
+    {
+      "name": "CALIBRATION",
+      "passed": true,
+      "score": 0.43,
+      "reason": "Forecast confidence 36%, data quality 50%"
+    },
+    {
+      "name": "RISK",
+      "passed": true,
+      "score": 0.48100000000000004,
+      "reason": "P(loss) 48%, Max DD -750%"
+    },
+    {
+      "name": "MARKET_CONFIRMATION",
+      "passed": true,
+      "score": 0.5,
+      "reason": "Tape: NEUTRAL (NEUTRAL trend)"
+    }
+  ],
+  "market_layer": {
+    "tape_verdict": "NEUTRAL",
+    "trend": "NEUTRAL",
+    "rsi": 40.06,
+    "price": 46.12,
+    "volume_ratio": 0.95,
+    "events": [
+      "GAP"
+    ],
+    "provenance": "yfinance",
+    "verified": true
+  },
+  "forecast_layer": {
+    "return_p10": -31.1,
+    "return_p50": 1.5,
+    "return_p90": 34.1,
+    "drawdown_p10": -7.5,
+    "probability_of_loss": 0.48,
+    "probability_of_thesis": 0.24,
+    "confidence": 0.36,
+    "forecast_id": "forecast-test-fail-closed-20260225004038",
+    "verified": true
+  }
+}

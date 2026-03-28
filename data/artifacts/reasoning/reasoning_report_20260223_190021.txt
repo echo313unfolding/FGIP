@@ -1,0 +1,61 @@
+============================================================
+  FGIP REASONING REPORT
+  Generated: 2026-02-24T00:00:21.884705+00:00Z
+============================================================
+
+  THESIS SCORE: 63.4%
+  Breakdown:
+    both_sides_patterns: +15
+    high_confidence_patterns: +20
+    causal_chains: +0
+    convergence_nodes: +15
+    source_quality: +4.7
+    connectivity: +8.6
+
+  BOTH-SIDES PATTERNS (3):
+    [95%] Vanguard Group
+         Problem edges: 3
+         Correction edges: 3
+         Owns 8.9% of Micron
+         Owns 8.8% of Microsoft
+         Owns 8.4% of Apple Inc
+         Owns 7.8% of GlobalFoundries
+         Owns 7.2% of Google
+    [95%] State Street Corporation
+         Problem edges: 3
+         Correction edges: 3
+         Owns 4.2% of Micron
+         Owns 4.1% of Microsoft
+         Owns 3.9% of Apple Inc
+         Owns 3.5% of Google
+         Owns 3.1% of GlobalFoundries
+    [95%] BlackRock Inc
+         Problem edges: 3
+         Correction edges: 3
+         Owns 7.3% of Microsoft
+         Owns 7.1% of Micron
+         Owns 6.5% of Apple Inc
+         Owns 6.1% of Google
+         Owns 5.9% of GlobalFoundries
+
+  TOP CAUSAL CHAINS (0):
+
+  CONVERGENCE NODES (11):
+    Vanguard (FINANCIAL_INST): 2 layers, 10 connections
+    BlackRock (FINANCIAL_INST): 2 layers, 10 connections
+    Intel (COMPANY): 2 layers, 9 connections
+    JPMorgan (FINANCIAL_INST): 2 layers, 8 connections
+    GlobalFoundries (COMPANY): 2 layers, 5 connections
+    Micron (COMPANY): 2 layers, 5 connections
+    Microsoft (COMPANY): 2 layers, 5 connections
+    Apple Inc (COMPANY): 2 layers, 5 connections
+    Google (COMPANY): 2 layers, 5 connections
+    Citibank (FINANCIAL_INST): 2 layers, 3 connections
+
+  PROPOSED INFERENCES (6):
+    [95%] Vanguard Group --BENEFITS_FROM--> CHIPS Act
+    [95%] Vanguard Group --BENEFITS_FROM--> Chips Act 2022
+    [95%] State Street Corporation --BENEFITS_FROM--> CHIPS Act
+    [95%] State Street Corporation --BENEFITS_FROM--> Chips Act 2022
+    [95%] BlackRock Inc --BENEFITS_FROM--> CHIPS Act
+    [95%] BlackRock Inc --BENEFITS_FROM--> Chips Act 2022

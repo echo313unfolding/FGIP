@@ -1,0 +1,1462 @@
+{
+  "score_run_id": "score-run-20260304T005014Z",
+  "scored_at": "2026-03-04T00:50:14.521326+00:00",
+  "weights": {
+    "insurance_risk": 0.2,
+    "flood_zone": 0.2,
+    "hoa_health": 0.15,
+    "healthcare_access": 0.15,
+    "property_tax": 0.1,
+    "cost_of_living": 0.1,
+    "crime_rate": 0.1
+  },
+  "scores": [
+    {
+      "area_id": "the-villages",
+      "area_name": "The Villages",
+      "county": "Sumter",
+      "overall_score": 83.5,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 82,
+          "weight": 0.2,
+          "weighted_score": 16.4,
+          "data": {
+            "score": 82,
+            "citizens_share_pct": 7.5,
+            "avg_premium": 1950,
+            "hurricane_exposure": "low",
+            "market_health": "good",
+            "notes": [
+              "Very inland",
+              "The Villages has bulk insurance programs"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Very inland",
+            "The Villages has bulk insurance programs"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 92,
+          "weight": 0.2,
+          "weighted_score": 18.4,
+          "data": {
+            "score": 92,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Very low flood risk"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Very low flood risk"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 80,
+          "weight": 0.15,
+          "weighted_score": 12.0,
+          "data": {
+            "score": 80,
+            "avg_hoa_fee": 450,
+            "avg_condo_hoa_fee": 500,
+            "special_assessment_rate": "low",
+            "litigation_rate": "very low",
+            "sb4d_compliance": "high",
+            "building_age_mix": "newer",
+            "notes": [
+              "Villages CDDs well-managed",
+              "Bulk purchasing reduces costs"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Villages CDDs well-managed",
+            "Bulk purchasing reduces costs"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 85,
+          "weight": 0.15,
+          "weighted_score": 12.75,
+          "data": {
+            "score": 85,
+            "nearest_hospital": "The Villages Regional Hospital",
+            "distance_miles": 1.0,
+            "hospital_rating": 3,
+            "nearest_trauma_center": "AdventHealth Orlando",
+            "trauma_distance_miles": 44.6,
+            "notes": [
+              "Level 1 trauma center within 45 miles"
+            ]
+          },
+          "source": "CMS Hospital Compare",
+          "notes": [
+            "Level 1 trauma center within 45 miles"
+          ]
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 82,
+          "weight": 0.1,
+          "weighted_score": 8.2,
+          "data": {
+            "score": 82,
+            "total_millage": 14.8,
+            "school_millage": 6.2,
+            "county_millage": 4.1,
+            "city_millage_range": "1-3",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 2960,
+            "notes": [
+              "Lower millage",
+              "The Villages CDDs add fees separately"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Lower millage",
+            "The Villages CDDs add fees separately"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 85,
+          "weight": 0.1,
+          "weighted_score": 8.5,
+          "data": {
+            "score": 85,
+            "violent_crime_rate": 180,
+            "property_crime_rate": 1100,
+            "total_crime_rate": 1280,
+            "national_comparison": "below average",
+            "vs_fl_average": {
+              "violent": -204,
+              "property": -848,
+              "total": -1052
+            },
+            "notes": [
+              "Very low crime",
+              "55+ community effect"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Very low crime",
+            "55+ community effect"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 72,
+          "weight": 0.1,
+          "weighted_score": 7.2,
+          "data": {
+            "score": 72,
+            "col_index": 95,
+            "housing_index": 92,
+            "utilities_index": 97,
+            "groceries_index": 96,
+            "healthcare_index": 95,
+            "transportation_index": 94,
+            "notes": [
+              "Slightly below average",
+              "Villages amenity fees add cost"
+            ],
+            "vs_national_avg": -5
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Slightly below average",
+            "Villages amenity fees add cost"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR",
+        "Sumter County Assessor"
+      ],
+      "scored_at": "2026-03-04T00:50:14.520775+00:00"
+    },
+    {
+      "area_id": "ocala",
+      "area_name": "Ocala",
+      "county": "Marion",
+      "overall_score": 78.8,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 78,
+          "weight": 0.2,
+          "weighted_score": 15.6,
+          "data": {
+            "score": 78,
+            "citizens_share_pct": 8.2,
+            "avg_premium": 2100,
+            "hurricane_exposure": "low",
+            "market_health": "good",
+            "notes": [
+              "Inland location reduces hurricane exposure",
+              "Healthy private market"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Inland location reduces hurricane exposure",
+            "Healthy private market"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 90,
+          "weight": 0.2,
+          "weighted_score": 18.0,
+          "data": {
+            "score": 90,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Mostly Zone X inland"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Mostly Zone X inland"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 75,
+          "weight": 0.15,
+          "weighted_score": 11.25,
+          "data": {
+            "score": 75,
+            "avg_hoa_fee": 250,
+            "avg_condo_hoa_fee": 350,
+            "special_assessment_rate": "low",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "newer",
+            "notes": [
+              "Fewer condos, more single-family HOAs",
+              "Lower assessment risk"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Fewer condos, more single-family HOAs",
+            "Lower assessment risk"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 85,
+          "weight": 0.15,
+          "weighted_score": 12.75,
+          "data": {
+            "score": 85,
+            "nearest_hospital": "Ocala Regional Medical Center",
+            "distance_miles": 1.1,
+            "hospital_rating": 3,
+            "nearest_trauma_center": "AdventHealth Orlando",
+            "trauma_distance_miles": 64.0,
+            "notes": []
+          },
+          "source": "CMS Hospital Compare",
+          "notes": []
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 72,
+          "weight": 0.1,
+          "weighted_score": 7.2,
+          "data": {
+            "score": 72,
+            "total_millage": 17.2,
+            "school_millage": 7.5,
+            "county_millage": 5.8,
+            "city_millage_range": "2-4",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3440,
+            "notes": [
+              "Mid-range millage",
+              "Good homestead savings"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Mid-range millage",
+            "Good homestead savings"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 62,
+          "weight": 0.1,
+          "weighted_score": 6.2,
+          "data": {
+            "score": 62,
+            "violent_crime_rate": 485,
+            "property_crime_rate": 2150,
+            "total_crime_rate": 2635,
+            "national_comparison": "slightly above average",
+            "vs_fl_average": {
+              "violent": 101,
+              "property": 202,
+              "total": 303
+            },
+            "notes": [
+              "Ocala metro has higher rates",
+              "Rural areas safer"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Ocala metro has higher rates",
+            "Rural areas safer"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 78,
+          "weight": 0.1,
+          "weighted_score": 7.8,
+          "data": {
+            "score": 78,
+            "col_index": 91,
+            "housing_index": 78,
+            "utilities_index": 98,
+            "groceries_index": 95,
+            "healthcare_index": 94,
+            "transportation_index": 92,
+            "notes": [
+              "Below average COL",
+              "Housing very affordable"
+            ],
+            "vs_national_avg": -9
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Below average COL",
+            "Housing very affordable"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR",
+        "Marion County Assessor"
+      ],
+      "scored_at": "2026-03-04T00:50:14.520703+00:00"
+    },
+    {
+      "area_id": "clermont",
+      "area_name": "Clermont",
+      "county": "Lake",
+      "overall_score": 74.0,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 72,
+          "weight": 0.2,
+          "weighted_score": 14.4,
+          "data": {
+            "score": 72,
+            "citizens_share_pct": 10.3,
+            "avg_premium": 2250,
+            "hurricane_exposure": "low-moderate",
+            "market_health": "good",
+            "notes": [
+              "Inland but closer to Orlando metro"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Inland but closer to Orlando metro"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 78,
+          "weight": 0.2,
+          "weighted_score": 15.6,
+          "data": {
+            "score": 78,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Lake areas may be Zone A"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Lake areas may be Zone A"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 72,
+          "weight": 0.15,
+          "weighted_score": 10.8,
+          "data": {
+            "score": 72,
+            "avg_hoa_fee": 275,
+            "avg_condo_hoa_fee": 375,
+            "special_assessment_rate": "low",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "newer",
+            "notes": [
+              "Growing area, newer HOAs",
+              "Check individual community reserves"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Growing area, newer HOAs",
+            "Check individual community reserves"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 80,
+          "weight": 0.15,
+          "weighted_score": 12.0,
+          "data": {
+            "score": 80,
+            "nearest_hospital": "Orlando Regional Medical Center",
+            "distance_miles": 23.8,
+            "hospital_rating": 4,
+            "nearest_trauma_center": "Orlando Regional Medical Center",
+            "trauma_distance_miles": 23.8,
+            "notes": [
+              "Nearest hospital has 4-star CMS rating",
+              "Level 1 trauma center within 24 miles"
+            ]
+          },
+          "source": "CMS Hospital Compare",
+          "notes": [
+            "Nearest hospital has 4-star CMS rating",
+            "Level 1 trauma center within 24 miles"
+          ]
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 74,
+          "weight": 0.1,
+          "weighted_score": 7.4,
+          "data": {
+            "score": 74,
+            "total_millage": 16.8,
+            "school_millage": 7.2,
+            "county_millage": 5.5,
+            "city_millage_range": "2-4",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3360,
+            "notes": [
+              "Moderate millage",
+              "Clermont slightly higher"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Moderate millage",
+            "Clermont slightly higher"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 70,
+          "weight": 0.1,
+          "weighted_score": 7.0,
+          "data": {
+            "score": 70,
+            "violent_crime_rate": 380,
+            "property_crime_rate": 1850,
+            "total_crime_rate": 2230,
+            "national_comparison": "average",
+            "vs_fl_average": {
+              "violent": -4,
+              "property": -98,
+              "total": -102
+            },
+            "notes": [
+              "Moderate crime rates",
+              "Clermont area lower"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Moderate crime rates",
+            "Clermont area lower"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 68,
+          "weight": 0.1,
+          "weighted_score": 6.8,
+          "data": {
+            "score": 68,
+            "col_index": 97,
+            "housing_index": 95,
+            "utilities_index": 98,
+            "groceries_index": 97,
+            "healthcare_index": 95,
+            "transportation_index": 96,
+            "notes": [
+              "Near average",
+              "Orlando proximity raises prices"
+            ],
+            "vs_national_avg": -3
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Near average",
+            "Orlando proximity raises prices"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Lake County Assessor",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.520957+00:00"
+    },
+    {
+      "area_id": "lakeland",
+      "area_name": "Lakeland",
+      "county": "Polk",
+      "overall_score": 72.6,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 68,
+          "weight": 0.2,
+          "weighted_score": 13.6,
+          "data": {
+            "score": 68,
+            "citizens_share_pct": 12.1,
+            "avg_premium": 2400,
+            "hurricane_exposure": "moderate",
+            "market_health": "moderate",
+            "notes": [
+              "Central FL, some hurricane exposure",
+              "Moderate market stress"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Central FL, some hurricane exposure",
+            "Moderate market stress"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 75,
+          "weight": 0.2,
+          "weighted_score": 15.0,
+          "data": {
+            "score": 75,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Some lakefront areas Zone AE"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Some lakefront areas Zone AE"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 70,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "data": {
+            "score": 70,
+            "avg_hoa_fee": 200,
+            "avg_condo_hoa_fee": 300,
+            "special_assessment_rate": "moderate",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "mixed",
+            "notes": [
+              "Mix of older and newer communities",
+              "Some underfunded HOAs"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Mix of older and newer communities",
+            "Some underfunded HOAs"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 95,
+          "weight": 0.15,
+          "weighted_score": 14.25,
+          "data": {
+            "score": 95,
+            "nearest_hospital": "Lakeland Regional Health",
+            "distance_miles": 0.9,
+            "hospital_rating": 4,
+            "nearest_trauma_center": "Lakeland Regional Health",
+            "trauma_distance_miles": 0.9,
+            "notes": [
+              "Nearest hospital has 4-star CMS rating",
+              "Level 1 trauma center within 1 miles"
+            ]
+          },
+          "source": "CMS Hospital Compare",
+          "notes": [
+            "Nearest hospital has 4-star CMS rating",
+            "Level 1 trauma center within 1 miles"
+          ]
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 62,
+          "weight": 0.1,
+          "weighted_score": 6.2,
+          "data": {
+            "score": 62,
+            "total_millage": 19.5,
+            "school_millage": 8.1,
+            "county_millage": 6.4,
+            "city_millage_range": "3-5",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3900,
+            "notes": [
+              "Higher millage",
+              "Varies significantly by city"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Higher millage",
+            "Varies significantly by city"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 55,
+          "weight": 0.1,
+          "weighted_score": 5.5,
+          "data": {
+            "score": 55,
+            "violent_crime_rate": 520,
+            "property_crime_rate": 2400,
+            "total_crime_rate": 2920,
+            "national_comparison": "above average",
+            "vs_fl_average": {
+              "violent": 136,
+              "property": 452,
+              "total": 588
+            },
+            "notes": [
+              "Lakeland has higher rates",
+              "Some areas vary significantly"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Lakeland has higher rates",
+            "Some areas vary significantly"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 75,
+          "weight": 0.1,
+          "weighted_score": 7.5,
+          "data": {
+            "score": 75,
+            "col_index": 93,
+            "housing_index": 82,
+            "utilities_index": 99,
+            "groceries_index": 96,
+            "healthcare_index": 96,
+            "transportation_index": 95,
+            "notes": [
+              "Below average COL",
+              "Housing affordable"
+            ],
+            "vs_national_avg": -7
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Below average COL",
+            "Housing affordable"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "Polk County Assessor",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.520832+00:00"
+    },
+    {
+      "area_id": "sebring",
+      "area_name": "Sebring",
+      "county": "Highlands",
+      "overall_score": 72.0,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 75,
+          "weight": 0.2,
+          "weighted_score": 15.0,
+          "data": {
+            "score": 75,
+            "citizens_share_pct": 9.8,
+            "avg_premium": 2000,
+            "hurricane_exposure": "low",
+            "market_health": "moderate",
+            "notes": [
+              "Very inland, affordable",
+              "Smaller market, fewer options"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Very inland, affordable",
+            "Smaller market, fewer options"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 88,
+          "weight": 0.2,
+          "weighted_score": 17.6,
+          "data": {
+            "score": 88,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Inland, minimal flood risk"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Inland, minimal flood risk"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 65,
+          "weight": 0.15,
+          "weighted_score": 9.75,
+          "data": {
+            "score": 65,
+            "avg_hoa_fee": 180,
+            "avg_condo_hoa_fee": 280,
+            "special_assessment_rate": "moderate",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "older",
+            "notes": [
+              "Some older communities",
+              "Lower fees but watch reserves"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Some older communities",
+            "Lower fees but watch reserves"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 55,
+          "weight": 0.15,
+          "weighted_score": 8.25,
+          "data": {
+            "score": 55,
+            "nearest_hospital": "AdventHealth Sebring",
+            "distance_miles": 1.5,
+            "hospital_rating": 2,
+            "nearest_trauma_center": "Lakeland Regional Health",
+            "trauma_distance_miles": 48.8,
+            "notes": []
+          },
+          "source": "CMS Hospital Compare",
+          "notes": []
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 68,
+          "weight": 0.1,
+          "weighted_score": 6.8,
+          "data": {
+            "score": 68,
+            "total_millage": 18.1,
+            "school_millage": 7.8,
+            "county_millage": 5.9,
+            "city_millage_range": "2-4",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3620,
+            "notes": [
+              "Moderate-high millage",
+              "Lower home values offset"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Moderate-high millage",
+            "Lower home values offset"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 64,
+          "weight": 0.1,
+          "weighted_score": 6.4,
+          "data": {
+            "score": 64,
+            "violent_crime_rate": 450,
+            "property_crime_rate": 2050,
+            "total_crime_rate": 2500,
+            "national_comparison": "slightly above average",
+            "vs_fl_average": {
+              "violent": 66,
+              "property": 102,
+              "total": 168
+            },
+            "notes": [
+              "Rural poverty factor",
+              "Property crime higher"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Rural poverty factor",
+            "Property crime higher"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 82,
+          "weight": 0.1,
+          "weighted_score": 8.2,
+          "data": {
+            "score": 82,
+            "col_index": 88,
+            "housing_index": 72,
+            "utilities_index": 96,
+            "groceries_index": 94,
+            "healthcare_index": 92,
+            "transportation_index": 90,
+            "notes": [
+              "Well below average COL",
+              "Very affordable"
+            ],
+            "vs_national_avg": -12
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Well below average COL",
+            "Very affordable"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "Highlands County Assessor",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.521070+00:00"
+    },
+    {
+      "area_id": "winter-haven",
+      "area_name": "Winter Haven",
+      "county": "Polk",
+      "overall_score": 71.1,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 68,
+          "weight": 0.2,
+          "weighted_score": 13.6,
+          "data": {
+            "score": 68,
+            "citizens_share_pct": 12.1,
+            "avg_premium": 2400,
+            "hurricane_exposure": "moderate",
+            "market_health": "moderate",
+            "notes": [
+              "Central FL, some hurricane exposure",
+              "Moderate market stress"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Central FL, some hurricane exposure",
+            "Moderate market stress"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 75,
+          "weight": 0.2,
+          "weighted_score": 15.0,
+          "data": {
+            "score": 75,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "Some lakefront areas Zone AE"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Some lakefront areas Zone AE"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 70,
+          "weight": 0.15,
+          "weighted_score": 10.5,
+          "data": {
+            "score": 70,
+            "avg_hoa_fee": 200,
+            "avg_condo_hoa_fee": 300,
+            "special_assessment_rate": "moderate",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "mixed",
+            "notes": [
+              "Mix of older and newer communities",
+              "Some underfunded HOAs"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Mix of older and newer communities",
+            "Some underfunded HOAs"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 85,
+          "weight": 0.15,
+          "weighted_score": 12.75,
+          "data": {
+            "score": 85,
+            "nearest_hospital": "Winter Haven Hospital",
+            "distance_miles": 0.6,
+            "hospital_rating": 3,
+            "nearest_trauma_center": "Lakeland Regional Health",
+            "trauma_distance_miles": 12.6,
+            "notes": [
+              "Level 1 trauma center within 13 miles"
+            ]
+          },
+          "source": "CMS Hospital Compare",
+          "notes": [
+            "Level 1 trauma center within 13 miles"
+          ]
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 62,
+          "weight": 0.1,
+          "weighted_score": 6.2,
+          "data": {
+            "score": 62,
+            "total_millage": 19.5,
+            "school_millage": 8.1,
+            "county_millage": 6.4,
+            "city_millage_range": "3-5",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3900,
+            "notes": [
+              "Higher millage",
+              "Varies significantly by city"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Higher millage",
+            "Varies significantly by city"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 55,
+          "weight": 0.1,
+          "weighted_score": 5.5,
+          "data": {
+            "score": 55,
+            "violent_crime_rate": 520,
+            "property_crime_rate": 2400,
+            "total_crime_rate": 2920,
+            "national_comparison": "above average",
+            "vs_fl_average": {
+              "violent": 136,
+              "property": 452,
+              "total": 588
+            },
+            "notes": [
+              "Lakeland has higher rates",
+              "Some areas vary significantly"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Lakeland has higher rates",
+            "Some areas vary significantly"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 75,
+          "weight": 0.1,
+          "weighted_score": 7.5,
+          "data": {
+            "score": 75,
+            "col_index": 93,
+            "housing_index": 82,
+            "utilities_index": 99,
+            "groceries_index": 96,
+            "healthcare_index": 96,
+            "transportation_index": 95,
+            "notes": [
+              "Below average COL",
+              "Housing affordable"
+            ],
+            "vs_national_avg": -7
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Below average COL",
+            "Housing affordable"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "Polk County Assessor",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.521010+00:00"
+    },
+    {
+      "area_id": "palm-coast-west",
+      "area_name": "Palm Coast (West)",
+      "county": "Flagler",
+      "overall_score": 68.6,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 52,
+          "weight": 0.2,
+          "weighted_score": 10.4,
+          "data": {
+            "score": 52,
+            "citizens_share_pct": 18.2,
+            "avg_premium": 3200,
+            "hurricane_exposure": "moderate-high",
+            "market_health": "stressed",
+            "notes": [
+              "Coastal areas have high exposure",
+              "Inland areas better"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Coastal areas have high exposure",
+            "Inland areas better"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 65,
+          "weight": 0.2,
+          "weighted_score": 13.0,
+          "data": {
+            "score": 65,
+            "zone": "X",
+            "requires_flood_insurance": false,
+            "estimated_flood_premium": 0,
+            "notes": [
+              "West areas better, coastal high risk"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "West areas better, coastal high risk"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 68,
+          "weight": 0.15,
+          "weighted_score": 10.2,
+          "data": {
+            "score": 68,
+            "avg_hoa_fee": 325,
+            "avg_condo_hoa_fee": 425,
+            "special_assessment_rate": "moderate",
+            "litigation_rate": "low",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "mixed",
+            "notes": [
+              "Palm Coast CDDs add fees",
+              "Check individual HOA reserves"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Palm Coast CDDs add fees",
+            "Check individual HOA reserves"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 85,
+          "weight": 0.15,
+          "weighted_score": 12.75,
+          "data": {
+            "score": 85,
+            "nearest_hospital": "AdventHealth Palm Coast",
+            "distance_miles": 7.9,
+            "hospital_rating": 3,
+            "nearest_trauma_center": "AdventHealth Orlando",
+            "trauma_distance_miles": 71.3,
+            "notes": []
+          },
+          "source": "CMS Hospital Compare",
+          "notes": []
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 78,
+          "weight": 0.1,
+          "weighted_score": 7.8,
+          "data": {
+            "score": 78,
+            "total_millage": 15.2,
+            "school_millage": 6.5,
+            "county_millage": 4.8,
+            "city_millage_range": "2-4",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3040,
+            "notes": [
+              "Lower millage",
+              "Palm Coast has CDD fees"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Lower millage",
+            "Palm Coast has CDD fees"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 75,
+          "weight": 0.1,
+          "weighted_score": 7.5,
+          "data": {
+            "score": 75,
+            "violent_crime_rate": 320,
+            "property_crime_rate": 1650,
+            "total_crime_rate": 1970,
+            "national_comparison": "below average",
+            "vs_fl_average": {
+              "violent": -64,
+              "property": -298,
+              "total": -362
+            },
+            "notes": [
+              "Palm Coast relatively safe",
+              "Lower than state average"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Palm Coast relatively safe",
+            "Lower than state average"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 70,
+          "weight": 0.1,
+          "weighted_score": 7.0,
+          "data": {
+            "score": 70,
+            "col_index": 96,
+            "housing_index": 90,
+            "utilities_index": 99,
+            "groceries_index": 97,
+            "healthcare_index": 96,
+            "transportation_index": 97,
+            "notes": [
+              "Slightly below average",
+              "Growing area"
+            ],
+            "vs_national_avg": -4
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Slightly below average",
+            "Growing area"
+          ]
+        }
+      },
+      "red_flags": [],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Flagler County Assessor",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.521175+00:00"
+    },
+    {
+      "area_id": "port-st-lucie-west",
+      "area_name": "Port St. Lucie (West)",
+      "county": "St. Lucie",
+      "overall_score": 60.2,
+      "component_scores": {
+        "insurance_risk": {
+          "factor": "insurance_risk",
+          "score": 45,
+          "weight": 0.2,
+          "weighted_score": 9.0,
+          "data": {
+            "score": 45,
+            "citizens_share_pct": 22.5,
+            "avg_premium": 3800,
+            "hurricane_exposure": "high",
+            "market_health": "stressed",
+            "notes": [
+              "Coastal exposure",
+              "High Citizens dependency",
+              "Recent claims history"
+            ]
+          },
+          "source": "Florida OIR / industry data",
+          "notes": [
+            "Coastal exposure",
+            "High Citizens dependency",
+            "Recent claims history"
+          ]
+        },
+        "flood_zone": {
+          "factor": "flood_zone",
+          "score": 55,
+          "weight": 0.2,
+          "weighted_score": 11.0,
+          "data": {
+            "score": 55,
+            "zone": "AE",
+            "requires_flood_insurance": true,
+            "estimated_flood_premium": 1800,
+            "notes": [
+              "Even inland has some flood zones"
+            ],
+            "data_source": "FEMA NFHL (county estimate)"
+          },
+          "source": "FEMA NFHL",
+          "notes": [
+            "Even inland has some flood zones"
+          ]
+        },
+        "hoa_health": {
+          "factor": "hoa_health",
+          "score": 60,
+          "weight": 0.15,
+          "weighted_score": 9.0,
+          "data": {
+            "score": 60,
+            "avg_hoa_fee": 300,
+            "avg_condo_hoa_fee": 450,
+            "special_assessment_rate": "moderate",
+            "litigation_rate": "moderate",
+            "sb4d_compliance": "moderate",
+            "building_age_mix": "mixed",
+            "notes": [
+              "Some coastal buildings need SB 4-D work",
+              "Assessments possible"
+            ]
+          },
+          "source": "FL SB 4-D / county records",
+          "notes": [
+            "Some coastal buildings need SB 4-D work",
+            "Assessments possible"
+          ]
+        },
+        "healthcare_access": {
+          "factor": "healthcare_access",
+          "score": 85,
+          "weight": 0.15,
+          "weighted_score": 12.75,
+          "data": {
+            "score": 85,
+            "nearest_hospital": "Lawnwood Regional Medical Center",
+            "distance_miles": 10.7,
+            "hospital_rating": 3,
+            "nearest_trauma_center": "Lawnwood Regional Medical Center",
+            "trauma_distance_miles": 10.7,
+            "notes": [
+              "Level 1 trauma center within 11 miles"
+            ]
+          },
+          "source": "CMS Hospital Compare",
+          "notes": [
+            "Level 1 trauma center within 11 miles"
+          ]
+        },
+        "property_tax": {
+          "factor": "property_tax",
+          "score": 65,
+          "weight": 0.1,
+          "weighted_score": 6.5,
+          "data": {
+            "score": 65,
+            "total_millage": 18.8,
+            "school_millage": 7.9,
+            "county_millage": 6.2,
+            "city_millage_range": "3-5",
+            "homestead_exemption": 50000,
+            "example_annual_tax": 3760,
+            "notes": [
+              "Moderate-high millage"
+            ]
+          },
+          "source": "County assessor",
+          "notes": [
+            "Moderate-high millage"
+          ]
+        },
+        "crime_rate": {
+          "factor": "crime_rate",
+          "score": 58,
+          "weight": 0.1,
+          "weighted_score": 5.8,
+          "data": {
+            "score": 58,
+            "violent_crime_rate": 540,
+            "property_crime_rate": 2200,
+            "total_crime_rate": 2740,
+            "national_comparison": "above average",
+            "vs_fl_average": {
+              "violent": 156,
+              "property": 252,
+              "total": 408
+            },
+            "notes": [
+              "Port St. Lucie varies by neighborhood"
+            ]
+          },
+          "source": "FBI UCR",
+          "notes": [
+            "Port St. Lucie varies by neighborhood"
+          ]
+        },
+        "cost_of_living": {
+          "factor": "cost_of_living",
+          "score": 62,
+          "weight": 0.1,
+          "weighted_score": 6.2,
+          "data": {
+            "score": 62,
+            "col_index": 99,
+            "housing_index": 98,
+            "utilities_index": 100,
+            "groceries_index": 98,
+            "healthcare_index": 97,
+            "transportation_index": 98,
+            "notes": [
+              "Near average",
+              "Coastal premium"
+            ],
+            "vs_national_avg": -1
+          },
+          "source": "BLS / regional data",
+          "notes": [
+            "Near average",
+            "Coastal premium"
+          ]
+        }
+      },
+      "red_flags": [
+        "High insurance risk in St. Lucie County",
+        "Flood insurance required (Zone AE)"
+      ],
+      "data_sources": [
+        "FEMA NFHL",
+        "FL county records",
+        "St. Lucie County Assessor",
+        "FBI UCR",
+        "BLS",
+        "CMS Hospital Compare",
+        "Florida OIR"
+      ],
+      "scored_at": "2026-03-04T00:50:14.521125+00:00"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+Facility Buildout Data (Reshoring Signals)
+==================================================
+
+Company: Intel
+Facility: Ohio Fab Complex
+Location: Ohio
+Investment: $20B
+Year: 2022-2027
+URL: https://www.intel.com/content/www/us/en/newsroom/news/intel-announces-ohio.html
+
+Company: TSMC
+Facility: Arizona Fab
+Location: Arizona
+Investment: $40B
+Year: 2021-2026
+URL: https://pr.tsmc.com/english/news/2907
+
+Company: Samsung
+Facility: Taylor Texas Fab
+Location: Texas
+Investment: $17B
+Year: 2021-2024
+URL: https://news.samsung.com/us/samsung-electronics-announces-new-advanced-semiconductor-fab-in-taylor-texas/
+
+Company: Hyundai
+Facility: Georgia EV Plant
+Location: Georgia
+Investment: $5.5B
+Year: 2022-2025
+URL: https://www.hyundaimotorgroup.com/news/CONT0000000000036505
+
+Company: Eli Lilly
+Facility: Indiana Manufacturing
+Location: Indiana
+Investment: $3.7B
+Year: 2023-2026
+URL: https://investor.lilly.com/news-releases/news-release-details/lilly-invests-additional-16-billion-expand-indiana-manufacturing

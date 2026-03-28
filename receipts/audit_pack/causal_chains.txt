@@ -1,0 +1,105 @@
+================================================================================
+FGIP CAUSAL CHAINS REPORT
+================================================================================
+
+## CAUSAL CHAINS FROM KEY NODES
+----------------------------------------
+
+TOP 20 CAUSAL CHAINS (by confidence):
+
+ 1. [100%] genius-act-2025 --ENABLES--> debt-domestication --REDUCES--> foreign-leverage
+
+ 2. [100%] genius-act-2025 --ENABLES--> debt-domestication --REDUCES--> fed-treasury-purchases
+
+ 3. [100%] debt-domestication --REDUCES--> foreign-leverage --ENABLES--> tariff-enablement
+
+ 4. [100%] debt-domestication --REDUCES--> foreign-leverage --BLOCKS--> tariff-enablement
+
+ 5. [100%] foreign-leverage --ENABLES--> tariff-enablement --FUNDS--> reshoring-2025
+
+ 6. [100%] foreign-leverage --BLOCKS--> tariff-enablement --FUNDS--> reshoring-2025
+
+ 7. [100%] tariff-enablement --FUNDS--> reshoring-2025 --IMPLEMENTED_BY--> chips-act
+
+ 8. [100%] reshoring-2025 --IMPLEMENTED_BY--> chips-act --REDUCES--> trade-deficit
+
+ 9. [90%] chips-act --AWARDED_GRANT--> intel --DONATED_TO--> rep-pelosi
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+10. [90%] chips-act --AWARDED_GRANT--> intel --DONATED_TO--> sen-schumer
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+11. [90%] chips-act --AWARDED_GRANT--> intel --DONATED_TO--> sen-young
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+12. [90%] chips-act --AWARDED_GRANT--> intel --DONATED_TO--> sen-cornyn
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+13. [90%] chips-act --AWARDED_GRANT--> intel --DONATED_TO--> rep-mccarthy
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+14. [90%] reshoring-2025 --IMPLEMENTED_BY--> chips-act --AWARDED_GRANT--> intel
+    WEAKEST LINK: chips-act -> intel
+    Confidence: 95%
+    Source: MISSING
+
+15. [90%] reshoring-2025 --IMPLEMENTED_BY--> chips-act --AWARDED_GRANT--> tsmc
+    WEAKEST LINK: chips-act -> tsmc
+    Confidence: 90%
+    Source: Correction Layer (correction_loader)
+
+16. [90%] reshoring-2025 --IMPLEMENTED_BY--> chips-act --AWARDED_GRANT--> samsung
+    WEAKEST LINK: chips-act -> samsung
+    Confidence: 90%
+    Source: Correction Layer (correction_loader)
+
+17. [90%] reshoring-2025 --IMPLEMENTED_BY--> chips-act --IMPLEMENTED_BY--> commerce
+    WEAKEST LINK: chips-act -> commerce
+    Confidence: 90%
+    Source: Correction Layer (federal_register)
+
+18. [81%] genius-act-2025 --CORRECTS--> stablecoin-framework-us --CORRECTS--> bis-cbdc-dependency
+    WEAKEST LINK: genius-act-2025 -> stablecoin-framework-us
+    Confidence: 90%
+    Source: Correction Layer (correction_loader)
+
+19. [81%] genius-act-2025 --IMPLEMENTED_BY--> fdic --RULEMAKING_FOR--> genius-act-2025
+    WEAKEST LINK: genius-act-2025 -> fdic
+    Confidence: 90%
+    Source: Correction Layer (correction_loader)
+
+20. [81%] genius-act-2025 --IMPLEMENTED_BY--> fdic --RULEMAKING_FOR--> genius-act
+    WEAKEST LINK: genius-act-2025 -> fdic
+    Confidence: 90%
+    Source: Correction Layer (correction_loader)
+
+
+## GENIUS ACT DEBT DOMESTICATION CHAIN
+----------------------------------------
+
+Expected chain: GENIUS -> domestication -> leverage -> tariffs -> reshoring -> CHIPS -> deficit
+
+[FOUND] genius-act-2025 --ENABLES--> debt-domestication
+         Confidence: 100%, Source: congress.gov
+[FOUND] debt-domestication --REDUCES--> foreign-leverage
+         Confidence: 100%, Source: treasury.gov
+[FOUND (BLOCKS)] foreign-leverage --BLOCKS--> tariff-enablement
+         Confidence: 100%, Source: historical analysis
+[FOUND] tariff-enablement --FUNDS--> reshoring-2025
+         Confidence: 100%, Source: ustr.gov
+[FOUND] reshoring-2025 --IMPLEMENTED_BY--> chips-act
+         Confidence: 100%, Source: commerce.gov
+[FOUND] chips-act --REDUCES--> trade-deficit
+         Confidence: 100%, Source: census.gov
+
+================================================================================

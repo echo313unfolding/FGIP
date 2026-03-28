@@ -1,0 +1,109 @@
+============================================================
+  FGIP REASONING REPORT (DYNAMIC)
+  Generated: 2026-02-24T16:45:55.855085+00:00Z
+============================================================
+
+  THESIS SCORE: 74.6%
+  Breakdown:
+    both_sides_patterns: +25
+    high_confidence_patterns: +20
+    causal_chains: +0
+    convergence_nodes: +15
+    source_quality: +0.6
+    connectivity: +10
+    dynamic_mechanisms: +4.0
+
+  DYNAMIC SCENARIOS (3):
+    chips-act-reshoring:
+      Effect: CHIPS Act reduces trade deficit pressure, marginally reducing Fed intervention needs
+      Extraction: 10.8% -> 10.5%
+      Thesis boost: +0.6
+    genius-act-partial:
+      Effect: GENIUS Act partially replaces Fed Treasury purchases with stablecoin issuer purchases
+      Extraction: 10.8% -> 9.5%
+      Thesis boost: +2.5
+    genius-act-full:
+      Effect: GENIUS Act at scale ($2T+) significantly reduces Fed Treasury purchase needs
+      Extraction: 10.8% -> 6.7%
+      Thesis boost: +5.7
+
+  KEY INSIGHT:
+    The static extraction rate (10.8%) includes
+    inflation CAUSED BY Fed printing. When correction mechanisms
+    reduce Fed printing, inflation drops, and extraction drops.
+    You can't use the disease as the argument against the cure.
+
+  BOTH-SIDES PATTERNS (8):
+    [95%] Intel
+         Problem edges: 7
+         Correction edges: 8
+    [95%] Micron
+         Problem edges: 3
+         Correction edges: 2
+         Owns 4.2% of Micron
+    [95%] Vanguard Group
+         Problem edges: 5
+         Correction edges: 3
+         Owns 8.9% of Micron
+         Owns 8.8% of Microsoft
+         Owns 8.4% of Apple Inc
+         Owns 7.8% of GlobalFoundries
+         Owns 7.2% of Google
+    [95%] State Street Corporation
+         Problem edges: 5
+         Correction edges: 3
+         Owns 4.2% of Micron
+         Owns 4.1% of Microsoft
+         Owns 3.9% of Apple Inc
+         Owns 3.5% of Google
+         Owns 3.1% of GlobalFoundries
+    [95%] BlackRock Inc
+         Problem edges: 5
+         Correction edges: 3
+         Owns 7.3% of Microsoft
+         Owns 7.1% of Micron
+         Owns 6.5% of Apple Inc
+         Owns 6.1% of Google
+         Owns 5.9% of GlobalFoundries
+    [90%] Foreign Treasury Leverage
+         Problem edges: 2
+         Correction edges: 2
+    [90%] Fed Reserve Account Parking Mechanism
+         Problem edges: 2
+         Correction edges: 2
+    [75%] Tariff Policy Enablement
+         Problem edges: 1
+         Correction edges: 2
+
+  TOP CAUSAL CHAINS (1):
+    [30%] Intel --FUNDED_PROJECT--> Ohio Fab Complex
+         Weakest: edge_funded_project_intel_ohio-fab-comple
+
+  CONVERGENCE NODES (14):
+    Intel (COMPANY): 3 layers, 18 connections
+    Micron (COMPANY): 3 layers, 8 connections
+    Microsoft (COMPANY): 2 layers, 13 connections
+    JPMorgan (FINANCIAL_INST): 2 layers, 12 connections
+    Vanguard (FINANCIAL_INST): 2 layers, 12 connections
+    BlackRock (FINANCIAL_INST): 2 layers, 12 connections
+    Google (COMPANY): 2 layers, 8 connections
+    Citibank (FINANCIAL_INST): 2 layers, 7 connections
+    Goldman Sachs (FINANCIAL_INST): 2 layers, 6 connections
+    Apple Inc (COMPANY): 2 layers, 6 connections
+
+  PROPOSED INFERENCES (19):
+    [95%] Intel --BENEFITS_FROM--> Intel
+    [95%] Intel --BENEFITS_FROM--> Ohio Fab Complex
+    [95%] Intel --BENEFITS_FROM--> CHIPS Act
+    [95%] Intel --BENEFITS_FROM--> chips-act-2022
+    [95%] Micron --BENEFITS_FROM--> CHIPS Act
+    [95%] Vanguard Group --BENEFITS_FROM--> CHIPS Act
+    [95%] Vanguard Group --BENEFITS_FROM--> chips-act-2022
+    [95%] State Street Corporation --BENEFITS_FROM--> CHIPS Act
+    [95%] State Street Corporation --BENEFITS_FROM--> chips-act-2022
+    [95%] BlackRock Inc --BENEFITS_FROM--> CHIPS Act
+    [95%] BlackRock Inc --BENEFITS_FROM--> chips-act-2022
+    [90%] Foreign Treasury Leverage --BENEFITS_FROM--> Foreign Treasury Leverage
+    [90%] Foreign Treasury Leverage --BENEFITS_FROM--> Debt Domestication
+    [90%] Fed Reserve Account Parking Mechanism --BENEFITS_FROM--> Genius Act 2025
+    [90%] Fed Reserve Account Parking Mechanism --BENEFITS_FROM--> Stablecoin Treasury Absorption

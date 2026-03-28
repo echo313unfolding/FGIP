@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-03-03T10:55:00Z",
+  "version": "2.2.0",
+  "taxonomy": {
+    "PROVEN": "Tier-0 artifact exists locally + SHA256 hash + repro command",
+    "EVIDENCED": "Tier-1 citation exists but no Tier-0 artifact yet",
+    "HEURISTIC": "Inference from proven facts",
+    "UNVERIFIED": "Claim exists, no acceptable evidence"
+  },
+  "claims_count": {
+    "PROVEN": 13,
+    "EVIDENCED": 15,
+    "HEURISTIC": 12,
+    "UNVERIFIED": 5
+  },
+  "proven_receipts": [
+    {
+      "claim_id": "backtest-nuclear-smr-return",
+      "claim_text": "nuclear-smr-thesis achieved 24.5% total return with +2.7% alpha vs SPY",
+      "artifact_path": "receipts/backtest/backtest_20260303T015754Z.json",
+      "sha256": "3b5b66c49515c1b6db0ea0100d465eba373e0e3627e658f50764d151d11491bf",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis nuclear-smr-thesis --backtest"
+    },
+    {
+      "claim_id": "backtest-uranium-return",
+      "claim_text": "uranium-thesis achieved 21.7% total return with +1.6% alpha vs SPY",
+      "artifact_path": "receipts/backtest/backtest_20260303T015757Z.json",
+      "sha256": "32d80c93b23877ade8927c9bdb0852e9375f20ce95eb25a2932a746bc19a465d",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis uranium-thesis --backtest"
+    },
+    {
+      "claim_id": "backtest-rare-earth-return",
+      "claim_text": "rare-earth-thesis achieved 17.9% total return with +1.4% alpha vs SPY",
+      "artifact_path": "receipts/backtest/backtest_20260303T015807Z.json",
+      "sha256": "b6d111814c55cc33087911fd803e6ecb08cb3d9e68d87573376d4ad74841410a",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis rare-earth-thesis --backtest"
+    },
+    {
+      "claim_id": "backtest-defense-return",
+      "claim_text": "defense-anduril-thesis achieved 15.2% total return with +0.4% alpha vs SPY",
+      "artifact_path": "receipts/backtest/backtest_20260303T015804Z.json",
+      "sha256": "e1e1aa459bd60aa6bdd12cde8ce132a8acf180659139b239e58454aa1692e183",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis defense-anduril-thesis --backtest"
+    },
+    {
+      "claim_id": "backtest-ai-datacenter-return",
+      "claim_text": "ai-data-center-power returned 13.7% total with -0.9% alpha",
+      "artifact_path": "receipts/backtest/backtest_20260303T015819Z.json",
+      "sha256": "3f0a7191e61149e6a54386cc5b3e7b3c5a0df2d3bdd62c315d793e82dbe17959",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis ai-data-center-power --backtest"
+    },
+    {
+      "claim_id": "backtest-infrastructure-return",
+      "claim_text": "infrastructure-picks-shovels returned 11.2% total with -2.0% alpha",
+      "artifact_path": "receipts/backtest/backtest_20260303T015814Z.json",
+      "sha256": "34e4b842a17a3d107825c3b9383e6aa257cb3914d606d4dbbdfa64378008600b",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis infrastructure-picks-shovels --backtest"
+    },
+    {
+      "claim_id": "backtest-semiconductor-return",
+      "claim_text": "semiconductor-materials returned 3.4% total with -4.5% alpha",
+      "artifact_path": "receipts/backtest/backtest_20260303T015822Z.json",
+      "sha256": "4a1f713f71e92d95938a3cd205753f1d2262817b06e766a1c1603fa42debd111",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis semiconductor-materials --backtest"
+    },
+    {
+      "claim_id": "backtest-reshoring-return",
+      "claim_text": "reshoring-steel-thesis returned 0.7% total with -5.5% alpha",
+      "artifact_path": "receipts/backtest/backtest_20260303T015801Z.json",
+      "sha256": "f775207baa37fde5bf096cbe10d5fd8755c0e358b3d21e488734a5177e2f98b5",
+      "status": "PROVEN",
+      "repro_command": "python3 tools/paper_trade.py fgip.db --thesis reshoring-steel-thesis --backtest"
+    },
+    {
+      "claim_id": "backtest-summary",
+      "claim_text": "4 of 8 theses beat SPY with positive alpha; all had <15% max drawdown",
+      "artifact_path": "receipts/backtest/SUMMARY.json",
+      "sha256": "4c148e6d5841c25f2dc7545b6d3b0f81020ee21d067d0b37bac93b1ba5e5932b",
+      "status": "PROVEN",
+      "repro_command": "cat receipts/paper_trade/SUMMARY.json | jq"
+    },
+    {
+      "claim_id": "fred-m2sl-money-supply",
+      "claim_text": "M2 money supply time series from FRED (1959-2026)",
+      "artifact_path": "receipts/inflation/fred_M2SL.csv",
+      "sha256": "089c1a95b4fa1a43ce48bf4f28575832beaa1116ea6dd024cec227264b438f66",
+      "status": "PROVEN",
+      "fetched_at": "2026-03-03T10:48:00Z",
+      "repro_command": "curl -L 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL' -o receipts/inflation/fred_M2SL.csv"
+    },
+    {
+      "claim_id": "fred-csushpinsa-housing",
+      "claim_text": "Case-Shiller US National Home Price Index from FRED (1987-2025)",
+      "artifact_path": "receipts/inflation/fred_CSUSHPINSA.csv",
+      "sha256": "4786af05c525f30a21e00bc3992cc74bf5a011911963580ad7a3a91014c0455c",
+      "status": "PROVEN",
+      "fetched_at": "2026-03-03T10:48:00Z",
+      "repro_command": "curl -L 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=CSUSHPINSA' -o receipts/inflation/fred_CSUSHPINSA.csv"
+    },
+    {
+      "claim_id": "fred-vapgdpma-manufacturing-gdp",
+      "claim_text": "Manufacturing value added as % of GDP from FRED (2005-2025)",
+      "artifact_path": "receipts/industrial_base/fred_VAPGDPMA.csv",
+      "sha256": "8b9223341b2e89d37ba2a2da80fa066edc074b67ef1f79358ba9d68115377749",
+      "status": "PROVEN",
+      "fetched_at": "2026-03-03T10:48:00Z",
+      "repro_command": "curl -L 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=VAPGDPMA' -o receipts/industrial_base/fred_VAPGDPMA.csv"
+    },
+    {
+      "claim_id": "usgs-mcs2025-rare-earth",
+      "claim_text": "USGS Mineral Commodity Summaries 2025 (includes rare earth data)",
+      "artifact_path": "receipts/industrial_base/usgs_mcs2025.pdf",
+      "sha256": "4b3e4e00ed65365efb7b1f14c7c2f94b7005d4924e52cfb370cd2a8cd256d7e4",
+      "status": "PROVEN",
+      "fetched_at": "2026-03-03T10:51:00Z",
+      "repro_command": "curl -L 'https://pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf' -o receipts/industrial_base/usgs_mcs2025.pdf"
+    }
+  ],
+  "evidenced_claims": [
+    {
+      "claim_id": "genius-act-signed",
+      "claim_text": "GENIUS Act signed into law: 308-122 House, 68-30 Senate",
+      "tier1_source": "Paul Hastings LLP",
+      "status": "EVIDENCED",
+      "blocker": "congress.gov has Cloudflare protection - need browser-based fetch",
+      "required_tier0": {
+        "source": "congress.gov",
+        "artifact_type": "bill status page + roll call votes"
+      }
+    },
+    {
+      "claim_id": "genius-act-93-day",
+      "claim_text": "Reserve assets must have maturities of 93 days or less",
+      "tier1_source": "Georgetown Law",
+      "status": "EVIDENCED",
+      "blocker": "congress.gov has Cloudflare protection",
+      "required_tier0": {
+        "source": "congress.gov bill text"
+      }
+    },
+    {
+      "claim_id": "rsho-aum-growth",
+      "claim_text": "RSHO AUM grew from $6M to $101.5M",
+      "tier1_source": "Finimize",
+      "status": "EVIDENCED",
+      "blocker": "SEC EDGAR blocking automated requests",
+      "required_tier0": {
+        "source": "SEC EDGAR N-PORT filing"
+      }
+    },
+    {
+      "claim_id": "made-launch",
+      "claim_text": "BlackRock launched iShares U.S. Manufacturing ETF (MADE)",
+      "tier1_source": "ETF Strategy",
+      "status": "EVIDENCED",
+      "blocker": "SEC EDGAR blocking automated requests",
+      "required_tier0": {
+        "source": "SEC EDGAR N-1A filing"
+      }
+    },
+    {
+      "claim_id": "china-232x-shipbuilding",
+      "claim_text": "China has 232x US shipbuilding capability",
+      "tier1_source": "AEI (citing ONI declassified)",
+      "status": "EVIDENCED",
+      "blocker": "Need to locate actual ONI document",
+      "required_tier0": {
+        "source": "ONI declassified slide/report"
+      }
+    },
+    {
+      "claim_id": "one-week-munitions",
+      "claim_text": "US military stockpiles could deplete in less than one week vs China",
+      "tier1_source": "Fox Business (citing CSIS)",
+      "status": "EVIDENCED",
+      "blocker": "Need to identify specific CSIS report",
+      "required_tier0": {
+        "source": "CSIS report PDF"
+      }
+    }
+  ],
+  "newly_proven_claims": [
+    {
+      "claim_id": "m2-growth-rate",
+      "claim_text": "M2 money supply data available for CAGR calculation",
+      "upgraded_from": "EVIDENCED",
+      "upgraded_to": "PROVEN",
+      "artifact": "receipts/inflation/fred_M2SL.csv",
+      "note": "Can now compute exact growth rate from 1959-2026"
+    },
+    {
+      "claim_id": "case-shiller-housing-inflation",
+      "claim_text": "Case-Shiller housing index available for CAGR calculation",
+      "upgraded_from": "EVIDENCED",
+      "upgraded_to": "PROVEN",
+      "artifact": "receipts/inflation/fred_CSUSHPINSA.csv",
+      "note": "Can now compute exact housing appreciation from 1987-2025"
+    },
+    {
+      "claim_id": "manufacturing-gdp-decline",
+      "claim_text": "Manufacturing share of GDP declined (data available)",
+      "upgraded_from": "EVIDENCED",
+      "upgraded_to": "PROVEN",
+      "artifact": "receipts/industrial_base/fred_VAPGDPMA.csv",
+      "note": "Shows 13.1% (2005) to 9.5% (2025)"
+    },
+    {
+      "claim_id": "rare-earth-usgs-data",
+      "claim_text": "Rare earth dependency data from USGS",
+      "upgraded_from": "EVIDENCED",
+      "upgraded_to": "PROVEN",
+      "artifact": "receipts/industrial_base/usgs_mcs2025.pdf",
+      "note": "Full 2025 Mineral Commodity Summaries"
+    }
+  ],
+  "blocked_fetches": {
+    "sec_edgar": {
+      "reason": "SEC blocking automated requests without proper User-Agent declaration",
+      "workaround": "Use browser to download N-PORT/N-1A manually"
+    },
+    "congress_gov": {
+      "reason": "Cloudflare bot protection on search and bill pages",
+      "workaround": "Use browser to download bill status/text manually"
+    }
+  },
+  "verification_commands": {
+    "verify_all_hashes": "cd THESIS_PACK/receipts && find . -type f \\( -name '*.csv' -o -name '*.pdf' -o -name '*.json' \\) -exec sha256sum {} \\;",
+    "verify_fred_m2sl": "sha256sum THESIS_PACK/receipts/inflation/fred_M2SL.csv",
+    "verify_usgs": "sha256sum THESIS_PACK/receipts/industrial_base/usgs_mcs2025.pdf"
+  }
+}

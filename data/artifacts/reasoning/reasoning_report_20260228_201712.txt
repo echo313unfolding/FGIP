@@ -1,0 +1,96 @@
+============================================================
+  FGIP REASONING REPORT
+  Generated: 2026-03-01T01:17:12.239921+00:00Z
+============================================================
+
+  THESIS SCORE: 73.2%
+  Breakdown:
+    both_sides_patterns: +25
+    high_confidence_patterns: +20
+    causal_chains: +3
+    convergence_nodes: +15
+    source_quality: +0.2
+    connectivity: +10
+
+  BOTH-SIDES PATTERNS (11):
+    [95%] Intel
+         Problem edges: 15
+         Correction edges: 8
+    [95%] SEC
+         Problem edges: 1
+         Correction edges: 4
+    [95%] Commerce
+         Problem edges: 1
+         Correction edges: 6
+    [95%] Micron
+         Problem edges: 43
+         Correction edges: 2
+         Owns 4.2% of Micron
+    [95%] Foreign Treasury Leverage
+         Problem edges: 2
+         Correction edges: 3
+    [95%] Vanguard Group
+         Problem edges: 7
+         Correction edges: 3
+         Owns 8.9% of Micron
+         Owns 8.8% of Microsoft
+         Owns 8.4% of Apple Inc
+         Owns 7.8% of GlobalFoundries
+         Owns 7.2% of Google
+    [95%] State Street Corporation
+         Problem edges: 7
+         Correction edges: 3
+         Owns 4.2% of Micron
+         Owns 4.1% of Microsoft
+         Owns 3.9% of Apple Inc
+         Owns 3.5% of Google
+         Owns 3.1% of GlobalFoundries
+    [95%] BlackRock Inc
+         Problem edges: 7
+         Correction edges: 3
+         Owns 7.3% of Microsoft
+         Owns 7.1% of Micron
+         Owns 6.5% of Apple Inc
+         Owns 6.1% of Google
+         Owns 5.9% of GlobalFoundries
+    [90%] DOE Office of Nuclear Energy
+         Problem edges: 3
+         Correction edges: 1
+    [90%] Tariff Policy Enablement
+         Problem edges: 1
+         Correction edges: 3
+    [90%] Fed Reserve Account Parking Mechanism
+         Problem edges: 2
+         Correction edges: 2
+
+  TOP CAUSAL CHAINS (1):
+    [75%] Foreign Treasury Leverage --<-REDUCES--> Debt Domestication
+
+  CONVERGENCE NODES (22):
+    Intel (COMPANY): 3 layers, 64 connections
+    Micron (COMPANY): 3 layers, 53 connections
+    Microsoft (COMPANY): 2 layers, 163 connections
+    State Street (FINANCIAL_INST): 2 layers, 40 connections
+    Freeport-McMoRan (COMPANY): 2 layers, 27 connections
+    Caterpillar (COMPANY): 2 layers, 22 connections
+    JPMorgan (FINANCIAL_INST): 2 layers, 15 connections
+    Whirlpool (COMPANY): 2 layers, 14 connections
+    Vanguard (FINANCIAL_INST): 2 layers, 13 connections
+    BlackRock (FINANCIAL_INST): 2 layers, 13 connections
+
+  PROPOSED INFERENCES (40):
+    [95%] Intel --BENEFITS_FROM--> Intel
+    [95%] Intel --BENEFITS_FROM--> Ohio Fab Complex
+    [95%] Intel --BENEFITS_FROM--> Intel Ohio Fab
+    [95%] Intel --BENEFITS_FROM--> CHIPS Act
+    [95%] Intel --BENEFITS_FROM--> Chips Act 2022
+    [95%] SEC --BENEFITS_FROM--> SEC
+    [95%] SEC --BENEFITS_FROM--> Securities Regulation
+    [95%] Commerce --BENEFITS_FROM--> Commerce
+    [95%] Commerce --BENEFITS_FROM--> White House
+    [95%] Commerce --BENEFITS_FROM--> Reshoring
+    [95%] Commerce --BENEFITS_FROM--> Commerce Department
+    [95%] Commerce --BENEFITS_FROM--> National Science Foundation
+    [95%] Commerce --BENEFITS_FROM--> Defense Department
+    [95%] Commerce --BENEFITS_FROM--> Trade Representative Office Of United States
+    [95%] Commerce --BENEFITS_FROM--> International Trade Commission

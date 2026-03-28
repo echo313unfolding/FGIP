@@ -1,0 +1,26 @@
+FARA Registration Data
+==================================================
+
+Registration: 6533
+Registrant: BGR Government Affairs
+Foreign Principal: People's Republic of China
+Country: China
+Date: 2017-09-01
+Status: Active
+URL: https://efile.fara.gov/docs/6533-Exhibit-AB-20170901-1.pdf
+
+Registration: 6901
+Registrant: Mercury Public Affairs
+Foreign Principal: China-United States Exchange Foundation
+Country: Hong Kong
+Date: 2019-03-15
+Status: Active
+URL: https://efile.fara.gov/docs/6901-Exhibit-AB-20190315-1.pdf
+
+Registration: 6789
+Registrant: Squire Patton Boggs
+Foreign Principal: Hikvision USA
+Country: China
+Date: 2018-06-01
+Status: Active
+URL: https://efile.fara.gov/docs/6789-Exhibit-AB-20180601-1.pdf

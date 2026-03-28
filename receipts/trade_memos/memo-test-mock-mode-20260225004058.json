@@ -1,0 +1,73 @@
+{
+  "memo_id": "memo-test-mock-mode-20260225004058",
+  "thesis_id": "test-mock-mode",
+  "symbol": "INTC",
+  "direction": "BULLISH",
+  "created_at": "2026-02-25T00:40:58.553582",
+  "decision": "PASS",
+  "decision_confidence": 0.09,
+  "provenance": {
+    "tape": {
+      "verified": false,
+      "source_type": "mock",
+      "retrieved_at": "2026-02-25T00:40:58.528268",
+      "content_hash": null
+    },
+    "forecast": {
+      "verified": true,
+      "source_type": "forecast_db",
+      "source_ref": "forecast-test-mock-mode-20260225004058"
+    }
+  },
+  "conviction": {
+    "level": 1,
+    "triangulation_met": false,
+    "source_count": 0
+  },
+  "gates": [
+    {
+      "name": "PROVENANCE",
+      "passed": false,
+      "score": 0.0,
+      "reason": "0 Tier-0/1 sources (need 1)"
+    },
+    {
+      "name": "TRIANGULATION",
+      "passed": false,
+      "score": 0.0,
+      "reason": "0 source types (need 2): "
+    },
+    {
+      "name": "CALIBRATION",
+      "passed": true,
+      "score": 0.43,
+      "reason": "Forecast confidence 36%, data quality 50%"
+    },
+    {
+      "name": "RISK",
+      "passed": true,
+      "score": 0.48100000000000004,
+      "reason": "P(loss) 48%, Max DD -750%"
+    },
+    {
+      "name": "MARKET_CONFIRMATION",
+      "passed": false,
+      "score": 0.0,
+      "reason": "TAPE UNVERIFIED - mock data cannot confirm market"
+    }
+  ],
+  "market_layer": {
+    "verified": false
+  },
+  "forecast_layer": {
+    "return_p10": -31.1,
+    "return_p50": 1.5,
+    "return_p90": 34.1,
+    "drawdown_p10": -7.5,
+    "probability_of_loss": 0.48,
+    "probability_of_thesis": 0.24,
+    "confidence": 0.36,
+    "forecast_id": "forecast-test-mock-mode-20260225004058",
+    "verified": true
+  }
+}

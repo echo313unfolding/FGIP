@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-02-24T22:52:35.094820+00:00",
+  "dry_run": false,
+  "entities_added": 37,
+  "entities_skipped": 4,
+  "added": [
+    {
+      "entity": "lockheed-martin",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "raytheon",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "northrop-grumman",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "boeing",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "general-dynamics",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "l3harris",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "bae-systems",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "huntington-ingalls",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "leidos",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "saic",
+      "entity_set": "defense_primes",
+      "priority": 8
+    },
+    {
+      "entity": "meta",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "alphabet",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "nvidia",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "tesla",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "hp",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "dell",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "cisco",
+      "entity_set": "tech_offshorers",
+      "priority": 8
+    },
+    {
+      "entity": "samsung-electronics",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "amd",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "texas-instruments",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "asml",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "sk-hynix",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "applied-materials",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "lam-research",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "kla-corporation",
+      "entity_set": "semiconductor_majors",
+      "priority": 9
+    },
+    {
+      "entity": "microchip-technology",
+      "entity_set": "chips_recipients",
+      "priority": 9
+    },
+    {
+      "entity": "onsemi",
+      "entity_set": "chips_recipients",
+      "priority": 9
+    },
+    {
+      "entity": "polar-semiconductor",
+      "entity_set": "chips_recipients",
+      "priority": 9
+    },
+    {
+      "entity": "fidelity",
+      "entity_set": "big_three",
+      "priority": 10
+    },
+    {
+      "entity": "schwab",
+      "entity_set": "big_three",
+      "priority": 10
+    },
+    {
+      "entity": "binance",
+      "entity_set": "stablecoin_actors",
+      "priority": 7
+    },
+    {
+      "entity": "coinbase",
+      "entity_set": "stablecoin_actors",
+      "priority": 7
+    },
+    {
+      "entity": "kraken",
+      "entity_set": "stablecoin_actors",
+      "priority": 7
+    },
+    {
+      "entity": "westinghouse",
+      "entity_set": "nuclear_smr",
+      "priority": 7
+    },
+    {
+      "entity": "ge-hitachi",
+      "entity_set": "nuclear_smr",
+      "priority": 7
+    },
+    {
+      "entity": "occ",
+      "entity_set": "federal_agencies",
+      "priority": 8
+    },
+    {
+      "entity": "chips-program-office",
+      "entity_set": "federal_agencies",
+      "priority": 8
+    }
+  ],
+  "skipped": [
+    {
+      "entity": "nvidia",
+      "reason": "already exists"
+    },
+    {
+      "entity": "texas-instruments",
+      "reason": "already exists"
+    },
+    {
+      "entity": "sk-hynix",
+      "reason": "already exists"
+    },
+    {
+      "entity": "bae-systems",
+      "reason": "already exists"
+    }
+  ]
+}

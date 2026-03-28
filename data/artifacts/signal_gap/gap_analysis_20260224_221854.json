@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-02-24T22:18:54.094073Z",
+  "gaps_detected": 3,
+  "gaps": [
+    {
+      "topic": "defense_industrial",
+      "sector": "defense",
+      "signal_strength": 432,
+      "graph_coverage": 0,
+      "gap_ratio": 432.0,
+      "guests_detected": [
+        "Palmer Luckey"
+      ],
+      "channels_detected": [],
+      "recommended_expansions": [
+        "commodities",
+        "funders",
+        "companies_via_edgar",
+        "suppliers",
+        "adjacent_beneficiaries"
+      ]
+    },
+    {
+      "topic": "trade_reshoring",
+      "sector": "reshoring",
+      "signal_strength": 65,
+      "graph_coverage": 0,
+      "gap_ratio": 65.0,
+      "guests_detected": [
+        "Peter Zeihan"
+      ],
+      "channels_detected": [],
+      "recommended_expansions": [
+        "commodities",
+        "funders",
+        "suppliers",
+        "adjacent_beneficiaries"
+      ]
+    },
+    {
+      "topic": "guest:Michael Saylor",
+      "sector": "monetary",
+      "signal_strength": 4,
+      "graph_coverage": 0,
+      "gap_ratio": 4.0,
+      "guests_detected": [
+        "Michael Saylor"
+      ],
+      "channels_detected": [],
+      "recommended_expansions": [
+        "suppliers",
+        "adjacent_beneficiaries"
+      ]
+    }
+  ]
+}

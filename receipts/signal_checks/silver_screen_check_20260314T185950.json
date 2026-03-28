@@ -1,0 +1,85 @@
+{
+  "receipt_id": "silver_screen_check_20260314T185950",
+  "operation": "silver_screen_signal_check",
+  "date": "2026-03-14",
+  "operator": "claude_code",
+  "signal_check": {
+    "screen": "silver",
+    "date": "2026-03-14",
+    "operator": "claude_code",
+    "silver_spot_price_usd": 84.44,
+    "silver_spot_range": "84.44-87.33 (volatile week)",
+    "falsification_checks": {
+      "silver_deficit_closed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "6th consecutive year of deficit. Projected 200Moz deficit for 2026. COMEX registered inventory down to 88.78Moz from 167.7Moz in Oct 2025 (47% drop in 5 months). March 2026 delivery: 10,526 contracts stood for 52.63Moz \u2014 59.3% of all registered silver demanded in single delivery month.",
+        "severity": "CRITICAL \u2014 deficit accelerating, not closing"
+      },
+      "mexico_moratorium_reversed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "Sheinbaum confirmed: 'no new mining concessions will be granted' during her term (through 2030). 1,126 concessions covering 889,502ha returned to state. Investment fell from $500M (2023) to $400M (2025). HOWEVER: Economy Minister Ebrard announced plans to 'accelerate mining exploration in 2026' by streamlining permits for EXISTING concessions. This is NOT a reversal \u2014 no NEW concessions, but faster processing of pending ones.",
+        "severity": "PARTIAL SIGNAL \u2014 Ebrard push may slightly increase output from existing mines"
+      },
+      "china_export_restrictions_lifted": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "No evidence of China lifting silver strategic material classification or export restrictions."
+      },
+      "silver_substitute_found": {
+        "status": "IN PROGRESS \u2014 MONITOR",
+        "detail": "Longi, Jinko pursuing copper paste for solar cells. Mass production Q2 2026 target. Not yet at scale. Even if successful, only affects solar demand (~25% of total). Other 75% (electronics, EVs, data centers, 5G, nuclear, medical) has no substitute."
+      },
+      "m2_expansion_reversed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "M2 at $22.44T in Jan 2026, continuing to expand."
+      }
+    },
+    "production_guidance_check": {
+      "AG_first_majestic": {
+        "2026_guidance": "13.0-14.4Moz silver, 116-129Koz gold",
+        "AISC": "$26.15-$27.91/oz silver equivalent",
+        "note": "Record 2025 production (31.1Moz AgEq). Increased dividend. Strong margins at $84+ silver.",
+        "current_price": 22.56,
+        "3m_return": "+40.7%"
+      },
+      "HL_hecla": {
+        "2026_guidance": "15.1-16.5Moz silver (DOWN from 17Moz in 2025)",
+        "AISC": "$15.00-$16.25/oz after by-product credits",
+        "note": "Lower milled-grade at Greens Creek + Casa Berardi. $255-$279M capex planned. Record $55M exploration.",
+        "current_price": 19.61,
+        "3m_return": "+4.1%",
+        "flag": "DECLINING ORE GRADES \u2014 largest US silver producer shrinking output"
+      }
+    },
+    "new_signals": {
+      "comex_march_crisis": {
+        "severity": "HIGH",
+        "detail": "March 2026 COMEX delivery: 52.63Moz demanded against 88.78Moz registered. 59.3% of all registered silver demanded in single month. Multiple analysts flagging 'default risk' and 'paper vs physical divergence'. If squeeze intensifies, could force price discovery above paper market."
+      },
+      "ebrard_permit_acceleration": {
+        "severity": "MEDIUM",
+        "detail": "Mexico Economy Minister Ebrard pushing to streamline permit approvals for EXISTING concessions in 2026. Not a moratorium reversal, but could marginally increase output from existing mines. Monitor for actual production numbers Q2-Q3 2026."
+      },
+      "silver_180pct_from_jan2025": {
+        "severity": "INFO",
+        "detail": "Silver trading at $86.51, up from $31 in Jan 2025. +180% in ~14 months. Historic move. Risk of mean reversion vs structural deficit continuation."
+      }
+    },
+    "screen_verdict": {
+      "thesis_status": "HOLDS \u2014 0 of 5 falsification criteria met",
+      "new_risks": "COMEX delivery stress (bullish for physical, risky for paper), Ebrard permit push (marginal bearish for supply thesis)",
+      "conviction": "CONVICTION_4 (maintained)",
+      "action": "PAPER TRADE \u2014 Continue monitoring. Do NOT chase at +180% from Jan 2025 lows without pullback entry."
+    }
+  },
+  "cost": {
+    "wall_time_s": 0.023,
+    "cpu_time_s": 0.004,
+    "peak_memory_mb": 18.8,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-03-14T18:59:50",
+    "timestamp_end": "2026-03-14T18:59:50"
+  },
+  "input_hash": "ae4d0202755854acf47be93821f32c9c22601b1142844ab385e22275a2fbf7a0",
+  "output_hash": "8cd70aa1092cf1399cfbfe646d6a06352a3d39c349bda15f1aedb2476c06e56a"
+}

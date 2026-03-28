@@ -1,0 +1,18 @@
+{
+  "source": "Congress.gov / Treasury",
+  "legislation": "GENIUS Act (H.R. 4XXX)",
+  "signed": "2025-07-18",
+  "votes": {
+    "senate": "68-30",
+    "house": "308-122"
+  },
+  "requirements": {
+    "reserve_requirement": "100.0% backing",
+    "holder_yield": "0.0% (zero by law)",
+    "issuer_capture": "4.5% Treasury yield"
+  },
+  "projections": {
+    "market_2028": "$2000.0B",
+    "debt_domestication_2028": "23.53%"
+  }
+}

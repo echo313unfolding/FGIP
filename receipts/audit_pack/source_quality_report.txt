@@ -1,0 +1,1237 @@
+================================================================================
+FGIP SOURCE QUALITY REPORT
+Generated: 2026-02-24
+================================================================================
+
+## SOURCE TIER DISTRIBUTION
+----------------------------------------
+
+Tier 0 (Government Primary) (67 sources)
+  - bis.org
+  - govtrack.us
+  - docs.house.gov
+  - efile.fara.gov
+  - banking.senate.gov
+  - cbp.gov
+  - congress.gov
+  - fda.gov
+  - federalregister.gov
+  - federalreserve.gov
+
+Tier 1 (Regulated Filings) (118 sources)
+  - propublica.org
+  - nytimes.com
+  - business.columbia.edu
+  - ca.finance.yahoo.com
+  - doi.org
+  - edition.cnn.com
+  - finance.yahoo.com
+  - journals.library.columbia.edu
+  - seekingalpha.com
+  - aei.org
+
+Tier 2 (Quality Secondary) (557 sources)
+  - wer.worldeconomicsassociation.org
+  - 247wallst.com
+  - superpower.com
+  - abcnews.go.com
+  - academic.oup.com
+  - ampatriot.wordpress.com
+  - caselaw.findlaw.com
+  - change.org
+  - china.usembassy-china.org.cn
+  - chinascope.org
+
+
+## CLAIMS BY SOURCE TIER
+----------------------------------------
+Tier 0: 11 claims (CONFIRMED)
+Tier 0: 15 claims (EVIDENCED)
+Tier 0: 86 claims (PARTIAL)
+Tier 1: 1 claims (CONFIRMED)
+Tier 1: 1 claims (EVIDENCED)
+Tier 1: 98 claims (PARTIAL)
+Tier 2: 37 claims (EVIDENCED)
+Tier 2: 67 claims (MISSING)
+Tier 2: 185 claims (PARTIAL)
+
+
+## INVESTMENT-RELEVANT EDGES BY TIER
+----------------------------------------
+Edges in causal chains touching CHIPS/GENIUS/reshoring:
+[T2] [90%] chips-act --AWARDED_GRANT--> intel
+       Source: Correction Layer (correction_loader)
+[T2] [90%] chips-act --AWARDED_GRANT--> tsmc
+       Source: Correction Layer (correction_loader)
+[T2] [90%] chips-act --AWARDED_GRANT--> samsung
+       Source: Correction Layer (correction_loader)
+[T2] [90%] chips-act --IMPLEMENTED_BY--> commerce
+       Source: Correction Layer (correction_loader)
+[T2] [90%] chips-act --IMPLEMENTED_BY--> commerce
+       Source: Correction Layer (federal_register)
+[T2] [90%] chips-act --AWARDED_GRANT--> intel
+       Source: Correction Layer (usaspending)
+[T2] [90%] chips-act --AWARDED_GRANT--> globalfoundries
+       Source: Correction Layer (usaspending)
+[T2] [90%] chips-act --AWARDED_GRANT--> micron
+       Source: Correction Layer (usaspending)
+[T2] [90%] chips-act --AWARDED_GRANT--> samsung-texas
+       Source: Correction Layer (usaspending)
+[T2] [90%] chips-act --AWARDED_GRANT--> tsmc-arizona
+       Source: Correction Layer (usaspending)
+[T2] [90%] genius-act --IMPLEMENTED_BY--> fdic
+       Source: Correction Layer (federal_register)
+[T2] [90%] genius-act --IMPLEMENTED_BY--> treasury
+       Source: Correction Layer (federal_register)
+[T2] [90%] genius-act-2025 --CORRECTS--> stablecoin-framework-us
+       Source: Correction Layer (correction_loader)
+[T2] [90%] genius-act-2025 --IMPLEMENTED_BY--> fdic
+       Source: Correction Layer (correction_loader)
+[T2] [90%] genius-act-2025 --IMPLEMENTED_BY--> treasury
+       Source: Correction Layer (correction_loader)
+[T2] [90%] commerce --RULEMAKING_FOR--> chips-act
+       Source: Correction Layer (federal_register)
+[T2] [90%] white-house --AUTHORIZED_BY--> chips-act
+       Source: Correction Layer (federal_register)
+[T2] [90%] fdic --RULEMAKING_FOR--> genius-act
+       Source: Correction Layer (federal_register)
+[T2] [90%] treasury --RULEMAKING_FOR--> genius-act
+       Source: Correction Layer (federal_register)
+[T2] [90%] fdic --RULEMAKING_FOR--> genius-act-2025
+       Source: Correction Layer (correction_loader)
+[T2] [95%] chips-act --AWARDED_GRANT--> intel
+       Source: N/A
+[T2] [95%] chips-act --AWARDED_GRANT--> tsmc-arizona
+       Source: N/A
+[T2] [95%] chips-act --AWARDED_GRANT--> samsung-texas
+       Source: N/A
+[T2] [95%] chips-act --AWARDED_GRANT--> micron
+       Source: N/A
+[T2] [95%] chips-act --AWARDED_GRANT--> globalfoundries
+       Source: N/A
+[T2] [95%] vanguard-group --BENEFITS_FROM--> chips-act
+       Source: N/A
+[T2] [95%] state-street-corporation --BENEFITS_FROM--> chips-act
+       Source: N/A
+[T2] [95%] blackrock-inc --BENEFITS_FROM--> chips-act
+       Source: N/A
+[T0] [100%] chips-act --REDUCES--> trade-deficit
+       Source: census.gov
+[T0] [100%] debt-domestication --REDUCES--> foreign-leverage
+       Source: treasury.gov
+[T0] [100%] debt-domestication --REDUCES--> fed-treasury-purchases
+       Source: federalreserve.gov
+[T0] [100%] genius-act-2025 --ENABLES--> debt-domestication
+       Source: congress.gov
+[T0] [100%] reshoring-2025 --IMPLEMENTED_BY--> chips-act
+       Source: commerce.gov
+[T0] [100%] tariff-enablement --FUNDS--> reshoring-2025
+       Source: ustr.gov
+[T2] [100%] rep-adams --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-aderholt --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-aguilar --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-allen --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-allred --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-amodei --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-armstrong --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-arrington --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-auchincloss --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-axne --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-babin --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bacon --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-baird --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-balderson --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-banks --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-barr --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-barrag-n --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bass --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-beatty --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bentz --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bera --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bergman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-beyer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bice-ok --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-biggs --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bilirakis --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bishop-ga --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bishop-nc --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-blumenauer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-blunt-rochester --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-boebert --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bonamici --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bost --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bourdeaux --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bowman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-boyle-brendan-f --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-brady --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-brooks --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-brown-md --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-brown-oh --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-brownley --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-buchanan --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-buck --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bucshon --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-budd --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-burchett --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-burgess --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-bush --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-bustos --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-butterfield --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-calvert --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-cammack --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-carbajal --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-c-rdenas --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-carey --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-carl --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-carson --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-carter-ga --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-carter-la --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-carter-tx --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-cartwright --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-case --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-casten --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-castor-fl --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-castro-tx --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cawthorn --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-chabot --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cheney --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cherfilus-mccormick --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-chu --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cicilline --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-clark-ma --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-clarke-ny --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cleaver --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cline --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-cloud --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-clyburn --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-clyde --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-cohen --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cole --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-comer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-connolly --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-conway --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-cooper --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-correa --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-costa --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-courtney --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-craig --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-crawford --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-crenshaw --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-crist --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-crow --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-cuellar --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-curtis --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-davids-ks --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-davidson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-davis-danny-k --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-davis-rodney --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-dean --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-defazio --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-degette --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-delauro --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-delbene --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-demings --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-desaulnier --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-desjarlais --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-deutch --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-diaz-balart --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-dingell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-doggett --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-donalds --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-doyle-michael-f --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-duncan --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-dunn --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-ellzey --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-emmer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-escobar --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-eshoo --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-espaillat --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-estes --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-evans --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-fallon --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-feenstra --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-ferguson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-fischbach --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-fitzgerald --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-fitzpatrick --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-fleischmann --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-fletcher --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-flood --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-flores --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-foster --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-foxx --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-frankel-lois --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-franklin-c-scott --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-fulcher --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gaetz --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gallagher --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gallego --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-garamendi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-garbarino --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-garcia-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-garc-a-il --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-garcia-tx --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-gibbs --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-gimenez --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gohmert --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-golden --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-gomez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-gonzales-tony --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gonzalez-oh --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-gonzalez-vicente --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-good-va --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gooden-tx --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gosar --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-gottheimer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-granger --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-graves-la --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-graves-mo --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-green-tn --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-green-al-tx --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-greene-ga --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-griffith --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-grijalva --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-grothman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-guest --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-guthrie --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-harder-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-harris --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-harshbarger --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-hartzler --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-hayes --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-hern --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-herrell --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-herrera-beutler --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-hice-ga --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-higgins-la --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-higgins-ny --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-hill --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-himes --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-hinson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-hollingsworth --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-horsford --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-houlahan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-hoyer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-hudson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-huffman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-huizenga --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-issa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-jackson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-jackson-lee --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-jacobs-ny --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-jayapal --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-jeffries --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-johnson-ga --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-johnson-la --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-johnson-oh --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-johnson-sd --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-johnson-tx --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-jones --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-jordan --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-joyce-oh --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-joyce-pa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-kahele --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kaptur --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-katko --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-keating --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-keller --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-kelly-il --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kelly-ms --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-kelly-pa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-khanna --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kildee --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kilmer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kim-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kim-nj --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kind --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kinzinger --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kirkpatrick --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-krishnamoorthi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kuster --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-kustoff --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-lahood --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-lamalfa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-lamb --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lamborn --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-langevin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-larsen-wa --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-larson-ct --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-latta --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-laturner --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-lawrence --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lawson-fl --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lee-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lee-nv --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-leger-fernandez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lesko --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-letlow --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-levin-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-levin-mi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lieu --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lofgren --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-long --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-loudermilk --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-lowenthal --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lucas --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-luetkemeyer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-luria --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-lynch --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mace --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-malinowski --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-malliotakis --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-maloney-carolyn-b --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-maloney-sean --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mann --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-manning --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-massie --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mast --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-matsui --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mcbath --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mccarthy --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mccaul --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mcclain --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mcclintock --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mccollum --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mceachin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mcgovern --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mchenry --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mckinley --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mcnerney --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-meeks --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-meijer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-meng --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-meuser --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mfume --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-miller-il --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-miller-wv --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-miller-meeks --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-moolenaar --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-mooney --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-moore-al --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-moore-ut --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-moore-wi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-morelle --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-moulton --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mrvan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-mullin --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-murphy-fl --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-murphy-nc --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-nadler --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-napolitano --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-neal --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-neguse --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-nehls --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-newhouse --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-newman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-norcross --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-norman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-o-halleran --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-obernolte --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-ocasio-cortez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-omar --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-owens --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-palazzo --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-pallone --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-palmer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-panetta --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pappas --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pascrell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-payne --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pelosi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pence --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-perlmutter --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-perry --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-peters --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pfluger --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-phillips --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pingree --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-pocan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-porter --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-posey --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-pressley --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-price-nc --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-quigley --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-raskin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-reschenthaler --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rice-ny --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-rice-sc --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rodgers-wa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rogers-al --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rogers-ky --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rose --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-rosendale --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-ross --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-rouzer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-roy --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-roybal-allard --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-ruiz --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-ruppersberger --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-rush --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-rutherford --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-ryan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-salazar --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-s-nchez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-sarbanes --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-scalise --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-scanlon --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schakowsky --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schiff --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schneider --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schrader --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schrier --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-schweikert --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-scott-va --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-scott-austin --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-scott-david --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-sessions --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-sewell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-sherman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-sherrill --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-simpson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-sires --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-slotkin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-smith-mo --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-smith-ne --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-smith-nj --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-smith-wa --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-smucker --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-soto --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-spanberger --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-spartz --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-speier --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-stansbury --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-stanton --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-stauber --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-steel --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-stefanik --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-steil --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-steube --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-stevens --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-stewart --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-strickland --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-suozzi --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-swalwell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-takano --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-taylor --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-tenney --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-thompson-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-thompson-ms --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-thompson-pa --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-tiffany --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-timmons --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-titus --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-tlaib --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-tonko --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-torres-ca --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-torres-ny --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-trahan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-trone --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-turner --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-underwood --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-upton --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-valadao --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-van-drew --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-van-duyne --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-vargas --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-veasey --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-vel-zquez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-wagner --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-walberg --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-walorski --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-waltz --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-wasserman-schultz --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-waters --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-watson-coleman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-weber-tx --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-webster-fl --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-welch --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-wenstrup --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-westerman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-wexton --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-wild --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-williams-ga --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-williams-tx --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-wilson-fl --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-wilson-sc --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-wittman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-womack --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] rep-yarmuth --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] rep-zeldin --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-baldwin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-barrasso --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-bennet --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-blackburn --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-blumenthal --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-blunt --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-booker --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-boozman --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-braun --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-brown --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-burr --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cantwell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-capito --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cardin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-carper --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-casey --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cassidy --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-collins --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-coons --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cornyn --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cortez-masto --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-cotton --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-cramer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-crapo --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-cruz --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-daines --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-duckworth --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-durbin --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-ernst --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-feinstein --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-fischer --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-gillibrand --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-graham --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-grassley --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-hagerty --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-hassan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-hawley --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-heinrich --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-hickenlooper --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-hirono --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-hoeven --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-hyde-smith --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-inhofe --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-johnson --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-kaine --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-kelly --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-kennedy --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-king --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-klobuchar --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-lankford --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-lee --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-lujan --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-lummis --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-markey --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-marshall --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-mcconnell --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-menendez --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-merkley --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-moran --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-murphy --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-murray --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-ossoff --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-padilla --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-paul --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-peters --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-portman --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-reed --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-risch --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-romney --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-rosen --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-rounds --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-rubio --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-sanders --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-sasse --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-schatz --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-schumer --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-scott --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-shaheen --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-shelby --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-sinema --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-smith --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-stabenow --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-sullivan --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-tester --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-thune --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-tillis --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-toomey --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-tuberville --VOTED_AGAINST--> chips-act
+       Source: N/A
+[T2] [100%] sen-van-hollen --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-warner --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-warnock --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-warren --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-whitehouse --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-wicker --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-wyden --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] sen-young --VOTED_FOR--> chips-act
+       Source: N/A
+[T2] [100%] promethean-action --ANALYZES--> chips-act
+       Source: prometheanaction.com
+[T0] [100%] stablecoin-treasury-absorption --CONTRIBUTES_TO--> debt-domestication
+       Source: treasury.gov
+[T0] [100%] foreign-leverage --ENABLES--> tariff-enablement
+       Source: whitehouse.gov
+[T2] [100%] foreign-leverage --BLOCKS--> tariff-enablement
+       Source: historical analysis
+
+
+## TIER 2/3 DEPENDENCIES NEEDING UPGRADE
+----------------------------------------
+
+vanguard-group --BENEFITS_FROM--> chips-act
+  Source: MISSING
+  Notes: Owns shares in Micron which received AWARDED_GRANT from chips-act...
+
+state-street-corporation --BENEFITS_FROM--> chips-act
+  Source: MISSING
+  Notes: Owns shares in Micron which received AWARDED_GRANT from chips-act...
+
+blackrock-inc --BENEFITS_FROM--> chips-act
+  Source: MISSING
+  Notes: Owns shares in Micron which received AWARDED_GRANT from chips-act...
+
+foreign-leverage --BLOCKS--> tariff-enablement
+  Source: historical analysis
+  Notes: Bond market retaliation threat blocks tariff implementation without debt domesti...
+
+genius-act-2025 --CORRECTS--> stablecoin-framework-us
+  Source: Correction Layer (correction_loader)
+  Notes: GENIUS Act creates a federal regulatory system for stablecoins with 100% reserve...
+
+stablecoin-framework-us --CORRECTS--> bis-cbdc-dependency
+  Source: Correction Layer (correction_loader)
+  Notes: US stablecoin framework provides monetary sovereignty alternative to BIS/CBDC de...
+
+foreign-leverage --ENABLES--> tariff-enablement
+  Source: whitehouse.gov
+  Notes: Without bond market retaliation threat, tariffs become feasible...
+
+tariff-enablement --FUNDS--> reshoring-2025
+  Source: ustr.gov
+  Notes: Tariff revenue + protected domestic market funds reshoring investment...
+
+chips-act --REDUCES--> trade-deficit
+  Source: census.gov
+  Notes: 136 factories breaking ground, trade deficit improving 29%...
+
+debt-domestication --REDUCES--> fed-treasury-purchases
+  Source: federalreserve.gov
+  Notes: Private stablecoin Treasury demand reduces Fed purchase necessity...
+
+
+================================================================================
+END OF REPORT

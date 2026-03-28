@@ -1,0 +1,31 @@
+{
+  "checkin_date": "2026-03-03",
+  "regime": {
+    "current": "NORMAL",
+    "Se": 0.5
+  },
+  "allocation": {
+    "drift": {},
+    "needs_rebalance": false
+  },
+  "housing_gate": {
+    "can_proceed": false,
+    "reason": "Green lights not met: ['rental_experience', 'regime_stable', 'safety_buffer', 'housing_ratio', 'life_stable']",
+    "phase": "renting",
+    "location": "Florida",
+    "green_lights": "0/5 met",
+    "red_lights": "0/4 triggered"
+  },
+  "fci": {
+    "month": "2026-03",
+    "index": null,
+    "yoy_change": null,
+    "cpi_yoy": 2.7
+  },
+  "action_items": [
+    "Housing gate: 5 green lights not yet met",
+    "Update FCI with this month's expenses",
+    "Verify no cooling period violations",
+    "Confirm regime status from latest data"
+  ]
+}

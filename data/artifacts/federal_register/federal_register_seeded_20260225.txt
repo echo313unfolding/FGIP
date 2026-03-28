@@ -1,0 +1,44 @@
+Federal Register Rulemaking Data
+==================================================
+
+Agency: FDIC
+Action: RFI
+Target: GENIUS Act
+Title: Request for Information on Payment Stablecoins
+Date: 2025-12-16
+URL: https://www.fdic.gov/news/press-releases/2025/fdic-issues-request-information-related-payment-stablecoins
+
+Agency: Treasury
+Action: Final Rule
+Target: GENIUS Act
+Title: Stablecoin Reserve Requirements and Disclosure Standards
+Date: 2025-09-15
+URL: https://www.federalregister.gov/documents/2025/09/15/treasury-stablecoin-final-rule
+
+Agency: Commerce
+Action: Final Rule
+Target: CHIPS Act
+Title: CHIPS Program Application Requirements and Procedures
+Date: 2023-03-21
+URL: https://www.federalregister.gov/documents/2023/03/21/2023-05651/chips-incentives-program
+
+Agency: Commerce
+Action: Notice
+Target: CHIPS Act
+Title: National Semiconductor Technology Center Establishment
+Date: 2024-02-09
+URL: https://www.commerce.gov/news/press-releases/2024/02/biden-harris-administration-launches-first-chips-america-research
+
+Agency: SEC
+Action: Final Rule
+Target: Securities Regulation
+Title: Climate-Related Disclosures for Investors
+Date: 2024-03-06
+URL: https://www.sec.gov/rules/final/2024/33-11275.pdf
+
+Agency: FDIC
+Action: Notice
+Target: Banking Regulation
+Title: Revised Guidance on Third-Party Risk Management
+Date: 2024-06-06
+URL: https://www.fdic.gov/news/financial-institution-letters/2024/fil24021.html

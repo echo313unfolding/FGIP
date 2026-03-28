@@ -1,0 +1,2114 @@
+{
+  "timestamp": "2026-03-02T20:38:13.656697Z",
+  "theses_evaluated": 8,
+  "reports": [
+    {
+      "thesis_id": "nuclear-smr-thesis",
+      "thesis_statement": "Nuclear SMR companies will outperform as grid baseload demand exceeds supply, driven by data centers, reshoring, and grid modernization. Trump EO + DoE ARDP funding + NRC fast-track = policy tailwind.",
+      "tickers": [
+        "SMR",
+        "OKLO",
+        "CEG",
+        "BWXT",
+        "LEU"
+      ],
+      "sector": "nuclear",
+      "conviction_level": 3,
+      "conviction_score": 78.75,
+      "position_size_pct": 0.1,
+      "confirming_signals": [
+        {
+          "signal_id": "nrc-nne",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "nne licensed by NRC",
+          "signal_strength": 0.95,
+          "timestamp": "2026-03-02T20:38:13.497025Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-terrapower",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "terrapower licensed by NRC",
+          "signal_strength": 0.8,
+          "timestamp": "2026-03-02T20:38:13.497039Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-kairos-power",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "kairos-power licensed by NRC",
+          "signal_strength": 0.9,
+          "timestamp": "2026-03-02T20:38:13.497042Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-bwxt",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "bwxt licensed by NRC",
+          "signal_strength": 0.8,
+          "timestamp": "2026-03-02T20:38:13.497045Z",
+          "metadata": {}
+        }
+      ],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 1,
+      "triangulation_sources": [
+        "nrc_permit"
+      ],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-nuclear-smr-thesis-0",
+          "description": "Vogtle cost overruns repeat",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Position sizing, stop-loss on -30%",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-nuclear-smr-thesis-1",
+          "description": "Natural gas stays cheap (<$3)",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-nuclear-smr-thesis-2",
+          "description": "Renewables + storage cheaper",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-nuclear-smr-thesis-3",
+          "description": "NRC bureaucracy stalls permits",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-nuclear-smr-thesis-0",
+        "description": "Vogtle cost overruns repeat",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Position sizing, stop-loss on -30%",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-nuclear-smr-thesis-0",
+          "catalyst_type": "entry",
+          "description": "NRC permit approval",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "NRC ADAMS, Federal Register"
+        },
+        {
+          "catalyst_id": "entry-nuclear-smr-thesis-1",
+          "catalyst_type": "entry",
+          "description": "DoE grant announcement",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "USASpending, DoE News"
+        },
+        {
+          "catalyst_id": "entry-nuclear-smr-thesis-2",
+          "catalyst_type": "entry",
+          "description": "Utility PPA signing",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-nuclear-smr-thesis-0",
+          "catalyst_type": "exit",
+          "description": "Construction delays >6mo",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-nuclear-smr-thesis-1",
+          "catalyst_type": "exit",
+          "description": "Cost overrun >30%",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "Earnings calls, 10-K filings"
+        },
+        {
+          "catalyst_id": "exit-nuclear-smr-thesis-2",
+          "catalyst_type": "exit",
+          "description": "NRC permit denial",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "NRC ADAMS, Federal Register"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.25,
+      "target_price_pct": 0.3,
+      "generated_at": "2026-03-02T20:38:13.531725Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "uranium-thesis",
+      "thesis_statement": "Uranium prices will rise as SMR buildout requires HALEU fuel, supply constrained by Russia sanctions, and inventory drawdown accelerates.",
+      "tickers": [
+        "CCJ",
+        "URA",
+        "UUUU",
+        "LEU",
+        "NXE"
+      ],
+      "sector": "nuclear_fuel",
+      "conviction_level": 4,
+      "conviction_score": 92.25,
+      "position_size_pct": 0.15,
+      "confirming_signals": [
+        {
+          "signal_id": "grant-centrus-energy-doe-ne",
+          "signal_type": "confirming",
+          "source_type": "usaspending",
+          "source_tier": 0,
+          "source_url": "https://usaspending.gov",
+          "description": "centrus-energy funded by doe-ne",
+          "signal_strength": 0.9,
+          "timestamp": "2026-03-02T20:38:13.531929Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-nne",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "nne licensed by NRC",
+          "signal_strength": 0.95,
+          "timestamp": "2026-03-02T20:38:13.531956Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-terrapower",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "terrapower licensed by NRC",
+          "signal_strength": 0.8,
+          "timestamp": "2026-03-02T20:38:13.531961Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-kairos-power",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "kairos-power licensed by NRC",
+          "signal_strength": 0.9,
+          "timestamp": "2026-03-02T20:38:13.531963Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "nrc-bwxt",
+          "signal_type": "confirming",
+          "source_type": "nrc_permit",
+          "source_tier": 0,
+          "source_url": "https://nrc.gov",
+          "description": "bwxt licensed by NRC",
+          "signal_strength": 0.8,
+          "timestamp": "2026-03-02T20:38:13.531966Z",
+          "metadata": {}
+        }
+      ],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 2,
+      "triangulation_sources": [
+        "nrc_permit",
+        "usaspending"
+      ],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-uranium-thesis-0",
+          "description": "Kazakhstan expands production",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-uranium-thesis-1",
+          "description": "Russia sanctions lifted",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-uranium-thesis-2",
+          "description": "SMR buildout slower than expected",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-uranium-thesis-0",
+        "description": "Kazakhstan expands production",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor news and regulatory announcements",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-uranium-thesis-0",
+          "catalyst_type": "entry",
+          "description": "Utility long-term contract",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "entry-uranium-thesis-1",
+          "catalyst_type": "entry",
+          "description": "HALEU production milestone",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-uranium-thesis-2",
+          "catalyst_type": "entry",
+          "description": "Russia supply disruption",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-uranium-thesis-0",
+          "catalyst_type": "exit",
+          "description": "New mine production surge",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-uranium-thesis-1",
+          "catalyst_type": "exit",
+          "description": "SMR buildout delays",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-uranium-thesis-2",
+          "catalyst_type": "exit",
+          "description": "Utility contract cancellations",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.2,
+      "target_price_pct": 0.4,
+      "generated_at": "2026-03-02T20:38:13.547822Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "reshoring-steel-thesis",
+      "thesis_statement": "Domestic steel producers benefit from tariff protection and reshoring demand. Infrastructure spending + defense buildup = sustained demand.",
+      "tickers": [
+        "NUE",
+        "STLD",
+        "X",
+        "CLF"
+      ],
+      "sector": "steel",
+      "conviction_level": 1,
+      "conviction_score": 15.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-reshoring-steel-thesis-0",
+          "description": "Recession kills demand",
+          "severity": "fatal",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Hedge with inverse ETF or cash position",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-reshoring-steel-thesis-1",
+          "description": "Next administration removes tariffs",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor trade policy announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-reshoring-steel-thesis-2",
+          "description": "Chinese dumping circumvents tariffs",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor trade policy announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-reshoring-steel-thesis-0",
+        "description": "Recession kills demand",
+        "severity": "fatal",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Hedge with inverse ETF or cash position",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "fatal",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-reshoring-steel-thesis-0",
+          "catalyst_type": "entry",
+          "description": "Tariff implementation",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "Federal Register, Congress.gov"
+        },
+        {
+          "catalyst_id": "entry-reshoring-steel-thesis-1",
+          "catalyst_type": "entry",
+          "description": "Infrastructure bill passage",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-reshoring-steel-thesis-2",
+          "catalyst_type": "entry",
+          "description": "Defense contract award",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-reshoring-steel-thesis-0",
+          "catalyst_type": "exit",
+          "description": "Tariff reduction/removal",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "Federal Register, Congress.gov"
+        },
+        {
+          "catalyst_id": "exit-reshoring-steel-thesis-1",
+          "catalyst_type": "exit",
+          "description": "Recession demand collapse",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-reshoring-steel-thesis-2",
+          "catalyst_type": "exit",
+          "description": "Import surge",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.561061Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "defense-anduril-thesis",
+      "thesis_statement": "Defense tech companies (Anduril, Palantir) benefit from DoD modernization away from legacy contractors. Software-defined warfare + autonomous systems.",
+      "tickers": [
+        "PLTR",
+        "LHX",
+        "RTX"
+      ],
+      "sector": "defense",
+      "conviction_level": 1,
+      "conviction_score": 27.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-112e1d54",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.gao.gov/blog/u.s.-navy-shipbuilding-consistently-over-budget-and-delayed-despite-billions-invested-industry",
+          "description": "GAO: Navy shipbuilding consistently over budget and delayed",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.589637Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-47b58c70",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://defense.info/highlight-of-the-week/report-on-chinese-manufacturing-strategy/",
+          "description": "Report on Chinese manufacturing strategy and defense implications",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.589646Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-e7d6847d",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.rand.org/pubs/research_reports/RRA2534-1.html",
+          "description": "RAND analysis of defense industrial base",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.589656Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-906f4709",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://crsreports.congress.gov/product/pdf/IF/IF10890",
+          "description": "CRS report on defense supply chain",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.589665Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-811ceea0",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://dkexpressions.co.za/dkexp/sarah-adams-cia-targeter-responds-to-fbi-uncovering-secret-biolab-with-mystery-vials-srs-280/",
+          "description": "CIA analyst Sarah Adams on biolab/intelligence gaps",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.589677Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-defense-anduril-thesis-0",
+          "description": "Legacy contractors lobby successfully",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-defense-anduril-thesis-1",
+          "description": "DoD procurement remains bureaucratic",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-defense-anduril-thesis-2",
+          "description": "Peace dividend reduces spending",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-defense-anduril-thesis-0",
+        "description": "Legacy contractors lobby successfully",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor news and regulatory announcements",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-defense-anduril-thesis-0",
+          "catalyst_type": "entry",
+          "description": "DoD contract award",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "entry-defense-anduril-thesis-1",
+          "catalyst_type": "entry",
+          "description": "DARPA grant",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "USASpending, DoE News"
+        },
+        {
+          "catalyst_id": "entry-defense-anduril-thesis-2",
+          "catalyst_type": "entry",
+          "description": "Foreign ally contract",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-defense-anduril-thesis-0",
+          "catalyst_type": "exit",
+          "description": "Defense budget cut",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-defense-anduril-thesis-1",
+          "catalyst_type": "exit",
+          "description": "Contract loss",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "exit-defense-anduril-thesis-2",
+          "catalyst_type": "exit",
+          "description": "Tech failure",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.571451Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "rare-earth-thesis",
+      "thesis_statement": "MP Materials and rare earth processors benefit from China supply chain de-risking. Defense, EV, and electronics all need domestic supply.",
+      "tickers": [
+        "MP",
+        "UUUU"
+      ],
+      "sector": "critical_minerals",
+      "conviction_level": 1,
+      "conviction_score": 27.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-06d0f5fc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://farmonaut.com/mining/us-rare-earth-minerals-map-2026-strategic-mining-insights",
+          "description": "US rare earth minerals map 2026",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590279Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3310bb21",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://farmonaut.com/mining/usa-rare-earth-llc-2026-usgs-rare-earth-news-trends",
+          "description": "USA Rare Earth LLC 2026 news",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590288Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-49271700",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://finance.yahoo.com/news/3-rare-earth-stocks-watch-164900636.html",
+          "description": "3 rare earth stocks to watch",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590298Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7e7f705a",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.fool.com/investing/2026/02/09/3-mineral-stocks-could-help-make-you-a-fortune/",
+          "description": "3 mineral stocks fortune potential",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590307Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-6b9d4114",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://asiatimes.com/2026/02/china-unfazed-as-us-rallies-global-critical-minerals-bloc/",
+          "description": "China unfazed as US rallies global critical minerals bloc",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590316Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-83e67bca",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://foreignpolicy.com/2026/02/14/rubio-munich-security-conference-speech/",
+          "description": "Rubio at Munich Security Conference on minerals",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590325Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-da71a92f",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/02/2026-critical-minerals-ministerial",
+          "description": "State Department: 2026 Critical Minerals Ministerial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590334Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-8cecfec5",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://china.usembassy-china.org.cn/opening-remarks-of-the-critical-minerals-ministerial/",
+          "description": "Secretary Rubio remarks on critical minerals",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T04:27:44.590344Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-rare-earth-thesis-0",
+          "description": "MP can't scale processing",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-rare-earth-thesis-1",
+          "description": "China undercuts prices to kill competition",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Focus on companies with differentiated tech or government contracts",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-rare-earth-thesis-2",
+          "description": "Substitutes reduce rare earth demand",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-rare-earth-thesis-0",
+        "description": "MP can't scale processing",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor news and regulatory announcements",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-rare-earth-thesis-0",
+          "catalyst_type": "entry",
+          "description": "DoD contract",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "entry-rare-earth-thesis-1",
+          "catalyst_type": "entry",
+          "description": "Processing facility approval",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-rare-earth-thesis-2",
+          "catalyst_type": "entry",
+          "description": "China export restriction",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-rare-earth-thesis-0",
+          "catalyst_type": "exit",
+          "description": "China floods market",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-rare-earth-thesis-1",
+          "catalyst_type": "exit",
+          "description": "Technology substitution",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-rare-earth-thesis-2",
+          "catalyst_type": "exit",
+          "description": "MP execution failure",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.579022Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "infrastructure-picks-shovels",
+      "thesis_statement": "Infrastructure equipment companies (electrical, cooling, packaging, materials) are toll bridges between $500B+ committed AI/fab capex and physical reality. These are bottleneck plays with locked-in demand.",
+      "tickers": [
+        "FPS",
+        "POWL",
+        "VRT",
+        "MOD",
+        "AMKR",
+        "ENTG",
+        "LIN",
+        "vertiv",
+        "modine",
+        "amkor",
+        "entegris",
+        "linde",
+        "powell",
+        "forgent",
+        "air-products",
+        "asml"
+      ],
+      "sector": "infrastructure_equipment",
+      "conviction_level": 1,
+      "conviction_score": 27.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-infrastructure-picks-shovels-0",
+          "description": "AI capex bubble bursts - hyperscalers cut spending",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-infrastructure-picks-shovels-1",
+          "description": "Fab buildout slower than announced",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-infrastructure-picks-shovels-2",
+          "description": "Foreign competition undercuts pricing",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Focus on companies with differentiated tech or government contracts",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-infrastructure-picks-shovels-3",
+          "description": "Recession delays infrastructure spend",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor NRC/DoE announcements, scale in over time",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-infrastructure-picks-shovels-4",
+          "description": "Technology shift reduces demand (e.g., air cooling improves)",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-infrastructure-picks-shovels-0",
+        "description": "AI capex bubble bursts - hyperscalers cut spending",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor news and regulatory announcements",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-infrastructure-picks-shovels-0",
+          "catalyst_type": "entry",
+          "description": "Data center capex announcement",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-infrastructure-picks-shovels-1",
+          "catalyst_type": "entry",
+          "description": "Fab construction milestone",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-infrastructure-picks-shovels-2",
+          "catalyst_type": "entry",
+          "description": "Backlog growth in earnings",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-infrastructure-picks-shovels-3",
+          "catalyst_type": "entry",
+          "description": "CHIPS Act award to customer",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-infrastructure-picks-shovels-4",
+          "catalyst_type": "entry",
+          "description": "Utility IRP capacity addition",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-infrastructure-picks-shovels-0",
+          "catalyst_type": "exit",
+          "description": "Capex cancellation",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-infrastructure-picks-shovels-1",
+          "catalyst_type": "exit",
+          "description": "Construction delays >12mo",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-infrastructure-picks-shovels-2",
+          "catalyst_type": "exit",
+          "description": "Backlog decline",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-infrastructure-picks-shovels-3",
+          "catalyst_type": "exit",
+          "description": "New competitor capacity",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-infrastructure-picks-shovels-4",
+          "catalyst_type": "exit",
+          "description": "Technology substitution",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.625149Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "ai-data-center-power",
+      "thesis_statement": "AI compute buildout requires massive power infrastructure expansion. Companies providing power generation, distribution, and cooling equipment benefit from hyperscaler capex surge.",
+      "tickers": [
+        "VRT",
+        "ETN",
+        "FPS",
+        "POWL",
+        "NVT",
+        "MOD"
+      ],
+      "sector": "electrical_power",
+      "conviction_level": 1,
+      "conviction_score": 27.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-ai-data-center-power-0",
+          "description": "AI winter - spending collapses",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-ai-data-center-power-1",
+          "description": "Efficiency gains reduce power needs",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-ai-data-center-power-2",
+          "description": "On-site generation reduces grid demand",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-ai-data-center-power-3",
+          "description": "Lead times normalize as capacity expands",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-ai-data-center-power-0",
+        "description": "AI winter - spending collapses",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor news and regulatory announcements",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-ai-data-center-power-0",
+          "catalyst_type": "entry",
+          "description": "Hyperscaler earnings capex guidance",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-ai-data-center-power-1",
+          "catalyst_type": "entry",
+          "description": "Utility IRP data center load forecast",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-ai-data-center-power-2",
+          "catalyst_type": "entry",
+          "description": "Transformer/switchgear order announcement",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-ai-data-center-power-3",
+          "catalyst_type": "entry",
+          "description": "Book-to-bill ratio >1.5",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-ai-data-center-power-0",
+          "catalyst_type": "exit",
+          "description": "AI spending slowdown",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-ai-data-center-power-1",
+          "catalyst_type": "exit",
+          "description": "Hyperscaler capex cut",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-ai-data-center-power-2",
+          "catalyst_type": "exit",
+          "description": "New capacity oversupply",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-ai-data-center-power-3",
+          "catalyst_type": "exit",
+          "description": "Recession demand destruction",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.643590Z",
+      "data_freshness": "live"
+    },
+    {
+      "thesis_id": "semiconductor-materials",
+      "thesis_statement": "Semiconductor specialty materials (gases, chemicals, filtration) providers have recurring revenue model tied to fab production. Every wafer run consumes their products.",
+      "tickers": [
+        "ENTG",
+        "LIN",
+        "APD",
+        "DD"
+      ],
+      "sector": "specialty_materials",
+      "conviction_level": 1,
+      "conviction_score": 27.0,
+      "position_size_pct": 0.0,
+      "confirming_signals": [],
+      "refuting_signals": [],
+      "neutral_signals": [
+        {
+          "signal_id": "signal-4ee1a439",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://thehill.com/homenews/senate/5751482-merkley-trump-constitution-tariffs/",
+          "description": "The Hill reports on Supreme Court: Senate Democrat: Trump has 'no intention of following' Constituti",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174222Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-7c0d0e09",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=tHc4JZfZlu8",
+          "description": "Zeihan on Geopolitics reports on Supreme Court: The Supreme Court Just Ruled Trump's Tariffs Unconst",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174254Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-c8f6ce85",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_u11WJk-9Q",
+          "description": "Zeihan on Geopolitics covers topics: rare earth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174275Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-d7f7aff9",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=_bBRVNkAfkQ",
+          "description": "Lex Fridman reports on SEC: Deciphering Secrets of Ancient Civilizations, Noah's Ark, and Flood Myth",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174285Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-3f5d62dc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=Qp0rCU49lMs",
+          "description": "Lex Fridman reports on Intel: Michael Levin: Hidden Reality of Alien Intelligence & Biological Life ",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174305Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-f2f50bcc",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=m_CFCyc2Shs",
+          "description": "Lex Fridman covers topics: nuclear fusion",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174323Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-254ef7bd",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=HsLgZzgpz9Y",
+          "description": "Lex Fridman reports on Microsoft: Dave Plummer: Programming, Autism, and Old-School Microsoft Storie",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174332Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-b21527f3",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=jdCKiEJpwf4",
+          "description": "Lex Fridman covers topics: military industrial",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174350Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-db79dd2b",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=y3yAVZk3tyA",
+          "description": "Lex Fridman covers topics: tariff",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174358Z",
+          "metadata": {}
+        },
+        {
+          "signal_id": "signal-40b24aaf",
+          "signal_type": "neutral",
+          "source_type": "youtube_signal",
+          "source_tier": 2,
+          "source_url": "https://www.youtube.com/watch?v=QU03lRSpBZQ",
+          "description": "Shawn Ryan Show reports on SEC: Cyber Security Expert: \u201cWe Don\u2019t Know What Happens When You Link a M",
+          "signal_strength": 0.5,
+          "timestamp": "2026-02-23T22:39:06.174368Z",
+          "metadata": {}
+        }
+      ],
+      "triangulation_count": 0,
+      "triangulation_sources": [],
+      "triangulation_met": false,
+      "counter_theses": [
+        {
+          "counter_id": "counter-semiconductor-materials-0",
+          "description": "Fab buildout delays reduce demand",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor NRC/DoE announcements, scale in over time",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-semiconductor-materials-1",
+          "description": "Chinese alternatives emerge",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-semiconductor-materials-2",
+          "description": "Pricing pressure from customers",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        },
+        {
+          "counter_id": "counter-semiconductor-materials-3",
+          "description": "Technology change reduces material consumption",
+          "severity": "manageable",
+          "likelihood": 0.3,
+          "evidence": [],
+          "mitigation": "Monitor news and regulatory announcements",
+          "invalidated_by": null
+        }
+      ],
+      "strongest_counter": {
+        "counter_id": "counter-semiconductor-materials-0",
+        "description": "Fab buildout delays reduce demand",
+        "severity": "manageable",
+        "likelihood": 0.3,
+        "evidence": [],
+        "mitigation": "Monitor NRC/DoE announcements, scale in over time",
+        "invalidated_by": null
+      },
+      "counter_thesis_severity": "manageable",
+      "entry_catalysts": [
+        {
+          "catalyst_id": "entry-semiconductor-materials-0",
+          "catalyst_type": "entry",
+          "description": "Fab production ramp",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-semiconductor-materials-1",
+          "catalyst_type": "entry",
+          "description": "CHIPS Act facility operational",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "entry-semiconductor-materials-2",
+          "catalyst_type": "entry",
+          "description": "New supply contract announcement",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "entry-semiconductor-materials-3",
+          "catalyst_type": "entry",
+          "description": "Capacity expansion investment",
+          "expected_date": null,
+          "probability": 0.5,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "exit_catalysts": [
+        {
+          "catalyst_id": "exit-semiconductor-materials-0",
+          "catalyst_type": "exit",
+          "description": "Fab production decline",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-semiconductor-materials-1",
+          "catalyst_type": "exit",
+          "description": "Technology substitution",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        },
+        {
+          "catalyst_id": "exit-semiconductor-materials-2",
+          "catalyst_type": "exit",
+          "description": "Contract loss",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "SEC EDGAR 8-K filings"
+        },
+        {
+          "catalyst_id": "exit-semiconductor-materials-3",
+          "catalyst_type": "exit",
+          "description": "Commodity price pressure",
+          "expected_date": null,
+          "probability": 0.3,
+          "impact": "high",
+          "monitoring_source": "RSS feeds, SEC filings"
+        }
+      ],
+      "recommendation": "AVOID",
+      "entry_timing": "NOT_YET",
+      "stop_loss_pct": 0.0,
+      "target_price_pct": 0.0,
+      "generated_at": "2026-03-02T20:38:13.656690Z",
+      "data_freshness": "live"
+    }
+  ]
+}

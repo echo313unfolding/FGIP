@@ -1,0 +1,71 @@
+{
+  "receipt_id": "power_uranium_screen_check_20260314T191017",
+  "operation": "power_uranium_screen_signal_check",
+  "date": "2026-03-14",
+  "operator": "claude_code",
+  "signal_check": {
+    "screen": "power_uranium",
+    "date": "2026-03-14",
+    "operator": "claude_code",
+    "falsification_checks": {
+      "uranium_deficit_closed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "Goldman Sachs cumulative deficit 2025-2045 expanded from 1.703B to 1.914B lbs. Spot $77-80/lb, long-term contracts at $86/lb \u2014 utilities securing supply. Production under-delivery, mine restart delays, labor shortages, regulatory complexity. 'Price signals alone cannot resolve' the supply constraint."
+      },
+      "nuclear_ppas_cancelled": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "No cancellations. Meta 6.6GW, MSFT/AMZN/GOOG 10GW+ all proceeding. 2026 characterized as 'transformative' for uranium demand."
+      },
+      "haleu_chokepoint_resolved": {
+        "status": "PARTIALLY \u2014 MONITOR",
+        "detail": "Centrus DOE contract extended through June 2026 (Phase III, ~$110M). 900kg HALEU delivered in Phase II. Options for 8 additional years. BWXT named as deconversion partner. Pipeline building BUT still only Centrus enriching in US. Chokepoint narrowing but not eliminated."
+      },
+      "micro_reactor_timeline_slipped": {
+        "status": "ON TRACK \u2014 THESIS HOLDS",
+        "detail": "TRISO fuel delivered to INL Dec 2025. EO 14299 deadline Sept 30, 2028. No evidence of schedule slip. Centrus contract extension confirms continued momentum."
+      },
+      "natural_gas_demand_for_dc_collapsed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "2026 = 'year of load accountability' for gas-fed data centers. Shift from headline MW to contract-backed MW. DTM acquired $1.2B in FERC pipelines. Guardian Pipeline 15% expansion for 2028. Demand accelerating, not collapsing."
+      }
+    },
+    "new_signals": {
+      "goldman_deficit_expansion": {
+        "severity": "HIGH",
+        "detail": "Goldman Sachs expanded cumulative uranium deficit forecast from 1.703B to 1.914B lbs (+12.4%). Target $91/lb by end 2026 \u2014 20% upside from current ~$80."
+      },
+      "centrus_phase_3": {
+        "severity": "HIGH",
+        "detail": "DOE extended Centrus HALEU contract through June 2026 (Phase III, ~$110M). Options for 8 more years. BWXT named deconversion partner. This is the fuel supply chain for ALL advanced reactors materializing."
+      },
+      "dtm_ferc_acquisition": {
+        "severity": "HIGH",
+        "detail": "DTM acquired 3 FERC-regulated pipelines (3.7 Bcf/d, $1.2B) from ONEOK. Midwest market \u2014 data center power demand growth zone. CONFIRMS FGIP thesis: DTM capturing pipeline capacity ahead of DC buildout."
+      },
+      "denison_breakout": {
+        "severity": "MEDIUM",
+        "detail": "DNN +50.4% in 3 months. Wheeler River ISR deposit gaining attention as uranium deficit narrative strengthens. Strongest performer in uranium screen."
+      },
+      "powl_infrastructure_leader": {
+        "severity": "MEDIUM",
+        "detail": "POWL +53.4% in 3 months despite -10.4% pullback last month. Switchgear backlog 2-3 years. Serves data centers regardless of power source (solar, gas, nuclear). Power-agnostic infrastructure play."
+      }
+    },
+    "screen_verdict": {
+      "thesis_status": "HOLDS \u2014 0 of 5 falsification criteria met. HALEU chokepoint narrowing but not resolved.",
+      "conviction": "CONVICTION_4 (maintained). DTM elevated to CONVICTION_5 \u2014 $1.2B FERC acquisition confirms thesis.",
+      "action": "PAPER TRADE \u2014 NXE +40.7% and DNN +50.4% are the momentum leaders. LEU -8.4% 3M is the laggard despite being THE HALEU chokepoint \u2014 investigate. POWL pullback (-10.4% 1M) after +53.4% run \u2014 potential re-entry if backlog thesis holds."
+    }
+  },
+  "cost": {
+    "wall_time_s": 0.048,
+    "cpu_time_s": 0.005,
+    "peak_memory_mb": 18.7,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-03-14T19:10:17",
+    "timestamp_end": "2026-03-14T19:10:17"
+  },
+  "input_hash": "f7c1827696c169c98a872d0bbd4bd22710b630d39dccf123801d3b1eb4417660",
+  "output_hash": "7e6a1979fa99156283236cc4704f43ff2d0550b79a610e5fcb5679dd04609f0f"
+}

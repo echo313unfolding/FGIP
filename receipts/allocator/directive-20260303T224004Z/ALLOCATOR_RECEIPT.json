@@ -1,0 +1,20 @@
+{
+  "constraints_summary": {
+    "risk_tolerance": "conservative",
+    "settlement_amount": 250000.0,
+    "time_horizon_years": 10
+  },
+  "directive_hash": "25faa9b4e916ad8f14f83d6196cf15d6a244ecc3f8aa4a8e44312f38ffa7212c",
+  "directive_id": "directive-20260303T224004Z",
+  "generated_at": "2026-03-03T22:40:04.604224+00:00",
+  "json_path": "receipts/allocator/directive-20260303T224004Z/DIRECTIVE.json",
+  "md_path": "receipts/allocator/directive-20260303T224004Z/DIRECTIVE.md",
+  "regime_context": {
+    "C": 0.8,
+    "Se": 0.5,
+    "current_regime": "NORMAL",
+    "m2_cpi_gap": 0,
+    "regime_node_id": "manual-override"
+  },
+  "total_buckets": 4
+}

@@ -26,9 +26,44 @@ ENV/
 *.swp
 *.swo
 
-# Data artifacts (large/generated)
-data/artifacts/
-receipts/
+# Data artifacts — ignore all, whitelist government sources
+data/artifacts/*
+!data/artifacts/congress/
+!data/artifacts/conviction/
+!data/artifacts/dark_money/
+!data/artifacts/fara/
+!data/artifacts/fec/
+!data/artifacts/federal_register/
+!data/artifacts/scotus/
+!data/artifacts/stablecoin/
+!data/artifacts/tic/
+!data/artifacts/signal_gap/
+!data/artifacts/reasoning/
+!data/artifacts/narrative/
+!data/artifacts/usaspending/
+!data/artifacts/options/
+!data/artifacts/opensecrets/
+# Large blobs stay ignored: edgar/ (100MB), rss/ (59MB), podcast/ (17MB),
+# nuclear/ (15MB), youtube_takeout/ (11MB), promethean/ (3.6MB)
+
+# Receipts — ignore all, whitelist proof chains
+receipts/*
+!receipts/coverage/
+!receipts/gaps/
+!receipts/allocator/
+!receipts/audit/
+!receipts/audit_pack/
+!receipts/decisions/
+!receipts/governance/
+!receipts/location/
+!receipts/paper_trade/
+!receipts/signal_checks/
+!receipts/trade_memos/
+!receipts/watch/
+# Large/operational stay ignored: db_backups/ (21MB), schedule/, hygiene/, dedupe/
+
+# THESIS_PACK receipts are the proof chain — include them
+!THESIS_PACK/receipts/
 
 # Secrets
 *.pem

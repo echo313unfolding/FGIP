@@ -1,0 +1,13 @@
+{
+  "areas_with_red_flags": 1,
+  "details": [
+    {
+      "area": "Port St. Lucie (West)",
+      "county": "St. Lucie",
+      "flags": [
+        "High insurance risk in St. Lucie County",
+        "Flood insurance required (Zone AE)"
+      ]
+    }
+  ]
+}

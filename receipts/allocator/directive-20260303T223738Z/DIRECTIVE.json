@@ -1,0 +1,106 @@
+{
+  "allocation": {
+    "growth": {
+      "alternatives": [
+        "VTI",
+        "VXUS",
+        "VT"
+      ],
+      "category": "broad-equity",
+      "expense_ratio_cap_bps": 10,
+      "preferred_ticker": "VTI",
+      "purpose": "Long-horizon compounding; accept volatility",
+      "weight": 0.3
+    },
+    "income_ladder": {
+      "alternatives": [
+        "VGSH",
+        "VGIT",
+        "SCHR"
+      ],
+      "category": "treasury-duration",
+      "expense_ratio_cap_bps": 10,
+      "preferred_ticker": "VGIT",
+      "purpose": "Predictable income; duration-matched to needs",
+      "weight": 0.4
+    },
+    "inflation_hedge": {
+      "alternatives": [
+        "VTIP",
+        "SCHP",
+        "TIP"
+      ],
+      "category": "inflation-protected",
+      "expense_ratio_cap_bps": 10,
+      "preferred_ticker": "VTIP",
+      "purpose": "Protect purchasing power from M2-CPI gap",
+      "weight": 0.2
+    },
+    "safety_floor": {
+      "alternatives": [
+        "SGOV",
+        "BIL",
+        "SHV"
+      ],
+      "category": "cash-equivalents",
+      "expense_ratio_cap_bps": 10,
+      "preferred_ticker": "SGOV",
+      "purpose": "Protect against forced selling; immediate access",
+      "weight": 0.1
+    }
+  },
+  "constraints": {
+    "income_need_monthly": 0,
+    "liquidity_runway_months": 18,
+    "max_expense_ratio_bps": 20,
+    "max_single_position_pct": 0.3,
+    "min_diversification_buckets": 3,
+    "no_single_stock": true,
+    "risk_tolerance": "moderate",
+    "settlement_amount": 250000.0,
+    "tax_sensitive": true,
+    "time_horizon_years": 10
+  },
+  "directive_hash": "e2c11361e5289cd390ea3f4274a6fc1c775c30b7591dc3ba2f13270b4e20f237",
+  "directive_id": "directive-20260303T223738Z",
+  "generated_at": "2026-03-03T22:37:38.490772+00:00",
+  "receipts": {
+    "calibration_hash": "manual",
+    "regime_node_id": "manual-override"
+  },
+  "regime_context": {
+    "C": 0.8,
+    "Se": 0.5,
+    "current_regime": "NORMAL",
+    "m2_cpi_gap": 0,
+    "regime_node_id": "manual-override"
+  },
+  "regime_triggers": [
+    {
+      "action": "reduce_growth_by_10pct",
+      "condition": "regime == STRESS",
+      "rationale": "Elevated risk detected; reduce equity exposure"
+    },
+    {
+      "action": "activate_defensive_mode",
+      "condition": "regime == CRISIS",
+      "rationale": "Crisis detected; freeze discretionary, protect principal"
+    },
+    {
+      "action": "increase_TIPS_allocation",
+      "condition": "M2_CPI_gap > 5% sustained 3mo",
+      "rationale": "Hidden inflation eroding purchasing power"
+    },
+    {
+      "action": "reduce_TIPS_allocation",
+      "condition": "M2_CPI_gap < 2% sustained 3mo",
+      "rationale": "Inflation pressure normalized; can reduce TIPS weight"
+    }
+  ],
+  "what_would_change_this": [
+    "Regime shifts from NORMAL -> adjust per triggers",
+    "Liquidity need arises -> draw from safety_floor first",
+    "Time horizon shortens significantly -> increase safety allocation",
+    "Regime escalates to STRESS/CRISIS -> activate defensive rebalance"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "receipt_id": "copper_screen_check_20260314T191017",
+  "operation": "copper_screen_signal_check",
+  "date": "2026-03-14",
+  "operator": "claude_code",
+  "signal_check": {
+    "screen": "copper",
+    "date": "2026-03-14",
+    "operator": "claude_code",
+    "falsification_checks": {
+      "copper_deficit_closed": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "Deficit estimates range 150K-450K tonnes for 2026. LME on-warrant inventory dropped to 89,725mt \u2014 lowest in 6 months. Steep backwardation (near > far). Disruptions at mines in Indonesia, Chile, DRC compounding deficit. JP Morgan targets $12,500/mt in Q2 2026."
+      },
+      "copper_substitute_found": {
+        "status": "NO \u2014 THESIS HOLDS",
+        "detail": "No viable substitute for copper in electrical wiring, grid infrastructure, or EV motors. Aluminum can substitute in SOME overhead transmission but not in building wiring, data center bus bars, or EV motors. Physics unchanged."
+      },
+      "demand_destruction_recession": {
+        "status": "PARTIAL SIGNAL \u2014 MONITOR",
+        "detail": "Copper miners down 8-18% in last month. Tariff uncertainty + recession fears weighing on near-term sentiment. But structural demand (data centers 1.1Mmt/yr by 2030, EV doubling by 2035, grid upgrades) is multi-year. Short-term pullback \u2260 demand destruction."
+      }
+    },
+    "new_signals": {
+      "lme_backwardation": {
+        "severity": "HIGH",
+        "detail": "LME on-warrant copper at 89,725mt, lowest in 6 months. Steep backwardation means physical copper is scarcer than paper suggests. Same pattern as silver COMEX."
+      },
+      "data_center_copper_demand": {
+        "severity": "HIGH",
+        "detail": "Sprott: data centers need 1.1Mmt copper/yr by 2030 (~3% global demand). AI training = 58% of DC copper demand by 2030. This is NOT priced in yet."
+      },
+      "miner_pullback_opportunity": {
+        "severity": "MEDIUM",
+        "detail": "FCX -7.7%, SCCO -9.1%, TECK -14.3%, HBM -17.7% in last month. Structural thesis intact but short-term sentiment negative. If deficit thesis holds, this is an entry opportunity, not a warning."
+      },
+      "dtm_1_2b_acquisition": {
+        "severity": "HIGH",
+        "detail": "DTM acquired 3 FERC-regulated pipelines from ONEOK for $1.2B. 3.7 Bcf/d capacity, 1,300 miles across 7 Midwest states. Guardian Pipeline 15% expansion sanctioned for 2028. Midwest power demand growth = data center build zone."
+      }
+    },
+    "screen_verdict": {
+      "thesis_status": "HOLDS \u2014 0 of 3 falsification criteria met",
+      "new_risks": "Short-term tariff/recession fear causing miner pullback. Structural demand unchanged.",
+      "conviction": "CONVICTION_4 (maintained)",
+      "action": "PAPER TRADE \u2014 Miner pullback (-8 to -18% in 1 month) may be entry if deficit thesis holds. MTZ (+8.2% 1M) is the outlier \u2014 infrastructure construction doesn't pull back with miners."
+    }
+  },
+  "cost": {
+    "wall_time_s": 0.048,
+    "cpu_time_s": 0.005,
+    "peak_memory_mb": 18.7,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-03-14T19:10:17",
+    "timestamp_end": "2026-03-14T19:10:17"
+  },
+  "input_hash": "eb0aff6936f8b0da2d7d75db08ece61f5c37739b87900678cc3ff95462a07e5c",
+  "output_hash": "c27b94df7c42dda2d00837820b5b7ae530988c928bfb8768b1f60e3410c6bcd4"
+}

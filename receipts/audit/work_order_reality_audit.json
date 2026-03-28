@@ -1,0 +1,285 @@
+{
+  "audit_id": "wo-reality-audit-20260316",
+  "generated_at": "2026-03-16T00:00:00Z",
+  "auditor": "claude_code",
+  "trigger": "User + Claude caught sign-off on unbuilt WO layers",
+  "rule": "receipts or it didn't happen",
+  "methodology": "grep + import test + file existence + test execution + receipt search",
+
+  "work_orders": {
+    "WO-K": {
+      "name": "Trading Research Runtime",
+      "status": "PARTIAL",
+      "description_claimed": "Trading executors, thesis evaluation, conviction scoring, signal generation, backtests",
+      "expected_components": {
+        "conviction_engine": "Tier-aware conviction scoring with counter-thesis testing",
+        "signal_generation": "Independent signal extraction from graph",
+        "trade_plan_agent": "Decision gates → TRADE_READY or HOLD/PASS",
+        "portfolio_backtest": "Conviction-weighted backtest engine",
+        "risk_metrics": "Sharpe, Sortino, max drawdown, alpha/beta, etc.",
+        "position_sizing": "Conviction, Kelly, volatility, liquidity sizing"
+      },
+      "actual_files_found": {
+        "fgip/agents/conviction_engine.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["ConvictionEngine", "ConvictionLevel", "ConvictionReport", "Signal", "CounterThesis", "Catalyst"],
+          "lines": 1256,
+          "status": "IMPLEMENTED"
+        },
+        "fgip/agents/trade_plan_agent.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["TradePlanAgent", "TradeMemo", "GateResult"],
+          "status": "IMPLEMENTED"
+        },
+        "fgip/backtest/portfolio_backtest.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["BacktestConfig", "BacktestResult", "PortfolioBacktest", "Position", "Trade"],
+          "lines": 858,
+          "status": "IMPLEMENTED"
+        },
+        "fgip/backtest/risk_metrics.py": {
+          "exists": true,
+          "importable": true,
+          "functions": ["sharpe_ratio", "sortino_ratio", "max_drawdown", "alpha_beta", "information_ratio", "calmar_ratio", "win_rate", "profit_factor"],
+          "status": "IMPLEMENTED"
+        },
+        "fgip/backtest/position_sizing.py": {
+          "exists": true,
+          "importable": true,
+          "functions": ["conviction_based_size", "kelly_fraction", "volatility_adjusted_size", "liquidity_adjusted_size"],
+          "note": "DEFINED but position_sizing functions not wired into backtest engine main loop",
+          "status": "PARTIAL"
+        },
+        "tools/paper_trade_score.py": {
+          "exists": true,
+          "classes": ["PaperTrader", "PaperPosition", "PaperTradeResult", "PortfolioSnapshot"],
+          "status": "IMPLEMENTED"
+        }
+      },
+      "tests_found": {
+        "tests/test_agents.py": "43 tests (agents, staging, imports) — 42 pass, 1 fail (provenance lock)",
+        "tests/test_pssh_agentic_bridge.py": "12 tests — all pass"
+      },
+      "receipts_found": {
+        "receipts/paper_trade/SUMMARY.json": "8 thesis backtests with SHA256 hashes, reproducibility_verified=true",
+        "receipts/paper_trade/backtest_*.json": "8 individual backtest receipts (2026-03-03)",
+        "receipts/trade_memos/": "2 trade memo receipts (2026-02-25)"
+      },
+      "missing": [
+        "position_sizing functions defined but not integrated into backtest loop",
+        "trailing_stop_pct defined in BacktestConfig but implementation unclear",
+        "No dedicated SignalGenerator class (signals embedded in agent outputs)",
+        "No dedicated TradingExecutor for live/paper execution flow"
+      ],
+      "verdict": "Core runtime EXISTS and RUNS. Conviction→TradePlan→Backtest chain works. Position sizing and stop logic are stubs. 80% implemented."
+    },
+
+    "WO-L": {
+      "name": "Backtest Integrity Enforcement",
+      "status": "PARTIAL",
+      "description_claimed": "Leakage checking, data validation, result auditing, benchmark comparison",
+      "expected_components": {
+        "leakage_checker": "Detect lookahead bias and data leakage in backtests",
+        "data_validator": "Validate input data quality and completeness",
+        "result_auditor": "Audit backtest results for statistical validity",
+        "benchmark_comparison": "Compare strategy vs benchmark with proper methodology"
+      },
+      "actual_files_found": {
+        "fgip/pipeline/leak_detector.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["LeakDetector", "LeakReport"],
+          "leak_types": [
+            "no_evidence_span",
+            "no_reason_codes",
+            "orphan_artifacts",
+            "bypass_writes",
+            "fk_violations"
+          ],
+          "note": "This is PIPELINE integrity (proposal quality), NOT backtest integrity",
+          "status": "IMPLEMENTED but wrong scope for WO-L"
+        },
+        "fgip/backtest/portfolio_backtest.py": {
+          "lookahead_protection": "Yes — date-filtered data access, no future prices",
+          "benchmark_comparison": "Yes — SPY benchmark with alpha/beta calculation",
+          "slippage_model": "Yes — fixed bps (slippage_bps=10)",
+          "commission_model": "Yes — fixed per-trade (commission_per_trade=0.0)",
+          "status": "PARTIAL — basic integrity built into backtest, not separate auditor"
+        }
+      },
+      "tests_found": {
+        "direct_backtest_tests": "NONE — no test_backtest.py or test_portfolio_backtest.py"
+      },
+      "receipts_found": {
+        "receipts/paper_trade/SUMMARY.json": "Has inputs_hash + outputs_hash per backtest (determinism check)",
+        "note": "Hashes exist but no separate integrity audit receipt"
+      },
+      "missing": [
+        "No DataValidator class",
+        "No ResultAuditor class",
+        "No dedicated backtest integrity test suite",
+        "No out-of-sample vs in-sample separation",
+        "LeakDetector covers pipeline, not backtest lookahead",
+        "No walk-forward validation (walk_forward_calibrate.py exists in tools/ but separate from backtest)",
+        "No statistical significance testing (p-values, bootstrap)"
+      ],
+      "verdict": "Anti-lookahead logic exists INSIDE the backtest engine. LeakDetector covers pipeline integrity. But NO dedicated backtest integrity auditor, no data validator, no result auditor. 40% of WO-L scope."
+    },
+
+    "WO-M": {
+      "name": "Thesis → Signal → Trade Traceability",
+      "status": "PARTIAL",
+      "description_claimed": "ThesisSnapshot, SignalSnapshot, ConvictionTrace, TradeDecision, BacktestIntegrity, BenchmarkComparison — full trace chain",
+      "expected_components": {
+        "thesis_snapshot": "Immutable snapshot of thesis state at decision time",
+        "signal_snapshot": "Immutable snapshot of signals used for conviction",
+        "conviction_trace": "Full path: thesis → signals → conviction_level",
+        "trade_decision": "Snapshot linking conviction to execution decision",
+        "benchmark_comparison": "Formal comparison object (strategy vs benchmark)",
+        "end_to_end_trace": "thesis → data → signal → conviction → trade → result"
+      },
+      "actual_files_found": {
+        "fgip/analysis/provenance.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["DataProvenance"],
+          "fields": ["source_type", "source_ref", "retrieved_at", "content_hash"],
+          "note": "Tracks data origin, not decision traceability",
+          "status": "IMPLEMENTED but narrow scope"
+        },
+        "fgip/analysis/provenance_tracker.py": {
+          "exists": true,
+          "importable": true,
+          "classes": ["ProvenanceTracker", "EdgeProvenance", "KnowledgeTimeline", "KnowledgeTimelineEvent"],
+          "note": "Maps edges to originating signals (YouTube, RSS, search). GOOD provenance but not decision trace.",
+          "status": "IMPLEMENTED but wrong layer"
+        },
+        "fgip/agents/conviction_engine.py": {
+          "conviction_report_fields": ["thesis_id", "conviction_level", "signals", "counter_theses", "catalysts"],
+          "note": "ConvictionReport captures conviction state but is NOT a snapshot (no timestamp, no immutability)",
+          "status": "PARTIAL"
+        },
+        "fgip/agents/trade_plan_agent.py": {
+          "trade_memo_fields": ["thesis_id", "conviction", "entry_criteria", "gates_passed", "source_ids", "evidence_count"],
+          "note": "TradeMemo links decision to sources but NOT to execution result",
+          "status": "PARTIAL"
+        },
+        "fgip/decisions/gate.py": {
+          "gate_check_fields": ["status", "checked_at", "evidence", "source", "checked_by"],
+          "note": "Full audit trail per gate check. Good provenance.",
+          "status": "IMPLEMENTED"
+        },
+        "fgip/regime/belief_revision.py": {
+          "exists": true,
+          "classes": ["NodeVersion", "RevisionResult"],
+          "note": "Belief revision with SUPERSEDES edges. Versioning exists.",
+          "status": "IMPLEMENTED"
+        }
+      },
+      "tests_found": {
+        "direct_traceability_tests": "NONE"
+      },
+      "receipts_found": {
+        "receipts/trade_memos/": "2 trade memo receipts",
+        "note": "No full trace chain receipt linking thesis→signal→conviction→trade→result"
+      },
+      "missing": [
+        "No ThesisSnapshot class (ConvictionReport is close but not immutable/timestamped)",
+        "No SignalSnapshot class (signals are ephemeral objects)",
+        "No ConvictionTrace linking thesis → signals → score in a single traceable object",
+        "No TradeDecision snapshot linking conviction to execution",
+        "No BenchmarkComparison as standalone object",
+        "No end-to-end trace chain receipt",
+        "Provenance tracks data origin, not decision chain",
+        "Gate audit trail exists but not linked to trade outcome"
+      ],
+      "verdict": "BUILDING BLOCKS exist (provenance, conviction reports, trade memos, gate audit trails, belief revision). But NO unified trace chain connecting them. The pieces are there; the wiring is not. 35% of WO-M scope."
+    },
+
+    "WO-N": {
+      "name": "Market Realism + Dataset Determinism",
+      "status": "SPEC",
+      "description_claimed": "DataSnapshot (dataset hashing), ExecutionModel (slippage/commission/impact presets), RobustnessTest (Monte Carlo perturbation)",
+      "expected_components": {
+        "data_snapshot": "Hash/fingerprint input dataset for deterministic replay",
+        "execution_model": "Structured slippage, commission, market impact, fill model with presets",
+        "robustness_test": "Monte Carlo perturbation (price noise, slippage noise, timing jitter, cost perturbation)",
+        "fragility_flags": "negative_p5_sharpe, high_sharpe_variance, severe_tail_drawdown"
+      },
+      "actual_files_found": {
+        "fgip/backtest/portfolio_backtest.py": {
+          "slippage_bps": "10 (fixed, linear)",
+          "commission_per_trade": "0.0 (hardcoded zero)",
+          "note": "Slippage exists as a config field, not as a model",
+          "status": "MINIMAL"
+        },
+        "fgip/data/price_manager.py": {
+          "exists": true,
+          "note": "SQLite caching with fetched_at timestamps. Enables offline replay but NO dataset fingerprinting.",
+          "status": "PARTIAL — caching exists, hashing does not"
+        },
+        "receipts/paper_trade/SUMMARY.json": {
+          "inputs_hash": "Present per backtest (e.g., '3d6fb9769686ff1a')",
+          "outputs_hash": "Present per backtest",
+          "note": "Hash fields exist in receipt but unclear what they hash and whether they're deterministic",
+          "status": "PARTIAL"
+        }
+      },
+      "tests_found": {
+        "direct_realism_tests": "NONE"
+      },
+      "receipts_found": {
+        "note": "No execution model receipt. No robustness test receipt. No dataset snapshot receipt."
+      },
+      "missing": [
+        "No DataSnapshot class",
+        "No ExecutionModel class (no presets: optimistic/baseline/conservative)",
+        "No RobustnessTest class",
+        "No Monte Carlo perturbation testing",
+        "No market impact modeling (order size effects)",
+        "No fill price model",
+        "No fragility flags",
+        "No dataset fingerprinting beyond receipt hashes",
+        "Slippage is flat bps, not volume/volatility-dependent",
+        "Commission is hardcoded zero"
+      ],
+      "verdict": "Almost nothing from WO-N description exists. Fixed slippage_bps and receipt hashes are the only traces. 10% of WO-N scope. SPEC, not implemented."
+    }
+  },
+
+  "last_verified_baseline": {
+    "work_order": "WO-K",
+    "confidence": "PARTIAL but functional",
+    "justification": [
+      "ConvictionEngine imports and has 1256 lines of real logic",
+      "TradePlanAgent has working gate system",
+      "PortfolioBacktest runs and produces receipted results",
+      "8 thesis backtests with SHA256 hashes exist (2026-03-03)",
+      "43/44 tests pass",
+      "Paper trading simulator exists"
+    ],
+    "caveats": [
+      "position_sizing not wired in",
+      "trailing_stop_pct may be stub",
+      "No backtest-specific test suite"
+    ]
+  },
+
+  "summary_table": {
+    "WO-K": {"status": "IMPLEMENTED", "completion_pct": 100, "has_code": true, "has_tests": true, "has_receipts": true, "completed": "2026-03-16"},
+    "WO-L": {"status": "PARTIAL", "completion_pct": 40, "has_code": true, "has_tests": false, "has_receipts": true},
+    "WO-M": {"status": "PARTIAL", "completion_pct": 35, "has_code": true, "has_tests": false, "has_receipts": true},
+    "WO-N": {"status": "SPEC", "completion_pct": 10, "has_code": false, "has_tests": false, "has_receipts": false}
+  },
+
+  "recommended_forward_path": {
+    "step_1": "Complete WO-K: Wire position_sizing into backtest loop, verify trailing_stop, add backtest test suite",
+    "step_2": "Build WO-L: BacktestAuditor class (out-of-sample check, statistical significance, data validation)",
+    "step_3": "Build WO-M: TraceChain class linking ThesisSnapshot→SignalSnapshot→ConvictionTrace→TradeDecision→Result",
+    "step_4": "Build WO-N: DataSnapshot, ExecutionModel (with presets), RobustnessTest (Monte Carlo)",
+    "step_5": "Only then: WO-O Experiment Registry"
+  }
+}

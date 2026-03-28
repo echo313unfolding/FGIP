@@ -1,0 +1,58 @@
+{
+  "source": "Stablecoin attestations / DeFi Llama",
+  "data_source": "DeFi Llama API (live)",
+  "as_of": "2026-03-08",
+  "issuers": {
+    "tether": {
+      "node_id": "tether-usdt",
+      "name": "Tether",
+      "market_cap": 183.87,
+      "treasury_pct": 0.6,
+      "treasury_holdings": 110.32,
+      "headquarters": "British Virgin Islands",
+      "genius_compliant": false
+    },
+    "circle": {
+      "node_id": "circle-usdc",
+      "name": "USD Coin",
+      "market_cap": 77.29,
+      "treasury_pct": 0.8,
+      "treasury_holdings": 61.83,
+      "headquarters": "United States",
+      "genius_compliant": true
+    },
+    "paypal": {
+      "node_id": "paypal-pyusd",
+      "name": "PayPal USD",
+      "market_cap": 4.13,
+      "treasury_pct": 0.9,
+      "treasury_holdings": 3.72,
+      "headquarters": "United States",
+      "genius_compliant": true
+    },
+    "firstdigital": {
+      "node_id": "fd-fdusd",
+      "name": "First Digital USD",
+      "market_cap": 0.37,
+      "treasury_pct": 0.85,
+      "treasury_holdings": 0.32,
+      "headquarters": "Unknown",
+      "genius_compliant": true
+    }
+  },
+  "totals": {
+    "total_market_cap": 309.18,
+    "total_treasury_holdings": 176.19,
+    "genius_compliant_holdings": 65.87
+  },
+  "domestication_metrics": {
+    "current_domestication_pct": 2.07,
+    "foreign_holdings_baseline": 8500.0,
+    "projected_2028_pct": 23.53
+  },
+  "extraction_analysis": {
+    "holder_yield": 0.0,
+    "issuer_yield": 4.5,
+    "spread_captured_by_issuers": "$7.93B/year"
+  }
+}

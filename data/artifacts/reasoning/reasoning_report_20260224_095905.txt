@@ -1,0 +1,81 @@
+============================================================
+  FGIP REASONING REPORT
+  Generated: 2026-02-24T14:59:05.086327+00:00Z
+============================================================
+
+  THESIS SCORE: 70.6%
+  Breakdown:
+    both_sides_patterns: +25
+    high_confidence_patterns: +20
+    causal_chains: +0
+    convergence_nodes: +15
+    source_quality: +0.6
+    connectivity: +10
+
+  BOTH-SIDES PATTERNS (7):
+    [95%] Intel
+         Problem edges: 7
+         Correction edges: 6
+    [95%] Micron
+         Problem edges: 3
+         Correction edges: 2
+         Owns 4.2% of Micron
+    [95%] Vanguard Group
+         Problem edges: 5
+         Correction edges: 3
+         Owns 8.9% of Micron
+         Owns 8.8% of Microsoft
+         Owns 8.4% of Apple Inc
+         Owns 7.8% of GlobalFoundries
+         Owns 7.2% of Google
+    [95%] State Street Corporation
+         Problem edges: 5
+         Correction edges: 3
+         Owns 4.2% of Micron
+         Owns 4.1% of Microsoft
+         Owns 3.9% of Apple Inc
+         Owns 3.5% of Google
+         Owns 3.1% of GlobalFoundries
+    [95%] BlackRock Inc
+         Problem edges: 5
+         Correction edges: 3
+         Owns 7.3% of Microsoft
+         Owns 7.1% of Micron
+         Owns 6.5% of Apple Inc
+         Owns 6.1% of Google
+         Owns 5.9% of GlobalFoundries
+    [75%] Foreign Treasury Leverage
+         Problem edges: 1
+         Correction edges: 2
+    [75%] Tariff Policy Enablement
+         Problem edges: 1
+         Correction edges: 2
+
+  TOP CAUSAL CHAINS (1):
+    [30%] Intel --FUNDED_PROJECT--> Ohio Fab Complex
+         Weakest: edge_funded_project_intel_ohio-fab-comple
+
+  CONVERGENCE NODES (13):
+    Intel (COMPANY): 3 layers, 16 connections
+    Micron (COMPANY): 3 layers, 8 connections
+    Microsoft (COMPANY): 2 layers, 13 connections
+    JPMorgan (FINANCIAL_INST): 2 layers, 12 connections
+    Vanguard (FINANCIAL_INST): 2 layers, 10 connections
+    BlackRock (FINANCIAL_INST): 2 layers, 10 connections
+    Google (COMPANY): 2 layers, 8 connections
+    Citibank (FINANCIAL_INST): 2 layers, 6 connections
+    Goldman Sachs (FINANCIAL_INST): 2 layers, 6 connections
+    Apple Inc (COMPANY): 2 layers, 6 connections
+
+  PROPOSED INFERENCES (11):
+    [95%] Intel --BENEFITS_FROM--> Intel
+    [95%] Intel --BENEFITS_FROM--> Ohio Fab Complex
+    [95%] Intel --BENEFITS_FROM--> CHIPS Act
+    [95%] Micron --BENEFITS_FROM--> CHIPS Act
+    [95%] Vanguard Group --BENEFITS_FROM--> CHIPS Act
+    [95%] State Street Corporation --BENEFITS_FROM--> CHIPS Act
+    [95%] BlackRock Inc --BENEFITS_FROM--> CHIPS Act
+    [75%] Foreign Treasury Leverage --BENEFITS_FROM--> Foreign Treasury Leverage
+    [75%] Foreign Treasury Leverage --BENEFITS_FROM--> Debt Domestication
+    [75%] Tariff Policy Enablement --BENEFITS_FROM--> Tariff Policy Enablement
+    [75%] Tariff Policy Enablement --BENEFITS_FROM--> Foreign Treasury Leverage

@@ -1,0 +1,804 @@
+{
+  "timestamp": "2026-02-24T22:51:35.682061+00:00",
+  "summary": {
+    "total_entity_sets": 8,
+    "critical_gaps": 4,
+    "moderate_gaps": 2,
+    "adequate_coverage": 2,
+    "total_missing_entities": 41,
+    "sparse_nodes": 72,
+    "orphan_nodes": 2281
+  },
+  "coverage_by_set": [
+    {
+      "entity_set": "big_three",
+      "total_expected": 5,
+      "total_found": 3,
+      "coverage_ratio": 0.6,
+      "missing_entities": [
+        "fidelity",
+        "schwab"
+      ],
+      "found_entities": [
+        {
+          "expected": "blackrock",
+          "node_id": "blackrock",
+          "edges": 13
+        },
+        {
+          "expected": "vanguard",
+          "node_id": "vanguard",
+          "edges": 13
+        },
+        {
+          "expected": "state-street",
+          "node_id": "state-street",
+          "edges": 23
+        }
+      ],
+      "priority": 10,
+      "thesis_impact": "MODERATE: Significant entities missing"
+    },
+    {
+      "entity_set": "semiconductor_majors",
+      "total_expected": 16,
+      "total_found": 7,
+      "coverage_ratio": 0.4375,
+      "missing_entities": [
+        "samsung-electronics",
+        "nvidia",
+        "amd",
+        "texas-instruments",
+        "asml",
+        "sk-hynix",
+        "applied-materials",
+        "lam-research",
+        "kla-corporation"
+      ],
+      "found_entities": [
+        {
+          "expected": "intel",
+          "node_id": "intel",
+          "edges": 55
+        },
+        {
+          "expected": "tsmc",
+          "node_id": "tsmc",
+          "edges": 7
+        },
+        {
+          "expected": "samsung",
+          "node_id": "samsung",
+          "edges": 7
+        },
+        {
+          "expected": "micron",
+          "node_id": "micron",
+          "edges": 48
+        },
+        {
+          "expected": "qualcomm",
+          "node_id": "qualcomm-with-its-snapdragon-products",
+          "edges": 1
+        },
+        {
+          "expected": "globalfoundries",
+          "node_id": "globalfoundries",
+          "edges": 7
+        },
+        {
+          "expected": "broadcom",
+          "node_id": "broadcom-in-the-custom-asics-development-market",
+          "edges": 1
+        }
+      ],
+      "priority": 9,
+      "thesis_impact": "CRITICAL: Major blind spot in thesis coverage"
+    },
+    {
+      "entity_set": "chips_recipients",
+      "total_expected": 11,
+      "total_found": 5,
+      "coverage_ratio": 0.45454545454545453,
+      "missing_entities": [
+        "texas-instruments",
+        "sk-hynix",
+        "bae-systems",
+        "microchip-technology",
+        "onsemi",
+        "polar-semiconductor"
+      ],
+      "found_entities": [
+        {
+          "expected": "intel",
+          "node_id": "intel",
+          "edges": 55
+        },
+        {
+          "expected": "tsmc",
+          "node_id": "tsmc",
+          "edges": 7
+        },
+        {
+          "expected": "samsung",
+          "node_id": "samsung",
+          "edges": 7
+        },
+        {
+          "expected": "micron",
+          "node_id": "micron",
+          "edges": 48
+        },
+        {
+          "expected": "globalfoundries",
+          "node_id": "globalfoundries",
+          "edges": 7
+        }
+      ],
+      "priority": 9,
+      "thesis_impact": "CRITICAL: Major blind spot in thesis coverage"
+    },
+    {
+      "entity_set": "defense_primes",
+      "total_expected": 10,
+      "total_found": 0,
+      "coverage_ratio": 0.0,
+      "missing_entities": [
+        "lockheed-martin",
+        "raytheon",
+        "northrop-grumman",
+        "boeing",
+        "general-dynamics",
+        "l3harris",
+        "bae-systems",
+        "huntington-ingalls",
+        "leidos",
+        "saic"
+      ],
+      "found_entities": [],
+      "priority": 8,
+      "thesis_impact": "CRITICAL: Major blind spot in thesis coverage"
+    },
+    {
+      "entity_set": "tech_offshorers",
+      "total_expected": 11,
+      "total_found": 4,
+      "coverage_ratio": 0.36363636363636365,
+      "missing_entities": [
+        "meta",
+        "alphabet",
+        "nvidia",
+        "tesla",
+        "hp",
+        "dell",
+        "cisco"
+      ],
+      "found_entities": [
+        {
+          "expected": "apple",
+          "node_id": "apple",
+          "edges": 1
+        },
+        {
+          "expected": "google",
+          "node_id": "google",
+          "edges": 8
+        },
+        {
+          "expected": "microsoft",
+          "node_id": "microsoft",
+          "edges": 155
+        },
+        {
+          "expected": "amazon",
+          "node_id": "amazon",
+          "edges": 2
+        }
+      ],
+      "priority": 8,
+      "thesis_impact": "CRITICAL: Major blind spot in thesis coverage"
+    },
+    {
+      "entity_set": "nuclear_smr",
+      "total_expected": 9,
+      "total_found": 7,
+      "coverage_ratio": 0.7777777777777778,
+      "missing_entities": [
+        "westinghouse",
+        "ge-hitachi"
+      ],
+      "found_entities": [
+        {
+          "expected": "nuscale",
+          "node_id": "nne",
+          "edges": 4
+        },
+        {
+          "expected": "oklo",
+          "node_id": "oklo",
+          "edges": 3
+        },
+        {
+          "expected": "terrapower",
+          "node_id": "terrapower",
+          "edges": 4
+        },
+        {
+          "expected": "x-energy",
+          "node_id": "x-energy",
+          "edges": 2
+        },
+        {
+          "expected": "kairos-power",
+          "node_id": "kairos-power",
+          "edges": 2
+        },
+        {
+          "expected": "bwxt",
+          "node_id": "bwxt",
+          "edges": 4
+        },
+        {
+          "expected": "centrus-energy",
+          "node_id": "centrus-energy",
+          "edges": 3
+        }
+      ],
+      "priority": 7,
+      "thesis_impact": "ADEQUATE: Most entities covered"
+    },
+    {
+      "entity_set": "stablecoin_actors",
+      "total_expected": 8,
+      "total_found": 5,
+      "coverage_ratio": 0.625,
+      "missing_entities": [
+        "binance",
+        "coinbase",
+        "kraken"
+      ],
+      "found_entities": [
+        {
+          "expected": "tether",
+          "node_id": "tether-usdt",
+          "edges": 1
+        },
+        {
+          "expected": "circle",
+          "node_id": "circle-usdc",
+          "edges": 1
+        },
+        {
+          "expected": "usdc",
+          "node_id": "circle-usdc",
+          "edges": 1
+        },
+        {
+          "expected": "paxos",
+          "node_id": "paxos-usdp",
+          "edges": 1
+        },
+        {
+          "expected": "gemini",
+          "node_id": "gemini-gusd",
+          "edges": 1
+        }
+      ],
+      "priority": 7,
+      "thesis_impact": "MODERATE: Significant entities missing"
+    },
+    {
+      "entity_set": "federal_agencies",
+      "total_expected": 10,
+      "total_found": 8,
+      "coverage_ratio": 0.8,
+      "missing_entities": [
+        "occ",
+        "chips-program-office"
+      ],
+      "found_entities": [
+        {
+          "expected": "federal-reserve",
+          "node_id": "federal-reserve",
+          "edges": 4
+        },
+        {
+          "expected": "treasury",
+          "node_id": "treasury",
+          "edges": 6
+        },
+        {
+          "expected": "sec",
+          "node_id": "sec",
+          "edges": 8
+        },
+        {
+          "expected": "fdic",
+          "node_id": "fdic",
+          "edges": 12
+        },
+        {
+          "expected": "commerce",
+          "node_id": "commerce",
+          "edges": 11
+        },
+        {
+          "expected": "dod",
+          "node_id": "sen-dodd",
+          "edges": 1
+        },
+        {
+          "expected": "doe",
+          "node_id": "doe-ne",
+          "edges": 4
+        },
+        {
+          "expected": "nist",
+          "node_id": "general-services-administration",
+          "edges": 3
+        }
+      ],
+      "priority": 8,
+      "thesis_impact": "ADEQUATE: Most entities covered"
+    }
+  ],
+  "density_issues": [
+    {
+      "node_id": "opensecrets",
+      "name": "OpenSecrets",
+      "edge_count": 1,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "propublica",
+      "name": "ProPublica",
+      "edge_count": 1,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "bis",
+      "name": "BIS",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "hsbc",
+      "name": "HSBC",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "deutsche-bank",
+      "name": "Deutsche Bank",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "bank-of-ny-mellon",
+      "name": "Bank of NY Mellon",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "larry-fink",
+      "name": "Larry Fink",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "frances-haugen",
+      "name": "Frances Haugen",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "marco-rubio",
+      "name": "Marco Rubio",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "obbba",
+      "name": "OBBBA",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "anti-cbdc-act",
+      "name": "Anti-CBDC Act",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "vos-selections-v-trump",
+      "name": "V.O.S. Selections v. Trump",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "citizens-united",
+      "name": "Citizens United",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "oracle",
+      "name": "Oracle",
+      "edge_count": 2,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "mp-materials",
+      "name": "MP Materials",
+      "edge_count": 2,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "cleveland-cliffs",
+      "name": "Cleveland-Cliffs",
+      "edge_count": 1,
+      "expected_min_edges": 5,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "us-steel",
+      "name": "US Steel",
+      "edge_count": 1,
+      "expected_min_edges": 5,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "gannett",
+      "name": "Gannett",
+      "edge_count": 4,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "sinclair",
+      "name": "Sinclair",
+      "edge_count": 4,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "graham-media",
+      "name": "Graham Media",
+      "edge_count": 0,
+      "expected_min_edges": 5,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "bloomberg",
+      "name": "Bloomberg",
+      "edge_count": 0,
+      "expected_min_edges": 5,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "anduril",
+      "name": "Anduril",
+      "edge_count": 0,
+      "expected_min_edges": 5,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "great-rotation-2026",
+      "name": "Great Rotation",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "great-rotation",
+      "name": "Great Rotation",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "facebook",
+      "name": "Facebook",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "twitter",
+      "name": "Twitter",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "house-ccp-committee",
+      "name": "House Select Committee on CCP",
+      "edge_count": 0,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "house-select-committee-on-ccp",
+      "name": "House Select Committee on CCP",
+      "edge_count": 0,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "cisa",
+      "name": "CISA",
+      "edge_count": 0,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "dhs",
+      "name": "DHS",
+      "edge_count": 1,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "gao",
+      "name": "GAO",
+      "edge_count": 0,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "Federalist Society",
+      "name": "ORGANIZATION",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "organization",
+      "name": "ORGANIZATION",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "scotus-conservative-block",
+      "name": "scotus-conservative-block",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "hyundai",
+      "name": "Hyundai",
+      "edge_count": 2,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "eli-lilly",
+      "name": "Eli Lilly",
+      "edge_count": 2,
+      "expected_min_edges": 5,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "national-ev-charging-network",
+      "name": "National EV Charging Network",
+      "edge_count": 2,
+      "expected_min_edges": 3,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "robert-matsui",
+      "name": "Robert Matsui",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "pricewaterhousecoopers",
+      "name": "PricewaterhouseCoopers",
+      "edge_count": 2,
+      "expected_min_edges": 3,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "china-trade-policy",
+      "name": "China Trade Policy",
+      "edge_count": 2,
+      "expected_min_edges": 3,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "pro-trade-candidates",
+      "name": "Pro-trade candidates",
+      "edge_count": 2,
+      "expected_min_edges": 3,
+      "density_status": "sparse"
+    },
+    {
+      "node_id": "apple",
+      "name": "Apple",
+      "edge_count": 1,
+      "expected_min_edges": 3,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "media-shawn-ryan-show",
+      "name": "Shawn Ryan Show",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "shawn-ryan-show",
+      "name": "Shawn Ryan Show",
+      "edge_count": 1,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "person-sarah-adams",
+      "name": "Sarah Adams",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "sarah-adams",
+      "name": "Sarah Adams",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "media-tucker-carlson",
+      "name": "Tucker Carlson Network",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "tucker-carlson-network",
+      "name": "Tucker Carlson Network",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "media-joe-rogan",
+      "name": "Joe Rogan Experience",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    },
+    {
+      "node_id": "joe-rogan-experience",
+      "name": "Joe Rogan Experience",
+      "edge_count": 0,
+      "expected_min_edges": 2,
+      "density_status": "orphan"
+    }
+  ],
+  "recommended_actions": [
+    {
+      "priority": 8,
+      "action": "Add 10 missing entities to defense_primes",
+      "entities": [
+        "lockheed-martin",
+        "raytheon",
+        "northrop-grumman",
+        "boeing",
+        "general-dynamics",
+        "l3harris",
+        "bae-systems",
+        "huntington-ingalls",
+        "leidos",
+        "saic"
+      ],
+      "thesis_relevance": "Defense industrial base, both-sides ownership pattern",
+      "coverage_impact": "Would improve defense_primes from 0% to 100%"
+    },
+    {
+      "priority": 8,
+      "action": "Add 7 missing entities to tech_offshorers",
+      "entities": [
+        "meta",
+        "alphabet",
+        "nvidia",
+        "tesla",
+        "hp",
+        "dell",
+        "cisco"
+      ],
+      "thesis_relevance": "Companies dependent on offshore supply chains (problem layer)",
+      "coverage_impact": "Would improve tech_offshorers from 36% to 100%"
+    },
+    {
+      "priority": 9,
+      "action": "Add 9 missing entities to semiconductor_majors",
+      "entities": [
+        "samsung-electronics",
+        "nvidia",
+        "amd",
+        "texas-instruments",
+        "asml",
+        "sk-hynix",
+        "applied-materials",
+        "lam-research",
+        "kla-corporation"
+      ],
+      "thesis_relevance": "Supply chain vulnerability and reshoring beneficiaries",
+      "coverage_impact": "Would improve semiconductor_majors from 44% to 100%"
+    },
+    {
+      "priority": 9,
+      "action": "Add 6 missing entities to chips_recipients",
+      "entities": [
+        "texas-instruments",
+        "sk-hynix",
+        "bae-systems",
+        "microchip-technology",
+        "onsemi",
+        "polar-semiconductor"
+      ],
+      "thesis_relevance": "Government reshoring investments (correction layer)",
+      "coverage_impact": "Would improve chips_recipients from 45% to 100%"
+    },
+    {
+      "priority": 10,
+      "action": "Add 2 missing entities to big_three",
+      "entities": [
+        "fidelity",
+        "schwab"
+      ],
+      "thesis_relevance": "Both-sides pattern: same capital on problem and correction layers",
+      "coverage_impact": "Would improve big_three from 60% to 100%"
+    },
+    {
+      "priority": 7,
+      "action": "Add 3 missing entities to stablecoin_actors",
+      "entities": [
+        "binance",
+        "coinbase",
+        "kraken"
+      ],
+      "thesis_relevance": "GENIUS Act and debt domestication thesis",
+      "coverage_impact": "Would improve stablecoin_actors from 62% to 100%"
+    },
+    {
+      "priority": 7,
+      "action": "Add 2 missing entities to nuclear_smr",
+      "entities": [
+        "westinghouse",
+        "ge-hitachi"
+      ],
+      "thesis_relevance": "Energy independence and nuclear renaissance thesis",
+      "coverage_impact": "Would improve nuclear_smr from 78% to 100%"
+    },
+    {
+      "priority": 8,
+      "action": "Add 2 missing entities to federal_agencies",
+      "entities": [
+        "occ",
+        "chips-program-office"
+      ],
+      "thesis_relevance": "Government actors in monetary and industrial policy",
+      "coverage_impact": "Would improve federal_agencies from 80% to 100%"
+    }
+  ]
+}

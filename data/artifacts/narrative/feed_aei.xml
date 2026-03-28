@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>American Enterprise Institute &#8211; AEI</title>
+	<atom:link href="https://www.aei.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.aei.org/</link>
+	<description>The American Enterprise Institute, AEI, is a nonpartisan public policy research institute with a community of scholars and supporters committed to expanding liberty, increasing individual opportunity and strengthening free enterprise.</description>
+	<lastBuildDate>Mon, 23 Feb 2026 21:56:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9</generator>
+	<item>
+		<title>When Will AI Affect US Productivity Growth?</title>
+		<link>https://www.aei.org/economics/when-will-ai-affect-us-productivity-growth/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 21:56:44 +0000</pubDate>
+				<category><![CDATA[Economics]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[Economic growth]]></category>
+		<category><![CDATA[Gross Domestic Product (GDP)]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755697</guid>
+
+					<description><![CDATA[<p>Even if we’re still in the beginning of the beginning of an AI-driven economic revolution, is it still so early that we’re likely not yet seeing a broad impact on labor productivity and economic growth?</p>
+<p>The post <a href="https://www.aei.org/economics/when-will-ai-affect-us-productivity-growth/">When Will AI Affect US Productivity Growth?</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>By now, it’s pretty clear that generative AI can do lots of important business tasks. It can write code, summarize research, design marketing campaigns, and automate customer service.&nbsp;</p>
+
+
+
+<p>Take the case of Walmart. The retail giant<a href="https://www.cnbc.com/2026/02/19/amazon-revenue-passes-walmart-earnings-reports.html"> has partnered</a> with OpenAI and Google to make its products easier to discover and buy, while building its own AI shopping assistant, Sparky. At its recent earnings call, CEO John Furner <a href="https://www.fool.com/earnings/call-transcripts/2026/02/19/walmart-wmt-q4-2026-earnings-call-transcript/">said </a>half of its app users have already tried the smiley face helper. Customers who use Sparky spend more per order on average. That’s a notable real-world data point for all the remaining AI skeptics out there, although the company acknowledges it is still in the early days of figuring out how AI will affect its business long-term.</p>
+
+
+
+<p>Some economists are really encouraged by what they see taking place. In a recent Financial Times op-ed, Stanford’s Erik Brynjolfsson <a href="https://www.ft.com/content/4b51d0b4-bbfe-4f05-b50a-1d485d419dc5">argues </a>that the broader data may already be hinting at an important inflection point in the emerging age of AI. His confidence rests on a variety of observations: rapid advances in AI capability, a growing body of micro studies showing double-digit gains in specific tasks, evidence of employment shifts in AI-exposed occupations, and reports from “power users” and executives who say workflows are beginning to change.&nbsp;</p>
+
+
+
+<p>From the piece:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>My own updated analysis suggests a US productivity increase of roughly 2.7 per cent for 2025. This is a near doubling from the sluggish 1.4 per cent annual average that characterised the past decade. This shift aligns with the productivity “J-curve” that my colleagues and I have explored in earlier research. General-purpose technologies, from the steam engine to the computer, do not deliver immediate gains. Instead, they require a period of massive, often unmeasured investment in intangible capital — reorganising business processes, retraining the workforce and developing new business models. During this phase, measured productivity is suppressed as resources are diverted to investments. The updated 2025 US data suggests we are now transitioning out of this investment phase into a harvest phase where those earlier efforts begin to manifest as measurable output.</p>
+</blockquote>
+
+
+
+<p>But even if we’re still in the beginning of the beginning of an AI-driven economic revolution, is it still so early that we’re likely not yet seeing a broad impact on labor productivity and economic growth?</p>
+
+
+
+<p>There’s certainly reason for caution. As economist Martha Gimbel at Yale’s Budget Lab <a href="https://budgetlab.yale.edu/research/ai-productivity-boom-dont-count-your-productivity-data-chickens">notes</a>, productivity data are notoriously noisy. When GDP keeps rising while job growth slows, as has been happening lately in the US economy, it can look like workers are suddenly producing more. But there could be other explanations, as Gimbel explains. During the pandemic, millions of lower-wage service workers lost jobs, which mechanically raised average output per worker even though no one became more efficient. More recently, immigration policy changes have reduced labor-force growth. If workers leaving the labor force tend to be in lower-productivity roles, measured productivity can rise without any AI breakthrough. One or two quarters are hardly enough to prove a lasting shift.</p>
+
+
+
+<p>The recent NBER Working Paper “<a href="https://www.nber.org/system/files/working_papers/w34836/w34836.pdf">Firm Data on AI</a>” might help square the circle here. It finds that 70 percent of firms report using AI, yet 90 percent say it has had no measurable impact on productivity or employment so far, and senior executives themselves use it only about 1.5 hours per week, although “this frequency has increased sharply since the start of 2025.” So for now, adoption appears widespread but still rather shallow.</p>
+
+
+
+<p>What’s more, in the survey of nearly 6,000 senior executives across four advanced economies, adoption is concentrated in larger, more productive firms, whose leaders expect AI to raise productivity by 1.4 percent over the next three years. That pattern seems consistent with the idea that early “harvest” effects—again, where firms begin to see measurable gains after investing in AI and reorganizing workflows—may be jaggedly emerging at the frontier, even as economy-wide transformation remains incomplete.</p>
+
+
+
+<p>Again, not the end of the beginning but still the beginning of the beginning. Let the progress continue.</p>
+<p>The post <a href="https://www.aei.org/economics/when-will-ai-affect-us-productivity-growth/">When Will AI Affect US Productivity Growth?</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Standard Worth Inheriting</title>
+		<link>https://www.aei.org/society-and-culture/a-standard-worth-inheriting/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 21:45:42 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[civic responsibility]]></category>
+		<category><![CDATA[family]]></category>
+		<category><![CDATA[Judaism]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755693</guid>
+
+					<description><![CDATA[<p>That is how legacy works. It becomes instinct. Formation does not wait for adulthood; it begins the moment we learn whom to admire. A century like hers does not simply end. It sets a standard worth inheriting.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-standard-worth-inheriting/">A Standard Worth Inheriting</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>When her Baubie—Sylvia Wagner—recently died at 100, my daughter, Natalie, cried in a way that told me she understood something real had changed. She could not articulate it. But she recognized absence. She recognized weight. At four, you do not measure a century in historical eras. You measure it in presence: who sits at the table, who listens carefully, who feels steady when they enter a room. That is what she lost.</p>
+
+
+
+<p>But Sylvia Wagner was more than a beloved great-grandmother. Born in Omaha to Jewish immigrants from Latvia and Belorussia, she came of age in a household that treated hard work, education, and civic responsibility as obligations, not aspirations. That formation held. She went on to serve on the Omaha City Council representing the Sixth District, one of the few women in municipal leadership at the time, and she approached that role with intellectual seriousness and moral courage.</p>
+
+
+
+<p>Her tenure was not ceremonial. She championed Nebraska&#8217;s first group homes for adults with mental disabilities—standing firm against public fear and organized resistance—and worked to open Omaha&#8217;s streets to outdoor dining when that required confronting bureaucratic inertia as much as public skepticism. When the recall of Mayor Boyle became a political flashpoint, she opposed it, not because it was popular but because she believed constructive governance mattered more than political theater. She treated public office as a trust. Preparation mattered. Words carried consequence. Disagreement required argument, not theatrics.</p>
+
+
+
+<p>Her colleagues respected her Sabbath observance. That detail matters. For Sylvia Wagner, Jewish identity was not a background fact. It was the framework through which she understood obligation; to family, to community, to the city she served. The same tradition that shaped her private life informed her public ethics. She was one person all the way through.</p>
+
+
+
+<p>A hundred years does not merely accumulate birthdays. It tests a person. It reveals what bends with fashion and what endures. What Sylvia Wagner revealed over a century was disciplined leadership—strength anchored in study, conviction tempered by humility. She was not quiet. She had strong views and did not hesitate to voice them. But her confidence was rooted in preparation, not impulse; in duty, not display. Her voice carried weight because it was earned.</p>
+
+
+
+<p>I think of one Passover not long ago. Natalie was small enough to climb easily into her Baubie&#8217;s lap. The&nbsp;<em>Haggadah</em>&nbsp;lay open between them. Natalie traced the Hebrew letters with her finger, asking questions in the way only a child can—curious, insistent, delighted by the ritual. Sylvia leaned in, following the text closely, guiding her through the story of freedom and responsibility. At that end of the table, learning was serious. Questions were welcomed. Tradition was not recited mechanically but engaged. That is formation.</p>
+
+
+
+<p>Across her century, Sylvia Wagner lived through wars, economic hardship, political turbulence, and cultural change. She neither retreated into cynicism nor mistook noise for influence. She strengthened what she touched; her family, her community, her city.</p>
+
+
+
+<p>There is a Jewish phrase we say after someone dies: may her memory be a blessing. It is not sentimental. It is a charge. It asks whether we will allow the life we witnessed to shape our own. Sylvia Wagner&#8217;s century is a blessing not because it was long, but because it was serious; because it showed that a woman can be intellectually rigorous, morally courageous, publicly engaged, and deeply devoted to family, all at once, without apology.</p>
+
+
+
+<p>Natalie was fortunate to have sat on her lap, to have traced experience Jewish traditions under her guidance, to have absorbed that steadiness before she could name it. Not every girl grows up seeing female authority joined to humility, conviction joined to preparation, leadership joined to love. All girls should be so lucky. A society that wants strong institutions must form strong women and that formation begins early: at tables, in laps, in the quiet modeling of adulthood lived seriously.</p>
+
+
+
+<p>She cannot yet articulate what she lost. But as she ages, I hope she will understand what she received: intellectual seriousness without arrogance, moral courage without cruelty, leadership without vanity, love without condition.</p>
+
+
+
+<p>One day, she will sit at her own table. She will hold her own books. She will form her own arguments. She will lead in ways I cannot yet imagine. When that time comes, I hope there will be something of Sylvia Wagner in her—seriousness without severity, conviction without cruelty, strength without spectacle. Not because she is imitating her great-grandmother, but because she has absorbed the standard she witnessed.</p>
+
+
+
+<p>That is how legacy works. It becomes instinct. Formation does not wait for adulthood; it begins the moment we learn whom to admire.</p>
+
+
+
+<p>A century like hers does not simply end. It sets a standard worth inheriting.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-standard-worth-inheriting/">A Standard Worth Inheriting</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Lunar New Year and the Civic Gift of Belonging</title>
+		<link>https://www.aei.org/society-and-culture/lunar-new-year-and-the-civic-gift-of-belonging/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 21:34:15 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[civic trust]]></category>
+		<category><![CDATA[Community]]></category>
+		<category><![CDATA[Culture]]></category>
+		<category><![CDATA[Lunar New Year]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755639</guid>
+
+					<description><![CDATA[<p>In a time when inclusion is too often bureaucratized, Lunar New Year reminded us that the most durable belonging is still built the old-fashioned way: in shared streets and rituals and simple acts of welcome.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/lunar-new-year-and-the-civic-gift-of-belonging/">Lunar New Year and the Civic Gift of Belonging</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>This week, I took my son downtown for Lunar New Year.</p>
+
+
+
+<p>Chinatown was packed shoulder to shoulder. Lanterns hung overhead. Confetti covered the pavement. Storefronts spilled warmth and light into the cold air. Children leaned forward, wide-eyed, as drums echoed down the block.</p>
+
+
+
+<p>Then the dragons arrived—towering, roaring, dancing, absurdly alive. Their painted, blinking eyes and snapping mouths moved inches from the curb, bending toward the crowd as if the city itself were offering a blessing. My son, in his bright blue coat, edged right to the front. Strangers made room without hesitation. Adults smiled. Children stared and cheered in shared delight.</p>
+
+
+
+<p>For a moment, New York felt less like a machine and more like a neighborhood. And what stayed with me from the festival was not only the spectacle, but the welcome.</p>
+
+
+
+<p>We were included—not as outsiders performing appreciation, not as spectators politely observing someone else’s celebration, but as neighbors drawn into a public ritual of renewal. We learned. We laughed. We appreciated. We celebrated together.</p>
+
+
+
+<p>This is how multiculturalism and real inclusion actually works.</p>
+
+
+
+<p>Not through mandated language or institutional choreography. Not through bureaucratic frameworks that professionalize identity and turn belonging into an administrative project. But through lived encounter: communities confident enough in their traditions to open them outward, and citizens willing to receive that invitation with gratitude.</p>
+
+
+
+<p>Too much of modern diversity discourse has become abstract, adversarial, or grievance-soaked. It is filtered through institutions that reduce human difference to categories and treat civic life as a negotiation among competing blocs. The result is often a politics of separation rather than a culture of encounter.</p>
+
+
+
+<p>But Lunar New Year in Chinatown offers something different. It is pluralism made tangible: a public celebration rooted in particular histories and inheritances, yet generously shared with the broader city. No one handed us a pamphlet. No one asked us to rehearse the language of inclusion. There were no seminars about behavior and norms. There was simply belonging.</p>
+
+
+
+<p>And that matters because belonging cannot be conjured by administrative fiat. It is not the product of a training module or a strategic plan. It emerges from the kinds of shared practices that build trust over time—what Robert Putnam famously described as the everyday social capital that makes democratic life possible.</p>
+
+
+
+<p>We spend enormous energy today debating diversity at the level of institutions: policies, offices, statements, metrics. But civic cohesion is often forged elsewhere, in the ordinary rituals of neighborhood life, where people encounter one another not as abstractions or demographic symbols, but as fellow citizens and parents and children standing on the same curb.</p>
+
+
+
+<p>What I saw that afternoon was not a lesson in politics, but in civic formation. My son was not thinking about “multiculturalism” as an ideology. He was simply experiencing the city as a shared home with others—one in which traditions are not hidden away, but offered publicly, with generosity.</p>
+
+
+
+<p>This is the kind of experience that builds civic trust far more effectively than any institutional statement. A healthy democracy depends on more of these ordinary, embodied moments where difference becomes familiarity and strangers become neighbors.</p>
+
+
+
+<p>That matters, especially now.</p>
+
+
+
+<p>In an age of loneliness, fragmentation, and institutional mistrust, thick communal rituals are not ornamental. They are civic infrastructure. They teach continuity. Obligation. Reverence for those who came before. Hope for those who come next.</p>
+
+
+
+<p>Lunar New Year is not merely aesthetic. The parades, the family meals, the symbolism of luck and renewal: these are forms of moral education. They remind us that human beings are not self-made. We are shaped by inheritance, community, memory, and place.</p>
+
+
+
+<p>Watching my son take it all in, I was struck by how rare such unmediated public joy has become. So much of childhood today is individualized and curated, mediated through screens and algorithmic attention. But here was something embodied and communal. He wasn’t consuming content. He was participating in a city.</p>
+
+
+
+<p>And the city, briefly, rose to the occasion.</p>
+
+
+
+<p>People made space for one another’s children. The atmosphere was not performative or tense. Difference was not weaponized. It was offered.</p>
+
+
+
+<p>This is the quiet genius of American pluralism when it works: not the flattening of distinct traditions, but the sharing of them. Not a politics of perpetual accusation, but a culture of invitation.</p>
+
+
+
+<p>It depends on rituals that gather us, traditions that endure, and public spaces where strangers can become neighbors, even briefly.</p>
+
+
+
+<p>In an era when inclusion is too often treated as an administrative slogan, a dragon dance on a narrow street downtown offered something far more persuasive: inclusion practiced.</p>
+
+
+
+<p>In a time when inclusion is too often bureaucratized, Lunar New Year reminded us that the most durable belonging is still built the old-fashioned way: in shared streets and rituals and simple acts of welcome.</p>
+
+
+
+<p></p>
+<p>The post <a href="https://www.aei.org/society-and-culture/lunar-new-year-and-the-civic-gift-of-belonging/">Lunar New Year and the Civic Gift of Belonging</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Felicia Was There</title>
+		<link>https://www.aei.org/society-and-culture/felicia-was-there/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 21:32:26 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[family]]></category>
+		<category><![CDATA[Framework]]></category>
+		<category><![CDATA[Generations]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755683</guid>
+
+					<description><![CDATA[<p>Some gifts cannot be repaid. Many families have known someone like Felicia. The question worth sitting with is whether we appreciate that work for what it truly is: not a service transaction, but the connective tissue of family life itself.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/felicia-was-there/">Felicia Was There</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Sylvia Wagner lived to 100.</p>
+
+
+
+<p>A full century. Children, grandchildren, and great-grandchildren. Holidays gathered around family tables. Stories told and retold. The long unfolding of a family across generations.</p>
+
+
+
+<p>She lived a good and generous life.</p>
+
+
+
+<p>But the final decade was not easy.</p>
+
+
+
+<p>Longevity is often described as a triumph of modern medicine and prosperity. And it is. But what we speak of less often is what those added years require. Aging is not tidy. It is slow. It can be disorienting. Independence narrows. Memory falters. The body does not always cooperate.</p>
+
+
+
+<p>In those years, what sustains dignity is not technology. It is presence.</p>
+
+
+
+<p>Felicia was there.</p>
+
+
+
+<p>Not occasionally. Not ceremonially. But steadily. Faithfully. For years, through the long arc of Sylvia&#8217;s final decade. In the ordinary, repetitive, unseen work that fills the days of advanced age. She helped Sylvia rise in the morning and settle at night. She prepared meals. She kept track of medications. She navigated frustration with patience. She offered reassurance when the world felt unfamiliar.</p>
+
+
+
+<p>But Felicia did more than manage decline.</p>
+
+
+
+<p>She enabled Sylvia to travel—to leave her hometown of Omaha and come east to see her children and grandchildren and great-grandchildren. She made it possible for Sylvia to sit at Passover Seders, in Virginia Beach to hear the youngest ask the Four Questions, to feel the rhythm of family ritual. She ensured that Sylvia could enjoy a proper New York meal and see a Broadway show, dressed up and out in the world, rather than confined by frailty.</p>
+
+
+
+<p>She preserved not only comfort, but participation.</p>
+
+
+
+<p>Felicia also carried responsibilities. Her son serves in the United States military—which means she understands sacrifice not as an abstraction but as something she lives with daily, even as she showed up steadily in someone else&#8217;s. And yet she remained faithful. She showed up, day after day, with grace.</p>
+
+
+
+<p>I remember watching Sylvia seated at the table, alert and engaged, alive in the conversation—and I knew that it had taken careful, quiet effort to make that moment possible. Medications packed. Logistics arranged. Energy managed. Patience before and after the celebration.</p>
+
+
+
+<p>Felicia made those moments happen.</p>
+
+
+
+<p>Caregiving at the end of life is intimate work. It is physical and emotional. It requires attentiveness not only to the body but to the spirit. To know when to encourage, when to rest, when to insist gently, and when simply to sit. To understand that capability is not merely about mobility, but about belonging.</p>
+
+
+
+<p>Because of Felicia, my family could be children and grandchildren and great-grandchildren—not full-time nurses. We could listen to Sylvia&#8217;s stories rather than constantly calculate risk. We could celebrate her hundredth birthday with gratitude rather than anxiety. We could love her as family, trusting that someone steady was tending to the daily details.</p>
+
+
+
+<p>That is no small gift. And it points to something that policy discussions about elder care so often miss: the human reality behind the abstractions. We debate funding mechanisms and regulatory frameworks, but what sustains dignity in old age is a person who shows up, who pays attention, who makes participation possible.</p>
+
+
+
+<p>Caregiving rarely commands public recognition. It unfolds behind closed doors. It is repetitive. It can be exhausting. And yet it may be among the most consequential work done in any family. It is not only about preserving life. It is about preserving dignity within life.</p>
+
+
+
+<p>Felicia understood that.</p>
+
+
+
+<p>She did not extend Sylvia&#8217;s years; no one commands time. But she made those years more humane, more connected, more participatory than they might otherwise have been. She ensured that even in frailty, Sylvia remained part of the living current of her family. She made joy possible.</p>
+
+
+
+<p>Gratitude can feel inadequate in proportion to what we owe. I thanked her more than once, but words rarely seem equal to work like this. Some debts are not financial or formal; they are human. They live in memory. They live in the quiet knowledge that someone stood beside your loved one when you could not always be there yourself.</p>
+
+
+
+<p>Sylvia&#8217;s century is now complete. The stories remain. The generations continue. Great-grandchildren will grow up hearing about her long life and presence.</p>
+
+
+
+<p>And I will remember another steady presence too. Felicia was there.</p>
+
+
+
+<p>In the quiet mornings. In the long afternoons. In the travel that allowed one more holiday together. In the small acts that made participation possible. In the daily work that protected dignity.</p>
+
+
+
+<p>Some gifts cannot be repaid. They can only be honored. Many families have known someone like Felicia—or have needed someone like her. The question worth sitting with is whether we appreciate that work for what it truly is: not a service transaction, but the connective tissue of family life itself.</p>
+
+
+
+<p>This is my attempt to do just that.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/felicia-was-there/">Felicia Was There</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Conservatives Should Cheer Spanberger’s Williamsburg Speech</title>
+		<link>https://www.aei.org/society-and-culture/conservatives-should-cheer-spanbergers-williamsburg-speech/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 21:09:09 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[civil discourse]]></category>
+		<category><![CDATA[conservatives]]></category>
+		<category><![CDATA[political address]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755631</guid>
+
+					<description><![CDATA[<p>A free society does not require a flawless origin story. It requires citizens confident enough to argue about the nation’s direction while honoring a shared inheritance that was always unfinished. Williamsburg is where that work began. </p>
+<p>The post <a href="https://www.aei.org/society-and-culture/conservatives-should-cheer-spanbergers-williamsburg-speech/">Conservatives Should Cheer Spanberger’s Williamsburg Speech</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>On Tuesday evening, Virginia Governor Abigail Spanberger will deliver the Democratic response to the State of the Union from Colonial Williamsburg. Some conservatives are already sharpening their knives. They should reconsider.</p>
+
+
+
+<p>The instinct of many conservative critics is understandable. Spanberger has clashed with the Trump administration on immigration, federal workforce policy, and redistricting. Her use of one of America&#8217;s most storied settings as a backdrop for a partisan rebuttal will strike some on the right as lending hallowed ground to the opposition. Cliff Fleet, Colonial Williamsburg&#8217;s president and CEO, anticipated this—his letter to supporters noted that the Foundation “has welcomed US presidents from both political parties throughout its history” and has “always welcomed Virginia&#8217;s governors.”</p>
+
+
+
+<p>But critics are getting this exactly backward.</p>
+
+
+
+<p>Start with the history. The Williamsburg Capitol is not merely a picturesque backdrop of brick façades and tricorn hats. The chamber where Spanberger will stand is the same room where, on May 15, 1776, delegates to the Fifth Virginia Convention unanimously instructed their representatives in Philadelphia “to declare the United Colonies free and independent states.” That resolution, carried to Congress by Richard Henry Lee, became the motion that produced the Declaration of Independence. Virginia had a functioning republican constitution and an inaugurated governor—Patrick Henry—before Congress declared independence on July 4. The Revolution did not begin in Philadelphia. It began in Williamsburg.</p>
+
+
+
+<p>We are less than three months from the 250th anniversary of that May 15 resolution—one of the most consequential acts of political courage in modern history. That Colonial Williamsburg will be in the national spotlight, that Americans will hear its name and perhaps look up what happened there, is an unalloyed good. Every citizen who rediscovers that history is a small victory for civic education at a moment when we badly need it.</p>
+
+
+
+<p>I know this place well. During the earliest months of the pandemic, when schools were closed and playgrounds wrapped in caution tape, I began walking Colonial Williamsburg with my son. Those mornings were not nostalgic. They were steadying. The place reminded me that earlier generations lived through crises they did not choose and still built institutions meant to outlast them. Williamsburg gives form to the idea that civic life is not just something we feel. It is something we practice in shared space and I believe that this idea deeply implanted in my son.</p>
+
+
+
+<p>That is precisely what makes it the right setting for a political address—even one delivered by a governor whose policies many conservatives oppose. The deeper lesson of Williamsburg is not agreement. It is argument: vigorous, sometimes bitter, yet bounded by shared constitutional commitments. The chamber where Jefferson, Henry, Washington, and Mason forged their vision was not a place of consensus. It was a place of contest. That is what made it great.</p>
+
+
+
+<p>Conservatives have spent years arguing that the founding principles are universal, not a partisan relic but a shared inheritance. We have pushed back against those on the left who reduce the founding to little more than hypocrisy. But you cannot credibly make that case and then object when a Democratic governor invokes Williamsburg. If the founding belongs to everyone, then Williamsburg belongs to everyone—including people with whom we disagree.</p>
+
+
+
+<p>There is a strategic error here as well. When conservatives protest every Democratic engagement with American history, they cede the narrative. They risk turning Williamsburg into a partisan symbol rather than a common inheritance. They reinforce the caricature that the right treats the founders as mascots rather than statesmen whose ideas demand serious engagement from every generation. If conservatives believe the founding principles are durable, they should have enough confidence to let opponents invoke them.</p>
+
+
+
+<p>Alexis de Tocqueville observed that America’s genius lay in its habits of association; in citizens who gathered, argued, and governed themselves. Williamsburg embodies that tradition: a reminder that republican self-government depends not on silence but on speech, not on unanimity but on contest.</p>
+
+
+
+<p>Spanberger will stand where the promise of American self-government was first articulated and offer her vision for the country. Conservatives will disagree with much of what she says—vigorously, publicly, and in the tradition of the sacred place itself. The genius of Williamsburg is not harmony but argument: the conviction that serious disagreement, conducted in the open, strengthens rather than weakens the republic.</p>
+
+
+
+<p>A free society does not require a flawless origin story. It requires citizens confident enough to argue about the nation’s direction while honoring a shared inheritance that was always unfinished. Williamsburg is where that work began. It is right that it continues there, especially when the speaker is someone with whom many legitimately disagree.</p>
+
+
+
+<p>The past is not a museum piece. It is a charge. And it belongs to all of us.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/conservatives-should-cheer-spanbergers-williamsburg-speech/">Conservatives Should Cheer Spanberger’s Williamsburg Speech</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Some Clarifications Regarding the New Trade Situation</title>
+		<link>https://www.aei.org/foreign-and-defense-policy/some-clarifications-regarding-the-new-trade-situation/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 20:02:38 +0000</pubDate>
+				<category><![CDATA[Foreign and Defense Policy]]></category>
+		<category><![CDATA[China]]></category>
+		<category><![CDATA[tariffs]]></category>
+		<category><![CDATA[trade deficit]]></category>
+		<category><![CDATA[Trump]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755653</guid>
+
+					<description><![CDATA[<p>On Friday, the Supreme Court struck down Trump’s use of emergency authority for many tariffs. Trump showed quick inconsistency, announcing a 10 percent global tariff then raising it a day later. This year will again be tumultuous, but some misperceptions can be dispelled.</p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/some-clarifications-regarding-the-new-trade-situation/">Some Clarifications Regarding the New Trade Situation</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Last Thursday, 2025 trade data were published. On Friday, the Supreme Court struck down President Trump’s use of emergency authority for many tariffs. The Court left other matters open, for example rebates. And President Trump showed quickly that consistency is still unwanted, announcing a 10 percent global tariff then&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.nbcnews.com/politics/white-house/trump-raises-global-tariffs-15-percent-trade-supreme-court-decision-rcna260049">raising it to 15 percent</a>&nbsp;a day later. This year will again be tumultuous, but some misperceptions can be dispelled.</p>
+
+
+
+<p>Misperception 1:&nbsp; The trade deficit in goods, which set a&nbsp;<a href="https://www.census.gov/foreign-trade/balance/c0015.html" target="_blank" rel="noreferrer noopener">record in 2025</a>, will rise further without tariffs imposed under the International Economic Emergency Powers Act (IEEPA).</p>
+
+
+
+<p>Clarification: Demand for imports is first determined by our own economy. The better we’re doing, the more imports we want. In terms of policy, uncertainty prevails to start this year and will probably persist. The details of what’s uncertain have changed but the negative impact on imports hasn’t. The value of goods imports may not shift much.</p>
+
+
+
+<p>Misperception 2: Tariffs were high and now might plunge.</p>
+
+
+
+<p>Clarification: Tariffs weren’t as high as some headlines suggest, can’t fall much, and may not fall at all.</p>
+
+
+
+<p><a rel="noreferrer noopener" target="_blank" href="https://www.richmondfed.org/research/national_economy/macro_minute/2026/how_much_revenue_raised_by_tariffs_so_far">Tariff revenue</a>&nbsp;was equivalent to about 8.5 percent of goods import value last year. It was equivalent to about 12 percent in the fourth quarter alone (this helps explain why tariffs haven’t caused notable inflation). The main difference between the revenue burden on importers and much higher rates often cited was a hefty set of exemptions. These were largely confirmed in the annexes attached to&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.whitehouse.gov/presidential-actions/2026/02/imposing-a-temporary-import-surcharge-to-address-fundamental-international-payments-problems/">Friday’s global tariff announcement</a>. To preserve effective tariffs, the Trump administration can either trim exemptions or apply new tariffs using other legal authorities.</p>
+
+
+
+<p>Misperception 3: IEEPA tariffs can be quickly replaced through Sections 122 and 301 of the 1974 Trade Act, Section 232 of the Trade Expansion Act of 1962, and other tools.</p>
+
+
+
+<p>Clarification: They can, but very well may not. Trade investigations can’t always be simple and dramatic, but President Trump doesn’t like announcing small or complex trade actions. The Department of Commerce is responsible for national security inquiries and&nbsp;<a href="https://www.reuters.com/world/asia-pacific/trump-administration-pushes-out-official-whose-unit-banned-chinese-vehicles-2026-01-23/" target="_blank" rel="noreferrer noopener">faces internal challenges</a>&nbsp;ranging from unresolved cases to departing personnel, mostly connected to China policy. National security restrictions that don’t feature China would surely face more challenges.</p>
+
+
+
+<p>Another complicating factor is the administration has reasons to stay close to country and product tariff levels cited in negotiations with our partners. Extensive deviations could undermine existing agreements or provoke retaliation. Yet new trade actions that look remarkably similar to IEEPA tariffs, which were themselves announced with&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.whitehouse.gov/presidential-actions/2025/07/addressing-threats-to-the-us/">sometimes ridiculous justifications</a>, would invite more lawsuits.</p>
+
+
+
+<p>Misperception 4: If IEEPA tariffs are refunded, it would be a sizable economic boost. Conversely, the short-term loss to the Treasury would be serious.</p>
+
+
+
+<p>Clarification: IEEPA tariffs and potential rebates certainly matter to the companies involved, but don’t matter much to the US as a whole. The total amount is&nbsp;<a href="https://www.cbp.gov/newsroom/stats/trade" target="_blank" rel="noreferrer noopener">near $140 billion</a>, where rebates would likely be spread out by the legal process. The 2025 tax reductions are estimated to average&nbsp;<a href="https://taxfoundation.org/research/all/federal/trump-tax-cuts-2025-budget-reconciliation/" target="_blank" rel="noreferrer noopener">$450 billion annually</a>&nbsp;for ten years. Annual GDP was $31 trillion last year. The projected federal deficit for fiscal 2026 is&nbsp;<a href="https://www.cbo.gov/publication/61882" target="_blank" rel="noreferrer noopener">$1.9 trillion</a>. Adding $140 billion wouldn’t help but is basically a forecast error. The President and critics treat existing tariffs as vital. They’ve been imposed capriciously, sometimes foolishly; they aren’t vital.</p>
+
+
+
+<p>Misperception 5: Bilateral trade agreements stuck by the Trump administration to date are in jeopardy due to the President’s loss of authority.</p>
+
+
+
+<p>Clarification: These agreements have close to the same status as before. None were actual treaties ratified by Congress, requiring equivalent steps in partner countries. All were entirely subject to the President’s dissatisfaction with the results or even&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://thehill.com/homenews/administration/5732984-trump-switzerland-tariffs-phone-call/">his personal treatment</a>. Negotiating partners ignoring concessions they made to the US over the past year face a major risk. The US can’t respond immediately if most partners abandon the deals, but President Trump isn’t just going to forget about trade.</p>
+
+
+
+<p>Misperception 6: The Court decision weakens the US position versus China.</p>
+
+
+
+<p>Clarification: The US position versus China has been weakened far more by the Trump administration. China is by a large margin the easiest country to act against under US trade law—both economic predator and military threat. The Section 301 and 232 findings practically write themselves.</p>
+
+
+
+<p>President Trump is the problem. In 2020, as China refused any responsibility for Covid, he took no trade action at all. Since his October 2025 meeting with Xi Jinping, his administration has frozen&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.nationalreview.com/2025/12/trumps-china-chip-deal-and-the-sale-of-american-national-security/">or reversed China action all on its own</a>, apparently because the President thinks his forthcoming trip to Beijing will be magical. What’s more likely is he will accomplish little, again, and the Court decision will have nothing to do with that. &nbsp;</p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/some-clarifications-regarding-the-new-trade-situation/">Some Clarifications Regarding the New Trade Situation</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Will Drones Become Part of Critical Infrastructure?</title>
+		<link>https://www.aei.org/technology-and-innovation/will-drones-become-part-of-critical-infrastructure/</link>
+		
+		<dc:creator><![CDATA[Julia Torres]]></dc:creator>
+		<pubDate>Mon, 23 Feb 2026 10:30:00 +0000</pubDate>
+				<category><![CDATA[Technology & Innovation]]></category>
+		<category><![CDATA[Technology, Science, and Energy]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[drones]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[Technology and innovation]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755552</guid>
+
+					<description><![CDATA[<p>Shane Tews is joined by Brian Hinman and John Donovan to discuss how a next phase in drone technology could change the future of aviation.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/will-drones-become-part-of-critical-infrastructure/">Will Drones Become Part of Critical Infrastructure?</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Drones have previously been confined due to limitations such as short battery lives and restricted load capacities. This is beginning to change. With SiFly recently breaking the world record with an electric drone completing a flight lasting more than three hours, we are seeing drones advance into a new phase of aviation that will be used as a crucial part of critical infrastructure. Why does going from minutes to hours completely change what drones can do in the real world? And how is SiFly building toward an America First manufactured drone that is fundamentally a more sophisticated technology than what already exists?</p>
+
+
+
+<p>Here are highlights from my conversation with Brian Hinman, the founder and CEO of SiFly and an adviser at Metrika. I was also joined by John Donovan, the CEO of Qudit Investments and former CEO of AT&amp;T Communications. With my guests’ extensive experience across aviation, cybersecurity, and technology, this discussion goes deep into understanding how this next phase in drones enhances deploying new tools for first responders and how it could change conversations around the future of aviation.</p>
+
+
+
+<p>Below is a lightly edited and abridged transcript of our discussion. You can listen to <a href="https://www.aei.org/multimedia/the-future-of-drones-with-brian-hinman-and-john-donovan/" target="_blank" rel="noreferrer noopener">this</a> and <a href="https://www.aei.org/tag/explain-to-shane-podcast/" target="_blank" rel="noreferrer noopener">other episodes</a> of <em>Explain to Shane</em> on AEI.org and subscribe via your preferred listening platform. If you enjoyed this episode, leave us a review, and tell your friends and colleagues to tune in.</p>
+
+
+
+<p><strong>Shane Tews: Let’s start with how you two met and started working together, because you have an interesting story.</strong></p>
+
+
+
+<p>Brian Hinman: We go back 20 years, actually. John was my customer when he was at AT&amp;T—he was on my board. We met when I was building DSL equipment and reconnected about two years ago. It’s been fantastic to get back together again.</p>
+
+
+
+<p>John Donovan: It’s fortuitous, Shane, that my daughter had an interest in agriculture—regenerative agriculture. I was at the University of California, Davis, and we were out in the field. They were telling us about all this advanced work they were doing with sensing, and the problem was that these darn drones cost so much money and only hang in the air for 20 minutes. I was literally up at UC Davis and I get a call from Brian, so I drove back to Brian’s office to visit him. You talk about serendipity. I already knew the use case in agriculture walking in his front door, and he said, ‘I have this high-endurance platform.’ I said, ‘Perfect.’ I just witnessed how not having high endurance makes it really hard to innovate with devices that only stay in the air for 20 minutes.</p>
+
+
+
+<p>I just have to point out, in my 40-year career, I’ve never met a better engineer than Brian. When you get down to the physics of things, he won’t tell you this story but we were in a board meeting once and I had looked and he had opened his notebook and was writing some calculations down. I asked, ‘What are you doing?’ He said, ‘This idea popped in my head on something and I had to write it down.’ I looked at his engineering notebook and it dawned on me: there are people who know technology—they know how to talk about it and how it works. Then there are people who live inside the information box. That’s Brian. That’s Brian in the physical sense, and he has an obsession with perfection at every component in every element every time in anything he’s ever done. And that’s what I love best about him.</p>
+
+
+
+<p><strong>Let’s talk about SiFly—what have you created here?</strong></p>
+
+
+
+<p>Brian Hinman: Well, just at the beginning of the company, what got me started was thinking about—you want to make something that can fly a long time, that’s electrically powered because you get all the reliability that comes with that. But it kind of requires rethinking how drones are made because as Part 107, it’s all visual line of sight flying under FAA rules. And I’d see the future as flying way beyond visual line of sight—cellular connected, cloud connected.</p>
+
+
+
+<p>And what does that look like? It means that the aircraft themselves need to be redesigned from the scratch. And if you look at all the drones that are out there today, they all look like flying bricks and they don’t need to be particularly aerodynamic because they’re typically hovering and are not in forward flight. In essence, what I set out to do four years ago was to create the quadcopter optimized for forward flight. And as it just as an aircraft category. And I think what I’ve ended up with is something that not only works well at the scale that we’re at, but it scales up to much larger sizes.</p>
+
+
+
+<p><strong>You have two models that you have been working on. Tell us first about the Q12.</strong></p>
+
+
+
+<p>Brian Hinman: Right, it’s actually 12 is for 12 kilograms, that’s how much the thing weighs so the Q12 is really a sensing platform that’s meant to be a drone as first responder. You send it out to the scene, it’s got a high-quality camera on board; other sensors payloads can be added in—thermal cameras, we do multi-spectral mapping for things like agriculture. And again, we flown that thing for over three hours.</p>
+
+
+
+<p>We think we—actually at this point—could do over four hours, and very soon we’re going to be able to demonstrate that we can break the world record as far as for electrically powered vertical takeoff and landing aircraft—set the distance record as well. I think for a lot of those missions that require overlying a site, surveillance, you name it, that’s what the Q12 platform is for. The other one is the larger one, the Q250, and that is designed to be carrying payload, serious payload. The initial application we were looking at in agriculture is for spraying and agricultural spraying is something that everybody needs to do and we think we have a platform there that’s going to be the most cost-effective way of doing it and, again, way safer than, for example, using helicopters to do it.</p>
+
+
+
+<p><strong>What are the next steps for you all before you can go to market with these amazing things?</strong></p>
+
+
+
+<p>Brian Hinman: We’re in the back-end phase of the engineering now. The timing of the change in rules was actually good for us because we’re at the stage of choosing some of our contract manufacturers. And with the emphasis of Made in America, we’re looking at contract manufacturers in Arizona and Texas that would do this subsystem assembly. We’re to do the final assembly in California, testing and ship out of here. So, all that timing worked out well. We’re down the path already with the waiver.</p>
+
+
+
+<p>Interestingly enough, the way that whole thing got set up, virtually every single company is going to have to go through that process—which isn’t a bad thing. It’s essentially an audit every year to make sure that drones are being shipped to the United States are going to be safe, that there’s not going to be a national security risk. We’re hopeful we can get through that pretty quickly. In the second quarter of this year, we’re going to be doing what we call beta site installations with several customers, and across the board we have three different segments we address: we address the public safety market, we address agriculture, and then the third one is what I would call traditional commercial applications, like linear inspection and mapping. And there’s a huge amount of that out there that’s going on today.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/will-drones-become-part-of-critical-infrastructure/">Will Drones Become Part of Critical Infrastructure?</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Trade Policy Uncertainty: Insights from a Roundtable</title>
+		<link>https://www.aei.org/economics/a-roundtable-on-trade-policy-uncertainty/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Fri, 20 Feb 2026 17:21:24 +0000</pubDate>
+				<category><![CDATA[Economics]]></category>
+		<category><![CDATA[business]]></category>
+		<category><![CDATA[investment]]></category>
+		<category><![CDATA[tariffs]]></category>
+		<category><![CDATA[Trade policy]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755556</guid>
+
+					<description><![CDATA[<p>The United States has benefited from the opportunity to shape a trade governance that extends well beyond tariffs. International rules on standards, intellectual property, services, customs procedures, and dispute settlement provide a stabilizing framework on which businesses rely.</p>
+<p>The post <a href="https://www.aei.org/economics/a-roundtable-on-trade-policy-uncertainty/">Trade Policy Uncertainty: Insights from a Roundtable</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>On February 12, my colleague Heather Berry and I moderated a <a href="https://www.youtube.com/watch?v=hvML4HQI61Q&amp;t=1636s">roundtable at the Rayburn House Office Building </a>on trade policy uncertainty and its effects on businesses. The roundtable was part of the “Georgetown on the Hill” series organized by the Center for Business and Public Policy at the McDonough School of Business. Panelists included Angela Ellard, Nonresident Senior Advisor at the Center for Strategic and International Studies and former Deputy Director General of the WTO, Nuno Limao, Wallenberg Chair Professor at Georgetown University, and Sarah Wells, CEO and founder of Sarah Wells Bags. In this post, I would like to highlight some of the main takeaways from the event.</p>
+
+
+
+<p>The discussion suggested that we have moved from a world where uncertainty centered on tariff levels to one where it increasingly concerns the rules themselves—how they are set, how they change, and whether they will be enforced consistently over time.</p>
+
+
+
+<p>Uncertainty shapes behavior even before policies take full effect. Firms invest in advance—placing orders, building supplier relationships, qualifying inputs, or expanding capacity—without knowing what costs or market access will look like months or years ahead. When policy shifts are broad, frequent, or unpredictable, research has shown that businesses delay or scale back those investments. The economic effects can accumulate gradually, even if they are not immediately visible in headline data.</p>
+
+
+
+<p>Uncertainty about trade rules affects not only importers but also exporters. Firms must assess whether foreign markets will remain accessible, whether standards or other requirements will change, and whether trade agreements—current or newly negotiated—will provide durable assurance. Even without formal retaliation, doubts about durability can alter expectations and investment plans.</p>
+
+
+
+<p>On the ground, firms experience uncertainty as a series of costly operational choices. Even relatively simple supply chains require months of preparation: safety testing, orders, payments, and shipping all occur long before goods reach a U.S. port. When tariffs or enforcement conditions change midstream, firms may face immediate cash demands and difficult decisions about pricing, inventory, and financing. Diversifying production is costly and complex, involving new supplier networks, redesigned inputs, and significant upfront investment—often without confidence that the new arrangement will remain stable.</p>
+
+
+
+<p>For small and mid-sized firms, these constraints can be particularly tight. Limited cash reserves and narrow margins amplify the impact of unexpected policy changes. Lost sales from delayed or reduced inventory compound tariff costs. Although higher uncertainty can dampen foreign competition, fewer new entrants also signal that margins and predictability are insufficient to justify investment.</p>
+
+
+
+<p>In this environment, trade policy becomes harder to align with broader goals—whether manufacturing expansion, revenue generation, or strategic competition—because uncertainty itself can deter the investment those goals require.</p>
+
+
+
+<p>Existing institutions face challenges and a call for reform. Yet, the United States has benefited from the opportunity to shape a trade governance that extends well beyond tariffs. International rules on standards, intellectual property, services, customs procedures, and dispute settlement provide a stabilizing framework on which businesses rely.</p>
+<p>The post <a href="https://www.aei.org/economics/a-roundtable-on-trade-policy-uncertainty/">Trade Policy Uncertainty: Insights from a Roundtable</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Ending Improper Government Payments to Dead People</title>
+		<link>https://www.aei.org/opportunity-social-mobility/ending-improper-government-payments-to-dead-people/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Fri, 20 Feb 2026 16:23:18 +0000</pubDate>
+				<category><![CDATA[Opportunity and Social Mobility]]></category>
+		<category><![CDATA[benefits]]></category>
+		<category><![CDATA[Ending Improper Payments to Deceased People Act]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Federal Communications Commission (FCC)]]></category>
+		<category><![CDATA[Social Security Administration]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755537</guid>
+
+					<description><![CDATA[<p>Last week, President Donald Trump signed into law the “Ending Improper Payments to Deceased People Act.” The new law permanently authorizes data sharing between the Social Security Administration’s “Death Master File” and the Department of the Treasury’s “Do Not Pay” list.</p>
+<p>The post <a href="https://www.aei.org/opportunity-social-mobility/ending-improper-government-payments-to-dead-people/">Ending Improper Government Payments to Dead People</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Last week, President Donald Trump signed into law the “Ending Improper Payments to Deceased People Act.” You read that correctly. The bipartisan <a href="https://www.congress.gov/bill/119th-congress/senate-bill/269/cosponsors">legislation</a>, which was introduced by Sen. John Kennedy (R-LA), updates his prior legislation that temporarily authorized the sharing of death data with benefit-paying agencies. The new law <a href="https://www.kennedy.senate.gov/public/2026/2/president-trump-signs-kennedy-bill-to-end-government-payments-to-deceased-americans">permanently authorizes</a> data sharing between the Social Security Administration’s “Death Master File” and the Department of the Treasury’s “Do Not Pay” list, which is used by various benefit-paying agencies.</p>
+
+
+
+<p>One of the cosponsors of the new law, Sen. Ashley Moody (R-FL), <a href="https://www.moody.senate.gov/press-releases/photo-release-senator-moodys-bill-to-end-washington-waste-save-taxpayer-dollars-and-stop-government-payments-to-deceased-people-signed-into-law-by-president-trump/">describes</a> its intent as “rein(ing) in the government’s ability to make improper payments to deceased people in the future.” As that suggests, government payments to dead people are an ongoing problem. Just in the past two months, the fraud-focused <em>New York Post</em> has featured the following headlines: “California collected millions for 94,000 dead people’s phone and internet services, bombshell FCC report finds” (<a href="https://nypost.com/2026/01/28/us-news/california-took-in-millions-for-94000-dead-peoples-phone-and-internet-service/">January 28, 2026</a>); “Trump admin probes Colorado after 221 dead people received federal housing assistance” (<a href="https://nypost.com/2025/12/18/us-news/trump-admin-probes-colorado-after-221-dead-people-received-federal-housing-assistance/">December 18, 2025</a>); and <em>“</em>Heartless Calif. welfare worker stole $40K in benefits using identities of elderly, dead people: feds” (<a href="https://nypost.com/2025/12/16/us-news/calif-welfare-worker-stole-40k-in-benefits-using-identities-of-elderly-dead-people-feds/">December 16, 2025</a>).</p>
+
+
+
+<p>Early in the pandemic, official reports noted that stimulus checks worth <a href="https://www.cnbc.com/2020/06/25/1point4-billion-in-stimulus-checks-sent-to-deceased-individuals.html">$1.4 billion</a> were sent to dead people. In 2022, the Department of Labor Inspector General <a href="https://www.oig.dol.gov/public/reports/oa/2022/19-22-005-03-315.pdf">reported</a> that “205,766 Social Security numbers of deceased persons were used to file claims” for pandemic unemployment benefits, resulting in almost $140 million in potential fraud. In December 2025, the Government Accountability Office <a href="https://www.gao.gov/assets/gao-26-108742.pdf">reported</a> that $94 million in Obamacare tax credits may have been paid to deceased individuals in 2023. Perhaps most famously, earlier last year President Trump and Elon Musk <a href="https://www.aei.org/economics/my-views-on-recent-changes-at-the-social-security-administration/">incorrectly</a> <a href="https://www.factcheck.org/2025/02/trump-musk-exaggerate-scale-of-improper-social-security-payments-to-the-dead/">suggested</a> that significant Social Security benefits had been paid to deceased individuals.</p>
+
+
+
+<p>Sometimes benefits start flowing while a claimant is alive and wrongly continue after death. Take the government’s <a href="https://www.fcc.gov/general/lifeline-program-low-income-consumers">Lifeline</a> program, which provides <a href="https://docs.fcc.gov/public/attachments/DOC-418786A2.pdf">nearly $1 billion per year</a> to help low-income Americans afford basic phone and internet services. Last month, the Inspector General of the Federal Communications Commission (FCC), which oversees the program, <a href="https://www.fcc.gov/sites/default/files/FCC%20OIG%20Advisory%20Regarding%20Deceased%20and%20Duplicate%20Lifeline%20Subscribers.pdf">reported</a> on three states (California, Texas, and Oregon) that had opted out of the national system that checks whether program benefits flow to deceased individuals. Between late 2020 and 2025, providers in those three states claimed funding for over 116,000 subscribers recorded as deceased on the Treasury Department’s Do Not Pay registry. Of those cases, 66 percent involved individuals who died <em>after</em> becoming eligible, yet their benefits continued for several months after their demise.</p>
+
+
+
+<p>In more troubling cases, the date of death occurred <em>before</em> a claimant enrolled in benefits. In the three opt-out states profiled in the Inspector General’s <a href="https://www.fcc.gov/sites/default/files/FCC%20OIG%20Advisory%20Regarding%20Deceased%20and%20Duplicate%20Lifeline%20Subscribers.pdf">report</a>, 15 percent of cases flagged were known to have a date of death before enrollment, while another 19 percent may have died before enrollment. Overall, 81 percent of Lifeline claims involving “deceased subscribers” across the three states were in California.</p>
+
+
+
+<p>As that suggests, many of those wrongly receiving assistance are using the identities of dead people to access benefits. The identity of the same deceased individual was sometimes associated with benefit claims in multiple states. The Inspector General followed that trail to also <a href="https://www.fcc.gov/sites/default/files/FCC%20OIG%20Advisory%20Regarding%20Deceased%20and%20Duplicate%20Lifeline%20Subscribers.pdf">find</a> 270,000 cases in which living individuals claimed benefits two or more times in the same month in California, Texas, and Oregon and other states.</p>
+
+
+
+<p>In November, FCC Chairman Brendan Carr <a href="https://docs.fcc.gov/public/attachments/DOC-415444A1.pdf">revoked</a> California’s opt-out status. That move followed Governor Gavin Newsom’s signing of legislation “that puts California on the path to becoming the first U.S. state offering undocumented immigrants access” to Lifeline benefits, as Politico <a href="https://subscriber.politicopro.com/article/2025/10/california-set-to-become-the-first-state-offering-phone-bill-discounts-to-undocumented-immigrants-00595820">reported</a>. Sen. Ted Cruz (R-TX), who chairs the Senate Commerce, Science, and Transportation Committee, <a href="https://www.commerce.senate.gov/2025/10/chairman-cruz-sounds-alarm-on-new-california-law-giving-free-smartphones-to-illegal-aliens">assailed</a> the California legislation, <a href="https://www.commerce.senate.gov/services/files/1A83D724-4BB6-491A-85B0-BCD2FEE24202">saying</a> it “likely violates federal law” and “is the latest in a series of measures by Democrat-run jurisdictions that not only incentivize illegal entry into the United States but also obstruct the lawful operations of federal immigration authorities.”</p>
+
+
+
+<p>Earlier this week, the FCC adopted a <a href="https://docs.fcc.gov/public/attachments/DOC-418786A1.pdf">reform proposal</a> to prevent “rampant abuse of the program and its verification processes” including by “ensuring that Lifeline support is used to benefit only legal, living, and eligible Americans.” Even with new federal legislation, that shows how eternal vigilance will likely remain necessary to prevent government benefit payments to dead people.</p>
+<p>The post <a href="https://www.aei.org/opportunity-social-mobility/ending-improper-government-payments-to-dead-people/">Ending Improper Government Payments to Dead People</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>2025 Trade and Investment Didn’t Yield Manufacturing Jobs</title>
+		<link>https://www.aei.org/foreign-and-defense-policy/2025-trade-and-investment-didnt-yield-manufacturing-jobs/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Fri, 20 Feb 2026 14:46:19 +0000</pubDate>
+				<category><![CDATA[Foreign and Defense Policy]]></category>
+		<category><![CDATA[employment]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[tariffs]]></category>
+		<category><![CDATA[trade deficit]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755525</guid>
+
+					<description><![CDATA[<p>The year’s trade deficit trend and a key measure of foreign investment in the US provide figures President Trump is likely to emphasize. However, the more optimistic his spin, the more glaring is the poor payoff: manufacturing employment still fell.</p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/2025-trade-and-investment-didnt-yield-manufacturing-jobs/">2025 Trade and Investment Didn’t Yield Manufacturing Jobs</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Recently released data covering the whole of 2025 contain good news. The trend for the trade deficit over the course of the year and one measure of foreign investment into the US both offer numbers President Trump will try to highlight. While the extent of the good news can certainly be debated, that isn’t the President’s problem. Instead, the more optimistic his spin, the more glaring is the poor payoff: <a href="https://data.bls.gov/timeseries/CES3000000001?amp%253bdata_tool=XGtable&amp;output_view=data&amp;include_graphs=true" target="_blank" rel="noreferrer noopener">manufacturing employment still fell</a>.</p>
+
+
+
+<p>Trade wins&nbsp;the headlines. The&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.bea.gov/data/intl-trade-investment/international-trade-goods-and-services">combined American goods and services deficit fell only slightly in 2025</a>, remaining large at $900 billion. But this includes a rush of imports in the first quarter in advance of expected tariffs. After the first quarter, the goods and services deficit fell 26 percent compared to the equivalent period of 2024.</p>
+
+
+
+<p>Within that, goods trade is most important because that’s where tariffs were applied and because goods trade is what should affect manufacturing jobs. The goods result is less impressive without services but similar. The 2025 goods deficit is <a href="https://www.census.gov/foreign-trade/balance/c0015.html" target="_blank" rel="noreferrer noopener">slightly higher than in 2024</a> but, after tariffs were announced in early April, the last three quarters of last year saw a 16 percent drop compared to the year before.</p>
+
+
+
+<p>We also have&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.census.gov/foreign-trade/statistics/highlights/topyr.html">country data for goods trade</a>. The top 11 (to include Canada, since President Trump is obsessed) national sources of our 2025 goods trade deficit show pronounced changes versus 2024:</p>
+
+
+
+<div class="wp-block-genesis-blocks-gb-container gb-block-container"><div class="gb-container-inside"><div class="gb-container-content">
+<p class="has-text-align-center">Goods Trade Deficits, $ billion</p>
+</div></div></div>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th></th><th class="has-text-align-left" data-align="left">2025</th><th class="has-text-align-left" data-align="left">2024</th></tr></thead><tbody><tr><td>China</td><td class="has-text-align-left" data-align="left">202.1</td><td class="has-text-align-left" data-align="left">295.5</td></tr><tr><td>Mexico</td><td class="has-text-align-left" data-align="left">196.9</td><td class="has-text-align-left" data-align="left">171.5</td></tr><tr><td>Vietnam</td><td class="has-text-align-left" data-align="left">178.2</td><td class="has-text-align-left" data-align="left">123.5</td></tr><tr><td>Taiwan</td><td class="has-text-align-left" data-align="left">146.8</td><td class="has-text-align-left" data-align="left">73.7</td></tr><tr><td>Ireland</td><td class="has-text-align-left" data-align="left">114.2</td><td class="has-text-align-left" data-align="left">86.5</td></tr><tr><td>Germany</td><td class="has-text-align-left" data-align="left">73.0</td><td class="has-text-align-left" data-align="left">84.7</td></tr><tr><td>Thailand</td><td class="has-text-align-left" data-align="left">71.9</td><td class="has-text-align-left" data-align="left">45.5</td></tr><tr><td>Japan</td><td class="has-text-align-left" data-align="left">63.9</td><td class="has-text-align-left" data-align="left">69.4</td></tr><tr><td>India</td><td class="has-text-align-left" data-align="left">58.2</td><td class="has-text-align-left" data-align="left">45.8</td></tr><tr><td>South Korea</td><td class="has-text-align-left" data-align="left">56.4</td><td class="has-text-align-left" data-align="left">66.0</td></tr><tr><td>Canada</td><td class="has-text-align-left" data-align="left">46.4</td><td class="has-text-align-left" data-align="left">62.0</td></tr></tbody></table><figcaption class="wp-element-caption">Source: <a href="https://www.census.gov/foreign-trade/balance/index.html" target="_blank" rel="noreferrer noopener">https://www.census.gov/foreign-trade/balance/index.html</a></figcaption></figure>
+
+
+
+<p><br>At first blush, the China drop is encouraging. The US should be less dependent on China, and send over less hard currency. But deficit surges with Taiwan and Vietnam are suspicious in the same light. The <a href="https://www.cnn.com/2001/WORLD/asiapcf/east/08/26/taiwan.china.1020/index.html" target="_blank" rel="noreferrer noopener">long-standing use of China</a> as a platform by Taiwanese firms suggests they can just re-label shipments. <a href="https://www.reuters.com/world/asia-pacific/vietnams-trade-surplus-with-us-surges-january-imports-china-hit-new-high-2026-02-06/" target="_blank" rel="noreferrer noopener">Uncertainty in Vietnam-US trade</a> relations surprisingly didn’t matter, possibly because China is heavily <a href="https://www.aei.org/china-global-investment-tracker/" target="_blank" rel="noreferrer noopener">invested in consumer goods output in Vietnam</a>.</p>
+
+
+
+<p>Monthly trade deficits with Taiwan and Vietnam rose over the course of 2025. So did that with Thailand, another easy transshipment route for Chinese products. Meanwhile, there was no deterioration in the Mexico and Ireland deficits over the course of the year (the Ireland deficit all but disappeared by December). New Trump nemesis India may surpass old Trump nemesis Japan as a deficit source in 2026.</p>
+
+
+
+<p>Another set of 2025 data received less attention but adds to the administration’s simultaneous success and dilemma. The value of foreign portfolio holdings in the US&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table1.html">rose nearly $4.9 trillion in 2025</a>. This is&nbsp;<em>not</em>&nbsp;new spending. Nonetheless, it suspiciously fits the President’s talk&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.cbsnews.com/news/trump-20-trillion-new-us-investments-numbers-dont-add-up/">of $20 trillion in “new investment”</a>&nbsp;and is a sign of American financial success. The UK led with a $700 billion gain, while our archenemy Canada followed with $500 billion.</p>
+
+
+
+<p>That’s 12 months of financial success worth trillions and nine months of trade success, at least on Trump’s view. Unfortunately, that’s not the end of the story. The last three quarters of the 2025 also saw manufacturing employment decline each month. The pace of decline last year was slower than 2024 but over 100,000 jobs were still lost, with employment returning to the levels of early 2022. Not what the President ran on.</p>
+
+
+
+<p>Manufacturing job loss in 2025 isn’t the end of the story, either. It can take time for trade and financial changes to affect employment. The number one question for administration officials is when—when will employment rise and how much? The US hasn’t seen 13 million manufacturing jobs since 2008—is that out of reach? If so, trade and investment sound and fury looks largely like grandstanding.</p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/2025-trade-and-investment-didnt-yield-manufacturing-jobs/">2025 Trade and Investment Didn’t Yield Manufacturing Jobs</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Advancing AI Literacy in the US Workplace</title>
+		<link>https://www.aei.org/technology-and-innovation/advancing-ai-literacy-in-the-us-workplace/</link>
+		
+		<dc:creator><![CDATA[Julia Torres]]></dc:creator>
+		<pubDate>Fri, 20 Feb 2026 10:30:00 +0000</pubDate>
+				<category><![CDATA[Technology & Innovation]]></category>
+		<category><![CDATA[Technology, Science, and Energy]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[Technology and innovation]]></category>
+		<category><![CDATA[Workforce development]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755466</guid>
+
+					<description><![CDATA[<p>The Department of Labor framework is unashamedly instrumental: It aims to help workers safely use AI to stay productive rather than equip them as critical agents in shaping AI governance or contesting its deployment. It supports real economy delivery in a timely manner—as it should for a technology already in widespread use.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/advancing-ai-literacy-in-the-us-workplace/">Advancing AI Literacy in the US Workplace</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>If there is one truism of the so-called information revolution, it is that the rollout and uptake of each new technological iteration in day-to-day business practice occurs faster than the last. It took over half a century for computers to be widely used, three decades for personal computers to arrive on every desk, 20 years for internet applications to become ubiquitous, and 10 years for smartphone apps to dominate. But in just over three short years since the public release of ChatGPT, businesses and employees are being urged to incorporate the use of generative pretrained transformers (GPTs)—AI tools—into their everyday work practice.</p>
+
+
+
+<p>To be sure, their incorporation is inevitable given the tremendous productivity benefits on offer. (<a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noreferrer noopener">McKinsey estimates</a> a 0.1–0.6 percentage point addition to annual labor productivity growth through 2040.) There is little doubt that GPTs have revolutionized <a href="https://www.bis.org/publ/work1208.htm" target="_blank" rel="noreferrer noopener">computer coding activities</a> and improved the throughput and quality of many <a href="https://www.triangulateknowledge.com/blog/the-impact-of-generative-ai-on-knowledge-work" target="_blank" rel="noreferrer noopener">knowledge workers’ outputs</a>—for example, agents in contact centers. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12147479/" target="_blank" rel="noreferrer noopener">Medical practitioners’</a> efficiency is increasing with the use of ambient listening tools to take notes during consultations, and care quality is improving with customized summaries and treatment plans provided subsequently to patients.</p>
+
+
+
+<p>However, as with all new technologies, caution is necessary. The same tools can lead to decreases in efficiency and quality if <a href="https://mitsloan.mit.edu/ideas-made-to-matter/how-generative-ai-can-boost-highly-skilled-workers-productivity" target="_blank" rel="noreferrer noopener">used inappropriately</a>, meaning without sufficient human interpretation or outside the bounds of its capabilities. For example, a University of Sydney academic found that a Deloitte report to an Australian government department contained <a href="https://www.evidentlyai.com/blog/ai-hallucinations-examples" target="_blank" rel="noreferrer noopener">phantom citations and fabricated</a> footnotes due to unchecked GPT use in its preparation. This cost Deloitte up to AUD 300,000 in foregone fees and a lot of public embarrassment. Likewise, court and opponent time was wasted, and a lawyer <a href="https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/" target="_blank" rel="noreferrer noopener">faced sanctions</a> after a ChatGPT-prepared brief was found to contain <a href="https://virtuositylegal.com/ai-in-court-when-legal-tech-goes-rogue-lessons-from-mata-v-avianca/" target="_blank" rel="noreferrer noopener">entirely fictitious case law</a>, including invented citations and opinions.</p>
+
+
+
+<p>Importantly, just as for all other information technology advances, benefits come not from substituting existing tasks but from enhancing already skilled practitioners’ ability to carry out their activities. GPTs can create computer code quickly, but coders still have to understand the tasks for which the code will be used to craft the appropriate prompts and then select the best code from multiple generated examples. Similarly, AI tools may capture consultation records, but medical practitioners must still edit them and check treatment plans generated to ensure they are appropriate for the specific case.</p>
+
+
+
+<p>AI application risks come, therefore, not from the GPTs themselves but from inappropriate use. Such risks are best addressed by education, not regulation. Workers need new skills in AI literacy to make the most of GPT-based applications and avoid their pitfalls.</p>
+
+
+
+<p>Propitiously, therefore, last week the US Department of Labor released its <a href="https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2025/TEN%2007-25/TEN%2007-25%20%28complete%20document%29.pdf" target="_blank" rel="noreferrer noopener">Artificial Intelligence Literacy Framework.</a> AI literacy is defined as “a foundational set of competencies that enable individuals to use and evaluate AI technologies responsibly, with a primary focus on generative AI, which is increasingly central to the modern workplace.” The aim is “to support a wide range of users working to strengthen AI literacy across the American workforce.”</p>
+
+
+
+<p><a href="https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/2026/02/ETA-20260212-hi.jpg" target="_blank" rel="noreferrer noopener">The framework</a> is voluntary. It defines five foundational content areas: how AI works, common workplace applications, effective prompting, evaluating AI outputs, and responsible and secure use. Seven delivery principles stress adaptability across sectors, experiential learning, and pairing AI use with “human skills” like judgment, creativity, communication, and problem solving. The framework is targeted at states, workforce boards, community colleges, apprenticeships, and employers and is intended as <a href="https://www.axios.com/2026/02/13/labor-department-ai-literacy-framework" target="_blank" rel="noreferrer noopener">national guidance for workforce and training programs</a>.</p>
+
+
+
+<p>The US framework differs from other national and international AI literacy strategies in its <a href="https://www.onthelaborfront.com/dol-releases-ai-literacy-framework-to-guide-national-workforce-training-efforts/" target="_blank" rel="noreferrer noopener">focus on workers</a> rather than on the whole population. This is pragmatic given the extensive use (and misuse) of AI already in the US workplace. If the promised productivity gains are to be made as soon as possible in line with wider economic policy objectives, then workers already at the coalface need these relevant skills now. There just isn’t time to fashion a comprehensive AI-in-education strategy focused first on teachers and students, national curricula, and teacher-training reforms, as promulgated by <a href="https://www.unesco.org/en/articles/what-you-need-know-about-unescos-new-ai-competency-frameworks-students-and-teachers" target="_blank" rel="noreferrer noopener">UNESCO</a>.</p>
+
+
+
+<p>The US framework also differs in its tight focus on workplace contexts rather than on <a href="https://edtecharchives.org/journal/2222/20832" target="_blank" rel="noreferrer noopener">broader civic, societal, and ethical</a> competencies and its understanding of AI’s social impact and action toward a “sustainable and fair society.” It eschews a European Union–type <a href="https://onlinelibrary.wiley.com/doi/10.1111/1758-5899.13299" target="_blank" rel="noreferrer noopener">tight connection to AI governance</a> (e.g., AI Act implementation, digital rights, and algorithmic transparency) and civic, democratic, and rights-based dimensions of AI literacy.</p>
+
+
+
+<p>The Department of Labor framework is unashamedly instrumental: It aims to help workers safely use AI to stay productive rather than equip them as critical agents in shaping AI governance or contesting its deployment. It supports real economy delivery in a timely manner—as it should for a technology already in widespread use.</p>
+
+
+
+<p></p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/advancing-ai-literacy-in-the-us-workplace/">Advancing AI Literacy in the US Workplace</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Poisoned Chalice at the Federal Reserve</title>
+		<link>https://www.aei.org/economics/a-poisoned-chalice-at-the-federal-reserve/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Thu, 19 Feb 2026 20:23:01 +0000</pubDate>
+				<category><![CDATA[Economics]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[Congressional Budget Office (CBO)]]></category>
+		<category><![CDATA[Gross Domestic Product (GDP)]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755475</guid>
+
+					<description><![CDATA[<p>Handling the budget and AI challenges will require skill and flexibility from Kevin Warsh at the Fed’s helm. Above all, it will require the maintenance of central bank independence without interference from the Trump administration. </p>
+<p>The post <a href="https://www.aei.org/economics/a-poisoned-chalice-at-the-federal-reserve/">A Poisoned Chalice at the Federal Reserve</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>In early 2006, when Ben Bernanke replaced Alan Greenspan as the Federal Reserve’s Chair, The Economist ran a memorable and prescient cover. It had Greenspan and Bernanke in a relay race. However, instead of Greenspan handing Bernanke a baton, it had him handing Bernanke a stick of dynamite. The Economist was referring to the US housing market bubble that was about to burst. When that bubble burst in 2008, Bernanke was left with the unenviable task of having to deal with the 2008-2009 Great Economic Recession.&nbsp;</p>
+
+
+
+<p>If Greenspan left Bernanke with one stick of dynamite,&nbsp;it would seem that Jerome Powell&nbsp;will be handing Kevin Warsh two sticks of dynamite when he hands over his leadership of the Fed in May. Not only will&nbsp;Warsh be left with an unsustainable US public finance position with which to contend. He will also be left with an Artificial Intelligence (AI) bubble that is almost certain to burst on his watch. Those two challenges will make it&nbsp;very difficult&nbsp;for&nbsp;Warsh to deliver on the Fed’s dual mandate to promote maximum employment and stable prices. It will also make it&nbsp;very difficult&nbsp;for&nbsp;Warsh to implement his stated intention of reducing the size of the Fed’s bloated balance sheet.&nbsp;</p>
+
+
+
+<p>Start with unsustainable public finances. According to the Congressional Budget Office, the US public deficit is now set to average over six percent of GDP over the next decade or around double the three percent of GDP that would be consistent with public debt stability. In dollar terms, the US budget deficit is set to rise from around $2 trillion this year to a jaw-dropping $3.1 trillion by 2036. As a result, the public debt to GDP ratio is set to rise from around 100 percent at present to an all-time record of 120 percent by 2036. </p>
+
+
+
+<p>It would be an understatement to say that needing to finance a&nbsp;$2 trillion&nbsp;budget deficit and to roll over&nbsp;$9 trillion&nbsp;a year in maturing US Treasury bonds will&nbsp;highly complicate&nbsp;Warsh’s task of managing monetary policy. If he is perceived to be cutting interest rates at an excessively fast pace, as Trump might pressure him to do, he might raise concerns, especially among foreign Treasury bond holders, that the US will try to inflate its way out of its debt problem. In turn, that could invite a bond market and a dollar market crisis that could spill over to the rest of the financial system.&nbsp;Similarly, if&nbsp;Warsh tries to reduce the size of the Fed’s balance sheet,&nbsp;he risks forcing long-term interest rates higher.&nbsp;That would add to the government’s spending on interest payments, which already stand at close to&nbsp;$1 trillion&nbsp;a year.&nbsp;</p>
+
+
+
+<p>If the experience with the bursting of the 2001 dot.com bubble is anything by which to go, the eventual bursting of the AI bubble could mean that&nbsp;Warsh might have to deal with an economic recession&nbsp;relatively early&nbsp;in his term. Such a recession would compound&nbsp;Warsh’s public finance challenge by increasing the size of the budget deficit.&nbsp;</p>
+
+
+
+<p>One reason to fear an AI-induced recession is that today’s US equity valuations are at lofty levels reminiscent of those preceding the bursting of the dot.com bubble. That could presage a sharp stock market decline as occurred when the dot.com bubble burst. Another reason is that the amounts being invested in AI are now similar in size to those that occurred during the internet boom but are occurring in a much shorter time frame. As if to underline this point, it is estimated that last year the $100 to $200 billion invested in AI last year accounted for around one-third of US economic growth. An even higher amount of AI investment is expected this year. </p>
+
+
+
+<p>Simultaneously handling the budget and AI challenges will require considerable skill and flexibility from&nbsp;Warsh at the Fed’s helm. It will also not afford&nbsp;Warsh the luxury of doggedly holding on to his oft-stated views of wanting lower interest rates and a marked reduction in the Fed’s bloated balance sheet.&nbsp;Above all, it&nbsp;will require the maintenance of central bank independence without interference from the Trump administration.&nbsp;</p>
+
+
+
+<p>        &nbsp;</p>
+<p>The post <a href="https://www.aei.org/economics/a-poisoned-chalice-at-the-federal-reserve/">A Poisoned Chalice at the Federal Reserve</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Political Backlash to Data Centers</title>
+		<link>https://www.aei.org/technology-and-innovation/the-political-backlash-to-data-centers/</link>
+		
+		<dc:creator><![CDATA[Julia Torres]]></dc:creator>
+		<pubDate>Thu, 19 Feb 2026 10:30:00 +0000</pubDate>
+				<category><![CDATA[Technology & Innovation]]></category>
+		<category><![CDATA[Technology, Science, and Energy]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[data center]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[Technology and innovation]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755410</guid>
+
+					<description><![CDATA[<p>The backlash against data centers is real, bipartisan, and accelerating. But the moratoria are blunt instruments aimed at a poorly defined target. They capture far more than hyperscale AI facilities, they hand significant regulatory discretion to agencies without clear legislative direction, and they offer no mechanism for addressing the grid and water concerns that motivated them in the first place. Public frustration with data centers reflects genuine questions about who bears the costs of the AI build-out. Those are legitimate questions. Moratoria do not answer them.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/the-political-backlash-to-data-centers/">The Political Backlash to Data Centers</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>The single most dramatic shift in political opinion over the past six months has been the backlash against data centers.</p>
+
+
+
+<p>I first noticed the change last autumn while browsing a post from the Facebook Group of my hometown in Central Illinois. A post about a <a href="https://sangamonil.gov/departments/a-c/county-board/news?ArtMID=8871&amp;ArticleID=846&amp;preview=true" target="_blank" rel="noreferrer noopener">new CyrusOne data center</a> in Springfield had 145 comments, making it one of the more active discussions on the page. Even though the facility would operate on a closed-loop water system, commenters fixated on its water use. And despite the fact that CyrusOne would fund the necessary transmission upgrades and pay the full cost of service, many still feared the project would drive up local energy bills.</p>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img fetchpriority="high" decoding="async" width="936" height="164" src="https://www.aei.org/wp-content/uploads/2026/02/Picture1-5.png?x97961" alt="" class="wp-image-1008755420" srcset="https://www.aei.org/wp-content/uploads/2026/02/Picture1-5.png 936w, https://www.aei.org/wp-content/uploads/2026/02/Picture1-5-300x53.png 300w, https://www.aei.org/wp-content/uploads/2026/02/Picture1-5-768x135.png 768w" sizes="(max-width: 936px) 100vw, 936px" /></figure>
+
+
+
+<p></p>
+
+
+
+<p>My hometown is not alone. National polling shows that public opinion is weakening on data centers. Heatmap’s poll of nearly 4,000 registered voters found that only 44% would support a data center being built near them, while 42% would oppose it, a net approval of just +2%. That put data centers below solar, wind, natural gas, nuclear, and even geothermal in local support. But the most striking stat comes from Morning Consult. In successive polls just a month apart in October and November 2025, support for an outright ban on data center construction grew from 37% to 41%.</p>
+
+
+
+<iframe title="Polling on Data Centers" aria-label="Table" id="datawrapper-chart-i3MLj" src="https://datawrapper.dwcdn.net/i3MLj/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1197" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+
+
+<p></p>
+
+
+
+<p>This dislike for data centers is starting to translate into political action. <a href="https://www.datacenterwatch.org/report">According to Data Center Watch</a>, between May 2024 and March 2025, $64 billion in US data center projects were blocked or delayed. In Michigan, <a href="https://bridgemi.com/michigan-environment-watch/at-least-19-michigan-towns-pause-data-centers-no-one-knows-if-itll-work/">at least 19 communities</a> have proposed or implemented data center bans. And to not be outdone, Senator Bernie Sanders <a href="https://www.washingtonpost.com/opinions/2026/02/11/data-center-moratorium-bernie-sanders/">has proposed a data center ban</a>.</p>
+
+
+
+<p>State legislatures are moving in a similar direction. In just the past few months, lawmakers in Georgia, New York, Oklahoma, Virginia, and Maryland have introduced bills to pause or restrict data center construction. The bills differ in duration and scope, but they all aim to stop building until the costs can be properly studied. The table below maps the current landscape.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<iframe title="Data Center Moratorium Proposals" aria-label="Table" id="datawrapper-chart-rLuOU" src="https://datawrapper.dwcdn.net/rLuOU/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1073" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+
+
+<p></p>
+
+
+
+<p>The most aggressive of the bills is from New York State Senator Liz Krueger, who recently proposed <a href="https://www.nysenate.gov/legislation/bills/2025/S9144">S9144</a>. The bill would disallow permits for siting, construction, or operation of data centers until the state completes a full regulatory process which cannot happen sooner than three years after enactment. Importantly, the bill doesn’t specify a date when the regulation has to be completed, so the ban could remain permanent.</p>
+
+
+
+<p>This bill also requires the Department of Environmental Conservation to produce a Generic Environmental Impact Statement (GEIS) on data centers within 18 months. A GEIS differs from a standard environmental review. Instead of analyzing the impacts of a single project at a specific site, it assesses impacts across an entire category of development statewide. Once a GEIS is complete, future projects that fall within its scope can be reviewed against its findings rather than starting from scratch, which can speed up individual approvals.</p>
+
+
+
+<p>But the efficiency benefit cuts both ways. A GEIS gives the agency substantial authority to define what counts as an acceptable data center, what mitigation measures are required, and what conditions must be met before a project can proceed. If the Department of Environmental Conservation writes a restrictive GEIS, it could function as a de facto regulatory framework for data centers in New York, independent of any further legislative action.</p>
+
+
+
+<p>What’s most striking about these bills is that they aren’t directed at the large data centers from Google, Meta, and Amazon. Big tech is mostly building massive data centers, known as hyperscale data centers. According to the <a href="https://www.congress.gov/crs-product/R48646#fn8">common industry definition</a>, hyperscalers use 5,000 servers or more and devote at least 10,000 square feet to the operation, drawing 100 MW or more. Instead, the bills have thresholds that range from 1 MW (Virginia) to 20 MW (New York) to 100 MW (Oklahoma). Virginia’s 1 MW threshold and Georgia’s lack of a MW definition would be especially onerous as it would capture colocation firms, regional telecom operators, university research centers, and government agencies, not just AI companies.</p>
+
+
+
+<p>The backlash against data centers is real, bipartisan, and accelerating. But the moratoria are blunt instruments aimed at a poorly defined target. They capture far more than hyperscale AI facilities, they hand significant regulatory discretion to agencies without clear legislative direction, and they offer no mechanism for addressing the grid and water concerns that motivated them in the first place. Public frustration with data centers reflects genuine questions about who bears the costs of the AI build-out. Those are legitimate questions. Moratoria do not answer them.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/the-political-backlash-to-data-centers/">The Political Backlash to Data Centers</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Rubio in Munich and the Civic Foundations Universities Can’t Ignore</title>
+		<link>https://www.aei.org/society-and-culture/rubio-in-munich-and-the-civic-foundations-universities-cant-ignore/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 22:09:55 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[Democracy]]></category>
+		<category><![CDATA[europe]]></category>
+		<category><![CDATA[Free speech]]></category>
+		<category><![CDATA[Marco Rubio]]></category>
+		<category><![CDATA[Secretary of State]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755423</guid>
+
+					<description><![CDATA[<p>In Munich this week, Marco Rubio spoke of the need to renew the habits that allow free societies to endure—not merely through power, but through civic unity and democratic confidence. But that civic ethic is what many universities now find hardest to sustain.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/rubio-in-munich-and-the-civic-foundations-universities-cant-ignore/">Rubio in Munich and the Civic Foundations Universities Can’t Ignore</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p><a rel="noreferrer noopener" target="_blank" href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/secretary-of-state-marco-rubio-at-the-munich-security-conference">Speaking in Munich</a>&nbsp;this&nbsp;week, Secretary of State Marco Rubio offered European leaders something more than diplomatic reassurance. He offered a diagnosis of what holds the democratic West together and what happens when those civic foundations weaken.&nbsp;</p>
+
+
+
+<p>Rubio began with an unusually explicit claim: the transatlantic alliance is not merely transactional. It is historical and cultural. The United States and Europe, he argued, are bound by more than security coordination. They are joined by shared values, shared history, and&nbsp;the civilizational&nbsp;inheritance that made liberal democracy possible in the first place.&nbsp;</p>
+
+
+
+<p><a rel="noreferrer noopener" target="_blank" href="https://www.washingtonpost.com/politics/2026/02/14/munich-security-conference-rubio-europe/">&#8220;We belong together,&#8221;</a>&nbsp;Rubio&nbsp;insisted;&nbsp;not as a matter of convenience, but as a matter of identity. The alliance, he suggested, is rooted in the things that unite us, not only in the threats that confront us.&nbsp;</p>
+
+
+
+<p>That framing matters. Rubio was arguing that free societies thrive and endure only when they collectively&nbsp;possess&nbsp;enough moral confidence and civic cohesion to defend their shared ideals and values.&nbsp;</p>
+
+
+
+<p>And that is where higher education enters the picture.&nbsp;</p>
+
+
+
+<p>Rubio&#8217;s speech was animated by a concern that has become impossible to miss across the democratic world:&nbsp;Institutions can survive only if citizens still believe in the legitimacy of the project. Alliances cannot be sustained through bureaucracy alone. Democracies cannot be sustained through&nbsp;procedure&nbsp;alone. They require civic trust, cultural continuity, and the capacity to argue without dissolving into fragmentation.&nbsp;</p>
+
+
+
+<p>Rubio&#8217;s emphasis on shared inheritance points toward a&nbsp;question universities&nbsp;once took seriously: Who forms the citizens capable of sustaining democratic unity?&nbsp;</p>
+
+
+
+<p>For much of modern history, higher education understood itself as part of the civic architecture of the West. Universities&nbsp;did&nbsp;not merely credential students. They cultivated the habits Rubio&#8217;s speech presupposes—intellectual seriousness, democratic restraint, and an appreciation for the moral achievements of liberal civilization.&nbsp;</p>
+
+
+
+<p>But today, universities increasingly struggle to play that role.&nbsp;</p>
+
+
+
+<p>Rubio warned against a hollowing out of common purpose. His message was that the West cannot remain strong if it loses confidence in the values that&nbsp;undergird&nbsp;it. Yet American higher education has become one of the primary sites where that confidence erodes: where shared inheritance is treated as embarrassment, where national cohesion is framed as exclusion, and where the language of democracy is often turned inward as accusation rather than outward as aspiration.&nbsp;</p>
+
+
+
+<p>Rubio&#8217;s remarks were also notable for what they implied about seriousness. Partnership, he suggested, depends on democratic societies being willing to defend sovereignty, borders, and civic order—not as abstractions, but as conditions of self-government. The alliance is not simply a set of commitments on paper; it is a shared willingness to sustain the moral and civic prerequisites of freedom.&nbsp;</p>
+
+
+
+<p>That theme has an uncomfortable resonance on campus. Universities speak constantly about &#8220;democracy,&#8221; but often hesitate to teach the responsibilities that democracy requires: the obligations of citizenship, the discipline of pluralism, the acceptance of disagreement, the&nbsp;necessity of limits.&nbsp;</p>
+
+
+
+<p>The result is not only&nbsp;ideological&nbsp;imbalance. It is civic thinning.&nbsp;</p>
+
+
+
+<p>One striking feature of Rubio&#8217;s Munich speech was his insistence that democratic life depends on persuasion rather than coercion. The West, at its best, governs through argument. Rubio spoke of the need to renew the habits that allow free societies to endure—not merely through power, but through civic unity and democratic confidence.&nbsp;</p>
+
+
+
+<p>But that civic ethic is precisely what many universities now find hardest to sustain.&nbsp;</p>
+
+
+
+<p>According to the latest&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.thefire.org/news/new-high-34-americans-say-free-speech-headed-wrong-direction">National Speech Index</a>,&nbsp;nearly three-quarters&nbsp;of Americans now say free speech in the United States is headed in the wrong direction. That pessimism reflects more than&nbsp;partisan&nbsp;mood. It reflects a growing fear that the institutions meant to model democratic argument—above all, universities—are&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/society-and-culture/as-america-turns-250-free-speech-confidence-is-collapsing/">losing the capacity to do so</a>.&nbsp;</p>
+
+
+
+<p>Rubio&#8217;s speech was, in this sense, an implicit reminder:&nbsp;You cannot defend democratic unity abroad if you cannot sustain democratic argument at home.&nbsp;</p>
+
+
+
+<p>The deeper danger is not that the transatlantic alliance will fracture because of a single dispute. It is that the cultural foundations of liberal democracy will continue to weaken—leaving societies less able to cooperate, less able to trust, and less able to name what they share.&nbsp;</p>
+
+
+
+<p>Higher education cannot&nbsp;determine&nbsp;foreign policy. But it plays&nbsp;a central role&nbsp;in shaping whether future leaders inherit the civic confidence Rubio appealed to in Munich:&nbsp;The belief that liberal democracy is not merely a system to manage, but a civilization to sustain.&nbsp;</p>
+
+
+
+<p>Rubio&#8217;s core claim was simple:&nbsp;The West is more than an arrangement. It is an inheritance.&nbsp;</p>
+
+
+
+<p>If universities cannot teach that inheritance,&nbsp;honestly, pluralistically, and without apology,&nbsp;then the alliance Rubio defended will rest on thinner ground than any treaty can repair.&nbsp;</p>
+
+
+
+<p>The&nbsp;West will not be held together by weapons or wealth, but by whether its schools still teach the civic meaning of the words Rubio used in Munich: &#8220;We belong together.&#8221;&nbsp;</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/rubio-in-munich-and-the-civic-foundations-universities-cant-ignore/">Rubio in Munich and the Civic Foundations Universities Can’t Ignore</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Class President Is Not a Political Faction</title>
+		<link>https://www.aei.org/society-and-culture/a-class-president-is-not-a-political-faction/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 21:13:25 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[Censorship]]></category>
+		<category><![CDATA[jewish]]></category>
+		<category><![CDATA[protest]]></category>
+		<category><![CDATA[University]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755438</guid>
+
+					<description><![CDATA[<p>Universities often insist they must remain neutral, but neutrality does not mean abdication. If a class president wishes to engage politically, they may do so as a private citizen. Student government exists to represent all students, not to function as an organized faction. </p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-class-president-is-not-a-political-faction/">A Class President Is Not a Political Faction</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>I was recently handed a flyer&nbsp;at Sarah Lawrence College advertising a “Community-Building Dinner Fundraiser for Gaza” and “Power Mapping 101,” co-hosted by Students for Justice in Palestine&nbsp;(SJP)&nbsp;and the “Class of 2028 President.”&nbsp;</p>
+
+
+
+<p>This was not&nbsp;a&nbsp;neutral&nbsp;event.&nbsp;It was ideological organizing, framed explicitly in the language of factional power: “Want to know who calls the shots on campus?”&nbsp;</p>
+
+
+
+<p>SJP activism at Sarah Lawrence has not&nbsp;remained&nbsp;within the bounds of ordinary advocacy. In recent months, it has repeatedly crossed into rhetoric&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.timesofisrael.com/anti-zionist-protesters-disrupt-israel-critic-ezra-klein-with-genocide-accusations/">that dehumanizes Jews</a>&nbsp;and into tactics of disruption and intimidation that corrode the basic norms of university life&nbsp;and undermine student safety, learning,&nbsp;and expression.&nbsp;</p>
+
+
+
+<p>Of course, students are free to protest.&nbsp;Protest&nbsp;is part of university life. But protest in a liberal&nbsp;private&nbsp;institution exists within limits: it cannot become coercion, obstruction, or degradation. Free expression does not mean intimidation. Advocacy does not mean the capture of representative offices.&nbsp;</p>
+
+
+
+<p>That is what makes this flyer alarming. It is not signed by a private student. It is signed by an office.&nbsp;</p>
+
+
+
+<p>Not a name, but “Class of 2028 President.”&nbsp;</p>
+
+
+
+<p>That changes the meaning entirely. A student may join SJP, fundraise, or organize under their own name. But a class president is not simply another activist. That title carries delegated legitimacy. It&nbsp;signals:&nbsp;I speak for the class.&nbsp;</p>
+
+
+
+<p>And that is precisely the breach&nbsp;here. Student government&nbsp;exists to serve an entire class&nbsp;students of&nbsp;different backgrounds, beliefs, and convictions. Its purpose is representation across disagreement, not alignment with a faction.&nbsp;</p>
+
+
+
+<p>A student&nbsp;in the class of 2028 who supports Israel,&nbsp;is ambivalent, or simply does not wish to affiliate with SJP politics now has a class president who has publicly aligned the office with one side of a polarizing and morally charged conflict. That student did not lose a debate. They lost&nbsp;representation. They learn, without being told, that some politics counts as “community,” while theirs is treated as suspect.&nbsp;</p>
+
+
+
+<p>That is not&nbsp;inclusion. It is&nbsp;symbolic&nbsp;conscription.&nbsp;</p>
+
+
+
+<p>To my knowledge, the Class of 2028 did not vote to affiliate itself with SJP. It did not consent to having its elected leadership function as an arm of a political movement. The title borrows institutional legitimacy. It transforms private activism into an act of representation.&nbsp;</p>
+
+
+
+<p>And this is not occurring in a vacuum. Last year, Gaza protests at Sarah Lawrence culminated in the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.algemeiner.com/2024/11/22/students-justice-palestine-occupies-building-sarah-lawrence-college/">occupation of Westlands</a>, the college’s main administrative building, followed by a&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.mindingthecampus.org/2024/11/25/sarah-lawrence-has-fallen/">week-long encampment</a>—widely reported because it crossed from expression into sustained obstruction of operations.&nbsp;</p>
+
+
+
+<p>In January, SJP-affiliated students&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/society-and-culture/leadership-failed-at-sarah-lawrence/">shouted down New York Times columnist Ezra Klein</a>—himself a critic of Israel—while the college president sat onstage in silence. That was not&nbsp;dialogue. It was&nbsp;disruption&nbsp;as a political weapon, met with administrative passivity. Universities cannot pretend such tactics are merely “speech.”&nbsp;</p>
+
+
+
+<p>The flyer’s promise of “Power Mapping 101” is&nbsp;revealing. Power mapping is not&nbsp;civic&nbsp;education. It is organizing instruction:&nbsp;identify&nbsp;who holds authority, apply leverage, seize&nbsp;institutional control. The language of “who calls the shots” is not the language of community. It is the language of capture.&nbsp;</p>
+
+
+
+<p>When elected student offices lend their names to that project, the university is no longer dealing with ordinary activism. It is lending representative authority to a factional movement. And when an institution allows intimidation to be renamed as “community-building,” it does not&nbsp;remain&nbsp;neutral. It legitimizes menace.&nbsp;</p>
+
+
+
+<p>Universities have developed a dangerous reflex: proceduralizing antisemitism into oblivion. When Jewish students report being degraded, administrators reach for euphemism&nbsp;—“tensions,” “difficult conversations,” “stakeholder engagement.” Documented instances of dehumanizing rhetoric are not misunderstandings. They are lines being crossed.&nbsp;</p>
+
+
+
+<p>And the chilling effect is measurable. According to the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.thefire.org/research-learn/2026-college-free-speech-rankings">Foundation for Individual Rights and Expression</a>, 166 of 257 campuses received a failing grade in the 2026 College Free Speech Rankings&nbsp;and student self-censorship has risen every year since tracking began. Not because speech is formally banned, but because campus climates increasingly punish dissent.&nbsp;</p>
+
+
+
+<p>That is not the marketplace of ideas. It is factional enforcement.&nbsp;</p>
+
+
+
+<p>Universities often insist they must remain neutral. Fine. But neutrality does not mean abdication. If a class president wishes to engage politically, they may do so as a private citizen, under their own name. The university must clarify that student government exists to&nbsp;represent&nbsp;all students,&nbsp;not to&nbsp;function as a megaphone for an&nbsp;organized faction.&nbsp;</p>
+
+
+
+<p>The issue is not whether students may protest. The issue is whether the institution still knows the difference between protest and menace, between advocacy and coercion, between private activism and representative authority.&nbsp;</p>
+
+
+
+<p>Equal justice and equal representation are not metaphors. They are obligations. Universities do not get to outsource institutional legitimacy to factional movements and call it “community-building.” A university that does so cannot still claim to be an institution of liberal education.&nbsp;</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-class-president-is-not-a-political-faction/">A Class President Is Not a Political Faction</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Civic Crisis Schools Can Fix</title>
+		<link>https://www.aei.org/society-and-culture/a-civic-crisis-schools-can-fix/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 20:55:53 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[Democracy]]></category>
+		<category><![CDATA[Free speech]]></category>
+		<category><![CDATA[school]]></category>
+		<category><![CDATA[Social media]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755433</guid>
+
+					<description><![CDATA[<p>For too many young Americans today, disagreement is treated not as a normal part of learning but as a threat—something to be avoided, silenced, or managed. This is more than a cultural mood. It is a civic vulnerability. </p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-civic-crisis-schools-can-fix/">A Civic Crisis Schools Can Fix</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>For too many young Americans today, disagreement is treated not as a normal part of learning but as a threat—something to be avoided, silenced, or managed. This is more than a cultural mood. It is a civic vulnerability.&nbsp;</p>
+
+
+
+<p>According to the Foundation for Individual Rights and Expression&#8217;s latest&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.thefire.org/research-learn/national-speech-index">National Speech Index</a>,&nbsp;nearly three-quarters&nbsp;of Americans say free speech is headed in the wrong direction. That pessimism is rising, not falling, even as Americans continue to affirm the First Amendment in principle.&nbsp;</p>
+
+
+
+<p>That is why the work underway at&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.bwl.org/">Birch Wathen Lenox</a>&nbsp;(BWL), a New York K–12 school, deserves national attention. BWL is treating constructive dialogue not as a slogan or an assembly theme, but as a serious educational model: a developmental arc that teaches students, year by year, how to&nbsp;engage&nbsp;disagreement with trust, compassion, and evidence.&nbsp;</p>
+
+
+
+<p>This is not&nbsp;indoctrination. It is education.&nbsp;</p>
+
+
+
+<p>In Lower School, it may mean learning how to listen through stories about fairness. In Middle School, it means practicing perspective-taking and evaluating sources. In Upper School, it means wrestling seriously with contested questions&nbsp;&#8211;&nbsp;economic systems, scientific tradeoffs, cultural debates—anchored in texts and disciplined inquiry rather than social media heat.&nbsp;</p>
+
+
+
+<p>Students are not rewarded for performative outrage or instant certainty. They are rewarded for fairness, evidence, and intellectual honesty—for the&nbsp;difficult work&nbsp;of articulating the strongest version of an argument they may reject. One of the central practices is &#8220;steel-manning,&#8221; not straw-manning: learning to understand before refuting, to clarify before condemning.&nbsp;</p>
+
+
+
+<p>The goal is not consensus; it is&nbsp;capacity.&nbsp;</p>
+
+
+
+<p>For two decades as a teacher of politics,&nbsp;I&#8217;ve&nbsp;watched students wrestle with moral conflict and competing visions of justice. But in recent years something has shifted: many young people arrive having absorbed the lesson that disagreement is danger, that&nbsp;hard questions&nbsp;are&nbsp;harm, and that silence is safer than engagement.&nbsp;</p>
+
+
+
+<p>This is not simply about politics. It is about the information environment in which students are being formed. Social media trains them to treat every conversation as a performance, every disagreement as a threat to belonging, every moment of uncertainty as weakness. The incentives are all wrong: hot takes travel faster than careful argument, and moral labeling replaces persuasion.&nbsp;</p>
+
+
+
+<p>That is not sustainable. A democracy cannot function if citizens cannot tolerate contestation.&nbsp;</p>
+
+
+
+<p>Constructive dialogue is not merely a classroom technique. It is a school of&nbsp;character. It requires courage—the willingness to speak honestly under social pressure. It requires humility—the ability to admit uncertainty, to say &#8220;I don&#8217;t know,&#8221; or &#8220;I was wrong.&#8221; It requires charity—the discipline of interpreting an opponent&#8217;s argument in its strongest form rather than its weakest. And it requires self-command—the ability to remain steady when emotions rise.&nbsp;</p>
+
+
+
+<p>These are not soft virtues; they are the virtues that free societies depend on.&nbsp;</p>
+
+
+
+<p>Tocqueville understood this early. American democracy, he&nbsp;observed, rested not only on laws or institutions, but on the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.gutenberg.org/files/815/815-h/815-h.htm">habits and mores</a>&nbsp;of the people—the quiet forms of restraint and civic practice that make freedom sustainable.&nbsp;</p>
+
+
+
+<p>Schools are where those habits are formed.&nbsp;</p>
+
+
+
+<p>One of the most important lessons students can learn today is also one of the simplest: the ability to say, plainly, &#8220;I don&#8217;t know.&#8221; In an age saturated with instant answers, recognizing the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.realcleareducation.com/2026/01/20/the_power_of_saying_i_dont_know_1159836.html">limits of one&#8217;s knowledge is not weakness</a>. It is the beginning of&nbsp;inquiry. Our culture increasingly trains students to perform certainty rather than practice reflection. Schools should do the opposite.&nbsp;</p>
+
+
+
+<p>A crucial part of BWL&#8217;s model is institutional neutrality. Teachers are facilitators, not advocates. The school does not exist to deliver official conclusions on contested political questions, but to equip students to reason through those questions themselves. Neutrality is not&nbsp;indifference. It is discipline. It creates the conditions for genuine inquiry rather than conformity.&nbsp;</p>
+
+
+
+<p>This is&nbsp;not a boutique innovation. It is a recovery of something older and essential: the idea that schools form citizens by forming habits. We teach math&nbsp;through repetition, writing through revision, music&nbsp;through practice. We&nbsp;must&nbsp;teach democratic disagreement the same way&nbsp;&#8211;&nbsp;through structured encounters with complexity, guided by adults who model restraint and fairness.&nbsp;</p>
+
+
+
+<p>This is not work reserved for one kind of community or student. Every school that claims to prepare young people for adult life in a pluralistic society has&nbsp;reason&nbsp;to take this seriously. The alternative is leaving students to&nbsp;learn&nbsp;conflict from the internet.&nbsp;</p>
+
+
+
+<p>Schools cannot solve polarization alone. But they can do something essential: form young people with&nbsp;the virtues&nbsp;that make democratic life possible.&nbsp;</p>
+
+
+
+<p>The most dangerous outcome is not that students will disagree.&nbsp;It is that they will become incapable of disagreement without fear.&nbsp;</p>
+
+
+
+<p>Freedom of speech is not a slogan. It is a civic discipline. And&nbsp;BWL&nbsp;is showing where that discipline must begin.&nbsp;</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/a-civic-crisis-schools-can-fix/">A Civic Crisis Schools Can Fix</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Housing Doesn’t Need Higher Prices—It Needs More Homes</title>
+		<link>https://www.aei.org/housing-center/housing-doesnt-need-higher-prices-it-needs-more-homes/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 20:51:41 +0000</pubDate>
+				<category><![CDATA[Housing]]></category>
+		<category><![CDATA[Affordable housing]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[homeowners]]></category>
+		<category><![CDATA[household income]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755405</guid>
+
+					<description><![CDATA[<p>As housing affordability dominates national headlines, policymakers from the White House to Capitol Hill are scrambling for answers—but focusing on rising prices alone obscures the deeper problem: an entrenched shortage of homes. </p>
+<p>The post <a href="https://www.aei.org/housing-center/housing-doesnt-need-higher-prices-it-needs-more-homes/">Housing Doesn’t Need Higher Prices—It Needs More Homes</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>As housing affordability dominates national headlines, policymakers from the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.whitehouse.gov/presidential-actions/2026/01/stopping-wall-street-from-competing-with-main-street-homebuyers/">White House</a>&nbsp;to&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.congress.gov/bill/119th-congress/senate-bill/2651/text">Capitol Hill</a>&nbsp;are scrambling for answers—but focusing on rising prices alone obscures the deeper problem: an entrenched shortage of homes.&nbsp;</p>
+
+
+
+<p>Home prices rising&nbsp;isn’t&nbsp;automatically a sign of a healthy housing market. When appreciation runs far ahead of incomes for years, it stops looking like wealth creation and starts acting like a quiet tax on everyone who&nbsp;didn’t&nbsp;buy early.&nbsp;</p>
+
+
+
+<p>The current administration’s economic assumptions—including expectations of&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.forbes.com/sites/chrisgunster/2026/01/23/trump-wants-lower-mortgage-rates-heres-what-would-actually-work/">lower&nbsp;mortgage rates</a>&nbsp;and&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.cbsnews.com/news/trump-officials-predict-2026-economic-boom/">strong economic growth</a>—point toward a housing market outcome that deserves closer scrutiny. Under those conditions, and holding supply constraints constant, our&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/articles/lower-rates-combined-with-strong-economic-growth-needs-housing-supply-growth-to-avoid-higher-home-prices/">estimates</a>&nbsp;suggest that home prices could rise by&nbsp;roughly 10 percent&nbsp;per year. That&nbsp;isn’t&nbsp;automatically a sign of success.&nbsp;</p>
+
+
+
+<p>When it comes to home price appreciation,&nbsp;it’s&nbsp;best to avoid extremes—neither too much nor too little. Appreciation that runs far ahead of&nbsp;incomes&nbsp;for prolonged periods creates its own set of problems.&nbsp;</p>
+
+
+
+<p>As a country, we have recent experience with what sustained appreciation looks like. Since 2012, national home prices&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/home-price-appreciation-index-and-months-remaining-inventory/">have risen</a>&nbsp;by&nbsp;roughly 144 percent, while household incomes have increased by only 64 percent. Unsurprisingly, housing affordability has become one of the most salient political issues in the country. From that perspective alone,&nbsp;it’s&nbsp;worth questioning whether rapid home-price appreciation should be treated as a&nbsp;policy&nbsp;success.&nbsp;</p>
+
+
+
+<p>Yet that kind of price growth is often framed as an unambiguous positive—a wealth effect that boosts household balance sheets and consumer confidence. But home price appreciation&nbsp;isn’t&nbsp;free&nbsp;wealth. When prices rise much faster than incomes for extended periods, the downsides accumulate and affect far more people than is commonly acknowledged, including many homeowners themselves.&nbsp;</p>
+
+
+
+<p>Start with the macro picture. Rapid home-price appreciation increases boom-and-bust risk and diverts capital toward existing housing rather than productive investment. It reduces labor mobility, making it harder for workers to move to opportunity and for employers—especially in high-cost regions—to hire and&nbsp;retain&nbsp;staff. Over time, it widens inequality, particularly across generations, as younger households face higher barriers to entry while older cohorts benefit&nbsp;largely from&nbsp;timing.&nbsp;</p>
+
+
+
+<p>Always-renters are the most obvious losers. House prices and rents are linked&nbsp;in the long run, but prices typically adjust faster. In supply-constrained markets, rent growth often follows price growth with a lag, leaving renters facing higher housing costs without&nbsp;benefiting&nbsp;from the appreciating asset.&nbsp;</p>
+
+
+
+<p>Renters who hope to buy eventually are in a similar position. Rapid appreciation raises purchase prices and&nbsp;requires&nbsp;down payments, forcing households to save longer or take on more&nbsp;leverage. In practice, this delays homeownership or shuts the door to ownership altogether.&nbsp;</p>
+
+
+
+<p>The story for current homeowners is more complicated—and often misunderstood.&nbsp;</p>
+
+
+
+<p>Rapid home-price appreciation also undermines many homeowners—especially those policymakers often assume are benefiting. For households hoping to move up, higher prices raise both the value of their current home and the cost of the next one, often widening the financing gap rather than closing it. For young families, the shortage of&nbsp;starter&nbsp;and move-up homes makes it harder to find the extra bedroom that would support having another child, turning housing into a constraint on family formation. And for older homeowners, rising values&nbsp;frequently&nbsp;translate into higher property taxes, insurance, and maintenance costs, while taxes, transaction costs, and limited downsizing options make it difficult to tap accumulated equity. The result is a growing class of homeowners who look wealthier on paper but are increasingly cash-constrained in practice.&nbsp;</p>
+
+
+
+<p>Only one group consistently&nbsp;benefits&nbsp;from rapid home-price appreciation: homeowners who plan to sell and downsize, particularly if they can move to a lower-cost area. But even here, the upside is&nbsp;frequently&nbsp;eroded by taxes and the scarcity of suitable housing options.&nbsp;</p>
+
+
+
+<p>This is why the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.weforum.org/stories/2026/01/davos-2026-special-address-donald-trump-president-united-states-america/">idea</a>&nbsp;that&nbsp;building&nbsp;more homes would “crater the market”&nbsp;gets&nbsp;housing policy backwards. Stable prices supported by adequate supply are a sign of a healthy housing market, not a failing one. When supply is allowed to respond to demand, price growth moderates, affordability improves, and households gain flexibility rather than paper wealth alone.&nbsp;</p>
+
+
+
+<p>More homes mean more options—for renters trying to buy, for families needing room to grow, and for older homeowners looking to downsize without punitive tax consequences. They also mean less pressure to rely on ever-rising prices to generate wealth, and fewer incentives for speculative behavior that thrives in artificially scarce markets.&nbsp;</p>
+
+
+
+<p>The Goldilocks principle applies here: The goal&nbsp;shouldn’t&nbsp;be falling prices, but neither should it be prices that race far ahead of&nbsp;incomes&nbsp;year after year. Housing markets&nbsp;don’t&nbsp;need ever-higher prices—they need enough homes.&nbsp;</p>
+<p>The post <a href="https://www.aei.org/housing-center/housing-doesnt-need-higher-prices-it-needs-more-homes/">Housing Doesn’t Need Higher Prices—It Needs More Homes</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Justice Department Could Break the Federal Contracting System. That Might Be a Good Thing.</title>
+		<link>https://www.aei.org/foreign-and-defense-policy/the-justice-department-could-break-the-federal-contracting-system-that-might-be-a-good-thing/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 18:28:18 +0000</pubDate>
+				<category><![CDATA[Foreign and Defense Policy]]></category>
+		<category><![CDATA[Department of Justice (DOJ)]]></category>
+		<category><![CDATA[False Claims Act]]></category>
+		<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Fraud]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755360</guid>
+
+					<description><![CDATA[<p>Federal contractors face a new threat to their business models as the Trump Administration’s Department of Justice rediscovered that the False Claims Act can be weaponized to enforce policies the executive branch wishes to impose upon firms that contract with the government. </p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/the-justice-department-could-break-the-federal-contracting-system-that-might-be-a-good-thing/">The Justice Department Could Break the Federal Contracting System. That Might Be a Good Thing.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Federal contractors face a new threat to their business models as the Trump Administration’s Department of Justice (DOJ) appears to have <a href="https://www.bakerdonelson.com/department-of-justice-reports-record-breaking-68-billion-year-in-false-claims-act-recoveries" target="_blank" rel="noreferrer noopener">rediscovered</a> what past Administrations have long known. The False Claims Act (FCA) can be weaponized and used to enforce whatever policies the executive branch wishes to impose upon those firms who choose to contract with the government. How this power is ultimately used and how companies and Congress react will determine whether this is a good idea or not.</p>
+
+
+
+<p>The&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.justice.gov/d9/civil/legacy/2011/04/22/C-FRAUDS_FCA_Primer.pdf">FCA</a>&nbsp;was enacted in 1863 during the height of the Civil War. The so-called Lincoln Law was designed to ferret out contract fraud that was rampant at the time. Examples of shoddy goods (originally, low-quality materials that caused uniforms to melt in the rain), rancid meat, and gunpowder filled with sawdust compelled the government to create more effective tools to counter massive fraud. In addition to increasing the prosecutorial power of the government, the new law empowered individual citizens under the 13th century concept of&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.fletc.gov/sites/default/files/imported_files/training/programs/legal-division/downloads-articles-and-faqs/research-by-subject/civil-actions/quitam.pdf">qui tam</a>&nbsp;to report on wrongdoing, sue on behalf of the government and obtain a portion of the damages. The FCA became a successful tool in the battle against genuine contract fraud—be it financial, product substitution, bid rigging, bribery, or kickbacks.</p>
+
+
+
+<p>The problem is that in the modern era the definition of contract fraud began to widen as&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/foreign-and-defense-policy/the-decline-in-defense-purchasing-power-and-the-transformation-of-the-pentagon-into-a-social-program/">socioeconomic experimentation</a>&nbsp;in contracting gained prominence. Government contractors have incrementally been forced to comply with a glut of government unique socio-economic, oversight, labor, and environmental policies contained in federal contracts. Each of these mandates once embedded in a contract clause became the basis for future fraud claims under the FCA. The threat of prosecution for any non-compliance of these clauses marked an escalation of using false claims beyond what many would define as “real” contract fraud by applying it to enforce political and social aspirations and goals.&nbsp;</p>
+
+
+
+<p>The Act eventually became a self-licking ice cream cone designed to perpetuate progressive values as firms acted to preclude lawsuits. The left hoped to infect the commercial non-governmental facing portions of companies whose subsidiaries had federal contracts and force these firms to apply non-market social mandates to their entire organization. What they didn’t count on is that businesses are free agents. As non-commercial mandates grew and the&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.congress.gov/bill/99th-congress/senate-bill/1562">1986 amendments</a>&nbsp;to FCA made it even easier to use it as a tool of progressive politics, commercial companies&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.aei.org/foreign-and-defense-policy/the-federal-acquisition-streamlining-act-turns-30-a-needed-history-lesson/">abandoned</a>&nbsp;the federal market in droves.&nbsp;</p>
+
+
+
+<p>Not surprisingly, without these firms the government fell behind the private sector in keeping up with innovation. The history of government acquisition reform since the early 1990s has been an attempt to bring back those commercial companies who had left the market and entice new emerging technology companies to work with the government. In&nbsp;<a rel="noreferrer noopener" target="_blank" href="https://www.congress.gov/bill/103rd-congress/senate-bill/1587/text">1994</a>, Congress specifically exempted commercial companies from most government unique socioeconomic mandates, partially shielding them from the FCA. This worked for about 15 years until what once were a limited handful of government unique commercial contracting clauses exploded under the Obama and Biden Administrations.&nbsp;</p>
+
+
+
+<p>The Trump Administration has now seemingly figured out the secret of exploiting the FCA and is just beginning to use it to apply to contractors as a way to enforce its own vision of DEI, tariff, environmental, and labor policies. Commercial contractors such as Google and Verizon are now reported to being <a href="https://www.wsj.com/politics/policy/trump-doj-dei-fraud-investigations-93213d52?gaa_at=eafs&amp;gaa_n=AWEtsqcUk5kAG4aQFngsuUU_5eW4e7ilwvTjmLao6cUFmyZYomVYXWwQS5Y8ojzwpKw%3D&amp;gaa_ts=6995cf82&amp;gaa_sig=7cuJr4HNlM5YbQQ0G7PKHVN_HuzSS_bgBI2wAsBuJzEmqMIaYIig_dtkmNvxFgEAJB7XELeXe4EScrcltSXCLQ%3D%3D" target="_blank" rel="noreferrer noopener">investigated</a> by DOJ under the FCA to change their diversity hiring practices. No doubt many more such uses are on the way.</p>
+
+
+
+<p>A demonstration of government overreach using a legal tool that the left has exploited for decades just might be what is needed to establish the case to reform the FCA and place restrictions on this particular arbitrary use of government power. The danger is this Administration will grow too fond of the FCA and dream up new contract clauses that conform to its ideology and policy goals.&nbsp;</p>
+
+
+
+<p>This could break the system and undermine what limited progress that has been made in widening the defense industrial base in the past decade. The risks of government contracting may become too high for those firms with only a limited amount of government sales and facing conflicting mandates depending on what Administration a contract was awarded. As was the case in the 1970–80s, these firms can exit the federal market to detriment of our national security.</p>
+
+
+
+<p>A better alternative exists. Congress can act and limit the applicability of the FCA to only instances of unquestionable and genuine contract fraud. Another approach would be to eliminate and prohibit all instances of non-commercial socioeconomic clauses in federal contacts so as not to trigger the FCA in the future. If current DOJ actions lead to such reforms, then the short-term disruption to the system would be well worth it.</p>
+<p>The post <a href="https://www.aei.org/foreign-and-defense-policy/the-justice-department-could-break-the-federal-contracting-system-that-might-be-a-good-thing/">The Justice Department Could Break the Federal Contracting System. That Might Be a Good Thing.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Parents over Platforms: Why App-Level Responsibility Is the Smarter Path for Kids’ Online Safety</title>
+		<link>https://www.aei.org/technology-and-innovation/parents-over-platforms-why-app-level-responsibility-is-the-smarter-path-for-kids-online-safety/</link>
+		
+		<dc:creator><![CDATA[Julia Torres]]></dc:creator>
+		<pubDate>Wed, 18 Feb 2026 10:30:00 +0000</pubDate>
+				<category><![CDATA[Technology & Innovation]]></category>
+		<category><![CDATA[Technology, Science, and Energy]]></category>
+		<category><![CDATA[Social media]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[Technology and innovation]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755263</guid>
+
+					<description><![CDATA[<p>To help protect children online, lawmakers should resist the lure of centralized symbolism and instead place responsibility where it can make a difference—at the application level, where design decisions shape behavior and outcomes every day.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/parents-over-platforms-why-app-level-responsibility-is-the-smarter-path-for-kids-online-safety/">Parents over Platforms: Why App-Level Responsibility Is the Smarter Path for Kids’ Online Safety</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>I’ve written about this <a href="https://www.aei.org/technology-and-innovation/kids-online-safety-requires-precision-not-centralization/" target="_blank" rel="noreferrer noopener">before</a>, but it bears repeating: Should responsibility for kids’ online safety lie with operating systems and app stores, or with the applications themselves? At first glance, the operating system (OS) approach seems appealing. Verify a child’s age at the device&#8217;s operating level, block downloads deemed inappropriate by regulation, and call it a day. It sounds clean, efficient, and centralized. But it is also insufficient.</p>
+
+
+
+<p>The core problem is that operating systems are distribution channels, while applications are experiences. When it comes to children’s online safety, the risk lies in the experience, not in access. An app store can only gate the initial access. It does not control design. Once a child downloads an application, the operating system no longer shapes what happens next. It does not determine whether an app uses algorithmically amplified feeds. It does not control whether push notifications are engineered to maximize engagement. It does not design in-app messaging features or decide how user data is collected and monetized. Developers make those decisions.</p>
+
+
+
+<p>Children do not experience the operating system; they use individual apps. Consider how kids use devices today. As I have noted <a href="https://www.aei.org/technology-and-innovation/kids-online-safety-requires-precision-not-centralization/" target="_blank" rel="noreferrer noopener">previously</a>, on the same phone, a teenager might have a messaging app, a short-form video platform with algorithmic recommendations, a fitness tracker, and a restaurant-ordering app. All four apps are delivered initially through the same app store, yet their risk profiles differ dramatically.</p>
+
+
+
+<p>A video platform optimized for engagement, driven by recommendation engines and social amplification, raises entirely different concerns than an app used to order takeout. Treating these services as interchangeable because they share a distribution channel overlooks the fundamental distinction between device-level access and application-level design.</p>
+
+
+
+<p>Broad mandates imposed at the operating system level risk creating a false sense of security among parents while imposing compliance burdens on low-risk applications. That outcome would neither enhance safety nor promote innovation. Plus, the modern digital environment is inherently multi-device. Even if an OS-level age gate worked perfectly on a smartphone, it would not follow a child across devices. The same application may be available on a gaming console, a laptop, a tablet, or a smart TV.</p>
+
+
+
+<p>More importantly, a one-time verification at download does not account for how applications evolve. Children’s online experiences are dynamic, and apps are not static products; they update frequently as features are introduced, tested, modified, and occasionally retired. Algorithms change, and monetization strategies often shift as the app&#8217;s use evolves.</p>
+
+
+
+<p>If Congress wants durable protections, it must recognize that safety obligations should track with the product’s ongoing design choices, not with a one-time transaction at the distribution layer. Application-level responsibility aligns capability with accountability because the developer controls the app&#8217;s content moderation systems, data collection practices, recommendation algorithms, and engagement mechanisms. They are uniquely positioned to implement age-appropriate safeguards because they build and continuously refine features that may pose risks.</p>
+
+
+
+<p>When responsibility sits with developers, incentives align. If a company introduces a feature that increases risk for minors, it must address that risk directly. If a service poses minimal risk, such as a restaurant app or a basic productivity tool, it is not swept into compliance regimes designed for algorithmically driven social platforms.</p>
+
+
+
+<p>Application-level safeguards also empower parents more effectively. Such an <a href="https://www.aei.org/technology-and-innovation/childrens-online-safety-should-rely-on-content-providers-not-device-manufacturers/" target="_blank" rel="noreferrer noopener">approach</a> places responsibility where it belongs: with those who design the user experience. When protections are built into specific services, families can make informed decisions about individual products. Parents can evaluate what an app does, what behaviors it encourages, what data it collects, and what risks it poses. That level of transparency is impossible when everything is filtered through a single operating system checkpoint.</p>
+
+
+
+<p>None of this argues against congressional action. On the contrary, Congress should act to protect children online. If Congress gets this right, it can align responsibility with capability, preserve innovation in low-risk applications, ensure high-risk features are appropriately managed, and create a framework flexible enough to adapt to evolving technology.</p>
+
+
+
+<p>To help protect children online, lawmakers should resist the lure of centralized symbolism and instead place responsibility where it can make a difference—at the application level, where design decisions shape behavior and outcomes every day.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/parents-over-platforms-why-app-level-responsibility-is-the-smarter-path-for-kids-online-safety/">Parents over Platforms: Why App-Level Responsibility Is the Smarter Path for Kids’ Online Safety</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Age of AI Depends Less on Voters Than on Volts</title>
+		<link>https://www.aei.org/economics/the-age-of-ai-depends-less-on-voters-than-on-volts/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Tue, 17 Feb 2026 21:41:51 +0000</pubDate>
+				<category><![CDATA[Economics]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[data center]]></category>
+		<category><![CDATA[electricity]]></category>
+		<category><![CDATA[Goldman Sachs]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755336</guid>
+
+					<description><![CDATA[<p>The biggest thing that could slow AI isn’t politics or local protests, it’s whether there’s enough electricity available to power those warehouse-sized supercomputers. Now that’s something that should be front of mind for America’s political class.</p>
+<p>The post <a href="https://www.aei.org/economics/the-age-of-ai-depends-less-on-voters-than-on-volts/">The Age of AI Depends Less on Voters Than on Volts</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>No AI data centers, no AI revolution.</p>
+
+
+
+<p>Or to be less dramatic, slowing the buildout of these sprawling server farms will slow technical advances and the economywide spread of generative artificial intelligence, which is shaping up to be a powerful new general-purpose technology. As such, a new survey from Politico <a href="https://www.politico.com/news/2026/02/17/data-centers-public-knowledge-5-charts-00769974">suggests </a>Silicon Valley shouldn’t take voter tolerance for granted.</p>
+
+
+
+<p>Let’s start with the good news for AI companies: Just 28 percent of 2,000 surveyed would oppose the building of a new data center in their area. That, versus 37 percent who would support construction and 28 percent who would neither support nor oppose.&nbsp;</p>
+
+
+
+<p>Then things get complicated. Public opinion turns out to be extremely sensitive to electricity costs. Among those initially supportive, nearly two-thirds would still back a local data center if it raised their monthly power bill by just $5. But that backing erodes quickly as the price tag climbs. At a $10 increase, support slips to about half. By $25, opponents outnumber supporters. And if bills rose by $50 a month, nearly six in 10 would oppose the project, while only about one-third would still favor it.</p>
+
+
+
+<p>Then there’s the Trump factor: Tie expansion to the US president and backing among Democrats (or at least Kamala Harris voters) and current undecideds falls roughly 20 points. Oh, and of course, the NIMBY factor: Only 37 percent support a facility within three miles of home.</p>
+
+
+
+<p>These survey results are likely of little surprise to Big Tech, given events happening on the ground:</p>
+
+
+
+<ul class="wp-block-list">
+<li>In Prince William County, Va.—part of the region’s major data-center hub—residents <a href="https://www.politico.com/news/2026/02/13/virginia-prince-william-county-data-center-boom-00779219?fbclid=IwY2xjawQBbcJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe1UaYCdq8jPhRtKtk8pQsTbSgPtWuHdlGdEU6ONgQOKQW5UNa5BPINbyeFkA_aem_GCgyXdy-27iuAFoHVW3v5w">have organized</a> against rapid expansion, citing round-the-clock low-frequency noise from industrial cooling systems, pollution risk from the heavy use of diesel backup generators, and the need for new transmission lines and substations near neighborhoods. </li>
+
+
+
+<li>In Howell Township, Mich., a proposed roughly $1 billion data-center project tied to Meta<a href="https://www.wsj.com/politics/policy/these-rural-americans-are-trying-to-hold-back-the-tide-of-ai-66945306?gaa_at=eafs&amp;gaa_n=AWEtsqcftXNNGMJqGdRDep-rgYzK9zz9Q0lvNUcsZpXzsTQ6zLv56l9uWo6OQKpXMa0%3D&amp;gaa_ts=699495c2&amp;gaa_sig=50r0yXdRRApI522ZdNFSGVyWtZYM4yZwZp29whu27w430k_GPiTsvZxpAXIIXXBxn-CuBgAqHpxuOFxhxRDUgw%3D%3D"> was withdrawn </a>after residents mobilized against it and the township imposed a temporary moratorium on new data-center development.</li>
+
+
+
+<li>In Bessemer, Ala., residents objected to forest clearing, heavy water use, and disputed job projections tied to a $14.5 billion data-center campus described as “the size of 18 Walmarts,” <a href="https://www.nytimes.com/2026/01/25/us/politics/trump-ai.html">notes </a>The New York Times.</li>
+</ul>
+
+
+
+<p>So, does this early polling and nascent public opposition signal big trouble ahead for the AI infrastructure buildout? </p>
+
+
+
+<p>Probably not, at least according to Goldman Sachs. The bank says in a recent analysis that local pushback usually slows projects or pushes them to other locations, rather than stopping them altogether. Even moratoriums “have not changed data center development patterns,” and outright bans would likely mean relocation “rather than cancellations.” Also: Clearer regulation could reduce uncertainty and enable clearer and faster approvals.</p>
+
+
+
+<p>True, lawmakers are trying to shift more electricity costs onto data centers, but Goldman expects higher power prices to have “limited impact on future data center power demand growth.” There’s just so much need.</p>
+
+
+
+<p>In the end, the bank concludes, the biggest thing that could slow AI isn’t politics or local protests, it’s whether there’s enough electricity available to power those warehouse-sized supercomputers. Now that’s something that should be <a href="https://www.aei.org/economics/americas-clean-energy-future-needs-yes-for-an-answer/">front of mind</a> for America’s political class.</p>
+<p>The post <a href="https://www.aei.org/economics/the-age-of-ai-depends-less-on-voters-than-on-volts/">The Age of AI Depends Less on Voters Than on Volts</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What ​​Bari Weiss Can Learn from PBS. Really​.</title>
+		<link>https://www.aei.org/opportunity-social-mobility/what-bari-weiss-can-learn-from-pbs-really/</link>
+		
+		<dc:creator><![CDATA[Ellison Winger]]></dc:creator>
+		<pubDate>Tue, 17 Feb 2026 20:24:18 +0000</pubDate>
+				<category><![CDATA[Opportunity and Social Mobility]]></category>
+		<category><![CDATA[CBS News]]></category>
+		<category><![CDATA[debate]]></category>
+		<category><![CDATA[Interview]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755331</guid>
+
+					<description><![CDATA[<p>America does not need another newscast with a photogenic anchor and a mix of the same stories as every other news program. A newscast that combines drama and substance might actually get viewers to tune in. </p>
+<p>The post <a href="https://www.aei.org/opportunity-social-mobility/what-bari-weiss-can-learn-from-pbs-really/">What ​​Bari Weiss Can Learn from PBS. Really​.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Bari Weiss has promised “to make CBS News fit for purpose in the 21st century.”&nbsp; The conventional expectation has been that she will push the CBS Evening News, the network’s flagship program, toward the Right, a la Fox News.&nbsp;​​Indeed,&nbsp;she’s&nbsp;said to have tried to lure Bret Baire of Fox to CBS. &nbsp;</p>
+
+
+
+<p>Here’s&nbsp;​​a radical suggestion for her, even as CBS News producers take buyouts&nbsp;en&nbsp;masses:​​&nbsp;Take a lesson from PBS.&nbsp;​​Admittedly,&nbsp;it’s&nbsp;not an obvious suggestion.​&nbsp;​​​The PBS News Hour struggles to reach a million viewers, most of whom are over 65.&nbsp;Its&nbsp;story&nbsp;selection&nbsp;has a consistent anti-Trump spin. Its stories&nbsp;go​​&nbsp;on&nbsp;three times longer than they&nbsp;should.&nbsp;&nbsp;</p>
+
+
+
+<p>But the core idea, inherited from Robert MacNeill and Jim Lehrer decades ago, could distinguish CBS from its competitors and inject excitement—by combining the news with fast-paced ​​interviews that will themselves make news.   </p>
+
+
+
+<p>America does not need another newscast with a photogenic anchor (Tony Dokopuil) and a mix of the same stories as every other news program (eg. Nancy Guthrie, ice storms, Kristi Noem fires her pilot). It’s not working so far. According to ​<em><a href="https://www.adweek.com/tvnewser/week-of-jan-26-2026-evening-news-ratings/" target="_blank" rel="noreferrer noopener">AdWeek</a></em>​, “<em>CBS Evening News</em> drew <strong>4.538 million total viewers</strong> and <strong>623,000 viewers in the key Adults 25-54 demo</strong> for the week of January 26. This was down by seven percent in total viewers and down eight percent in the demo compared to the week prior.”   </p>
+
+
+
+<p>In other words,&nbsp;it’s&nbsp;time for a radical intervention—not aspirin but CRISPR-based innovation. Instead, Weiss—as&nbsp;she’s&nbsp;done so well at her Free Press site—should inject the informative drama of the old 60 Minutes “point-counterpoint” mini-debates&nbsp;​​into every newscast.&nbsp;Inflation news?&nbsp;Have Scott Bessent tangle with Paul Krugman​.​​​&nbsp;Tariffs?&nbsp;Cue Howard&nbsp;Luttnick&nbsp;and Phil Gramm. Repeal of&nbsp;​the&nbsp;​carbon dioxide endangerment&nbsp;​finding​​​? Cue Bill McKibben vs. Lee Zeldin.&nbsp;Hype&nbsp;the confrontations in advance: Steven Miller squaring off against the owner of a chicken processing plant losing its illegal immigrant workforce.&nbsp;​​In other words, combine journalism and that​​&nbsp;Trump favorite, Ultimate Fighting. Short but not sweet. &nbsp;</p>
+
+
+
+<p>Weiss has already proven&nbsp;​​she is&nbsp;accomplished&nbsp;at interview “gets”—as per her extended interview with Erika Kirk and the Tony Dokoupil interview with JD Vance.&nbsp;​​But these need not be stand​​alone programs. Better to incorporate their sound bite fireworks into the nightly news—both to make news (as do the Sunday morning interview shows) and to distinguish the former Walter Cronkite approach from its contemporary competitors.&nbsp;</p>
+
+
+
+<p>Three mini-debates a night would add content—and&nbsp;pizazz​.​​​&nbsp;But that should not&nbsp;preclude&nbsp;original reporting.&nbsp;Every newscast could include a Report from America—not a cute shaggy dog story but&nbsp;​​a story about a local controversy (all news must have drama)&nbsp;​​that carries broader meaning.&nbsp;​​A local zoning dispute​​&nbsp;reveals how hard it&nbsp;​​is to build new housing. &nbsp;A “harm reduction” drug control strategy paired with neighbors who&nbsp;don’t&nbsp;want addicts on their street corners. Or culture pieces: the revival of Cajun culture in Louisiana, the decline of Broadway attendance.&nbsp;Or ideas this older American&nbsp;doesn’t&nbsp;know anything&nbsp;about.​​&nbsp;&nbsp;</p>
+
+
+
+<p>The reason CBS trails its competitors at 6:30 pm&nbsp;isn’t&nbsp;just&nbsp;what’s&nbsp;been it​​s liberal bias but the fact that there&nbsp;hasn’t&nbsp;been a dime’s worth of difference among the​​&nbsp;three legacy networks’ approach.&nbsp; &nbsp;</p>
+
+
+
+<p>A newscast that combines drama and substance might actually get viewers to tune in.&nbsp;</p>
+<p>The post <a href="https://www.aei.org/opportunity-social-mobility/what-bari-weiss-can-learn-from-pbs-really/">What ​​Bari Weiss Can Learn from PBS. Really​.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Suicides, Settlements, and Unresolved Chatbot Issues: A Long Litigation Road Lies Ahead</title>
+		<link>https://www.aei.org/technology-and-innovation/suicides-settlements-and-unresolved-chatbot-issues-a-long-litigation-road-lies-ahead/</link>
+		
+		<dc:creator><![CDATA[Julia Torres]]></dc:creator>
+		<pubDate>Tue, 17 Feb 2026 10:30:00 +0000</pubDate>
+				<category><![CDATA[Technology & Innovation]]></category>
+		<category><![CDATA[Technology, Science, and Energy]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[Technology and innovation]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755112</guid>
+
+					<description><![CDATA[<p>Prospective settlements in several lawsuits blaming conversational chatbots for causing minors to kill themselves aren’t likely to stop related claims from proceeding, with multiple forces driving litigation and settlements failing to resolve key issues.</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/suicides-settlements-and-unresolved-chatbot-issues-a-long-litigation-road-lies-ahead/">Suicides, Settlements, and Unresolved Chatbot Issues: A Long Litigation Road Lies Ahead</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>News <a href="https://www.latimes.com/business/story/2026-01-07/google-character-ai-to-settle-lawsuits-alleging-chatbots-harmed-teens" target="_blank" rel="noreferrer noopener">broke</a> last month that <a href="https://www.nytimes.com/2026/01/07/technology/google-characterai-teenager-lawsuit.html" target="_blank" rel="noreferrer noopener">settlements</a> may soon arrive in several high-profile lawsuits—<a href="https://storage.courtlistener.com/recap/gov.uscourts.flmd.433581/gov.uscourts.flmd.433581.242.0_2.pdf" target="_blank" rel="noreferrer noopener"><em>Garcia v. Character Technologies</em></a> and <a href="https://storage.courtlistener.com/recap/gov.uscourts.cod.247438/gov.uscourts.cod.247438.31.0.pdf" target="_blank" rel="noreferrer noopener"><em>Montoya v. Character Technologies</em></a>, included—that blame companies and individuals behind or allegedly associated with <a href="https://policies.character.ai/about" target="_blank" rel="noreferrer noopener">Character.AI</a> chatbots for causing minors to kill themselves. Defendants likely settling are Character Technologies (the company operating Character.AI) and two Character.AI co-founders (<a href="https://www.noamshazeer.com/" target="_blank" rel="noreferrer noopener">Noam Shazeer</a> and Daniel De Freitas Adiwarsana), plus Google and its parent company, Alphabet.</p>
+
+
+
+<p>Character.AI and the <a href="https://socialmediavictims.org/about-our-firm/" target="_blank" rel="noreferrer noopener">Social Media Victims Law Center</a> (SMVLC), a law firm representing the plaintiffs, issued a <a href="https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit" target="_blank" rel="noreferrer noopener">joint statement</a> asserting that “Character.AI has taken innovative and decisive steps with regard to AI safety and teens, and will continue to champion these efforts and push others across the industry to adopt similar safety standards.”</p>
+
+
+
+<p>That’s good news, but don’t expect lawsuits blaming conversational and companionship chatbots for allegedly provoking the tragic actions of—and causing harm to or the deaths of—both minors and adults to suddenly disappear. SMVLC filed <a href="https://www.wsj.com/tech/ai/seven-lawsuits-allege-openai-encouraged-suicide-and-harmful-delusions-25def1a3">seven lawsuits</a> in California in November <a href="https://socialmediavictims.org/press-releases/smvlc-tech-justice-law-project-lawsuits-accuse-chatgpt-of-emotional-manipulation-supercharging-ai-delusions-and-acting-as-a-suicide-coach/" target="_blank" rel="noreferrer noopener">against</a> OpenAI (the company behind ChatGPT) and its CEO, Sam Altman. Also in the mix are recently filed cases targeting those same defendants filed by the <a href="https://edelson.com/inside-the-firm/artificial-intelligence/" target="_blank" rel="noreferrer noopener">Edelson</a> firm, including <a href="https://fingfx.thomsonreuters.com/gfx/legaldocs/dwvkqjrzyvm/OPENAI%20MURDER%20LAWSUIT%20complaint.pdf" target="_blank" rel="noreferrer noopener"><em>First County Bank v. OpenAI Foundation</em></a> and <a href="https://s3.documentcloud.org/documents/26078538/raine-vs-openai.pdf" target="_blank" rel="noreferrer noopener"><em>Raine v. OpenAI</em></a>.</p>
+
+
+
+<p><a href="https://s3.documentcloud.org/documents/26078538/raine-vs-openai.pdf" target="_blank" rel="noreferrer noopener"><em>Raine</em></a> is brought by the parents of 16-year-old Adam Raine, who killed himself after ChatGPT <a href="https://s3.documentcloud.org/documents/26078538/raine-vs-openai.pdf" target="_blank" rel="noreferrer noopener">allegedly</a> “became Adam’s closest confidant,” validated “his most harmful and self-destructive thoughts,” and “actively worked to displace Adam’s connections with family and loved ones.” OpenAI’s <a href="https://cdn.arstechnica.net/wp-content/uploads/2025/11/Raine-v-OpenAI-Answer-11-25-25.pdf" target="_blank" rel="noreferrer noopener">answer</a> disputes what caused Adam’s death, cites the minor’s preexisting problems, emphasizes the extensive safety measures the company takes, and points out that “ChatGPT’s guardrails caused it to repeatedly refuse to respond to many of Adam Raine’s queries regarding self-harm” and “repeatedly (more than 100 times) directed him to reach out to loved ones, trusted persons, crisis hotlines and other crisis resources in connection with his queries about self-harm.”   </p>
+
+
+
+<p>One reason the cases will keep coming is that numerous law firms are carving out practice areas for <a href="https://levinlaw.com/ai-suicide-lawsuits/" target="_blank" rel="noreferrer noopener">AI suicide lawsuits</a>. As one firm <a href="https://www.levylaw.com/ai-chatbot-suicide-lawsuits/" target="_blank" rel="noreferrer noopener">puts it</a>, “AI chatbots like Character.AI and ChatGPT allegedly engaged in predatory behavior and ignored suicide threats. If you or a loved one was harmed, contact us today.” The <a href="https://techjusticelaw.org/about/" target="_blank" rel="noreferrer noopener">Tech Justice Law Project</a> joined SMVLC in November in filing the <a href="https://techjusticelaw.org/2025/11/06/social-media-victims-law-center-and-tech-justice-law-project-lawsuits-accuse-chatgpt-of-emotional-manipulation-supercharging-ai-delusions-and-acting-as-a-suicide-coach/">seven lawsuits</a> against OpenAI and Altman. Meetali Jain, the Project’s executive director, <a href="https://techjusticelaw.org/2025/11/06/social-media-victims-law-center-and-tech-justice-law-project-lawsuits-accuse-chatgpt-of-emotional-manipulation-supercharging-ai-delusions-and-acting-as-a-suicide-coach/" target="_blank" rel="noreferrer noopener">contends</a> that “ChatGPT is a product designed by people to manipulate and distort reality, mimicking humans to gain trust and keep users engaged at whatever the cost.” <a href="https://www.kentucky.gov/Pages/Activity-stream.aspx?n=AttorneyGeneral&amp;prId=1857" target="_blank" rel="noreferrer noopener">States</a> are also <a href="https://www.ag.ky.gov/Press%20Release%20Attachments/CTI%20Complaint%20Motion%20and%20Order%20Filed.pdf" target="_blank" rel="noreferrer noopener">suing</a> Character Technologies.</p>
+
+
+
+<p>A Federal Trade Commission inquiry <a href="https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions" target="_blank" rel="noreferrer noopener">launched</a> in September “to understand what steps, if any, companies have taken to evaluate the safety of their chatbots when acting as companions” and “to limit the products’ use by and potential negative effects on children” will keep pressure and <a href="https://news.bloomberglaw.com/legal-exchange-insights-and-commentary/the-ftcs-inquiry-into-chatbots-signals-broader-ai-crackdown">press</a> attention on conversational chatbots’ alleged dangers. The American Psychological Association’s <a href="https://www.apaservices.org/advocacy/news/federal-trade-commission-chatbot-companions" target="_blank" rel="noreferrer noopener">backing</a> of the FTC’s inquiry may fuel <a href="https://psychiatryonline.org/doi/10.1176/appi.pn.2025.10.10.5" target="_blank" rel="noreferrer noopener">research</a> into so-called “<a href="https://www.psychologytoday.com/us/blog/urban-survival/202507/the-emerging-problem-of-ai-psychosis" target="_blank" rel="noreferrer noopener">AI psychosis</a>” that, if ever officially recognized as a psychiatric disorder, could bolster plaintiffs’ claims. OpenAI <a href="https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/">notes</a> that “mental health conversations [on ChatGPT] that trigger safety concerns, like psychosis, mania, or suicidal thinking, are extremely rare. Because they are so uncommon, even small differences in how we measure them can have a significant impact on the numbers we report.”</p>
+
+
+
+<p>Given these forces, the odds of more litigation are high. Makers of conversational chatbots should engage in numerous risk-mitigation measures, precisely as <a href="https://openai.com/index/introducing-parental-controls/" target="_blank" rel="noreferrer noopener">some</a> companies <a href="https://blog.character.ai/an-update-on-changes-to-our-under-18-experience/" target="_blank" rel="noreferrer noopener">already have</a>. Attorney <a href="https://www.afslaw.com/attorneys/andrew-mcarthur" target="_blank" rel="noreferrer noopener">Andrew McArthur</a> has <a href="https://www.afslaw.com/perspectives/ai-law-blog/new-lawsuits-targeting-personalized-ai-chatbots-highlight-need-ai-quality" target="_blank" rel="noreferrer noopener">explained</a> that:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Companies utilizing AI chatbots, non-playable characters, virtual assistants, or other similar products or services should carefully review their quality assurance programs, safety standards, data collection practices, and intellectual property policies to consider whether they have adequate safeguards in place to mitigate potential harm and ensure compliance with legal and regulatory obligations.</p>
+</blockquote>
+
+
+
+<p>Cases targeting conversational chatbots raise critical questions that settlements won’t resolve, including some issues also playing out in the social media addiction cases I’ve <a href="https://www.aei.org/technology-and-innovation/federal-multidistrict-litigation-and-social-media-addiction-onward-to-summary-judgment-and-bellwether-trials/" target="_blank" rel="noreferrer noopener">addressed</a>. For example, <a href="https://fingfx.thomsonreuters.com/gfx/legaldocs/dwvkqjrzyvm/OPENAI%20MURDER%20LAWSUIT%20complaint.pdf" target="_blank" rel="noreferrer noopener"><em>First County Bank</em></a> and <a href="https://s3.documentcloud.org/documents/26078538/raine-vs-openai.pdf" target="_blank" rel="noreferrer noopener"><em>Raine</em></a> include causes of action based on <a href="https://www.law.cornell.edu/wex/product_liability" target="_blank" rel="noreferrer noopener">strict product liability</a> theories. There are fundamental <a href="https://www.winston.com/en/blogs-and-podcasts/product-liability-and-mass-torts-digest/is-an-ai-chatbot-a-product" target="_blank" rel="noreferrer noopener">disputes</a> about whether chatbots constitute “products,” at least as that term is used within such theories, or whether they are “services” delivering speech to users. A second, case-by-case question involves causation of human behavior and harm because <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5839093/pdf/fpsyt-09-00061.pdf" target="_blank" rel="noreferrer noopener">many factors</a> influence suicides.</p>
+
+
+
+<p>The ultimate issue may be whether the <a href="https://www.law.cornell.edu/constitution/first_amendment" target="_blank" rel="noreferrer noopener">First Amendment</a> protects speech generated by chatbots. If it does, that would likely thwart most tort causes of action, including negligence claims, unless plaintiffs can satisfy the Supreme Court’s demanding test for unlawful <a href="https://www.law.cornell.edu/wex/brandenburg_test" target="_blank" rel="noreferrer noopener">incitement to violence</a>. I’ve <a href="https://www.aei.org/technology-and-innovation/is-chatbot-output-speech-a-recent-ruling-misses-the-mark/" target="_blank" rel="noreferrer noopener">argued</a> that the First Amendment safeguards chatbot output, as have <a href="https://www.eff.org/files/2025/08/05/145-1_amicus_brief_of_eff_cdt_2025-06-23.pdf" target="_blank" rel="noreferrer noopener">others</a>. However, US District Judge Anne Conway <a href="https://storage.courtlistener.com/recap/gov.uscourts.flmd.433581/gov.uscourts.flmd.433581.115.0.pdf" target="_blank" rel="noreferrer noopener">ruled</a> in <a href="https://www.courtlistener.com/docket/69300919/garcia-v-character-technologies-inc/" target="_blank" rel="noreferrer noopener"><em>Garcia</em></a> that—at the early, motion-to-dismiss stage—she <a href="https://storage.courtlistener.com/recap/gov.uscourts.flmd.433581/gov.uscourts.flmd.433581.115.0.pdf" target="_blank" rel="noreferrer noopener">was</a> “not prepared to hold that Character A.I.’s output is speech.”</p>
+<p>The post <a href="https://www.aei.org/technology-and-innovation/suicides-settlements-and-unresolved-chatbot-issues-a-long-litigation-road-lies-ahead/">Suicides, Settlements, and Unresolved Chatbot Issues: A Long Litigation Road Lies Ahead</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Viewpoint Diversity Isn’t a Slogan. It’s the Point of a University.</title>
+		<link>https://www.aei.org/society-and-culture/viewpoint-diversity-isnt-a-slogan-its-the-point-of-a-university/</link>
+		
+		<dc:creator><![CDATA[Julia Cataneo]]></dc:creator>
+		<pubDate>Fri, 13 Feb 2026 20:52:26 +0000</pubDate>
+				<category><![CDATA[Society and Culture]]></category>
+		<category><![CDATA[Diversity]]></category>
+		<category><![CDATA[Free speech]]></category>
+		<category><![CDATA[University]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755204</guid>
+
+					<description><![CDATA[<p>A central problem in higher education today is not merely that universities are ideologically narrow. It is that many academic leaders have become unwilling even to name that narrowing as a problem.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/viewpoint-diversity-isnt-a-slogan-its-the-point-of-a-university/">Viewpoint Diversity Isn’t a Slogan. It’s the Point of a University.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p><em>The Stanford Daily</em> recently hosted a revealing exchange about &#8220;viewpoint diversity.&#8221;</p>
+
+
+
+<p>Jessica Riskin, a Stanford historian and leader of the campus chapter of the <a href="https://www.aaup.org/">American Association of University Professors</a>, <a href="https://stanforddaily.com/2026/02/04/aaup-viewpoint-diversity/">argued</a> that the term is not what it appears to be—that it has become a political slogan, an instrument of conservative interference in academic life.</p>
+
+
+
+<p>Paul Brest, Stanford&#8217;s former law dean and a leader in the campus chapter of <a href="https://heterodoxacademy.org/">Heterodox Academy</a>, <a href="https://stanforddaily.com/2026/02/10/brest-necessity-viewpoint-diversity/">offered a response</a>: Viewpoint diversity is not a partisan cudgel. It is a basic condition of the university&#8217;s truth-seeking mission.</p>
+
+
+
+<p>But the exchange reveals something deeper. A central problem in higher education today is not merely that universities are ideologically narrow. It is that many academic leaders have become unwilling even to name that narrowing as a problem.</p>
+
+
+
+<p>Brest&#8217;s argument is straightforward and, in the classical liberal tradition, difficult to contest. Universities exist to test ideas, not to protect them. Intellectual progress depends on contestation. John Stuart Mill famously warned that an opinion held without challenge becomes <a href="https://www.utilitarianism.com/ol/two.html">a dead dogma rather than a living truth</a>. A campus that lacks meaningful dissent does not become more enlightened. It becomes more fragile—more prone to groupthink, confirmation bias, and moral certainty masquerading as scholarship.</p>
+
+
+
+<p>Brest also highlights an increasingly important point: Academic freedom is not threatened only by formal censorship. It is threatened by social conformity. The pressures that silence people today rarely arrive as explicit bans. They arrive as reputational risk, professional ostracism, and the tacit understanding—especially among junior faculty and students—that certain views are simply not speakable.</p>
+
+
+
+<p>This is not a right-wing fantasy. The <a href="https://www.thefire.org/">Foundation for Individual Rights and Expression</a>&#8216;s most recent <a href="https://www.thefire.org/research-learn/national-speech-index-january-2026">National Speech Index</a> found that nearly three-quarters of Americans believe free speech is headed in the wrong direction; a striking indicator of how widespread pessimism about open expression has become.</p>
+
+
+
+<p>Riskin&#8217;s response is what makes the exchange so revealing. She does not deny the ideological homogeneity. She does not argue that heterodox perspectives flourish in faculty culture. Instead, she focuses on the genealogy of the phrase itself, linking &#8220;viewpoint diversity&#8221; to conservative activists and broader political efforts to reshape higher education.</p>
+
+
+
+<p>This is a familiar institutional maneuver: When the substance of a critique is difficult to refute, attention shifts to the motives of those raising it.</p>
+
+
+
+<p>Of course political actors invoke viewpoint diversity opportunistically. Political actors invoke every principle opportunistically. The question is whether the principle is true. And the fact that the academy increasingly treats the very language of intellectual pluralism as suspect suggests that something deeper is at stake.</p>
+
+
+
+<p>Riskin also offers a telling straw man: If advocates were serious, she implies, they would demand more Marxists or other underrepresented left-wing perspectives. But the imbalance at elite universities is not that they lack radicals. Many departments are saturated with them. The missing viewpoints are often far more ordinary: Religious traditionalism, civic nationalism, heterodox liberalism, skepticism of identity essentialism, and the kinds of institutional conservatism held by millions of Americans outside the academy.</p>
+
+
+
+<p>The problem is not that campuses lack exotic ideologies. It is that they increasingly lack normal ones.</p>
+
+
+
+<p>This narrowing has real consequences. Riskin suggests that the excesses of DEI arise from administrators and consultants, not from a lack of viewpoint diversity. But that distinction collapses under scrutiny. Why did these bureaucracies become untouchable in the first place? Why did institutions outsource moral authority to ideological compliance offices? The answer is precisely that dissent became morally illegible.</p>
+
+
+
+<p>Viewpoint diversity is not an aesthetic preference. It is how institutions resist capture. When disagreement is treated as harm, administrative power expands. When everyone thinks alike, bureaucracies metastasize. The DEI regime did not arise despite intellectual homogeneity. It arose because of it.</p>
+
+
+
+<p>Higher education has increasingly redefined disagreement as danger and consensus as virtue. Academic freedom has quietly come to mean the freedom to affirm progressive norms, while dissent is managed through social sanction. The result is an academy that speaks endlessly about diversity while fearing diversity of thought.</p>
+
+
+
+<p>Viewpoint diversity is not a conservative slogan or a Republican project. It is not a Trojan horse. It is the premise of liberal education. A university that cannot tolerate internal pluralism becomes something else: a credentialing system wrapped in moral performance, a guild enforcing consensus, a bureaucratic church without theology.</p>
+
+
+
+<p>The Stanford exchange shows how far we have drifted. One side argues that disagreement is essential to truth. The other responds that the language of disagreement has been contaminated by politics. That is not an answer. It is an evasion.</p>
+
+
+
+<p>If universities cannot defend viewpoint diversity as a neutral institutional good, then academic freedom has already collapsed—not by law, but by culture.</p>
+
+
+
+<p>A university that fears disagreement cannot educate for freedom and it does not deserve the public&#8217;s trust.</p>
+<p>The post <a href="https://www.aei.org/society-and-culture/viewpoint-diversity-isnt-a-slogan-its-the-point-of-a-university/">Viewpoint Diversity Isn’t a Slogan. It’s the Point of a University.</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The AI Jobs Non-Apocalypse: An Update</title>
+		<link>https://www.aei.org/economics/the-ai-jobs-non-apocalypse-an-update/</link>
+		
+		<dc:creator><![CDATA[Julia Cataneo]]></dc:creator>
+		<pubDate>Fri, 13 Feb 2026 20:32:02 +0000</pubDate>
+				<category><![CDATA[Economics]]></category>
+		<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[Labor economics]]></category>
+		<category><![CDATA[US economy]]></category>
+		<guid isPermaLink="false">https://www.aei.org/?p=1008755179</guid>
+
+					<description><![CDATA[<p>Artificial intelligence is indeed affecting the US job market—as a powerful general-purpose technology should, at some point—but in ways that are narrower and slower than the apocalypse narrative suggests.</p>
+<p>The post <a href="https://www.aei.org/economics/the-ai-jobs-non-apocalypse-an-update/">The AI Jobs Non-Apocalypse: An Update</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>It’s been just over three years since ChatGPT launched—and maybe roughly three minutes since the last viral warning about an imminent white-collar “bloodbath.” Of course, as has been correctly said, it&#8217;s tough to make predictions, especially about the future.</p>
+
+
+
+<p>So what does the data actually say so far? A growing stack of careful studies points in a remarkably consistent direction. Artificial intelligence is indeed affecting the US job market—as a powerful general-purpose technology should, at some point—but in ways that are narrower and slower than the apocalypse narrative suggests.</p>
+
+
+
+<p>Start with timing. One recent paper <a href="https://arxiv.org/abs/2601.02554">finds</a> that labor-market weakening in AI-exposed occupations began in early 2022—months before ChatGPT’s release. The authors argue this pattern points to broader macroeconomic and sectoral forces, including monetary tightening and a post-pandemic correction in tech hiring. That, rather than a clean break caused by generative AI alone. At the same time, AI-related skills such as writing, coding, and information synthesis remain valuable, with graduates exposed to them earning higher pay and finding jobs faster.</p>
+
+
+
+<p>Another widely cited study, “Canaries in the Coal Mine” from the Stanford Digital Economy Lab, <a href="https://digitaleconomy.stanford.edu/news/canaries-interest-rates-and-timinga-more-on-recent-drivers-of-employment-changes-for-young-workers/">finds</a> clearer AI-linked effects after careful statistical controls. The strongest signal emerges beginning around 2024 and is concentrated primarily among young workers in highly exposed occupations. Even there, the impact appears mainly to reflect reduced hiring rather than layoffs, with firms likely trimming junior inflows rather than displacing experienced staff.</p>
+
+
+
+<p>Other analyses tell a similar story. <a href="https://www.dallasfed.org/research/economics/2026/0106">According </a>to the Dallas Fed, employment declines linked to AI exposure are small and concentrated among workers ages 20–24, driven mainly by reduced entry into those occupations rather than layoffs. The aggregate impact on overall unemployment remains minimal.</p>
+
+
+
+<p>The big picture looks even less threatening. A recent analysis by The Economist <a href="https://www.economist.com/finance-and-economics/2026/01/26/why-ai-wont-wipe-out-white-collar-jobs">notes </a>that the US economy has added millions of white-collar jobs since late 2022. Real wages have risen. There has also been strong growth in technical, managerial, and coordination-heavy roles, including many often labeled AI “at risk.”</p>
+
+
+
+<p>Put it all together and the state of play seems clear here in mid-February 2026. AI’s early job-market effects look like a shift at the entry level, at worst, not mass displacement. And one might reasonably conclude that hiring is slowing in routine knowledge roles even as demand rises for experienced, judgment-intensive, and AI-complementary work. At least the first phase of the Great AI Labor Transition appears evolutionary, not revolutionary—and certainly not catastrophic.</p>
+
+
+
+<p>To quote the Stanford team, “We will be actively monitoring the labor market and updating our results periodically to see if the trends we identified persist, strengthen, reverse, or change in some other ways.”&nbsp;</p>
+
+
+
+<p>Same with me.</p>
+<p>The post <a href="https://www.aei.org/economics/the-ai-jobs-non-apocalypse-an-update/">The AI Jobs Non-Apocalypse: An Update</a> appeared first on <a href="https://www.aei.org">American Enterprise Institute - AEI</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+Page Caching using Memcache 
+
+Served from: php.aei.org @ 2026-02-23 17:12:23 by W3 Total Cache
+-->
