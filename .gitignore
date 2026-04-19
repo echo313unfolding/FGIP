@@ -89,5 +89,8 @@ models/
 .mypy_cache/
 .pytest_cache/
 
+# Generated wiki (rebuild with make wiki-index)
+wiki/
+
 # Accidental CLI artifacts
 --no-stage

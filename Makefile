@@ -208,6 +208,7 @@ watch-all:
 	@$(MAKE) watch-gao
 	@$(MAKE) watch-fara
 	@$(MAKE) fgip-snapshot
+	@$(MAKE) wiki-lint
 
 # ---------- Timeline / Forensic Helpers ----------
 
