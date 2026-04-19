@@ -47,6 +47,24 @@ fgip-stats:
 fgip-lint:
 	@$(FGIP) lint
 
+# Wiki lint (Karpathy-style graph health checks)
+wiki-lint:
+	@python3 "$(FGIP_DIR)/tools/wiki_lint.py" --db "$(FGIP_DB)"
+
+wiki-lint-json:
+	@python3 "$(FGIP_DIR)/tools/wiki_lint.py" --db "$(FGIP_DB)" --json
+
+# Wiki index generator
+wiki-index:
+	@python3 "$(FGIP_DIR)/tools/wiki_index.py" --db "$(FGIP_DB)" --output "$(FGIP_DIR)/wiki"
+
+wiki-full:
+	@python3 "$(FGIP_DIR)/tools/wiki_index.py" --db "$(FGIP_DB)" --output "$(FGIP_DIR)/wiki" --entities --topics
+
+# Run supersession migration (adds staleness tracking columns)
+wiki-migrate:
+	@python3 "$(FGIP_DIR)/tools/wiki_lint.py" --db "$(FGIP_DB)" --fix-staleness
+
 fgip-dedupe:
 	@python3 "$(FGIP_DIR)/tools/dedupe_edges.py" --db "$(FGIP_DB)"
 
