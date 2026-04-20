@@ -92,5 +92,9 @@ models/
 # Generated wiki (rebuild with make wiki-index)
 wiki/
 
+# Claude Code local config
+.mcp.json
+CLAUDE.md
+
 # Accidental CLI artifacts
 --no-stage
