@@ -1,0 +1,118 @@
+{
+  "receipt_version": "1.0",
+  "thesis_id": "thesis-dollar-resilience-rails",
+  "timestamp": "2026-05-09T19:16:19Z",
+  "generated_by": "fgip-export-thesis-receipt",
+  "claim": "Regulated stablecoin rails may create a second programmable dollar settlement layer and additional demand channel for short-term U.S. debt, while still depending on banks, regulators, reserves, AML/sanctions compliance, and Treasury-market liquidity.",
+  "tickers": [],
+  "source_edges": [],
+  "evidence_summary": {
+    "confirming_signals": 0,
+    "refuting_signals": 0,
+    "tier_0_signals": 0,
+    "tier_1_signals": 0,
+    "tier_2_signals": 0,
+    "source_types": [],
+    "triangulation_met": false,
+    "triangulation_count": 0
+  },
+  "evidence_bundle": {
+    "source_ids": [],
+    "fact_ids": [],
+    "edge_ids": []
+  },
+  "funding_chain": [
+    "GENIUS Act creates permitted payment stablecoin issuer framework",
+    "OCC/FDIC/Fed issue implementation rules for supervised entities",
+    "Permitted issuers hold reserves in cash, Treasuries, repo",
+    "Stablecoin growth creates demand for short-term dollar safe assets",
+    "Programmable settlement rails reduce legacy bottleneck friction"
+  ],
+  "beneficiaries": [
+    {
+      "ticker": "N/A",
+      "role": "Permitted payment stablecoin issuers"
+    },
+    {
+      "ticker": "N/A",
+      "role": "Reserve custodians and banks"
+    },
+    {
+      "ticker": "N/A",
+      "role": "Compliance and AML infrastructure vendors"
+    },
+    {
+      "ticker": "N/A",
+      "role": "Transfer agents supporting tokenized securities"
+    }
+  ],
+  "counter_thesis": [
+    {
+      "description": "Regulation concentrates power in permitted issuers and banks",
+      "severity": "manageable",
+      "likelihood": 0.5,
+      "mitigation": "Multiple issuer framework reduces single-point concentration"
+    },
+    {
+      "description": "Stablecoins not FDIC insured; reserve run risk",
+      "severity": "serious",
+      "likelihood": 0.3,
+      "mitigation": "100% reserve backing with liquid assets mitigates but does not eliminate"
+    },
+    {
+      "description": "Stablecoin Treasury demand too small relative to total US debt",
+      "severity": "manageable",
+      "likelihood": 0.5,
+      "mitigation": "Marginal demand matters at auction; growth trajectory matters"
+    },
+    {
+      "description": "Foreign regulatory pushback on dollar stablecoin dominance",
+      "severity": "manageable",
+      "likelihood": 0.4,
+      "mitigation": "GENIUS Act is US domestic framework; foreign jurisdictions build own"
+    }
+  ],
+  "disconfirming_evidence": [
+    "GENIUS Act implementation rules block most issuers",
+    "Major stablecoin reserve failure or bank run",
+    "Foreign jurisdictions ban dollar stablecoins",
+    "Stablecoin market cap stagnates or declines for 2+ years",
+    "Treasury auctions show no correlation with stablecoin reserve growth"
+  ],
+  "conviction": {
+    "score": 8.5,
+    "level": 1,
+    "recommendation": "AVOID",
+    "position_size_pct": 0.0
+  },
+  "graph_state": "Candidate",
+  "cost": {
+    "wall_time_s": 0.001,
+    "cpu_time_s": 0.001,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-09T19:16:19",
+    "timestamp_end": "2026-05-09T19:16:19"
+  },
+  "receipt_hash": "sha256:9693e8596784760fb0bb1b2b0eb74b42fee84b74cd750eebbc9ef8de81ccffea",
+  "solana_registration": {
+    "content_hash": "9693e8596784760fb0bb1b2b0eb74b42fee84b74cd750eebbc9ef8de81ccffea",
+    "original_hash": "89973e8bab1a7f49671dae7b71fe6757d2f4f7e6a7598bc3dfeab704ec028078",
+    "artifact_type": "fgip_thesis_receipt",
+    "artifact_type_id": 6,
+    "metadata": {
+      "thesis_id": "thesis-dollar-resilience-rails",
+      "generated_at": "2026-05-09T19:16:19Z",
+      "source_count": 0,
+      "fact_count": 0,
+      "edge_count": 0,
+      "conviction_score": 8.5,
+      "conviction_level": 1,
+      "graph_state": "Candidate"
+    },
+    "fidelity_receipt_identity": "fidelity:source_fact_edge_validation:thesis-dollar-resilience-rails",
+    "behavioral_receipt_identity": "behavioral:funding_path_validation:thesis-dollar-resilience-rails",
+    "risk_attestation_identity": "risk:counter_thesis_checked:thesis-dollar-resilience-rails",
+    "metadata_hash": "9cea95aa422e3158132188acb3d724e97c038d62d7bcfe5eda5d8fe0cd20422e"
+  }
+}

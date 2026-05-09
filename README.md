@@ -9,8 +9,8 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)](https://sqlite.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![2,050+ nodes](https://img.shields.io/badge/nodes-2%2C050%2B-brightgreen)]()
-[![2,730+ edges](https://img.shields.io/badge/edges-2%2C730%2B-blue)]()
+[![2,070+ nodes](https://img.shields.io/badge/nodes-2%2C070%2B-brightgreen)]()
+[![2,750+ edges](https://img.shields.io/badge/edges-2%2C750%2B-blue)]()
 [![69K+ proposed edges](https://img.shields.io/badge/proposed_edges-69K%2B-orange)]()
 
 **Track the money. Test the thesis. Present the documents.**
@@ -71,7 +71,7 @@ The graph traces these chains across 6 layers:
 |  → conviction scoring → position sizing                     |
 +------------------------------------------------------------+
 |  GRAPH + PROPOSED EDGES                                     |
-|  2,050+ nodes · 2,730+ edges · 69K+ proposed · 24 agents   |
+|  2,070+ nodes · 2,750+ edges · 69K+ proposed · 24 agents   |
 +------------------------------------------------------------+
 |  DATA INGEST (Tier 0 / Tier 1)                              |
 |  Congress · EDGAR · USASpending · Federal Register · FEC    |
@@ -142,6 +142,7 @@ FGIP evaluates 15+ investment theses across sectors:
 | Fertilizer/inflation | Fertilizer | CF, NTR | Henry Hub gas, urea prices, M2 data |
 | Government infrastructure | Infrastructure | PWR, LDOS | IIJA/IRA remaining spend, state DOT awards |
 | SMR endgame | Nuclear SMR | OKLO, SMR | NRC design approvals, utility PPAs |
+| Dollar resilience rails | Digital asset rails | — | GENIUS Act, OCC/FDIC rulemakings, Treasury reserve data |
 
 ## Verified findings
 
@@ -201,6 +202,8 @@ fgip-engine/
 ├── config/              # Watchlist, risk parameters
 ├── tools/               # Graph population and diagnostic tools
 ├── scripts/             # Graph insertion scripts
+├── data/                # Source registry, extracted facts, candidate edges
+├── receipts/            # Thesis receipts (exportable to ReceiptGatedAsset)
 ├── THESIS_PACK/         # Investment thesis claims + backtest receipts
 ├── articulations/       # Analytical write-ups on specific topics
 ├── tests/               # Test suite
@@ -239,6 +242,8 @@ fgip-engine/
 | [THESIS_RECEIPT_SCHEMA.md](docs/THESIS_RECEIPT_SCHEMA.md) | Receipt format for thesis validation (evidence, conviction, graph state) |
 | [TRADING_AGENT_V0_SPEC.md](docs/TRADING_AGENT_V0_SPEC.md) | Trading agent architecture and risk parameters |
 | [SOURCE_AND_FACT_MODEL.md](docs/SOURCE_AND_FACT_MODEL.md) | How citations, extracted facts, and proposed edges are separated |
+| [DIGITAL_ASSET_RAILS.md](docs/DIGITAL_ASSET_RAILS.md) | Stablecoin, tokenization, and regulated settlement rail layer |
+| [DOLLAR_RESILIENCE_RAILS.md](docs/DOLLAR_RESILIENCE_RAILS.md) | Candidate thesis: stablecoin reserves as dollar-demand channel |
 
 ## Source registry
 

@@ -64,6 +64,7 @@ receipts/*
 !receipts/amicus-5gw-frame-*.json
 !receipts/5gw-citation-chain-*.json
 !receipts/supply_chain_mapping/
+!receipts/thesis_receipts/
 # Large/operational stay ignored: db_backups/ (21MB), schedule/, hygiene/, dedupe/
 
 # Proposals (generated per scan, operational)

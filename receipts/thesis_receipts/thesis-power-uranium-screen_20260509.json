@@ -1,0 +1,267 @@
+{
+  "receipt_version": "1.0",
+  "thesis_id": "thesis-power-uranium-screen",
+  "timestamp": "2026-05-09T19:16:32Z",
+  "generated_by": "fgip-export-thesis-receipt",
+  "claim": "Data center power buildout drives midstream gas (NEXUS/Transco), E&P (Appalachian), utilities (MI/GA), gas turbines, and nuclear. FERC capacity filings are biggest alpha window.",
+  "tickers": [
+    "DTM",
+    "AR",
+    "WMB",
+    "EQT",
+    "DTE",
+    "CEG",
+    "OKLO"
+  ],
+  "source_edges": [
+    {
+      "from": "permitted-payment-stablecoin-issuers",
+      "to": "stablecoin-reserves",
+      "edge_type": "REQUIRES_RESERVES",
+      "confidence": 1.0,
+      "tier": 0
+    },
+    {
+      "from": "genius-act",
+      "to": "us-dollar-reserve-status",
+      "edge_type": "SUPPORTS_DEMAND_FOR",
+      "confidence": 0.9,
+      "tier": 0
+    },
+    {
+      "from": "payment-stablecoins",
+      "to": "programmable-dollar-settlement",
+      "edge_type": "ENABLES_PROGRAMMABLE_SETTLEMENT",
+      "confidence": 0.85,
+      "tier": 0
+    },
+    {
+      "from": "payment-stablecoins",
+      "to": "legacy-bank-settlement",
+      "edge_type": "BYPASSES_LEGACY_SETTLEMENT",
+      "confidence": 0.75,
+      "tier": 0
+    },
+    {
+      "from": "dtcc",
+      "to": "tokenized-securities",
+      "edge_type": "TOKENIZES",
+      "confidence": 0.85,
+      "tier": 1
+    },
+    {
+      "from": "payment-stablecoins",
+      "to": "financial-stability-risk",
+      "edge_type": "EXPOSES_TO_RUN_RISK",
+      "confidence": 0.8,
+      "tier": 1
+    },
+    {
+      "from": "foreign-treasury-holders",
+      "to": "treasury-market",
+      "edge_type": "CAN_RAISE_YIELD_PRESSURE",
+      "confidence": 0.8,
+      "tier": 0
+    },
+    {
+      "from": "primary-dealers",
+      "to": "treasury-auctions",
+      "edge_type": "BIDS_AT_AUCTION",
+      "confidence": 1.0,
+      "tier": 0
+    },
+    {
+      "from": "new-york-fed",
+      "to": "treasury-secondary-market",
+      "edge_type": "CONDUCTS_OPERATIONS",
+      "confidence": 1.0,
+      "tier": 0
+    },
+    {
+      "from": "federal-reserve",
+      "to": "congress",
+      "edge_type": "ACCOUNTABLE_TO",
+      "confidence": 1.0,
+      "tier": 0
+    }
+  ],
+  "evidence_summary": {
+    "confirming_signals": 246,
+    "refuting_signals": 0,
+    "tier_0_signals": 185,
+    "tier_1_signals": 61,
+    "tier_2_signals": 0,
+    "source_types": [
+      "graph_edge",
+      "nuclear_smr",
+      "opensecrets",
+      "rss",
+      "stablecoin",
+      "supply_chain_extractor",
+      "usaspending"
+    ],
+    "triangulation_met": true,
+    "triangulation_count": 7
+  },
+  "evidence_bundle": {
+    "source_ids": [
+      "whitehouse_genius_act_factsheet",
+      "dtcc_tokenization_page",
+      "reuters_boe_stablecoin_warning",
+      "fed_faq_ownership",
+      "treasury_primary_dealers",
+      "nyfed_treasury_operations",
+      "treasury_tic_feb2026",
+      "reuters_us_germany_troop_withdrawal_20260501",
+      "reuters_germany_missile_deployment_20260504",
+      "whitehouse_hungary_partnership_202604",
+      "telex_hungary_us_oil_himars_20260409",
+      "northrop_hungary_satellite_2026",
+      "congress_ndaa_fy2025_hr8070",
+      "congress_ukraine_supplemental_hr8035",
+      "usaspending_chips_act_awards",
+      "michigan_mpsc_dte_stargate",
+      "wna_uranium_deficit",
+      "silver_institute_deficit"
+    ],
+    "fact_ids": [
+      "fact_genius_act_enacted",
+      "fact_genius_act_reserve_requirement",
+      "fact_genius_act_dollar_demand",
+      "fact_dtcc_tokenization",
+      "fact_boe_stablecoin_risk",
+      "fact_fed_not_owned_by_asset_managers",
+      "fact_treasury_primary_dealers",
+      "fact_nyfed_treasury_operations",
+      "fact_foreign_treasury_holdings_feb2026",
+      "fact_us_withdraws_5000_troops_germany",
+      "fact_germany_missile_deployment_not_cancelled",
+      "fact_hungary_us_bilateral_partnership",
+      "fact_mol_us_crude_purchase",
+      "fact_hungary_himars_procurement",
+      "fact_hungary_smr_cooperation",
+      "fact_northrop_4ig_satellite",
+      "fact_ndaa_fy2025_enacted",
+      "fact_ukraine_supplemental_enacted",
+      "fact_chips_tsmc_award",
+      "fact_chips_intel_award",
+      "fact_dte_stargate_approved",
+      "fact_uranium_structural_deficit",
+      "fact_silver_6yr_deficit"
+    ],
+    "edge_ids": [
+      "edge_genius_act_reserves",
+      "edge_genius_act_dollar_defense",
+      "edge_stablecoins_settlement",
+      "edge_stablecoins_bypass_legacy",
+      "edge_dtcc_tokenizes",
+      "edge_boe_stablecoin_risk",
+      "edge_foreign_holders_pressure",
+      "edge_primary_dealers_auction",
+      "edge_nyfed_open_market",
+      "edge_fed_not_privately_owned",
+      "edge_us_withdraws_germany",
+      "edge_germany_confirms_missiles",
+      "edge_us_hungary_bilateral",
+      "edge_mol_us_crude",
+      "edge_hungary_himars",
+      "edge_hungary_smr",
+      "edge_northrop_4ig_satellite",
+      "edge_ndaa_fy2025_lmt",
+      "edge_ndaa_fy2025_gd",
+      "edge_ndaa_fy2025_hii",
+      "edge_ndaa_fy2025_bwxt",
+      "edge_ukraine_supp_lmt",
+      "edge_chips_tsmc",
+      "edge_chips_intel",
+      "edge_dte_stargate",
+      "edge_uranium_deficit",
+      "edge_silver_deficit"
+    ]
+  },
+  "funding_chain": [
+    "Hyperscalers commit capex to data center buildout",
+    "Utilities file for capacity additions (PUC/MPSC approvals)",
+    "Pipeline operators expand (Transco, NEXUS)",
+    "E&P producers supply gas (Appalachian basin)",
+    "Nuclear operators provide baseload (existing fleet + SMR pipeline)"
+  ],
+  "beneficiaries": [
+    {
+      "ticker": "DTM",
+      "role": "NEXUS pipeline, Ohio data center corridor"
+    },
+    {
+      "ticker": "WMB",
+      "role": "Transco expansion, record Q1 2026"
+    },
+    {
+      "ticker": "DTE",
+      "role": "Stargate 1.4GW data center campus"
+    },
+    {
+      "ticker": "CEG",
+      "role": "Largest US nuclear fleet, data center PPAs"
+    },
+    {
+      "ticker": "OKLO",
+      "role": "SMR developer, HALEU fuel"
+    }
+  ],
+  "counter_thesis": [
+    {
+      "description": "AI capex cycle slows or hyperscalers pull back",
+      "severity": "serious",
+      "likelihood": 0.3,
+      "mitigation": "Monitor quarterly capex guidance from MSFT/GOOG/AMZN/META"
+    },
+    {
+      "description": "Renewable + battery cost curve undercuts gas/nuclear",
+      "severity": "manageable",
+      "likelihood": 0.4,
+      "mitigation": "Baseload requirement persists; renewables intermittent"
+    }
+  ],
+  "disconfirming_evidence": [
+    "Hyperscaler capex guidance cut >20%",
+    "Grid interconnection queue clears faster than expected",
+    "Battery storage reaches 12+ hour duration at scale",
+    "Major data center project cancellation"
+  ],
+  "conviction": {
+    "score": 100,
+    "level": 5,
+    "recommendation": "BUY",
+    "position_size_pct": 0.2
+  },
+  "graph_state": "Active",
+  "cost": {
+    "wall_time_s": 0.132,
+    "cpu_time_s": 0.132,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-09T19:16:32",
+    "timestamp_end": "2026-05-09T19:16:32"
+  },
+  "receipt_hash": "sha256:6fddcdfd2bc12be99bbd43247ffaddaf958190b1f4c5a3f19dfb1b733df83a9e",
+  "solana_registration": {
+    "content_hash": "6fddcdfd2bc12be99bbd43247ffaddaf958190b1f4c5a3f19dfb1b733df83a9e",
+    "original_hash": "0400e5c306d0ccee7167b3048858806352f8ce0a5d7c84897357c4841f418f4e",
+    "artifact_type": "fgip_thesis_receipt",
+    "artifact_type_id": 6,
+    "metadata": {
+      "thesis_id": "thesis-power-uranium-screen",
+      "generated_at": "2026-05-09T19:16:32Z",
+      "source_count": 18,
+      "fact_count": 23,
+      "edge_count": 27,
+      "conviction_score": 100,
+      "conviction_level": 5,
+      "graph_state": "Active"
+    },
+    "fidelity_receipt_identity": "fidelity:source_fact_edge_validation:thesis-power-uranium-screen",
+    "behavioral_receipt_identity": "behavioral:funding_path_validation:thesis-power-uranium-screen",
+    "risk_attestation_identity": "risk:counter_thesis_checked:thesis-power-uranium-screen",
+    "metadata_hash": "0dc997ed46ca0212358bf8963bce06a616a0332102802551ffa9c5f63bbe5ad0"
+  }
+}
