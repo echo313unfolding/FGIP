@@ -1,158 +1,259 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Forensic%20graph%20intelligence%20platform&descSize=16&descColor=8b949e&descAlignY=55">
-  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:f0f6fc,100:ba9a2a&height=200&section=header&text=FGIP&fontSize=42&fontColor=1f2328&animation=fadeIn&fontAlignY=35&desc=Forensic%20graph%20intelligence%20platform&descSize=16&descColor=656d76&descAlignY=55">
-  <img alt="FGIP" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Forensic%20graph%20intelligence%20platform&descSize=16&descColor=8b949e&descAlignY=55">
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=8b949e&descAlignY=55">
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:f0f6fc,100:ba9a2a&height=200&section=header&text=FGIP&fontSize=42&fontColor=1f2328&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=656d76&descAlignY=55">
+  <img alt="FGIP" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=8b949e&descAlignY=55">
 </picture>
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)](https://sqlite.org)
-[![License](https://img.shields.io/badge/license-Echo%20Labs-green)](LICENSE)
-[![1,801 nodes](https://img.shields.io/badge/nodes-1%2C801-brightgreen)]()
-[![3,286 edges](https://img.shields.io/badge/edges-3%2C286-blue)]()
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![2,050+ nodes](https://img.shields.io/badge/nodes-2%2C050%2B-brightgreen)]()
+[![2,730+ edges](https://img.shields.io/badge/edges-2%2C730%2B-blue)]()
+[![69K+ proposed edges](https://img.shields.io/badge/proposed_edges-69K%2B-orange)]()
 
 **Track the money. Test the thesis. Present the documents.**
-**Forensic-grade graph intelligence -- from lobbying networks to investment signals.**
 
 </div>
 
-# FGIP
+## What FGIP does
 
-FGIP is a dual-use intelligence platform that exposes the lobbying, ownership, and judicial network behind American industrial policy and tracks the reshoring correction as an investable thesis. Every claim is adversarial-tested. Every edge has a source. The graph is the evidence.
-
-## What it does
-
-The platform builds a knowledge graph from government data (SEC EDGAR 13F filings, FEC campaign finance, Congress.gov voting records, Federal Register rulemakings, FRED economic data) and subjects investment theses to forensic verification.
-
-Three-layer architecture:
+FGIP maps where public funding is committed before it becomes recognized revenue, then traces the beneficiary chain.
 
 ```
-+---------------------------------------------------------+
-|  LAYER C: Agent Runtime                                  |
-|  42 agents * tool routing * adversarial testing          |
-+---------------------------------------------------------+
-|  LAYER B: Graph / Memory                                 |
-|  1,801 nodes * 3,286 edges * 1,659 claims * 1,040 sources|
-+---------------------------------------------------------+
-|  LAYER A: Model Substrate                                |
-|  CDNA inference * GGUF models * compressed weights       |
-+---------------------------------------------------------+
+bill → appropriation → agency → contract/grant → company → supplier → commodity → public ticker → hedge
 ```
 
-## Graph statistics
+Most trading systems look at price, volume, earnings, sentiment, and technical indicators. FGIP looks at where funding has been committed — in public government records — before the market headline says who benefits.
 
-| Table | Count |
-|-------|-------|
-| Nodes | 1,801 |
-| Edges | 3,286 |
-| Claims | 1,659 |
-| Sources | 1,040 |
-| Pending proposals | 7,684 |
+A headline is downstream. The funding trail is upstream.
 
-17 node types (ORGANIZATION, PERSON, LEGISLATION, COURT_CASE, COMPANY, FINANCIAL_INST, ETF_FUND, AGENCY, POLICY, ECONOMIC_METRIC, and more).
-55 edge types across problem and correction layers.
+## How it works
 
-## Analytical framework
+24 specialized agents ingest Tier 0 (government) and Tier 1 (professional) data sources. Each agent produces **proposed edges** — structured claims about relationships between entities, backed by source documents.
 
-Every claim goes through:
+```
+public records → graph edges → thesis conviction → positioning / hedge logic
+```
 
-1. **Claim Parser** -- Atomic claims + falsification criteria
-2. **Primary Source (Tier 0/1)** -- Treasury, FRED, SEC, Congress.gov
-3. **Counter-Model** -- Strongest competing explanation
-4. **Control Group** -- Comparison that should NOT show the effect
-5. **Graph Edge Builder** -- Only edges with qualifying sources + confidence
-6. **Investment Relevance** -- Maps verified edges to tradable implications
+### The funding chain
+
+Every node in the graph is either a source of funds, a channel for funds, or a recipient of funds. The edges are the flows.
+
+```
+Congress funds NDAA
+  → DoD funds Lockheed Martin
+    → Lockheed funds Howmet for forgings
+      → Howmet procures copper
+        → FCX sells the copper
+```
+
+The graph traces these chains across 6 layers:
+
+| Layer | What | Examples |
+|-------|------|---------|
+| 0 | Commodities | Gas, uranium, copper, silver, rare earths |
+| 1 | Extraction | Cameco, Freeport, MP Materials |
+| 2 | Transport/midstream | DT Midstream, Williams, Energy Transfer |
+| 3 | Conversion/power | Constellation Energy, GE Vernova, utilities |
+| 4 | Infrastructure | Data centers, fabs, grid equipment |
+| 5 | Platform/hyperscalers | The demand layer that drives everything below |
+
+## Architecture
+
+```
++------------------------------------------------------------+
+|  CONVICTION ENGINE                                          |
+|  Signal collection → triangulation → adversarial testing    |
+|  → conviction scoring → position sizing                     |
++------------------------------------------------------------+
+|  GRAPH + PROPOSED EDGES                                     |
+|  2,050+ nodes · 2,730+ edges · 69K+ proposed · 24 agents   |
++------------------------------------------------------------+
+|  DATA INGEST (Tier 0 / Tier 1)                              |
+|  Congress · EDGAR · USASpending · Federal Register · FEC    |
+|  FARA · NRC · SCOTUS · OpenSecrets · RSS · Options flow     |
++------------------------------------------------------------+
+```
+
+### Conviction engine
+
+Every thesis goes through:
+
+1. **Signal collection** — Query graph edges and proposed edges for confirming/refuting evidence
+2. **Triangulation** — Require 3+ independent signals from different source types, at least 1 Tier 0
+3. **Adversarial testing** — Articulate and test the strongest counter-thesis
+4. **Conviction scoring** — 1-5 levels based on evidence quality (not quantity)
+5. **Position sizing** — Conviction level maps to position size (conviction 3 = half position)
+
+### Evidence tiers
+
+| Tier | Source type | Conviction boost |
+|------|-----------|-----------------|
+| 0 | Government records (EDGAR, USASpending, Congress, Federal Register, NRC) | +15 per signal |
+| 1 | Professional sources (options flow, analyst, earnings, industry conference) | +8 per signal |
+| 2 | Commentary (news, social, podcast, YouTube) | +3 per signal |
+
+### Proposed edges pipeline
+
+Agents scrape sources and produce **proposed edges** — structured claims that sit in a staging table until reviewed. Each proposed edge has:
+
+- `from_node` / `to_node` — entities connected
+- `relationship` — edge type (VOTED_FOR, AWARDED_CONTRACT, OWNS_SHARES, etc.)
+- `confidence` — 0.0 to 1.0
+- `agent_name` — which agent produced it
+- `artifact_id` — link to source document
+
+Tier 0 agents (government sources) self-certify. Lower-tier agents require artifact evidence for promotion.
+
+## Agents
+
+| Agent | Source | Edge types | Count |
+|-------|--------|-----------|-------|
+| congress | Congress.gov, House/Senate Clerks | VOTED_FOR, VOTED_AGAINST, SPONSORED | 3,136 |
+| usaspending | USASpending.gov | AWARDED_GRANT, AWARDED_CONTRACT, FUNDED_PROJECT | 4,100 |
+| edgar | SEC EDGAR | OWNS_SHARES, ACQUIRED, SUPPLIES_TO, COMPETES_WITH | 2,265 |
+| federal_register | Federal Register | RULEMAKING_FOR, IMPLEMENTED_BY, AUTHORIZED_BY | 828 |
+| fec | FEC.gov | DONATED_TO | 11,201 |
+| opensecrets | OpenSecrets | LOBBIED_FOR, DONATED_TO | 4,644 |
+| scotus | SCOTUS dockets | FILED_AMICUS, CITED_BY | 4,659 |
+| rss | News feeds | Various | 14,503 |
+| supply_chain_extractor | 10-K filings | SUPPLIES_TO, DEPENDS_ON, CUSTOMER_OF | 12,413 |
+| stablecoin | Treasury, FDIC | RULEMAKING_FOR, REGULATES | 8,315 |
+| nuclear_smr | NRC ADAMS | LICENSED_BY, PERMITTED_BY | 184 |
+| fara | FARA.gov | REGISTERED_AGENT, REPRESENTS | 450 |
+| And 12 more... | | | |
+
+## Investment theses
+
+FGIP evaluates 15+ investment theses across sectors:
+
+| Thesis | Sector | Key tickers | Signal sources |
+|--------|--------|-------------|---------------|
+| Data center power | Midstream, E&P, utility | DTM, AR, WMB, EQT, DTE | FERC filings, PUC approvals, pipeline throughput |
+| Uranium structural deficit | Nuclear | CCJ, UUUU, CEG, OKLO | NRC permits, DoE grants, supply/demand data |
+| Defense primes | Defense | LMT, RTX, NOC, GD, HII, BWXT | NDAA, USASpending contracts, Ukraine supplemental |
+| Silver bottleneck | Silver mining | AG, PAAS | COMEX inventory, Mexico moratorium |
+| Copper wiring | Copper | FCX | Grid modernization contracts, mine supply |
+| Rare earth security | Critical minerals | MP | China export restrictions, DoD procurement |
+| Fertilizer/inflation | Fertilizer | CF, NTR | Henry Hub gas, urea prices, M2 data |
+| Government infrastructure | Infrastructure | PWR, LDOS | IIJA/IRA remaining spend, state DOT awards |
+| SMR endgame | Nuclear SMR | OKLO, SMR | NRC design approvals, utility PPAs |
 
 ## Verified findings
 
 ### Real inflation is 6.3%, not 2.7%
 
-M2 money supply growth tracks actual purchasing power loss (housing +220%, S&P +411%). 25-year backtest, 7/7 predictions confirmed, 3/3 adversarial attacks survived.
+M2 money supply growth tracks actual purchasing power loss (housing +220%, S&P +411%). 25-year backtest against FRED data, 7/7 predictions confirmed, 3/3 adversarial attacks survived.
 
-### Structural capital concentration (refined)
+### Structural capital concentration
 
-Big Three (Vanguard/BlackRock/State Street) own 18-20% of ALL large-cap firms -- CHIPS recipients AND control group. Difference: -0.08%. This is passive indexing, not strategic positioning. The refined thesis is stronger: structural concentration mechanically creates both-sides exposure regardless of intent.
+Big Three (Vanguard/BlackRock/State Street) own 18-20% of ALL large-cap firms — CHIPS recipients AND non-CHIPS control group. Difference: -0.08%. This is passive indexing, not strategic positioning. Structural concentration mechanically creates both-sides exposure regardless of intent.
 
-### Congress overlap -- weakened
+### Defense funding chains
 
-32 members voting for both CHIPS and related legislation. Statistical expectation: 70.1. Ratio: 0.46x (below expected). NOT a strong signal.
-
-## Data sources
-
-| Source | Type | Coverage |
-|--------|------|----------|
-| SEC EDGAR 13F | Institutional ownership | Quarterly |
-| FEC | Campaign finance | Continuous |
-| Congress.gov | Voting records, bill text | Continuous |
-| Federal Register | Rulemakings (FDIC, Commerce, SEC, Treasury) | Daily |
-| FRED | Economic indicators (M2, CPI, employment) | Monthly |
-| OpenSecrets | Dark money, 990 filings | Annual |
-| RSS feeds | News monitoring | Continuous |
-
-## Thesis Pack
-
-The `THESIS_PACK/` directory contains 5 investment thesis claims with backtest results:
-
-- `claims_backtest_results.md` -- 25-year M2 vs asset price validation
-- `claims_genius_act.md` -- GENIUS Act stablecoin framework analysis
-- `claims_industrial_base.md` -- Industrial base reshoring thesis
-- `claims_inflation_proxy.md` -- Real inflation vs CPI divergence
-- `claims_reshoring_etfs.md` -- Reshoring ETF positioning
+NDAA FY2025 ($895.2B) → 8 prime contractor AUTHORIZES_FUNDING edges. Ukraine supplemental ($60.84B) → 5 FUNDS_REPLENISHMENT edges. Columbia-class ($132B) → sole-source naval nuclear chain (GD → HII → BWXT → Cameco uranium). All traced from bill text to company to supplier to commodity.
 
 ## Quick start
 
 ```bash
-# Check thesis score
-python3 -m fgip.cli score
+# Clone
+git clone https://github.com/echo313unfolding/FGIP.git
+cd FGIP
+
+# Initialize database (creates schema, no data)
+python3 -m fgip.cli init
+
+# Populate graph with structural data
+python3 tools/populate_full_graph.py
+python3 tools/populate_commodity_chain.py
+python3 tools/wire_defense_government.py
+
+# Run conviction engine
+python3 -m fgip.agents.conviction_engine
+
+# Run trading agent scan
+python3 -m fgip.agents.trading_agent --scan
 
 # Run adversarial testing
 python3 -m fgip.analysis.adversarial
-
-# Run gap analysis
-python3 -m fgip.analysis.gap_detector
-
-# Portfolio allocation
-python3 -m fgip.allocator --settlement 250000 --risk-tolerance conservative
-
-# Location scoring
-python3 -m fgip.location --address "123 Main St, Hampton, GA"
 ```
 
 ## Project structure
 
 ```
 fgip-engine/
-+-- fgip/
-|   +-- agents/          # 42 analytical agents (FEC, Congress, dark money, etc.)
-|   +-- allocator/       # Portfolio allocation with policy constraints
-|   +-- analysis/        # Gap detection, signal convergence, adversarial testing
-|   +-- backtest/        # Portfolio backtesting and risk metrics
-|   +-- decisions/       # Evidence-gated decision framework
-|   +-- governance/      # Family cost index, housing gate, IPS
-|   +-- location/        # Property scoring (crime, flood, insurance, HOA)
-|   +-- ontology/        # Graph schema constraints and validation
-|   +-- regime/          # Regime classification and belief revision
-|   +-- resolve/         # Entity resolution and deduplication
-+-- echo_gateway/        # Agent runtime and task routing
-+-- cdna_server/         # CDNA compressed model inference
-+-- THESIS_PACK/         # Investment thesis claims + backtest receipts
-+-- scripts/             # Graph insertion scripts
-+-- tools/               # Diagnostic and calibration tools
-+-- tests/               # Test suite
+├── fgip/
+│   ├── agents/          # 24 analytical agents + conviction engine + trading agent
+│   ├── allocator/       # Portfolio allocation with policy constraints
+│   ├── analysis/        # Gap detection, adversarial testing, signal convergence
+│   ├── backtest/        # Portfolio backtesting and risk metrics
+│   ├── decisions/       # Evidence-gated decision framework
+│   ├── governance/      # Family cost index, housing gate, IPS
+│   ├── ontology/        # Graph schema constraints and validation
+│   ├── regime/          # Regime classification and belief revision
+│   ├── resolve/         # Entity resolution and deduplication
+│   └── pipeline/        # Artifact processing pipeline
+├── evidence_graph/      # Evidence graph with FSA state machine
+├── config/              # Watchlist, risk parameters
+├── tools/               # Graph population and diagnostic tools
+├── scripts/             # Graph insertion scripts
+├── THESIS_PACK/         # Investment thesis claims + backtest receipts
+├── articulations/       # Analytical write-ups on specific topics
+├── tests/               # Test suite
+└── web/                 # Web UI and API endpoints
 ```
+
+## Data sources (all public)
+
+| Source | URL | Type |
+|--------|-----|------|
+| SEC EDGAR | sec.gov/cgi-bin/browse-edgar | 13F filings, 10-K, 8-K |
+| Congress.gov | congress.gov | Voting records, bill text |
+| USASpending | usaspending.gov | Federal contracts and grants |
+| Federal Register | federalregister.gov | Rulemakings and executive orders |
+| FEC | fec.gov | Campaign finance |
+| FARA | fara.gov | Foreign agent registrations |
+| FRED | fred.stlouisfed.org | Economic indicators |
+| OpenSecrets | opensecrets.org | Dark money, lobbying |
+| NRC ADAMS | nrc.gov/reading-rm/adams.html | Nuclear regulatory documents |
 
 ## Companion projects
 
 | Project | What it does |
 |---------|-------------|
-| [helix-substrate](https://github.com/echo313unfolding/helix-substrate) | Calibration-free weight compression (4x, beats GPTQ) |
-| [helix-online-kv](https://github.com/echo313unfolding/helix-online-kv) | Online KV cache compression + compressed-domain attention |
-| [echo_runtime](https://github.com/echo313unfolding/echo_runtime) | Unified compressed AI inference runtime |
+| [helix-substrate](https://github.com/echo313unfolding/helix-substrate) | HXQ tensor compression (4x from FP32, cos>0.999) |
+| [helix-codec](https://github.com/echo313unfolding/helix-codec) | Standalone C99 tensor codec library |
+| [sentinel-hybrid-stack](https://github.com/echo313unfolding/sentinel-hybrid-stack) | Security monitoring with SSM+Transformer hybrid |
+| [hxq-solana](https://github.com/echo313unfolding/hxq-solana) | Receipt-gated asset registry on Solana |
+
+## Documentation
+
+| Document | What it covers |
+|----------|---------------|
+| [SUPPORTING_FACTORS.md](docs/SUPPORTING_FACTORS.md) | Source-backed evidence packets for each thesis (claims, evidence, funding chains, counter-theses) |
+| [EVIDENCE_TIERS.md](docs/EVIDENCE_TIERS.md) | How data sources are classified (Tier 0 government → Tier 3 hypothesis) |
+| [THESIS_RECEIPT_SCHEMA.md](docs/THESIS_RECEIPT_SCHEMA.md) | Receipt format for thesis validation (evidence, conviction, graph state) |
+| [TRADING_AGENT_V0_SPEC.md](docs/TRADING_AGENT_V0_SPEC.md) | Trading agent architecture and risk parameters |
+
+## The core idea
+
+```
+Where is money authorized?
+Where is it obligated?
+Who receives it?
+Who supplies them?
+What commodity bottlenecks bind it?
+What public tickers are exposed?
+What hedges offset the failure case?
+```
+
+Money moves through public records before headlines move prices.
 
 ## License
 
-Echo Labs LLC. See LICENSE for details.
+MIT. See [LICENSE](LICENSE).
 
 <div align="center">
 

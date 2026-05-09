@@ -1,0 +1,134 @@
+domain: "security"
+prefix: "SEC"
+default_staleness_days: 30
+
+node_types:
+  - THREAT_ACTOR
+  - VULNERABILITY
+  - CVE
+  - ASSET
+  - NETWORK_ZONE
+  - PROCESS
+  - USER
+  - INDICATOR
+  - LOG_EVENT
+  - TOOL
+  - TECHNIQUE
+  - MALWARE_FAMILY
+  - PATCH
+  - INVESTIGATION
+  - HYPOTHESIS
+  - VERDICT
+
+edge_types:
+  factual:
+    # Observed relationships (direct evidence from logs/scans/CVE databases)
+    - EXPLOITS            # threat_actor -> vulnerability
+    - TARGETS             # threat_actor -> asset
+    - RUNS_ON             # process -> asset
+    - CONNECTS_TO         # asset -> network_zone
+    - AUTHENTICATES_AS    # process -> user
+    - ASSIGNED_TO         # cve -> vulnerability
+    - PATCHED_BY          # vulnerability -> patch
+    - OBSERVED_IN         # indicator -> log_event
+    - USES_TOOL           # threat_actor -> tool
+    - USES_TECHNIQUE      # threat_actor -> technique
+    - DEPLOYS             # threat_actor -> malware_family
+    - DETECTED_ON         # malware_family -> asset
+    - PRODUCED_BY         # log_event -> process
+    - OPENED_BY           # investigation -> log_event
+    - MITIGATES           # patch -> vulnerability
+
+  inferential:
+    # Analyst judgments (require assertion_level tracking)
+    - LIKELY_RELATED      # indicator -> threat_actor
+    - ENABLES_LATERAL     # vulnerability -> network_zone
+    - EXFILTRATES_VIA     # threat_actor -> network_zone
+    - INDICATES           # indicator -> threat_actor
+    - SUGGESTS            # log_event -> hypothesis
+    - SUPPORTS            # log_event -> hypothesis
+    - CONTRADICTS         # log_event -> hypothesis
+    - WEAKENS             # observation -> hypothesis
+    - FALSIFIED_BY        # hypothesis -> log_event
+    - ESCALATED_TO        # investigation -> investigation
+
+  belief_revision:
+    # Verdict lifecycle
+    - SUPERSEDES          # verdict -> verdict (new finding replaces old)
+    - CONFIRMS            # evidence -> hypothesis
+    - INVALIDATES         # evidence -> hypothesis
+
+source_tiers:
+  0:
+    - nvd.nist.gov
+    - cisa.gov
+    - mitre.org
+    - attack.mitre.org
+    - cve.org
+    - capec.mitre.org
+  1:
+    - bleepingcomputer.com
+    - therecord.media
+    - krebsonsecurity.com
+    - arstechnica.com
+    - thehackernews.com
+    - virustotal.com
+
+constraints:
+  EXPLOITS:
+    - [THREAT_ACTOR, VULNERABILITY]
+  TARGETS:
+    - [THREAT_ACTOR, ASSET]
+    - [MALWARE_FAMILY, ASSET]
+  RUNS_ON:
+    - [PROCESS, ASSET]
+  CONNECTS_TO:
+    - [ASSET, NETWORK_ZONE]
+    - [ASSET, ASSET]
+  AUTHENTICATES_AS:
+    - [PROCESS, USER]
+  ASSIGNED_TO:
+    - [CVE, VULNERABILITY]
+  PATCHED_BY:
+    - [VULNERABILITY, PATCH]
+  USES_TOOL:
+    - [THREAT_ACTOR, TOOL]
+  USES_TECHNIQUE:
+    - [THREAT_ACTOR, TECHNIQUE]
+  DEPLOYS:
+    - [THREAT_ACTOR, MALWARE_FAMILY]
+  DETECTED_ON:
+    - [MALWARE_FAMILY, ASSET]
+  SUGGESTS:
+    - [LOG_EVENT, HYPOTHESIS]
+  SUPPORTS:
+    - [LOG_EVENT, HYPOTHESIS]
+    - [INDICATOR, HYPOTHESIS]
+  CONTRADICTS:
+    - [LOG_EVENT, HYPOTHESIS]
+    - [INDICATOR, HYPOTHESIS]
+
+properties:
+  nodes:
+    CVE:
+      required: [cve_id]
+      optional: [cvss_score, severity, published_date, cwe_id]
+    THREAT_ACTOR:
+      required: []
+      optional: [aliases, country, motivation, first_seen]
+    TECHNIQUE:
+      required: []
+      optional: [mitre_id, tactic, platform]
+    INDICATOR:
+      required: [indicator_type]
+      optional: [value, first_seen, last_seen]
+    VERDICT:
+      required: [verdict_class, confidence]
+      optional: [analyst, tool_calls, reasoning]
+  edges:
+    EXPLOITS:
+      required: [assertion_level]
+      optional: [technique, mitre_id, date_observed]
+    INDICATES:
+      required: [assertion_level]
+      optional: [confidence, indicator_type]

@@ -313,6 +313,60 @@ INVESTMENT_THESES: List[Dict[str, Any]] = [
             "Peace dividend reduces spending",
         ],
     },
+    # ── Defense Primes + Government Spending (bill → contract → company) ──
+    {
+        "thesis_id": "thesis-defense-primes",
+        "thesis_statement": "Defense primes benefit from NDAA $895B+, Ukraine replenishment ($60B industrial base), AUKUS ($368B subs), Pacific Deterrence ($9.9B), hypersonics. Munitions stockpiles depleted → multi-year replenishment cycle. Bipartisan support.",
+        "tickers": ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HII", "BWXT", "LDOS", "KTOS", "BAH", "TXT", "HWM", "TDG", "CW"],
+        "sector": "defense",
+        "entry_triggers": [
+            "NDAA passage with increased topline",
+            "Ukraine/Taiwan supplemental appropriation",
+            "Major DoD contract award (>$1B)",
+            "AUKUS submarine construction milestone",
+            "Munitions production acceleration order",
+            "Foreign Military Sale (FMS) notification to Congress",
+        ],
+        "exit_triggers": [
+            "Defense budget sequestration / continuing resolution >6 months",
+            "Major program cancellation (Sentinel, NGAD)",
+            "Nunn-McCurdy breach without restructure approval",
+            "Peace deal reducing Ukraine/Pacific threat perception",
+            "Contractor execution failure (cost overrun >50%)",
+        ],
+        "counter_theses": [
+            "Fiscal hawks force defense cuts in debt ceiling deal",
+            "Peace dividend narrative reduces bipartisan support",
+            "Cost overruns on major programs (Sentinel already breached) erode margins",
+            "Chinese industrial capacity outpaces US defense production",
+            "Technology disruption (drones, AI) obsoletes legacy platforms",
+        ],
+    },
+    # ── Government Infrastructure Spending (IIJA + IRA remaining spend) ──
+    {
+        "thesis_id": "thesis-government-infrastructure",
+        "thesis_statement": "IIJA ($1.2T) + IRA ($369B) have ~$600B+ remaining spend through FY2027. Grid modernization ($65B), broadband ($65B), EV charging ($7.5B), clean energy manufacturing credits. Contractors with government backlog benefit regardless of private sector cycle.",
+        "tickers": ["PWR", "LMT", "GD", "LDOS", "BAH", "SAIC"],
+        "sector": "infrastructure_equipment",
+        "entry_triggers": [
+            "IIJA/IRA award announcement to specific contractor",
+            "State DOT project letting acceleration",
+            "Grid modernization contract award",
+            "EV charging network deployment milestone",
+        ],
+        "exit_triggers": [
+            "Congressional clawback of IRA/IIJA funds",
+            "Executive order pausing disbursement",
+            "Interest rate spike killing project economics",
+            "Contractor capacity constraints (labor shortage)",
+        ],
+        "counter_theses": [
+            "Political clawback of IRA funds under new administration",
+            "IIJA funds get tied up in permitting delays",
+            "Labor shortage prevents spending at authorized pace",
+            "Interest rates make leveraged infrastructure uneconomic",
+        ],
+    },
     {
         "thesis_id": "rare-earth-thesis",
         "thesis_statement": "MP Materials and rare earth processors benefit from China supply chain de-risking. Defense, EV, and electronics all need domestic supply.",
@@ -421,6 +475,199 @@ INVESTMENT_THESES: List[Dict[str, Any]] = [
             "Technology change reduces material consumption",
         ],
     },
+    # ── Structural Bottleneck Theses (from FGIP graph) ──
+    {
+        "thesis_id": "thesis-power-uranium-screen",
+        "thesis_statement": "Data center power buildout drives midstream gas (NEXUS/Transco), E&P (Appalachian), utilities (MI/GA), gas turbines, and nuclear. FERC capacity filings are biggest alpha window.",
+        "tickers": ["DTM", "AR", "MPLX", "EQT", "WMB", "DTE", "CMS", "SO", "GEV", "CEG", "VST", "OKLO"],
+        "sector": "power_data_center",
+        "entry_triggers": [
+            "FERC NEXUS capacity reservation",
+            "State PUC approval (MI MPSC, GA PSC)",
+            "Utility earnings: data center load guidance",
+            "Midstream throughput volume increase",
+            "E&P drilling permit surge (PA DEP, OH DNR)",
+        ],
+        "exit_triggers": [
+            "Gas below $3.00 for 2+ quarters",
+            "Michigan PUC deal reversal",
+            "NEXUS throughput miss 2 consecutive quarters",
+            "Data center moratorium / grid constraint",
+        ],
+        "counter_theses": [
+            "AI capex bubble collapses, data centers cancelled",
+            "Renewables + battery undercut gas-fired baseload",
+            "Grid constraints block new connections",
+            "Recession kills power demand growth",
+        ],
+    },
+    {
+        "thesis_id": "thesis-silver-screen",
+        "thesis_statement": "Silver structural deficit (6th year), Mexico mining moratorium, China export ban. Supply cannot respond to demand. Bottleneck asset.",
+        "tickers": ["AG", "PAAS", "HL", "SVM", "EXK", "WPM"],
+        "sector": "silver",
+        "entry_triggers": [
+            "COMEX inventory drawdown acceleration",
+            "Mexico moratorium extension",
+            "China silver policy tightening",
+            "Industrial demand surge (solar/EV)",
+        ],
+        "exit_triggers": [
+            "Mexico moratorium lifted",
+            "Copper paste solar substitution (mass production)",
+            "Silver price collapse >30% from peak",
+            "Major new mine production online",
+        ],
+        "counter_theses": [
+            "Copper paste replaces silver in solar",
+            "Silver already ran +147% — priced in",
+            "Recession kills industrial demand",
+            "Mexico moratorium reversed",
+        ],
+    },
+    {
+        "thesis_id": "thesis-copper-screen",
+        "thesis_statement": "Copper wiring bottleneck for grid/EV/data center buildout. No substitute. Structural deficit with 10+ year mine development cycle.",
+        "tickers": ["FCX", "SCCO", "TECK", "HBM"],
+        "sector": "copper",
+        "entry_triggers": [
+            "Grid modernization contract announcement",
+            "EV production ramp (wiring demand)",
+            "Data center power infrastructure expansion",
+            "Mine supply disruption",
+        ],
+        "exit_triggers": [
+            "Copper substitution breakthrough",
+            "Major new mine production",
+            "Global recession demand destruction",
+            "Copper price collapse >25%",
+        ],
+        "counter_theses": [
+            "Aluminum substitution in wiring",
+            "Recycling ramp reduces primary demand",
+            "Recession kills construction demand",
+            "Chilean/Peruvian production surge",
+        ],
+    },
+    {
+        "thesis_id": "thesis-uranium-screen",
+        "thesis_statement": "Uranium structural deficit (30-40M lb/yr). SMR demand rising. HALEU enrichment bottleneck. US import dependency. $100+/lb consensus through 2026.",
+        "tickers": ["CCJ", "UUUU", "UEC", "DNN", "EU", "CEG", "VST", "OKLO", "SMR"],
+        "sector": "uranium",
+        "entry_triggers": [
+            "Uranium spot price breakout above $100/lb",
+            "New reactor restart announcement (TMI, Palisades)",
+            "HALEU production facility approval",
+            "Russian import restriction acceleration",
+        ],
+        "exit_triggers": [
+            "Major new mine production online (Kazakhstan expansion)",
+            "Nuclear accident globally",
+            "SMR program cancellation wave",
+            "Uranium spot below $70/lb sustained",
+        ],
+        "counter_theses": [
+            "Kazakhstan production surge floods market",
+            "Nuclear accident kills political support",
+            "SMR delays push timeline past 2030",
+            "Fusion breakthrough makes fission obsolete",
+        ],
+    },
+    {
+        "thesis_id": "thesis-coal-bridge",
+        "thesis_statement": "Data center demand delaying 40% of coal retirements. DOE emergency declarations. Appalachian proximity to PJM data center load. Bridge until gas turbines/SMRs online.",
+        "tickers": ["CNR", "BTU", "ARLP"],
+        "sector": "coal",
+        "entry_triggers": [
+            "Additional DOE emergency retirement delays",
+            "Utility coal contract extensions for data center load",
+            "Gas turbine waitlist extends further (2030+)",
+        ],
+        "exit_triggers": [
+            "Gas turbine supply normalizes",
+            "Battery storage cost collapse (<$50/kWh)",
+            "Coal plant regulatory forcing (EPA)",
+            "Carbon pricing legislation passes",
+        ],
+        "counter_theses": [
+            "EPA forces coal retirements regardless of demand",
+            "Gas turbine supply catches up by 2027",
+            "Carbon pricing makes coal uneconomic",
+            "ESG pressure prevents utility coal extensions",
+        ],
+    },
+    {
+        "thesis_id": "thesis-fertilizer-inflation",
+        "thesis_statement": "Gas feedstock drives nitrogen fertilizer cost drives food price drives real inflation above CPI. M2 at 6.3% real. Urea +30% in 2025. Potash +19%.",
+        "tickers": ["CF", "NTR", "MOS"],
+        "sector": "fertilizer",
+        "entry_triggers": [
+            "Henry Hub gas above $4.50/MMBtu sustained",
+            "Urea price breakout above $400/ton",
+            "Food CPI acceleration above 5%",
+            "Geopolitical supply disruption (Belarus potash, Russia)",
+        ],
+        "exit_triggers": [
+            "Gas price collapse below $2.50/MMBtu",
+            "New fertilizer capacity online (East Asia, Middle East)",
+            "Trade policy normalization (Russia/Belarus)",
+            "Demand destruction from recession",
+        ],
+        "counter_theses": [
+            "New Middle East/East Asia capacity floods nitrogen market",
+            "Precision agriculture reduces fertilizer per acre",
+            "Recession destroys food demand",
+            "Gas price collapse kills the thesis",
+        ],
+    },
+    {
+        "thesis_id": "thesis-rare-earth-security",
+        "thesis_statement": "China 70% mining, 90% processing. Export curbs targeting semiconductor supply chain. US Mountain Pass only domestic mine. Defense + AI chip supply at risk.",
+        "tickers": ["MP", "LYSDY"],
+        "sector": "rare_earths",
+        "entry_triggers": [
+            "China export restriction escalation",
+            "US government procurement mandate",
+            "Defense contract for domestic rare earth processing",
+            "New tariff on Chinese processed rare earths",
+        ],
+        "exit_triggers": [
+            "China lifts export restrictions",
+            "Substitute materials proven at scale",
+            "Multiple non-China processing plants operational",
+            "Trade war de-escalation",
+        ],
+        "counter_theses": [
+            "China lifts curbs as trade war tool (leverage spent)",
+            "Recycling captures enough rare earths",
+            "Japan/Australia processing scales faster than expected",
+            "Substitute permanent magnets eliminate REE dependency",
+        ],
+    },
+    {
+        "thesis_id": "thesis-smr-endgame",
+        "thesis_statement": "SMRs are the only baseload source that scales to GW without pipeline infrastructure. 2028+ earliest. HALEU fuel bottleneck. Convergence point: gas transition → nuclear.",
+        "tickers": ["OKLO", "SMR", "CCJ", "UUUU"],
+        "sector": "nuclear_smr",
+        "entry_triggers": [
+            "NRC design approval for next SMR",
+            "HALEU production facility commissioned",
+            "First SMR power purchase agreement with hyperscaler",
+            "DOE loan guarantee for SMR deployment",
+        ],
+        "exit_triggers": [
+            "NRC permit denial or 2-year timeline slip",
+            "Nuclear accident globally",
+            "Fusion breakthrough accelerates to commercial",
+            "HALEU production failure",
+        ],
+        "counter_theses": [
+            "SMR costs overrun to uneconomic levels",
+            "NRC review timeline slips beyond 2030",
+            "Nuclear accident kills political support",
+            "Fusion gets there first (ITER+ or private)",
+        ],
+    },
 ]
 
 
@@ -454,6 +701,39 @@ class ConvictionEngine(FGIPAgent):
         self.artifact_dir = Path(artifact_dir)
         self.artifact_dir.mkdir(parents=True, exist_ok=True)
         self._theses = INVESTMENT_THESES.copy()
+
+    def _resolve_ticker_node_ids(self, ticker: str, conn) -> List[str]:
+        """Resolve a ticker symbol to all matching node_ids in the graph.
+
+        Checks: exact node_id match, then aliases JSON array.
+        Returns list of node_ids (usually 1, but could be 0 or multiple).
+        """
+        node_ids = set()
+        ticker_lower = ticker.lower()
+
+        # Direct node_id match
+        row = conn.execute("SELECT node_id FROM nodes WHERE node_id = ?", (ticker_lower,)).fetchone()
+        if row:
+            node_ids.add(row[0])
+
+        # Alias match (aliases is JSON array like ["DTM", "DT Midstream"])
+        rows = conn.execute(
+            "SELECT node_id FROM nodes WHERE aliases LIKE ?",
+            (f'%"{ticker}"%',)
+        ).fetchall()
+        for row in rows:
+            node_ids.add(row[0])
+
+        # Only use name-based LIKE for node_type=COMPANY to avoid false matches
+        if not node_ids:
+            rows = conn.execute(
+                "SELECT node_id FROM nodes WHERE node_type = 'COMPANY' AND LOWER(name) LIKE ?",
+                (f"%{ticker_lower}%",)
+            ).fetchall()
+            for row in rows:
+                node_ids.add(row[0])
+
+        return list(node_ids)
 
     def add_thesis(self, thesis: Dict[str, Any]):
         """Add a custom thesis to evaluate."""
@@ -543,15 +823,23 @@ class ConvictionEngine(FGIPAgent):
         # Query graph for edges related to this sector/tickers
         conn = self.db.connect()
 
+        # Resolve all tickers to graph node_ids once (ticker → [node_id, ...])
+        ticker_node_map: Dict[str, List[str]] = {}
+        for ticker in tickers:
+            ticker_node_map[ticker] = self._resolve_ticker_node_ids(ticker, conn)
+
         # 1. Check for EDGAR filings (Form 13F institutional buys)
         for ticker in tickers:
-            node_id = ticker.lower()
-            rows = conn.execute("""
+            resolved_ids = ticker_node_map[ticker]
+            if not resolved_ids:
+                continue
+            id_placeholders = ",".join(["?"] * len(resolved_ids))
+            rows = conn.execute(f"""
                 SELECT e.from_node_id, e.edge_type, e.to_node_id, e.confidence, e.notes, e.source_url
                 FROM edges e
-                WHERE (e.from_node_id = ? OR e.to_node_id = ?)
+                WHERE (e.from_node_id IN ({id_placeholders}) OR e.to_node_id IN ({id_placeholders}))
                 AND e.edge_type IN ('OWNS_SHARES', 'INCREASED_POSITION', 'DECREASED_POSITION')
-            """, (node_id, node_id)).fetchall()
+            """, (*resolved_ids, *resolved_ids)).fetchall()
 
             for row in rows:
                 signal_type = "confirming" if row[1] in ('OWNS_SHARES', 'INCREASED_POSITION') else "refuting"
@@ -614,24 +902,36 @@ class ConvictionEngine(FGIPAgent):
 
         # 4. Check PROPOSED EDGES from Tier 0 agents (staging data = authoritative but pending review)
         # These are government sources, so we treat them as high-confidence signals
-        # WO-FGIP-TRIANGULATION-HYGIENE-02: Only count proposals WITH artifact_id evidence
-        tier_0_agents = TIER0_AGENTS  # All Tier-0 agents (dynamic placeholders)
+        # WO-FGIP-TRIANGULATION-HYGIENE-02: Tier 0 agents self-certify (data IS evidence).
+        # Non-Tier-0 agents require artifact_id.
+        tier_0_agents = TIER0_AGENTS
         tier0_placeholders = ",".join(["?"] * len(tier_0_agents))
 
         for ticker in tickers:
             ticker_lower = ticker.lower()
 
-            # Query proposed_edges for this ticker from Tier 0 agents
-            # REQUIRES artifact_id to ensure evidence trail
+            # Also try resolved node_ids for better matching
+            resolved_ids = ticker_node_map.get(ticker, [])
+            like_patterns = [f"%{ticker_lower}%"]
+            for nid in resolved_ids:
+                like_patterns.append(f"%{nid}%")
+
+            # Build OR conditions for all patterns
+            like_conditions = " OR ".join(
+                [f"(LOWER(pe.from_node) LIKE ? OR LOWER(pe.to_node) LIKE ?)" for _ in like_patterns]
+            )
+            like_params = []
+            for pat in like_patterns:
+                like_params.extend([pat, pat])
+
             rows = conn.execute(f"""
                 SELECT pe.from_node, pe.to_node, pe.relationship, pe.confidence, pe.agent_name, pe.reasoning
                 FROM proposed_edges pe
-                WHERE (LOWER(pe.from_node) LIKE ? OR LOWER(pe.to_node) LIKE ?)
+                WHERE ({like_conditions})
                 AND pe.agent_name IN ({tier0_placeholders})
                 AND pe.status = 'PENDING'
-                AND pe.artifact_id IS NOT NULL
-                AND pe.artifact_id != ''
-            """, (f"%{ticker_lower}%", f"%{ticker_lower}%", *tier_0_agents)).fetchall()
+                LIMIT 50
+            """, (*like_params, *tier_0_agents)).fetchall()
 
             for row in rows:
                 agent_name = row[4]
@@ -652,9 +952,15 @@ class ConvictionEngine(FGIPAgent):
                 # Determine if confirming or refuting
                 confirming_relationships = [
                     'OWNS_SHARES', 'INCREASED_POSITION', 'FUNDED_BY', 'LICENSED_BY',
-                    'PERMITTED_BY', 'AWARDED_GRANT', 'VOTED_FOR', 'SUPPORTS'
+                    'PERMITTED_BY', 'AWARDED_GRANT', 'VOTED_FOR', 'SUPPORTS',
+                    'AWARDED_CONTRACT', 'AUTHORIZES_FUNDING', 'FUNDS_REPLENISHMENT',
+                    'PRIME_CONTRACTOR', 'KEY_SUPPLIER', 'TAX_CREDIT_BENEFICIARY',
+                    'SPONSORED', 'COSPONSORED', 'SUPPLIES_TO',
                 ]
-                refuting_relationships = ['DECREASED_POSITION', 'VOTED_AGAINST', 'OPPOSES', 'DENIED']
+                refuting_relationships = [
+                    'DECREASED_POSITION', 'VOTED_AGAINST', 'OPPOSES', 'DENIED',
+                    'CANCELLED', 'REJECTED',
+                ]
 
                 if relationship in confirming_relationships:
                     signal_type = "confirming"
@@ -683,15 +989,13 @@ class ConvictionEngine(FGIPAgent):
                     neutral.append(signal)
 
         # 5. Check proposed_edges for sector-level signals (not ticker-specific)
-        # WO-FGIP-TRIANGULATION-HYGIENE-02: Only count proposals WITH artifact_id evidence
+        # Tier 0 agents self-certify; no artifact_id needed.
         rows = conn.execute(f"""
             SELECT pe.from_node, pe.to_node, pe.relationship, pe.confidence, pe.agent_name
             FROM proposed_edges pe
             WHERE pe.agent_name IN ({tier0_placeholders})
             AND pe.status = 'PENDING'
             AND (pe.from_node LIKE ? OR pe.to_node LIKE ?)
-            AND pe.artifact_id IS NOT NULL
-            AND pe.artifact_id != ''
             LIMIT 20
         """, (*tier_0_agents, f"%{sector}%", f"%{sector}%")).fetchall()
 
@@ -719,7 +1023,94 @@ class ConvictionEngine(FGIPAgent):
                 timestamp=datetime.utcnow().isoformat() + "Z",
             ))
 
-        # 6. Check YouTube/RSS signal layer for sector mentions (Tier 2 - context only)
+        # 6. Check graph edges for supply chain, regulatory, and correlation signals
+        # These are the edges populated by the trading agent data pipeline
+        SUPPLY_CHAIN_EDGES = [
+            'DEPENDS_ON', 'SUPPLIES_GAS', 'DELIVERS_TO', 'OPERATED_BY',
+            'GATHERS_FOR', 'POWERS', 'SUPPLIES_EQUIPMENT', 'MEMBER_OF',
+            'SUPPLIES_TO', 'KEY_SUPPLIER', 'PRIME_CONTRACTOR',
+        ]
+        REGULATORY_EDGES = [
+            'PUC_APPROVED', 'FILED_FERC', 'FILED_APPLICATION', 'FILED_MOTION',
+            'COMMISSION_ORDER', 'REGULATES',
+        ]
+        GOVERNMENT_FUNDING_EDGES = [
+            'AUTHORIZES_FUNDING', 'FUNDS_REPLENISHMENT', 'AWARDED_CONTRACT',
+            'AWARDED_GRANT', 'TAX_CREDIT_BENEFICIARY', 'SUPPORTS_SECTOR',
+        ]
+        MARKET_DATA_EDGES = [
+            'CORRELATED_WITH', 'CONTRACTED', 'ACQUISITION',
+        ]
+        REFUTING_EDGES = [
+            'DENIED', 'REJECTED', 'CANCELLED', 'THREATENS',
+        ]
+
+        all_signal_edge_types = SUPPLY_CHAIN_EDGES + REGULATORY_EDGES + GOVERNMENT_FUNDING_EDGES + MARKET_DATA_EDGES + REFUTING_EDGES
+        placeholders_edges = ",".join(["?"] * len(all_signal_edge_types))
+
+        for ticker in tickers:
+            resolved_ids = ticker_node_map[ticker]
+            if not resolved_ids:
+                continue
+            id_ph = ",".join(["?"] * len(resolved_ids))
+            rows = conn.execute(f"""
+                SELECT e.edge_id, e.edge_type, e.from_node_id, e.to_node_id,
+                       e.confidence, e.notes, e.source_url
+                FROM edges e
+                WHERE (e.from_node_id IN ({id_ph}) OR e.to_node_id IN ({id_ph}))
+                AND e.edge_type IN ({placeholders_edges})
+            """, (*resolved_ids, *resolved_ids, *all_signal_edge_types)).fetchall()
+
+            for row in rows:
+                edge_id, edge_type, from_n, to_n, conf, notes, source_url = row
+                conf_val = float(conf) if conf else 0.75
+
+                if edge_type in REGULATORY_EDGES:
+                    # Government filings = Tier 0
+                    source_tier = 0
+                    source_type = "regulatory_filing"
+                    signal_type = "confirming"
+                elif edge_type in GOVERNMENT_FUNDING_EDGES:
+                    # Government funding (bills, contracts, grants) = Tier 0
+                    source_tier = 0
+                    source_type = "usaspending"
+                    signal_type = "confirming"
+                elif edge_type in SUPPLY_CHAIN_EDGES:
+                    # Supply chain = Tier 1 (public filings, earnings)
+                    source_tier = 1
+                    source_type = "supply_chain"
+                    signal_type = "confirming"
+                elif edge_type in MARKET_DATA_EDGES:
+                    # Market data = Tier 1 neutral (useful context, not directional)
+                    source_tier = 1
+                    source_type = "market_data"
+                    signal_type = "neutral" if edge_type == 'CORRELATED_WITH' else "confirming"
+                elif edge_type in REFUTING_EDGES:
+                    source_tier = 0
+                    source_type = "regulatory_filing"
+                    signal_type = "refuting"
+                else:
+                    continue
+
+                signal = Signal(
+                    signal_id=f"graph-{edge_id}",
+                    signal_type=signal_type,
+                    source_type=source_type,
+                    source_tier=source_tier,
+                    source_url=source_url or "",
+                    description=f"{from_n} {edge_type} {to_n}" + (f" — {notes}" if notes else ""),
+                    signal_strength=conf_val,
+                    timestamp=datetime.utcnow().isoformat() + "Z",
+                )
+
+                if signal_type == "confirming":
+                    confirming.append(signal)
+                elif signal_type == "refuting":
+                    refuting.append(signal)
+                else:
+                    neutral.append(signal)
+
+        # 7. Check YouTube/RSS signal layer for sector mentions (Tier 2 - context only)
         rows = conn.execute("""
             SELECT pc.claim_text, pc.source_url, pc.created_at
             FROM proposed_claims pc

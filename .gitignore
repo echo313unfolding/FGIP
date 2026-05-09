@@ -60,7 +60,14 @@ receipts/*
 !receipts/signal_checks/
 !receipts/trade_memos/
 !receipts/watch/
+!receipts/defense_government_wiring_*.json
+!receipts/amicus-5gw-frame-*.json
+!receipts/5gw-citation-chain-*.json
+!receipts/supply_chain_mapping/
 # Large/operational stay ignored: db_backups/ (21MB), schedule/, hygiene/, dedupe/
+
+# Proposals (generated per scan, operational)
+proposals/
 
 # THESIS_PACK receipts are the proof chain — include them
 !THESIS_PACK/receipts/

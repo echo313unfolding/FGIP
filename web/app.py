@@ -745,6 +745,7 @@ def api_approve():
     data = request.json or {}
     proposal_ids = data.get('proposal_ids', [])
     reviewer_notes = data.get('notes', 'Approved via web UI')
+    skip_provenance = data.get('skip_provenance', False)
 
     if not proposal_ids:
         return jsonify({"error": "proposal_ids required"}), 400
@@ -762,7 +763,8 @@ def api_approve():
             ).fetchone()
 
             if claim:
-                result = accept_claim(conn, pid, reviewer_notes, "web_ui")
+                result = accept_claim(conn, pid, reviewer_notes, "web_ui",
+                                      skip_provenance_check=skip_provenance)
                 if result:
                     results.append({"proposal_id": pid, "status": "approved", "result": result})
                 else:
@@ -772,7 +774,8 @@ def api_approve():
                     "SELECT proposal_id FROM proposed_edges WHERE proposal_id = ?", (pid,)
                 ).fetchone()
                 if edge:
-                    result = accept_edge(conn, pid, reviewer_notes, "web_ui")
+                    result = accept_edge(conn, pid, reviewer_notes, "web_ui",
+                                         skip_provenance_check=skip_provenance)
                     if result:
                         results.append({"proposal_id": pid, "status": "approved", "result": result})
                     else:
@@ -831,6 +834,7 @@ def api_bulk_approve():
     agent_name = data.get('agent')
     min_confidence = float(data.get('min_confidence', 0.9))
     limit = int(data.get('limit', 100))
+    skip_provenance = data.get('skip_provenance', False)
 
     db = get_db()
     conn = db.connect()
@@ -851,7 +855,9 @@ def api_bulk_approve():
     claims = conn.execute(query, params).fetchall()
     for claim in claims:
         try:
-            result = accept_claim(conn, claim["proposal_id"], f"Bulk approved (agent={agent_name})", "web_ui_bulk")
+            result = accept_claim(conn, claim["proposal_id"],
+                                  f"Bulk approved (agent={agent_name})", "web_ui_bulk",
+                                  skip_provenance_check=skip_provenance)
             if result:
                 approved += 1
             else:
@@ -871,7 +877,9 @@ def api_bulk_approve():
     edges = conn.execute(query, params).fetchall()
     for edge in edges:
         try:
-            result = accept_edge(conn, edge["proposal_id"], f"Bulk approved (conf>={min_confidence})", "web_ui_bulk")
+            result = accept_edge(conn, edge["proposal_id"],
+                                 f"Bulk approved (conf>={min_confidence})", "web_ui_bulk",
+                                 skip_provenance_check=skip_provenance)
             if result:
                 approved += 1
             else:

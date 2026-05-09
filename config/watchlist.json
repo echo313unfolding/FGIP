@@ -1,0 +1,109 @@
+{
+  "version": "0.3.0",
+  "updated": "2026-05-07",
+
+  "risk_params": {
+    "max_single_position": 0.20,
+    "max_sector_exposure": 0.40,
+    "max_daily_loss": 0.05,
+    "trailing_stop_atr_mult": 2.0,
+    "min_conviction_to_trade": 3,
+    "kelly_fraction": 0.25,
+    "max_adv_participation": 0.01,
+    "slippage_bps": 10
+  },
+
+  "tiers": {
+    "tier_1": {
+      "scan_frequency": "daily",
+      "description": "Highest conviction — midstream/E&P data center power thesis",
+      "symbols": {
+        "DTM":  {"name": "DT Midstream", "thesis": "thesis-power-uranium-screen", "sector": "midstream", "notes": "NEXUS + Guardian pipeline. $1.2B acquisition. Top pick."},
+        "AR":   {"name": "Antero Resources", "thesis": "thesis-power-uranium-screen", "sector": "e_and_p", "notes": "Appalachian E&P. Gas price sensitive."},
+        "MPLX": {"name": "MPLX LP", "thesis": "thesis-power-uranium-screen", "sector": "midstream", "notes": "Ohio gathering. Distribution play."},
+        "EQT":  {"name": "EQT Corp", "thesis": "thesis-power-uranium-screen", "sector": "e_and_p", "notes": "Largest Appalachian producer."},
+        "WMB":  {"name": "Williams Companies", "thesis": "thesis-power-uranium-screen", "sector": "midstream", "notes": "Transco + Socrates $7.3B. Record Q1 2026."}
+      }
+    },
+    "tier_2": {
+      "scan_frequency": "daily",
+      "description": "Structural bottleneck — silver, copper, nuclear, gas turbine",
+      "symbols": {
+        "AG":   {"name": "First Majestic Silver", "thesis": "thesis-silver-screen", "sector": "silver", "notes": "Mexico moratorium. 6th yr deficit."},
+        "PAAS": {"name": "Pan American Silver", "thesis": "thesis-silver-screen", "sector": "silver", "notes": "Diversified silver miner."},
+        "FCX":  {"name": "Freeport McMoRan", "thesis": "thesis-copper-screen", "sector": "copper", "notes": "Largest US copper. 27 tons/MW."},
+        "CEG":  {"name": "Constellation Energy", "thesis": "thesis-uranium-screen", "sector": "nuclear", "notes": "Largest US nuclear fleet. TMI restart. IRA PTC $15/MWh."},
+        "GEV":  {"name": "GE Vernova", "thesis": "thesis-power-uranium-screen", "sector": "gas_turbine", "notes": "Turbine backlog. Waitlists to 2030s."}
+      }
+    },
+    "tier_3": {
+      "scan_frequency": "weekly",
+      "description": "Utilities, nuclear, and commodity producers",
+      "symbols": {
+        "DTE":  {"name": "DTE Energy", "thesis": "thesis-power-uranium-screen", "sector": "utility", "notes": "Michigan. Stargate 1.4GW. 19-yr contract."},
+        "CMS":  {"name": "CMS Energy", "thesis": "thesis-power-uranium-screen", "sector": "utility", "notes": "Grand Rapids. Rate GPD framework."},
+        "SO":   {"name": "Southern Company", "thesis": "thesis-power-uranium-screen", "sector": "utility", "notes": "Hampton GA. Equinix."},
+        "VST":  {"name": "Vistra", "thesis": "thesis-uranium-screen", "sector": "nuclear", "notes": "ERCOT. Comanche Peak nuclear."},
+        "OKLO": {"name": "Oklo", "thesis": "thesis-smr-endgame", "sector": "nuclear_smr", "notes": "SMR. 14GW pipeline. 2028+."}
+      }
+    },
+    "tier_4": {
+      "scan_frequency": "weekly",
+      "description": "Uranium, coal bridge, fertilizer, rare earths — commodity chain",
+      "symbols": {
+        "CCJ":  {"name": "Cameco", "thesis": "thesis-uranium-screen", "sector": "uranium", "notes": "Largest Western U miner. 30-40M lb deficit."},
+        "UUUU": {"name": "Energy Fuels", "thesis": "thesis-uranium-screen", "sector": "uranium", "notes": "Only US conventional mill. HALEU pathway."},
+        "CF":   {"name": "CF Industries", "thesis": "thesis-fertilizer-inflation", "sector": "fertilizer", "notes": "Gas → urea. Direct inflation channel."},
+        "MP":   {"name": "MP Materials", "thesis": "thesis-rare-earth-security", "sector": "rare_earths", "notes": "Only US REE mine. China 90% processing."},
+        "BTU":  {"name": "Peabody Energy", "thesis": "thesis-coal-bridge", "sector": "coal", "notes": "Bridge fuel. Retirements delayed 40%."},
+        "ET":   {"name": "Energy Transfer", "thesis": "thesis-power-uranium-screen", "sector": "midstream", "notes": "First direct gas-to-DC deal. CloudBurst."}
+      }
+    },
+    "tier_5": {
+      "scan_frequency": "weekly",
+      "description": "Defense primes — NDAA, Ukraine replenishment, AUKUS, PDI",
+      "symbols": {
+        "LMT":  {"name": "Lockheed Martin", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "F-35, HIMARS, hypersonic (HACM). Ukraine replenishment."},
+        "RTX":  {"name": "RTX Corporation", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "Patriot, SM-6, AMRAAM, Pratt engines. Missile replenishment cycle."},
+        "NOC":  {"name": "Northrop Grumman", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "B-21 Raider, Sentinel ICBM ($96B), Triton. Nunn-McCurdy risk."},
+        "GD":   {"name": "General Dynamics", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "Columbia-class sub ($132B), Abrams, Gulfstream. Electric Boat."},
+        "HII":  {"name": "Huntington Ingalls", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "Aircraft carriers, Virginia-class subs. AUKUS co-builder."},
+        "BWXT": {"name": "BWX Technologies", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "Sole-source naval nuclear reactors. Columbia + Virginia class."},
+        "PLTR": {"name": "Palantir Technologies", "thesis": "defense-anduril-thesis", "sector": "defense", "notes": "Army TITAN $458M, CDAO AI/ML. Software-defined warfare."},
+        "KTOS": {"name": "Kratos Defense", "thesis": "thesis-defense-primes", "sector": "defense", "notes": "Target drones, tactical UAVs, directed energy. Asymmetric play."}
+      }
+    }
+  },
+
+  "exit_rules": {
+    "DTM":  {"invalidation": "NEXUS throughput miss 2 consecutive quarters"},
+    "AR":   {"invalidation": "Gas below $3.00 for 2+ quarters"},
+    "MPLX": {"invalidation": "Ohio gathering volume decline"},
+    "AG":   {"invalidation": "Mexico moratorium lifted + copper paste mass production"},
+    "FCX":  {"invalidation": "Copper substitution breakthrough"},
+    "CEG":  {"invalidation": "Nuclear accident or regulatory shutdown"},
+    "OKLO": {"invalidation": "NRC permit denial or 2-year timeline slip"},
+    "CCJ":  {"invalidation": "Kazakhstan expansion floods market, spot < $70/lb"},
+    "CF":   {"invalidation": "Gas below $2.50 sustained, new Middle East capacity online"},
+    "MP":   {"invalidation": "China lifts REE export restrictions"},
+    "BTU":  {"invalidation": "EPA forces coal retirements + gas turbine supply normalizes"},
+    "ET":   {"invalidation": "Data center gas demand falls below 2 Bcf/d growth trajectory"},
+    "LMT":  {"invalidation": "F-35 program cancellation or major FMS block"},
+    "RTX":  {"invalidation": "Patriot production failure or major quality issue"},
+    "NOC":  {"invalidation": "Sentinel ICBM cancelled after Nunn-McCurdy breach"},
+    "GD":   {"invalidation": "Columbia-class submarine further cost overrun + schedule slip >2yr"},
+    "HII":  {"invalidation": "Submarine build rate cut below 2/year"},
+    "BWXT": {"invalidation": "Naval nuclear reactor program restructured or alternative fuel source"},
+    "PLTR": {"invalidation": "DoD shifts back to legacy contractors for AI/ML"},
+    "KTOS": {"invalidation": "Drone target program cut or competitor wins re-compete"}
+  },
+
+  "hedge_instruments": {
+    "KOLD": {"type": "2x_inverse_natgas", "hedges": ["AR", "EQT", "RRC"], "notes": "Best hedge pair. r=-0.50/-0.52 vs AR/EQT."},
+    "TLT":  {"type": "long_treasury", "hedges": ["AR", "LMT", "RTX"], "notes": "Flight to safety. Defense underperforms in risk-off if rates drop."},
+    "GLD":  {"type": "gold", "hedges": ["ALL"], "notes": "Macro hedge. Uncertainty/recession."},
+    "SLV":  {"type": "silver_etf", "hedges": ["AG", "PAAS"], "notes": "Silver exposure without single-name risk."},
+    "SH":   {"type": "inverse_sp500", "hedges": ["ALL"], "notes": "Broad market hedge. Defense beta ~0.7."},
+    "ITA":  {"type": "defense_etf", "hedges": ["LMT", "RTX", "NOC", "GD"], "notes": "iShares Aerospace & Defense ETF. Basket exposure."}
+  }
+}
