@@ -65,6 +65,8 @@ receipts/*
 !receipts/5gw-citation-chain-*.json
 !receipts/supply_chain_mapping/
 !receipts/thesis_receipts/
+!receipts/backtests/
+!receipts/mock_trades/
 # Large/operational stay ignored: db_backups/ (21MB), schedule/, hygiene/, dedupe/
 
 # Proposals (generated per scan, operational)

@@ -1,0 +1,30 @@
+{
+  "date": "2025-11-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "Candidate",
+  "action": "LONG_BASKET",
+  "target_weights_count": 20,
+  "gross_exposure": 0.126,
+  "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+  "visible_sources": [
+    "congress_ndaa_fy2025_hr8070",
+    "congress_ukraine_supplemental_hr8035"
+  ],
+  "visible_facts": [
+    "fact_ndaa_fy2025_enacted",
+    "fact_ukraine_supplemental_enacted"
+  ],
+  "visible_edges": [
+    "edge_genius_act_dollar_defense",
+    "edge_ndaa_fy2025_lmt",
+    "edge_ndaa_fy2025_rtx",
+    "edge_ndaa_fy2025_noc",
+    "edge_ndaa_fy2025_gd",
+    "edge_ndaa_fy2025_hii",
+    "edge_ndaa_fy2025_bwxt",
+    "edge_ukraine_supp_rtx",
+    "edge_ukraine_supp_lmt"
+  ],
+  "risk_gate": "candidate_evidence_gated",
+  "receipt_hash": "20f938c37a488ef2"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2024-07-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "N/A",
+  "action": "LONG_BASKET",
+  "target_weights_count": 1,
+  "gross_exposure": 1.0,
+  "rationale": "SPY benchmark.",
+  "visible_sources": [],
+  "visible_facts": [],
+  "visible_edges": [],
+  "risk_gate": "spy_benchmark",
+  "receipt_hash": "6b5ca93f22e311e7"
+}

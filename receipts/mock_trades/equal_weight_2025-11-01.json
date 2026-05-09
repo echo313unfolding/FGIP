@@ -1,0 +1,14 @@
+{
+  "date": "2025-11-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "N/A",
+  "action": "LONG_BASKET",
+  "target_weights_count": 20,
+  "gross_exposure": 1.0,
+  "rationale": "Equal-weight 20 tickers.",
+  "visible_sources": [],
+  "visible_facts": [],
+  "visible_edges": [],
+  "risk_gate": "equal_weight_baseline",
+  "receipt_hash": "a12c85f770ae3c28"
+}

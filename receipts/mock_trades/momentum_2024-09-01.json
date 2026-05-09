@@ -1,0 +1,14 @@
+{
+  "date": "2024-09-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "N/A",
+  "action": "LONG_BASKET",
+  "target_weights_count": 5,
+  "gross_exposure": 0.5,
+  "rationale": "Top-5 3-month momentum: ['PYPL', 'NDAQ', 'STT', 'ICE', 'BK']. 50% gross.",
+  "visible_sources": [],
+  "visible_facts": [],
+  "visible_edges": [],
+  "risk_gate": "momentum_baseline",
+  "receipt_hash": "e9e6b523e04b188d"
+}

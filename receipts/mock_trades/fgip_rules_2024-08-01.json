@@ -1,0 +1,21 @@
+{
+  "date": "2024-08-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "Candidate",
+  "action": "LONG_BASKET",
+  "target_weights_count": 20,
+  "gross_exposure": 0.062,
+  "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+  "visible_sources": [
+    "congress_ukraine_supplemental_hr8035"
+  ],
+  "visible_facts": [
+    "fact_ukraine_supplemental_enacted"
+  ],
+  "visible_edges": [
+    "edge_ukraine_supp_rtx",
+    "edge_ukraine_supp_lmt"
+  ],
+  "risk_gate": "candidate_evidence_gated",
+  "receipt_hash": "57c1725d221deb00"
+}

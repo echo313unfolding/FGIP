@@ -1,0 +1,14 @@
+{
+  "date": "2025-01-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "N/A",
+  "action": "NO_TRADE",
+  "target_weights_count": 0,
+  "gross_exposure": 0,
+  "rationale": "Cash baseline \u2014 no trades.",
+  "visible_sources": [],
+  "visible_facts": [],
+  "visible_edges": [],
+  "risk_gate": "cash_only",
+  "receipt_hash": "a71d5cb5759be4de"
+}

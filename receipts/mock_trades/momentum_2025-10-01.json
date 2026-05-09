@@ -1,0 +1,14 @@
+{
+  "date": "2025-10-01",
+  "thesis_id": "thesis-defense-primes",
+  "graph_state": "N/A",
+  "action": "LONG_BASKET",
+  "target_weights_count": 5,
+  "gross_exposure": 0.5,
+  "rationale": "Top-5 3-month momentum: ['HOOD', 'GLD', 'BAC', 'BK', 'TLT']. 50% gross.",
+  "visible_sources": [],
+  "visible_facts": [],
+  "visible_edges": [],
+  "risk_gate": "momentum_baseline",
+  "receipt_hash": "024023bb9a1d76b7"
+}

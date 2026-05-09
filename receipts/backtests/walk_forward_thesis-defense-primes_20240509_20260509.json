@@ -1,0 +1,2227 @@
+{
+  "simulation": "FGIP_WALK_FORWARD_MOCK_TRADER_V0",
+  "thesis_id": "thesis-defense-primes",
+  "start_date": "2024-05-09",
+  "end_date": "2026-05-09",
+  "universe": [
+    "COIN",
+    "HOOD",
+    "PYPL",
+    "SQ",
+    "ICE",
+    "CME",
+    "NDAQ",
+    "BK",
+    "STT",
+    "SHY",
+    "BIL",
+    "TLT",
+    "IEF",
+    "JPM",
+    "BAC",
+    "WFC",
+    "V",
+    "MA",
+    "GLD",
+    "UUP",
+    "SH"
+  ],
+  "benchmarks": [
+    "SPY"
+  ],
+  "rebalance_frequency": "monthly",
+  "risk_rules": {
+    "transaction_cost_bps": 10,
+    "slippage_bps": 5,
+    "max_single_name_pct": 0.05,
+    "candidate_max_gross": 0.25,
+    "active_max_gross": 0.5,
+    "quarantine_max_gross": 0.0,
+    "leverage": "none"
+  },
+  "agents": {
+    "cash": {
+      "metrics": {
+        "agent": "cash",
+        "total_return_pct": 0.0,
+        "annualized_return_pct": 0.0,
+        "volatility_pct": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown_pct": 0.0,
+        "initial_value": 100000.0,
+        "final_value": 100000.0,
+        "trading_days": 522,
+        "trade_count": 0,
+        "rebalances": 25
+      },
+      "decisions": [
+        {
+          "date": "2024-05-09",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "c3650d7824598130"
+        },
+        {
+          "date": "2024-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "9363246d83e268b6"
+        },
+        {
+          "date": "2024-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "9c3ba630732c6f3e"
+        },
+        {
+          "date": "2024-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "64b575f5b0687928"
+        },
+        {
+          "date": "2024-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "80c436a2b00c9398"
+        },
+        {
+          "date": "2024-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "5a21f22ef0c24318"
+        },
+        {
+          "date": "2024-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "483a50909ea82fe4"
+        },
+        {
+          "date": "2024-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "09a3be20f698a1f3"
+        },
+        {
+          "date": "2025-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "a71d5cb5759be4de"
+        },
+        {
+          "date": "2025-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "dd35bfdeee638330"
+        },
+        {
+          "date": "2025-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "c2a4d1a926433ebf"
+        },
+        {
+          "date": "2025-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "b012906d6c6aee7c"
+        },
+        {
+          "date": "2025-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "aed173aa277615ed"
+        },
+        {
+          "date": "2025-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "a3d6454ccae1b64b"
+        },
+        {
+          "date": "2025-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "ff39d516c138c33d"
+        },
+        {
+          "date": "2025-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "f13d998b969268f8"
+        },
+        {
+          "date": "2025-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "343c15509b084eb8"
+        },
+        {
+          "date": "2025-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "57c715e7d59271be"
+        },
+        {
+          "date": "2025-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "d587b7e519a28857"
+        },
+        {
+          "date": "2025-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "e783b2a8f66cb9f2"
+        },
+        {
+          "date": "2026-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "b2cbbb876c074107"
+        },
+        {
+          "date": "2026-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "1258a05f51dfe105"
+        },
+        {
+          "date": "2026-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "bfc20ae14de91e32"
+        },
+        {
+          "date": "2026-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "236c133ad2f9949f"
+        },
+        {
+          "date": "2026-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Cash baseline \u2014 no trades.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "cash_only",
+          "receipt_hash": "f742e7c0d6c62eca"
+        }
+      ]
+    },
+    "equal_weight": {
+      "metrics": {
+        "agent": "equal_weight",
+        "total_return_pct": 24.3,
+        "annualized_return_pct": 11.1,
+        "volatility_pct": 13.7,
+        "sharpe": 0.837,
+        "sortino": 1.172,
+        "max_drawdown_pct": 14.28,
+        "initial_value": 113021.98,
+        "final_value": 140487.2,
+        "trading_days": 522,
+        "trade_count": 339,
+        "rebalances": 25
+      },
+      "decisions": [
+        {
+          "date": "2024-05-09",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "c8a923c1b14d02b0"
+        },
+        {
+          "date": "2024-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "584107ab08f83156"
+        },
+        {
+          "date": "2024-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "6fbf310407b65c95"
+        },
+        {
+          "date": "2024-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "9be415e3573f11aa"
+        },
+        {
+          "date": "2024-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "4b30bf95789a7166"
+        },
+        {
+          "date": "2024-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "aadaf8a20be27b45"
+        },
+        {
+          "date": "2024-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "c0571d17226b706a"
+        },
+        {
+          "date": "2024-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "61d4c152e7db38ca"
+        },
+        {
+          "date": "2025-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "fc86e7497e783342"
+        },
+        {
+          "date": "2025-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "2ebaa5c8c34cd152"
+        },
+        {
+          "date": "2025-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "e617c11e38f86f15"
+        },
+        {
+          "date": "2025-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "ddf45c84d80f4c31"
+        },
+        {
+          "date": "2025-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "30e4c6bdfe65b816"
+        },
+        {
+          "date": "2025-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "a692ae54a15441ba"
+        },
+        {
+          "date": "2025-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "8af1543bb0671fbb"
+        },
+        {
+          "date": "2025-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "42e7e4c9cf9a8bfd"
+        },
+        {
+          "date": "2025-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "f54fa8d2c3715a35"
+        },
+        {
+          "date": "2025-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "caad8338aabf1710"
+        },
+        {
+          "date": "2025-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "a12c85f770ae3c28"
+        },
+        {
+          "date": "2025-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "508573588d3a9290"
+        },
+        {
+          "date": "2026-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "6255cad980ce0605"
+        },
+        {
+          "date": "2026-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "62064782859040d1"
+        },
+        {
+          "date": "2026-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "27960624da2f0288"
+        },
+        {
+          "date": "2026-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "2a5732f4209889dd"
+        },
+        {
+          "date": "2026-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 1.0,
+          "rationale": "Equal-weight 20 tickers.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "equal_weight_baseline",
+          "receipt_hash": "97bf02de40ff61ca"
+        }
+      ]
+    },
+    "spy": {
+      "metrics": {
+        "agent": "spy",
+        "total_return_pct": 45.3,
+        "annualized_return_pct": 19.81,
+        "volatility_pct": 16.35,
+        "sharpe": 1.187,
+        "sortino": 1.494,
+        "max_drawdown_pct": 18.77,
+        "initial_value": 99850.02,
+        "final_value": 145082.12,
+        "trading_days": 522,
+        "trade_count": 1,
+        "rebalances": 25
+      },
+      "decisions": [
+        {
+          "date": "2024-05-09",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "48decfb98a4983cd"
+        },
+        {
+          "date": "2024-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "85a5c54b6c72eef8"
+        },
+        {
+          "date": "2024-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "6b5ca93f22e311e7"
+        },
+        {
+          "date": "2024-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "a43e4581ea32a16c"
+        },
+        {
+          "date": "2024-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "0f5f087b788d1c46"
+        },
+        {
+          "date": "2024-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "1e4634f5c78db659"
+        },
+        {
+          "date": "2024-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "f5c979e86d2af43c"
+        },
+        {
+          "date": "2024-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "21fbe230a8ac023c"
+        },
+        {
+          "date": "2025-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "ec9dabd5e196ecf5"
+        },
+        {
+          "date": "2025-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "f0bda01090f3f20c"
+        },
+        {
+          "date": "2025-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "87701217edd9882e"
+        },
+        {
+          "date": "2025-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "7362d2b9040f6752"
+        },
+        {
+          "date": "2025-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "340c057ed7ca4a9d"
+        },
+        {
+          "date": "2025-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "f850973a7ac52fbe"
+        },
+        {
+          "date": "2025-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "c2c5cba0bcc4fe8d"
+        },
+        {
+          "date": "2025-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "5e5cde6adae2619e"
+        },
+        {
+          "date": "2025-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "ebc9c257074d04a3"
+        },
+        {
+          "date": "2025-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "5d768a27e6340808"
+        },
+        {
+          "date": "2025-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "7a9c45731e6f6d8f"
+        },
+        {
+          "date": "2025-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "2649b059fdc80cfa"
+        },
+        {
+          "date": "2026-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "cfca89c570e43077"
+        },
+        {
+          "date": "2026-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "cb455dbb2788b15f"
+        },
+        {
+          "date": "2026-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "8932445afd972380"
+        },
+        {
+          "date": "2026-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "064aee2755d9df34"
+        },
+        {
+          "date": "2026-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 1,
+          "gross_exposure": 1.0,
+          "rationale": "SPY benchmark.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "spy_benchmark",
+          "receipt_hash": "cc930096c1011c3a"
+        }
+      ]
+    },
+    "momentum": {
+      "metrics": {
+        "agent": "momentum",
+        "total_return_pct": 10.36,
+        "annualized_return_pct": 4.88,
+        "volatility_pct": 15.51,
+        "sharpe": 0.385,
+        "sortino": 0.561,
+        "max_drawdown_pct": 19.21,
+        "initial_value": 114202.3,
+        "final_value": 126036.44,
+        "trading_days": 522,
+        "trade_count": 163,
+        "rebalances": 25
+      },
+      "decisions": [
+        {
+          "date": "2024-05-09",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Insufficient history.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "",
+          "receipt_hash": "c3650d7824598130"
+        },
+        {
+          "date": "2024-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Insufficient history.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "",
+          "receipt_hash": "9363246d83e268b6"
+        },
+        {
+          "date": "2024-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "NO_TRADE",
+          "target_weights_count": 0,
+          "gross_exposure": 0,
+          "rationale": "Insufficient history.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "",
+          "receipt_hash": "9c3ba630732c6f3e"
+        },
+        {
+          "date": "2024-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['NDAQ', 'ICE', 'STT', 'BK', 'TLT']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "9eea04f8d7d730c3"
+        },
+        {
+          "date": "2024-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['PYPL', 'NDAQ', 'STT', 'ICE', 'BK']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "e9e6b523e04b188d"
+        },
+        {
+          "date": "2024-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['PYPL', 'CME', 'MA', 'GLD', 'HOOD']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "9c5e78990584547f"
+        },
+        {
+          "date": "2024-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'BK', 'WFC', 'GLD', 'STT']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "145ad7937a48e6ae"
+        },
+        {
+          "date": "2024-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'COIN', 'WFC', 'BAC', 'JPM']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "30afff7e5424965a"
+        },
+        {
+          "date": "2025-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'COIN', 'V', 'PYPL', 'WFC']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "6fb7359ea4e039bb"
+        },
+        {
+          "date": "2025-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'V', 'JPM', 'BK', 'GLD']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "3a43ef759d93bb62"
+        },
+        {
+          "date": "2025-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'BK', 'ICE', 'V', 'WFC']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "3090f12d51cacad1"
+        },
+        {
+          "date": "2025-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['GLD', 'CME', 'SH', 'ICE', 'TLT']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "009c65dc45151933"
+        },
+        {
+          "date": "2025-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['GLD', 'CME', 'SH', 'IEF', 'SHY']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "c5360c3ba09b718b"
+        },
+        {
+          "date": "2025-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'COIN', 'NDAQ', 'CME', 'JPM']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "4af90a72774dc9bf"
+        },
+        {
+          "date": "2025-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'COIN', 'STT', 'BAC', 'JPM']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "5d015dede31e1f36"
+        },
+        {
+          "date": "2025-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'COIN', 'NDAQ', 'STT', 'BK']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "32e10bb326669cc7"
+        },
+        {
+          "date": "2025-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['BK', 'HOOD', 'STT', 'BAC', 'MA']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "0af36db149f23ff3"
+        },
+        {
+          "date": "2025-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'GLD', 'BAC', 'BK', 'TLT']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "024023bb9a1d76b7"
+        },
+        {
+          "date": "2025-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['HOOD', 'GLD', 'COIN', 'BAC', 'WFC']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "4f30e0be34017de7"
+        },
+        {
+          "date": "2025-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['GLD', 'CME', 'UUP', 'BK', 'BAC']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "584fbcfce4b4d183"
+        },
+        {
+          "date": "2026-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['NDAQ', 'STT', 'ICE', 'WFC', 'BK']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "34f9f0411eda95db"
+        },
+        {
+          "date": "2026-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['GLD', 'ICE', 'STT', 'BK', 'NDAQ']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "f3cc1117bc7ee9ce"
+        },
+        {
+          "date": "2026-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['GLD', 'CME', 'TLT', 'IEF', 'BK']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "afef3a9bd637cc25"
+        },
+        {
+          "date": "2026-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['SH', 'CME', 'UUP', 'BK', 'STT']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "6028a3911743c87d"
+        },
+        {
+          "date": "2026-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "N/A",
+          "action": "LONG_BASKET",
+          "target_weights_count": 5,
+          "gross_exposure": 0.5,
+          "rationale": "Top-5 3-month momentum: ['STT', 'BK', 'PYPL', 'COIN', 'BAC']. 50% gross.",
+          "visible_sources": [],
+          "visible_facts": [],
+          "visible_edges": [],
+          "risk_gate": "momentum_baseline",
+          "receipt_hash": "9391139f0a664a11"
+        }
+      ]
+    },
+    "fgip_rules": {
+      "metrics": {
+        "agent": "fgip_rules",
+        "total_return_pct": 3.12,
+        "annualized_return_pct": 1.5,
+        "volatility_pct": 2.07,
+        "sharpe": 0.73,
+        "sortino": 1.006,
+        "max_drawdown_pct": 2.43,
+        "initial_value": 100297.22,
+        "final_value": 103429.44,
+        "trading_days": 522,
+        "trade_count": 96,
+        "rebalances": 25,
+        "evidence_discipline_failures": 0
+      },
+      "decisions": [
+        {
+          "date": "2024-05-09",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "dbf200d6807f9353"
+        },
+        {
+          "date": "2024-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "d11f8238339b0427"
+        },
+        {
+          "date": "2024-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "6d998b9e8cdb51ef"
+        },
+        {
+          "date": "2024-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "57c1725d221deb00"
+        },
+        {
+          "date": "2024-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "4483259a79c99645"
+        },
+        {
+          "date": "2024-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "455db67554c038c1"
+        },
+        {
+          "date": "2024-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "35592926b02eebcc"
+        },
+        {
+          "date": "2024-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.062,
+          "rationale": "State=Candidate, Tier0=1, Tier1=0, Sources=1, Edges=2, Score=15, Gross=0.062, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "2f29405a3ee8211b"
+        },
+        {
+          "date": "2025-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "028ccf02eb1f7626"
+        },
+        {
+          "date": "2025-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "9b0f2d42b0d9e5fa"
+        },
+        {
+          "date": "2025-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "267b729f3f4cfe27"
+        },
+        {
+          "date": "2025-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "64796bddd8646c46"
+        },
+        {
+          "date": "2025-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "08384f6dfe3e747d"
+        },
+        {
+          "date": "2025-06-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "b5420fba5e30f81d"
+        },
+        {
+          "date": "2025-07-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=8, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "3708906f6edf6af0"
+        },
+        {
+          "date": "2025-08-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "43acba7f07b14a35"
+        },
+        {
+          "date": "2025-09-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "b3e97015bda0d011"
+        },
+        {
+          "date": "2025-10-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "011ad439f7813088"
+        },
+        {
+          "date": "2025-11-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "20f938c37a488ef2"
+        },
+        {
+          "date": "2025-12-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "2d8ed852aa4e3287"
+        },
+        {
+          "date": "2026-01-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "26edb056a6570598"
+        },
+        {
+          "date": "2026-02-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "550da2889a5c6086"
+        },
+        {
+          "date": "2026-03-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "57c1f959b7869033"
+        },
+        {
+          "date": "2026-04-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.126,
+          "rationale": "State=Candidate, Tier0=2, Tier1=0, Sources=2, Edges=9, Score=30, Gross=0.125, MaxGross=0.25",
+          "visible_sources": [
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "77f2850b97cff14c"
+        },
+        {
+          "date": "2026-05-01",
+          "thesis_id": "thesis-defense-primes",
+          "graph_state": "Candidate",
+          "action": "LONG_BASKET",
+          "target_weights_count": 20,
+          "gross_exposure": 0.158,
+          "rationale": "State=Candidate, Tier0=2, Tier1=1, Sources=3, Edges=10, Score=38, Gross=0.158, MaxGross=0.25",
+          "visible_sources": [
+            "telex_hungary_us_oil_himars_20260409",
+            "congress_ndaa_fy2025_hr8070",
+            "congress_ukraine_supplemental_hr8035"
+          ],
+          "visible_facts": [
+            "fact_us_withdraws_5000_troops_germany",
+            "fact_mol_us_crude_purchase",
+            "fact_hungary_himars_procurement",
+            "fact_hungary_smr_cooperation",
+            "fact_ndaa_fy2025_enacted",
+            "fact_ukraine_supplemental_enacted"
+          ],
+          "visible_edges": [
+            "edge_genius_act_dollar_defense",
+            "edge_hungary_himars",
+            "edge_ndaa_fy2025_lmt",
+            "edge_ndaa_fy2025_rtx",
+            "edge_ndaa_fy2025_noc",
+            "edge_ndaa_fy2025_gd",
+            "edge_ndaa_fy2025_hii",
+            "edge_ndaa_fy2025_bwxt",
+            "edge_ukraine_supp_rtx",
+            "edge_ukraine_supp_lmt"
+          ],
+          "risk_gate": "candidate_evidence_gated",
+          "receipt_hash": "4dcc6933937e3a38"
+        }
+      ]
+    }
+  },
+  "look_ahead_audit": {
+    "future_sources_used": 0,
+    "future_prices_used": 0,
+    "strategy_edited_after_results": false,
+    "ticker_universe_fixed_before_test": true,
+    "risk_rules_fixed_before_test": true
+  },
+  "cost": {
+    "wall_time_s": 0.413,
+    "cpu_time_s": 0.838,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-09T19:41:00",
+    "timestamp_end": "2026-05-09T19:41:00"
+  }
+}
