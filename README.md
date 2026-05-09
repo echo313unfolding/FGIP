@@ -15,6 +15,8 @@
 
 **Track the money. Test the thesis. Present the documents.**
 
+FGIP is a research and evidence-mapping tool, not financial advice or an automated trading system.
+
 </div>
 
 ## What FGIP does
@@ -34,7 +36,7 @@ A headline is downstream. The funding trail is upstream.
 24 specialized agents ingest Tier 0 (government) and Tier 1 (professional) data sources. Each agent produces **proposed edges** — structured claims about relationships between entities, backed by source documents.
 
 ```
-public records → graph edges → thesis conviction → positioning / hedge logic
+public records → graph edges → thesis conviction → evidence / risk mapping
 ```
 
 ### The funding chain
@@ -236,6 +238,20 @@ fgip-engine/
 | [EVIDENCE_TIERS.md](docs/EVIDENCE_TIERS.md) | How data sources are classified (Tier 0 government → Tier 3 hypothesis) |
 | [THESIS_RECEIPT_SCHEMA.md](docs/THESIS_RECEIPT_SCHEMA.md) | Receipt format for thesis validation (evidence, conviction, graph state) |
 | [TRADING_AGENT_V0_SPEC.md](docs/TRADING_AGENT_V0_SPEC.md) | Trading agent architecture and risk parameters |
+| [SOURCE_AND_FACT_MODEL.md](docs/SOURCE_AND_FACT_MODEL.md) | How citations, extracted facts, and proposed edges are separated |
+
+## Source registry
+
+Citations live in the source registry. Extracted facts become graph edges. Receipts promote claims.
+
+```
+data/
+├── sources/sources.jsonl          # Citable documents (who said it, when, where)
+├── extracted/facts.jsonl          # Structured claims (what was said, machine-readable)
+└── edges/proposed_edges_examples.jsonl  # Candidate graph edges (how it connects)
+```
+
+Each layer serves a different consumer: sources are for humans verifying citations, facts are for agents querying structured claims, and edges are for the conviction engine scoring theses. See [SOURCE_AND_FACT_MODEL.md](docs/SOURCE_AND_FACT_MODEL.md) for the full model.
 
 ## The core idea
 
