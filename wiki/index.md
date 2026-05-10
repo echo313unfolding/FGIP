@@ -1,6 +1,6 @@
 # FGIP Knowledge Graph — Index
 
-*Generated 2026-04-19 17:10 UTC*
+*Generated 2026-04-19 17:16 UTC*
 
 **1896 nodes** | **3984 edges** | **29513 claims** | **5435 sources** | **16% evidence coverage**
 

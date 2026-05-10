@@ -1,0 +1,22 @@
+{
+  "receipt_id": "defense_government_wiring_20260507T190418Z",
+  "timestamp": "2026-05-07T19:04:18.718178Z",
+  "actions": {
+    "ticker_aliases": 19,
+    "bills_programs": 10,
+    "contract_edges": 34,
+    "sector_mappings": 9,
+    "supply_chain_edges": 14,
+    "adversary_edges": 9
+  },
+  "graph_totals": {
+    "nodes": 2050,
+    "edges": 2730
+  },
+  "cost": {
+    "wall_time_s": 0.015,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-07T19:04:18.722836"
+  }
+}

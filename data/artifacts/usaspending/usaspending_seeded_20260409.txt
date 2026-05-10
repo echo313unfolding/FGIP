@@ -1,0 +1,51 @@
+USASpending Award Data
+==================================================
+
+Program: CHIPS Act
+Recipient: Intel
+Amount: $8.9B
+Type: grant
+Year: 2024
+URL: https://www.commerce.gov/news/press-releases/2024/03/biden-harris-administration-announces-preliminary-terms-intel-receive
+
+Program: CHIPS Act
+Recipient: TSMC Arizona
+Amount: $6.6B
+Type: grant
+Year: 2024
+URL: https://www.commerce.gov/news/press-releases/2024/04/biden-harris-administration-announces-preliminary-terms-tsmc
+
+Program: CHIPS Act
+Recipient: Samsung Texas
+Amount: $6.4B
+Type: grant
+Year: 2024
+URL: https://www.commerce.gov/news/press-releases/2024/04/biden-harris-administration-announces-preliminary-terms-samsung
+
+Program: CHIPS Act
+Recipient: Micron
+Amount: $6.1B
+Type: grant
+Year: 2024
+URL: https://www.commerce.gov/news/press-releases/2024/04/biden-harris-administration-announces-preliminary-terms-micron
+
+Program: CHIPS Act
+Recipient: GlobalFoundries
+Amount: $1.5B
+Type: grant
+Year: 2024
+URL: https://www.commerce.gov/news/press-releases/2024/02/biden-harris-administration-announces-preliminary-terms-globalfoundries
+
+Program: IIJA
+Recipient: National EV Charging Network
+Amount: $7.5B
+Type: program
+Year: 2022-2027
+URL: https://www.fhwa.dot.gov/environment/alternative_fuel_corridors/
+
+Program: IRA
+Recipient: Domestic Manufacturing Tax Credits
+Amount: $60B+
+Type: program
+Year: 2022-2032
+URL: https://www.energy.gov/lpo/inflation-reduction-act-2022

@@ -1,0 +1,67 @@
+{
+  "source": "Stablecoin attestations / DeFi Llama",
+  "data_source": "Seeded baseline",
+  "as_of": "2026-04-07",
+  "issuers": {
+    "tether": {
+      "node_id": "tether-usdt",
+      "name": "Tether (USDT)",
+      "market_cap": 120.0,
+      "treasury_pct": 0.6,
+      "treasury_holdings": 72.0,
+      "headquarters": "British Virgin Islands",
+      "genius_compliant": false
+    },
+    "circle": {
+      "node_id": "circle-usdc",
+      "name": "Circle (USDC)",
+      "market_cap": 45.0,
+      "treasury_pct": 0.8,
+      "treasury_holdings": 36.0,
+      "headquarters": "United States",
+      "genius_compliant": true
+    },
+    "paxos": {
+      "node_id": "paxos-usdp",
+      "name": "Paxos (USDP)",
+      "market_cap": 5.0,
+      "treasury_pct": 0.95,
+      "treasury_holdings": 4.75,
+      "headquarters": "United States",
+      "genius_compliant": true
+    },
+    "paypal": {
+      "node_id": "paypal-pyusd",
+      "name": "PayPal (PYUSD)",
+      "market_cap": 2.0,
+      "treasury_pct": 0.9,
+      "treasury_holdings": 1.8,
+      "headquarters": "United States",
+      "genius_compliant": true
+    },
+    "gemini": {
+      "node_id": "gemini-gusd",
+      "name": "Gemini (GUSD)",
+      "market_cap": 0.5,
+      "treasury_pct": 0.95,
+      "treasury_holdings": 0.475,
+      "headquarters": "United States",
+      "genius_compliant": true
+    }
+  },
+  "totals": {
+    "total_market_cap": 172.5,
+    "total_treasury_holdings": 115.02,
+    "genius_compliant_holdings": 43.02
+  },
+  "domestication_metrics": {
+    "current_domestication_pct": 1.35,
+    "foreign_holdings_baseline": 8500.0,
+    "projected_2028_pct": 23.53
+  },
+  "extraction_analysis": {
+    "holder_yield": 0.0,
+    "issuer_yield": 4.5,
+    "spread_captured_by_issuers": "$5.18B/year"
+  }
+}

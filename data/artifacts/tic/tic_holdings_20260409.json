@@ -1,0 +1,105 @@
+{
+  "source": "Treasury International Capital System",
+  "data_source": "Seeded baseline",
+  "url": "https://ticdata.treasury.gov/",
+  "as_of": "2026-01-31",
+  "unit": "$B (billions)",
+  "holdings": {
+    "japan": {
+      "node_id": "japan-gov",
+      "name": "Japan",
+      "current_holdings": 1060.0,
+      "peak_holdings": 1290.0,
+      "year_change": -50.0,
+      "is_ally": true
+    },
+    "china": {
+      "node_id": "china-prc",
+      "name": "China (PRC)",
+      "current_holdings": 759.0,
+      "peak_holdings": 1300.0,
+      "year_change": -100.0,
+      "is_ally": false
+    },
+    "uk": {
+      "node_id": "united-kingdom",
+      "name": "United Kingdom",
+      "current_holdings": 690.0,
+      "peak_holdings": 700.0,
+      "year_change": 10.0,
+      "is_ally": true
+    },
+    "luxembourg": {
+      "node_id": "luxembourg",
+      "name": "Luxembourg",
+      "current_holdings": 390.0,
+      "peak_holdings": 400.0,
+      "year_change": -5.0,
+      "is_ally": true,
+      "note": "Financial center - includes hedge fund holdings"
+    },
+    "cayman": {
+      "node_id": "cayman-islands",
+      "name": "Cayman Islands",
+      "current_holdings": 340.0,
+      "peak_holdings": 350.0,
+      "year_change": 0.0,
+      "is_ally": true,
+      "note": "Financial center - hedge funds"
+    },
+    "ireland": {
+      "node_id": "ireland",
+      "name": "Ireland",
+      "current_holdings": 320.0,
+      "peak_holdings": 330.0,
+      "year_change": -10.0,
+      "is_ally": true,
+      "note": "Tech company Treasury holdings"
+    },
+    "belgium": {
+      "node_id": "belgium",
+      "name": "Belgium",
+      "current_holdings": 300.0,
+      "peak_holdings": 350.0,
+      "year_change": -20.0,
+      "is_ally": true,
+      "note": "Euroclear custody"
+    },
+    "taiwan": {
+      "node_id": "taiwan-roc",
+      "name": "Taiwan",
+      "current_holdings": 260.0,
+      "peak_holdings": 270.0,
+      "year_change": 5.0,
+      "is_ally": true
+    },
+    "canada": {
+      "node_id": "canada",
+      "name": "Canada",
+      "current_holdings": 250.0,
+      "peak_holdings": 260.0,
+      "year_change": -5.0,
+      "is_ally": true
+    },
+    "switzerland": {
+      "node_id": "switzerland",
+      "name": "Switzerland",
+      "current_holdings": 240.0,
+      "peak_holdings": 280.0,
+      "year_change": -15.0,
+      "is_ally": true
+    }
+  },
+  "totals": {
+    "top_10_total": 4609.0,
+    "all_foreign": 8500.0,
+    "adversary_holdings": 759.0,
+    "ally_holdings": 3850.0
+  },
+  "analysis": {
+    "china_peak_to_current_drop": 541.0,
+    "china_pct_of_total": 8.93,
+    "adversary_pct_of_total": 8.93,
+    "leverage_concentration": "China + Japan = 21.4% of foreign holdings"
+  }
+}

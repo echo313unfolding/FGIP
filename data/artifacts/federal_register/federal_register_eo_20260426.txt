@@ -1,0 +1,14 @@
+Executive Orders Data
+==================================================
+
+Type: Executive Order
+Target: America's Supply Chains
+Title: Executive Order on America's Supply Chains
+Date: 2021-02-24
+URL: https://www.whitehouse.gov/briefing-room/presidential-actions/2021/02/24/executive-order-on-americas-supply-chains/
+
+Type: Executive Order
+Target: CHIPS Implementation
+Title: Executive Order on Implementation of the CHIPS Act
+Date: 2022-08-09
+URL: https://www.whitehouse.gov/briefing-room/statements-releases/2022/08/09/fact-sheet-chips-and-science-act/

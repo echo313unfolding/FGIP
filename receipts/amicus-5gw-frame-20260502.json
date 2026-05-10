@@ -1,0 +1,27 @@
+{
+  "receipt_id": "amicus-5gw-frame-20260502",
+  "operation": "graph_insert",
+  "session_date": "2026-05-02",
+  "description": "Learning Resources v. Trump amicus completion + Kavanaugh dissent. Key finding: 5GW frame had ZERO amicus representation on pro-tariff side. National security establishment filed ANTI-tariff.",
+  "results": {
+    "nodes_inserted": 7,
+    "edges_inserted": 7,
+    "claims_inserted": 2,
+    "position_updates": 13,
+    "errors": []
+  },
+  "cost": {
+    "wall_time_s": 0.069,
+    "cpu_time_s": 0.013,
+    "peak_memory_mb": 19.8,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-02T15:04:15",
+    "timestamp_end": "2026-05-02T15:04:15"
+  },
+  "articulation": "articulations/learning_resources_v_trump_5gw_frame.md",
+  "sources": [
+    "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-1287.html",
+    "https://www.scotusblog.com/cases/case-files/learning-resources-inc-v-trump/"
+  ]
+}
