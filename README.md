@@ -251,7 +251,7 @@ fgip-engine/
 |---------|-------------|
 | [helix-substrate](https://github.com/echo313unfolding/helix-substrate) | HXQ tensor compression (4x from FP32, cos>0.999) |
 | [helix-codec](https://github.com/echo313unfolding/helix-codec) | Standalone C99 tensor codec library |
-| [sentinel-hybrid-stack](https://github.com/echo313unfolding/sentinel-hybrid-stack) | Security monitoring with SSM+Transformer hybrid |
+| [echo-sentry](https://github.com/echo313unfolding/echo-sentry) | Security monitoring with SSM+Transformer hybrid |
 
 ## Documentation
 

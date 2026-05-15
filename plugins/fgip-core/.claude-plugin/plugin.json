@@ -1,0 +1,7 @@
+{
+  "name": "fgip-core",
+  "version": "0.1.0",
+  "description": "Core FGIP evidence graph tools, skills, and commands for forensic intelligence analysis",
+  "skills_dir": "../skills",
+  "commands_dir": "../commands"
+}

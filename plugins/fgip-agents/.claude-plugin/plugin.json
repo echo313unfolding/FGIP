@@ -1,0 +1,6 @@
+{
+  "name": "fgip-agents",
+  "version": "0.1.0",
+  "description": "FGIP analytical desk agents — IC-style specialists for thesis evaluation, intelligence briefing, field debrief, source evaluation, sanctions screening, and data source ingestion",
+  "agents_dir": ".."
+}
