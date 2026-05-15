@@ -1,0 +1,230 @@
+{
+  "receipt_id": "node-type-normalize-20260514",
+  "operation": "node_type_normalize",
+  "session_date": "2026-05-14",
+  "results": {
+    "total_updated": 23,
+    "mappings": {
+      "company": {
+        "new_type": "COMPANY",
+        "count": 5,
+        "nodes": [
+          {
+            "id": "dtcc",
+            "name": "DTCC"
+          },
+          {
+            "id": "bullish",
+            "name": "Bullish"
+          },
+          {
+            "id": "equiniti",
+            "name": "Equiniti"
+          },
+          {
+            "id": "circle",
+            "name": "Circle"
+          },
+          {
+            "id": "paypal",
+            "name": "PayPal"
+          }
+        ]
+      },
+      "infrastructure": {
+        "new_type": "INFRASTRUCTURE",
+        "count": 3,
+        "nodes": [
+          {
+            "id": "programmable-dollar-settlement",
+            "name": "Programmable Dollar Settlement"
+          },
+          {
+            "id": "legacy-bank-settlement",
+            "name": "Legacy Bank Settlement"
+          },
+          {
+            "id": "banking-system",
+            "name": "Banking System"
+          }
+        ]
+      },
+      "regulator": {
+        "new_type": "REGULATOR",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "fincen",
+            "name": "Financial Crimes Enforcement Network"
+          }
+        ]
+      },
+      "risk": {
+        "new_type": "RISK_FACTOR",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "financial-stability-risk",
+            "name": "Financial Stability Risk"
+          }
+        ]
+      },
+      "central_bank": {
+        "new_type": "FINANCIAL_INST",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "new-york-fed",
+            "name": "Federal Reserve Bank of New York"
+          }
+        ]
+      },
+      "asset_class": {
+        "new_type": "ASSET_CLASS",
+        "count": 5,
+        "nodes": [
+          {
+            "id": "stablecoin-reserves",
+            "name": "Stablecoin Reserves"
+          },
+          {
+            "id": "short-term-treasuries",
+            "name": "Short-Term Treasury Securities"
+          },
+          {
+            "id": "payment-stablecoins",
+            "name": "Payment Stablecoins"
+          },
+          {
+            "id": "tokenized-securities",
+            "name": "Tokenized Securities"
+          },
+          {
+            "id": "tokenized-treasuries",
+            "name": "Tokenized Treasuries"
+          }
+        ]
+      },
+      "concept": {
+        "new_type": "CONCEPT",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "us-dollar-reserve-status",
+            "name": "U.S. Dollar Reserve Currency Status"
+          }
+        ]
+      },
+      "market": {
+        "new_type": "MARKET",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "treasury-secondary-market",
+            "name": "Treasury Secondary Market"
+          }
+        ]
+      },
+      "market_mechanism": {
+        "new_type": "MARKET_MECHANISM",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "treasury-auctions",
+            "name": "Treasury Auctions"
+          }
+        ]
+      },
+      "market_participant": {
+        "new_type": "MARKET_PARTICIPANT",
+        "count": 2,
+        "nodes": [
+          {
+            "id": "primary-dealers",
+            "name": "Primary Dealers"
+          },
+          {
+            "id": "foreign-treasury-holders",
+            "name": "Foreign Treasury Holders"
+          }
+        ]
+      },
+      "regulatory_category": {
+        "new_type": "REGULATORY_CATEGORY",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "permitted-payment-stablecoin-issuers",
+            "name": "Permitted Payment Stablecoin Issuers"
+          }
+        ]
+      },
+      "regulatory_requirement": {
+        "new_type": "REGULATORY_REQUIREMENT",
+        "count": 1,
+        "nodes": [
+          {
+            "id": "aml-sanctions-compliance",
+            "name": "AML/Sanctions Compliance"
+          }
+        ]
+      }
+    },
+    "remaining_lowercase": [],
+    "final_type_counts": {
+      "PERSON": 1024,
+      "ORGANIZATION": 553,
+      "COMPANY": 167,
+      "ECONOMIC_EVENT": 46,
+      "FINANCIAL_INST": 23,
+      "POLICY": 23,
+      "THESIS": 22,
+      "SECTOR": 19,
+      "COMMODITY": 18,
+      "FACILITY": 15,
+      "LOCATION": 15,
+      "REGULATOR": 15,
+      "ATTACK_VECTOR": 13,
+      "LEGISLATION": 13,
+      "PROGRAM": 13,
+      "MEDIA_OUTLET": 12,
+      "AGENCY": 11,
+      "INSTRUMENT": 10,
+      "PROJECT": 10,
+      "VULNERABILITY_CLASS": 10,
+      "SENTINEL": 9,
+      "GEOGRAPHY": 7,
+      "INFRASTRUCTURE": 6,
+      "ASSET_CLASS": 5,
+      "MINING_POOL": 5,
+      "TECHNOLOGY": 5,
+      "ASSET": 4,
+      "METHODOLOGY": 4,
+      "COUNTRY": 3,
+      "COURT_CASE": 3,
+      "JURISDICTION": 3,
+      "GOVERNMENT_AGENCY": 2,
+      "MARKET_PARTICIPANT": 2,
+      "RISK_FACTOR": 2,
+      "CATEGORY": 1,
+      "CONCEPT": 1,
+      "EVENT_CLASS": 1,
+      "LEGAL_MECHANISM": 1,
+      "LEGAL_PRECEDENT": 1,
+      "MARKET": 1,
+      "MARKET_MECHANISM": 1,
+      "REGULATORY_CATEGORY": 1,
+      "REGULATORY_REQUIREMENT": 1,
+      "THREAT_ACTOR": 1
+    }
+  },
+  "cost": {
+    "wall_time_s": 0.026,
+    "cpu_time_s": 0.003,
+    "peak_memory_mb": 13.5,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T03:25:57",
+    "timestamp_end": "2026-05-15T03:25:57"
+  }
+}

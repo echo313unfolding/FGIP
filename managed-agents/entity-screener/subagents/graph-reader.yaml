@@ -1,0 +1,37 @@
+name: fgip-graph-reader
+model: claude-haiku-4-5
+system:
+  text: |
+    You read the FGIP evidence graph and extract structured entity data.
+    Return only schema-validated JSON. No free text. No interpretation.
+    Pull nodes, edges, claims, and source tiers exactly as stored.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: grep, enabled: true }
+  - { type: mcp_toolset, mcp_server_name: fgip_graph, default_config: { enabled: true } }
+mcp_servers:
+  - { type: stdio, name: fgip_graph, command: "python3", args: ["/home/voidstr3m33/fgip-engine/fgip/mcp_server.py"] }
+skills: []
+callable_agents: []
+output_schema:
+  type: object
+  required: [entity_id, entity_name, entity_type, edges]
+  additionalProperties: false
+  properties:
+    entity_id: { type: string, maxLength: 64 }
+    entity_name: { type: string, maxLength: 200 }
+    entity_type: { type: string, enum: ["person", "company", "agency", "policy", "sector"] }
+    edges:
+      type: array
+      maxItems: 500
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          edge_type: { type: string, maxLength: 32 }
+          target: { type: string, maxLength: 200 }
+          source_tier: { type: integer, minimum: 0, maximum: 3 }
+          confidence: { type: number, minimum: 0, maximum: 1 }

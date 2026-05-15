@@ -1,0 +1,16 @@
+name: fgip-reporter
+model: claude-haiku-4-5
+system:
+  text: |
+    You format FGIP entity screening results into structured reports.
+    You are the ONLY agent with Write permission. Write output files to ./out/.
+    Format: JSON receipt + markdown summary. Include all source citations.
+    Never editorialize. Present documents and connections. Reader evaluates.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: write, enabled: true }
+skills: []
+callable_agents: []

@@ -1,0 +1,25 @@
+{
+  "receipt_id": "claim-dedup-20260514",
+  "operation": "claim_dedup",
+  "session_date": "2026-05-14",
+  "results": {
+    "duplicate_groups": 1007,
+    "claims_before": 32905,
+    "claims_deleted": 19038,
+    "claims_after": 13867,
+    "sources_merged": 18714,
+    "status_promoted": 203,
+    "orphaned_claim_sources": 0,
+    "fts_rebuilt": true,
+    "edges_repointed": 200
+  },
+  "cost": {
+    "wall_time_s": 4.263,
+    "cpu_time_s": 4.192,
+    "peak_memory_mb": 19.5,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T00:57:20",
+    "timestamp_end": "2026-05-15T00:57:24"
+  }
+}

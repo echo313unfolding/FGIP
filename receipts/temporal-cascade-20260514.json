@@ -1,0 +1,21 @@
+{
+  "receipt_id": "temporal-cascade-20260514",
+  "operation": "graph_insert",
+  "session_date": "2026-05-14",
+  "description": "Timing cascade temporal edges. 7 cascade stage nodes (deal \u2192 wells). 6 PRECEDES edges for sequence. 12 position-to-stage edges. Stargate-specific timeline. Connected to physical value hierarchy.",
+  "results": {
+    "nodes_inserted": 7,
+    "edges_inserted": 20,
+    "claims_inserted": 2,
+    "errors": []
+  },
+  "cost": {
+    "wall_time_s": 0.081,
+    "cpu_time_s": 0.018,
+    "peak_memory_mb": 19.4,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T03:26:02",
+    "timestamp_end": "2026-05-15T03:26:02"
+  }
+}

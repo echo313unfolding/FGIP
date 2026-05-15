@@ -1,0 +1,38 @@
+name: fgip-source-puller
+model: claude-haiku-4-5
+system:
+  text: |
+    You pull primary source data from the FGIP evidence graph for claim verification.
+    For each variable in a parsed claim, find the tier-0/1 source.
+    Return structured JSON with source tier, data value, timestamp, and citation.
+    No interpretation. No narrative. Just the data and its provenance.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: grep, enabled: true }
+  - { type: mcp_toolset, mcp_server_name: fgip_graph, default_config: { enabled: true } }
+mcp_servers:
+  - { type: stdio, name: fgip_graph, command: "python3", args: ["/home/voidstr3m33/fgip-engine/fgip/mcp_server.py"] }
+skills: []
+callable_agents: []
+output_schema:
+  type: object
+  required: [claim_id, variables]
+  additionalProperties: false
+  properties:
+    claim_id: { type: string, maxLength: 64 }
+    variables:
+      type: array
+      maxItems: 20
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          name: { type: string, maxLength: 100 }
+          value: { type: string, maxLength: 500 }
+          source: { type: string, maxLength: 200 }
+          source_tier: { type: integer, minimum: 0, maximum: 3 }
+          timestamp: { type: string, maxLength: 32 }
+          found: { type: boolean }

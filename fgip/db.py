@@ -970,6 +970,88 @@ class FGIPDatabase:
         except Exception:
             return False
 
+    # ========== Path Queries ==========
+
+    def path_between(self, start_id: str, end_id: str, max_hops: int = 3,
+                     min_confidence: float = 0.0, directed: bool = False) -> list[list[dict]]:
+        """BFS shortest paths between two nodes. Returns all shortest paths.
+
+        Each path is a list of steps: [{node_id, node_name, edge_id, edge_type, confidence, direction}]
+        """
+        conn = self.connect()
+
+        # Verify both nodes exist
+        start = conn.execute("SELECT node_id, name FROM nodes WHERE node_id = ?", (start_id,)).fetchone()
+        end = conn.execute("SELECT node_id, name FROM nodes WHERE node_id = ?", (end_id,)).fetchone()
+        if not start or not end:
+            return []
+
+        # BFS with path tracking
+        # queue items: (current_node_id, path_so_far)
+        from collections import deque
+        queue = deque()
+        queue.append((start_id, [{"node_id": start_id, "node_name": start["name"],
+                                   "edge_id": None, "edge_type": None,
+                                   "confidence": None, "direction": "start"}]))
+        visited = {start_id}
+        found_paths = []
+        found_depth = None
+
+        while queue:
+            current_id, path = queue.popleft()
+
+            # Stop expanding beyond found depth
+            if found_depth is not None and len(path) > found_depth:
+                break
+
+            # Stop at max_hops
+            if len(path) > max_hops + 1:
+                break
+
+            # Get neighbors
+            neighbors = []
+
+            # Outgoing edges
+            rows = conn.execute(
+                """SELECT e.edge_id, e.edge_type, e.to_node_id, e.confidence,
+                          n.name as neighbor_name
+                   FROM edges e JOIN nodes n ON e.to_node_id = n.node_id
+                   WHERE e.from_node_id = ? AND e.confidence >= ?""",
+                (current_id, min_confidence)
+            ).fetchall()
+            for r in rows:
+                neighbors.append((r["to_node_id"], r["neighbor_name"],
+                                   r["edge_id"], r["edge_type"],
+                                   r["confidence"], "outgoing"))
+
+            # Incoming edges (unless directed-only)
+            if not directed:
+                rows = conn.execute(
+                    """SELECT e.edge_id, e.edge_type, e.from_node_id, e.confidence,
+                              n.name as neighbor_name
+                       FROM edges e JOIN nodes n ON e.from_node_id = n.node_id
+                       WHERE e.to_node_id = ? AND e.confidence >= ?""",
+                    (current_id, min_confidence)
+                ).fetchall()
+                for r in rows:
+                    neighbors.append((r["from_node_id"], r["neighbor_name"],
+                                       r["edge_id"], r["edge_type"],
+                                       r["confidence"], "incoming"))
+
+            for nid, nname, eid, etype, conf, direction in neighbors:
+                step = {"node_id": nid, "node_name": nname,
+                        "edge_id": eid, "edge_type": etype,
+                        "confidence": conf, "direction": direction}
+
+                if nid == end_id:
+                    found_paths.append(path + [step])
+                    found_depth = len(path) + 1
+                elif nid not in visited:
+                    visited.add(nid)
+                    queue.append((nid, path + [step]))
+
+        return found_paths
+
     # ========== Statistics ==========
 
     def get_stats(self) -> dict:

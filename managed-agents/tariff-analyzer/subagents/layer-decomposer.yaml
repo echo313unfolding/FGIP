@@ -1,0 +1,61 @@
+name: fgip-tariff-layer-decomposer
+model: claude-haiku-4-5
+system:
+  text: |
+    You decompose tariff actions into the FGIP three-layer framework.
+    Given a country or tariff event, extract:
+    - Formula layer: deficit + barriers → base rate
+    - Gradient layer: energy intensity correlation
+    - Lever layer: sanctions compliance adjustments
+    Return structured JSON. Pull data from the graph. Flag missing variables.
+    No interpretation beyond the framework. Just decomposition and data.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: grep, enabled: true }
+  - { type: mcp_toolset, mcp_server_name: fgip_graph, default_config: { enabled: true } }
+mcp_servers:
+  - { type: stdio, name: fgip_graph, command: "python3", args: ["/home/voidstr3m33/fgip-engine/fgip/mcp_server.py"] }
+skills: []
+callable_agents: []
+output_schema:
+  type: object
+  required: [country, layers]
+  additionalProperties: false
+  properties:
+    country: { type: string, maxLength: 100 }
+    tariff_rate_pct: { type: number }
+    layers:
+      type: object
+      additionalProperties: false
+      properties:
+        formula:
+          type: object
+          additionalProperties: false
+          properties:
+            deficit_bn: { type: number }
+            barrier_score: { type: number }
+            base_rate_pct: { type: number }
+            source: { type: string, maxLength: 200 }
+        gradient:
+          type: object
+          additionalProperties: false
+          properties:
+            energy_intensity: { type: number }
+            correlation_r: { type: number }
+            p_value: { type: number }
+            source: { type: string, maxLength: 200 }
+        lever:
+          type: object
+          additionalProperties: false
+          properties:
+            sanctions_compliance: { type: boolean }
+            adjustment_pp: { type: number }
+            event: { type: string, maxLength: 300 }
+            source: { type: string, maxLength: 200 }
+    physical_value_tier: { type: string, enum: ["energy", "minerals", "manufacturing", "services", "financial", "tokenized"] }
+    missing_variables:
+      type: array
+      items: { type: string, maxLength: 100 }

@@ -1,0 +1,28 @@
+# Claim Verifier — managed-agent cookbook
+
+name: claim-verifier
+model: claude-sonnet-4-6
+
+system:
+  file: ../../plugins/fgip-agents/claim-verifier/agents/claim-verifier.md
+  append: "You are running headless. Produce files in ./out/; do not assume an interactive session."
+
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: grep,  enabled: true }
+      - { name: glob,  enabled: true }
+  - { type: mcp_toolset, mcp_server_name: fgip_graph, default_config: { enabled: true } }
+
+mcp_servers:
+  - { type: stdio, name: fgip_graph, command: "python3", args: ["/home/voidstr3m33/fgip-engine/fgip/mcp_server.py"] }
+
+skills:
+  - { from_plugin: ../../plugins/fgip-agents/claim-verifier }
+
+callable_agents:
+  - { manifest: ./subagents/source-puller.yaml }
+  - { manifest: ./subagents/adversarial.yaml }
+  - { manifest: ./subagents/verdict-writer.yaml }   # only leaf with Write

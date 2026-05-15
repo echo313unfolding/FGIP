@@ -1,0 +1,52 @@
+{
+  "receipt_id": "extraction-tariff-chain-20260514",
+  "operation": "graph_insert",
+  "session_date": "2026-05-14",
+  "description": "10.8% extraction rate \u2194 tariff three-layer chain. 5 nodes, 12 edges, 4 claims. Connects extraction rate through M2 mechanism to tariff formula (L1), energy gradient (L2, r=0.709), and sanctions lever (L3, India proof case). GENIUS Act as dynamic correction reducing both extraction and tariff pressure.",
+  "results": {
+    "nodes_inserted": 5,
+    "edges_inserted": 12,
+    "claims_inserted": 4,
+    "errors": []
+  },
+  "nodes": [
+    "extraction-rate-10p8",
+    "energy-intensity-gradient",
+    "physical-value-hierarchy",
+    "sanctions-energy-arbitrage",
+    "m2-deficit-mechanism"
+  ],
+  "edges": [
+    "E-m2-causes-extraction-extraction-tariff-chain-20260514",
+    "E-m2-causes-deficit-extraction-tariff-chain-20260514",
+    "E-extraction-correlates-tariff-extraction-tariff-chain-20260514",
+    "E-sanctions-creates-gradient-extraction-tariff-chain-20260514",
+    "E-gradient-modulates-tariff-extraction-tariff-chain-20260514",
+    "E-hierarchy-derives-gradient-extraction-tariff-chain-20260514",
+    "E-hierarchy-explains-extraction-extraction-tariff-chain-20260514",
+    "E-genius-reduces-extraction-extraction-tariff-chain-20260514",
+    "E-genius-reduces-deficit-extraction-tariff-chain-20260514",
+    "E-sanctions-lever-india-extraction-tariff-chain-20260514",
+    "E-fertilizer-derives-hierarchy-extraction-tariff-chain-20260514",
+    "E-extraction-informs-protection-extraction-tariff-chain-20260514"
+  ],
+  "claims": [
+    "CLAIM-EXTRACTION-RATE-10P8",
+    "CLAIM-ENERGY-GRADIENT-R0709",
+    "CLAIM-SANCTIONS-NOT-FORMULA",
+    "CLAIM-EXTRACTION-TARIFF-LOOP"
+  ],
+  "receipts_referenced": [
+    "receipts/fgip_tariff_sanctions_test1.json",
+    "receipts/fgip_tariff_sanctions_test2.json"
+  ],
+  "cost": {
+    "wall_time_s": 0.083,
+    "cpu_time_s": 0.013,
+    "peak_memory_mb": 19.2,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T00:47:45",
+    "timestamp_end": "2026-05-15T00:47:45"
+  }
+}

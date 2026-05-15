@@ -1,0 +1,30 @@
+{
+  "receipt_id": "partial-claim-audit-20260514",
+  "operation": "partial_claim_audit",
+  "session_date": "2026-05-14",
+  "results": {
+    "partial_before": 5789,
+    "promoted_to_verified": 17,
+    "promoted_to_evidenced": 2495,
+    "still_partial": 3277,
+    "edge_claims_no_sources": 1646,
+    "orphan_edges": 0,
+    "fts_rebuilt": true,
+    "final_statuses": {
+      "EVIDENCED": 10554,
+      "PARTIAL": 3277,
+      "VERIFIED": 34,
+      "CONFIRMED": 12,
+      "MISSING": 1
+    }
+  },
+  "cost": {
+    "wall_time_s": 0.277,
+    "cpu_time_s": 0.257,
+    "peak_memory_mb": 19.2,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T03:25:57",
+    "timestamp_end": "2026-05-15T03:25:58"
+  }
+}

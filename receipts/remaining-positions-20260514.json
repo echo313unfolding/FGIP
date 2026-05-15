@@ -1,0 +1,20 @@
+{
+  "receipt_id": "remaining-positions-20260514",
+  "operation": "graph_insert",
+  "session_date": "2026-05-14",
+  "description": "Remaining investment positions. 20 positions across 8 layers (utility, reit, gas_turbine, midstream, upstream, nuclear, uranium). Connected to accounts, thesis nodes, extraction defense, and cascade stages.",
+  "results": {
+    "nodes_inserted": 20,
+    "edges_inserted": 57,
+    "errors": []
+  },
+  "cost": {
+    "wall_time_s": 0.215,
+    "cpu_time_s": 0.053,
+    "peak_memory_mb": 19.6,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T03:26:03",
+    "timestamp_end": "2026-05-15T03:26:03"
+  }
+}

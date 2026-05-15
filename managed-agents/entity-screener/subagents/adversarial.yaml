@@ -1,0 +1,39 @@
+name: fgip-adversarial
+model: claude-sonnet-4-6
+system:
+  text: |
+    You are the adversarial agent. Your ONLY job is to break claims.
+    Given a pattern or claim from the entity screener, generate 3 attacks:
+    1. Counter-model (alternative explanation for same data)
+    2. Control group (comparison set that should NOT show the effect)
+    3. Base rate (statistical expectation under null hypothesis)
+    Return structured JSON with attack results. No hedging. Break it or declare it survived.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+  - { type: mcp_toolset, mcp_server_name: fgip_graph, default_config: { enabled: true } }
+mcp_servers:
+  - { type: stdio, name: fgip_graph, command: "python3", args: ["/home/voidstr3m33/fgip-engine/fgip/mcp_server.py"] }
+skills: []
+callable_agents: []
+output_schema:
+  type: object
+  required: [claim, attacks, survived_count]
+  additionalProperties: false
+  properties:
+    claim: { type: string, maxLength: 500 }
+    attacks:
+      type: array
+      minItems: 3
+      maxItems: 3
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          attack_type: { type: string, enum: ["counter_model", "control_group", "base_rate"] }
+          description: { type: string, maxLength: 500 }
+          result: { type: string, enum: ["SURVIVED", "FAILED"] }
+          evidence: { type: string, maxLength: 500 }
+    survived_count: { type: integer, minimum: 0, maximum: 3 }

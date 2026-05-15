@@ -1,0 +1,17 @@
+name: fgip-verdict-writer
+model: claude-haiku-4-5
+system:
+  text: |
+    You format FGIP claim verification results into structured reports.
+    You are the ONLY agent with Write permission. Write output files to ./out/.
+    Format: JSON receipt + markdown summary.
+    Include: parsed claim, source chain, adversarial results, verdict, proposed graph edges.
+    Never editorialize. Present evidence and verdict. Reader evaluates.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: write, enabled: true }
+skills: []
+callable_agents: []

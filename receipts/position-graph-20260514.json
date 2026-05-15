@@ -1,0 +1,21 @@
+{
+  "receipt_id": "position-graph-20260514",
+  "operation": "graph_insert",
+  "session_date": "2026-05-14",
+  "description": "Investment position graph. 11 positions across 5 layers (utility, midstream, upstream, nuclear, inflation defense). Connected to accounts, thesis nodes, and extraction defense.",
+  "results": {
+    "nodes_inserted": 10,
+    "edges_inserted": 30,
+    "claims_inserted": 3,
+    "errors": []
+  },
+  "cost": {
+    "wall_time_s": 0.146,
+    "cpu_time_s": 0.048,
+    "peak_memory_mb": 21.1,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp_start": "2026-05-15T01:12:13",
+    "timestamp_end": "2026-05-15T01:12:13"
+  }
+}
