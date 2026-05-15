@@ -34,15 +34,32 @@ Separately, congressional overlap on CHIPS-related committees (32 members) was f
 
 The methodology forced us to abandon emotionally satisfying claims and replace them with structurally defensible ones. This adversarial framework could be applied to validate IES scores against alternative explanations.
 
-**Honest evidence stratification (v0.1.0):**
-- 13,883 claims (including proposed-edge candidates in staging)
-- 87.9% have at least one cited source (any tier)
-- 10.5% backed by ≥1 Tier-0 or Tier-1 government/professional source
-- Triangulation (3+ independent source domains, ≥1 Tier-0) is aspirational — zero claims currently pass this bar in the database
-- Source breakdown: 96 Tier-0, 120 Tier-1, 5,293 Tier-2 (3.9% strong tier)
-- Edges decreased from 3,390 to 2,894 in v0.1.0 cut (deduplication discipline, not accumulation)
+**Honest evidence stratification (v0.1.1, post-provenance fix `d937b87`):**
 
-We publish the low numbers because publishing them is the point. Methodology documented in `docs/EVIDENCE_TIERS.md` and `docs/THESIS_RECEIPT_SCHEMA.md`.
+During pre-publication adversarial review, we identified and fixed a source-provenance bug affecting 23 agents — the propose() pipeline was dropping artifact linkage, causing most claims to show "has a source" while losing tier classification. A subsequent domain-extraction repair recovered 437 Tier-0 and 2,388 Tier-1 sources whose URLs were present but unparsed. Stratified numbers below are computed against the post-fix pipeline. Pre-fix numbers from the v0.1.0 release notes are superseded.
+
+The graph has two layers with different evidence profiles:
+
+**Analytical layer** (6,971 claims — congressional voting, campaign finance, securities, supply chain, trade):
+- 75.8% have at least one cited source
+- 61.5% backed by ≥1 Tier-0 (government primary) or Tier-1 (professional journalism/research) source
+- Strongest corridors: securities 100%, trade 100%, congressional voting 50.5%, campaign finance 50.3%
+- Weakest: supply chain 0.5%, DEBT_DOMESTICATION 0% (both need Tier-0 backfill)
+
+**Media signal layer** (6,912 claims — RSS/news-to-entity matching for real-time monitoring):
+- 100% have a cited source (by construction — each is an RSS item)
+- 66.0% backed by Tier-1 professional sources (NYT, BBC, Politico, The Hill, WSJ)
+- These are signal claims ("The Hill reports on [Company]: [headline]"), not analytical findings
+
+**Combined:**
+- 13,883 total claims, 87.9% source-linked
+- Source breakdown: 533 Tier-0, 2,508 Tier-1, 2,468 Tier-2 (55.2% strong tier)
+- 63.8% of all claims backed by ≥1 Tier-0 or Tier-1 source
+- Triangulation (3+ independent source domains with ≥1 Tier-0) remains aspirational — 0 claims pass this bar. Median sources per claim is 1. Source depth, not breadth, is the current gap.
+- 2,894 verified edges (down from 3,390 pre-dedup) + 80K proposed edges in staging pipeline
+- 30.3% of claims backed by Tier-0 government primary sources alone
+
+We publish the stratified numbers — including the zeros — because publishing them is the point. Methodology: `docs/EVIDENCE_TIERS.md`, `docs/THESIS_RECEIPT_SCHEMA.md`.
 
 ### 4. Commodity bottleneck layer
 
@@ -74,7 +91,7 @@ These bottlenecks determine which funding chains have pricing power and which ar
 |--|----------|------|
 | Graph DB | Neo4j (Cypher) | SQLite + FTS5 |
 | Nodes | 465,263 | 2,100+ |
-| Edges | 7,341,318 | 2,894 verified + 69K proposed |
+| Edges | 7,341,318 | 2,894 verified + 80K proposed |
 | AI model | Qwen2.5-14B (LoRA, Cypher) | 24 Python ingest agents |
 | Provenance | XRPL blockchain | SHA256 per edge + source URL |
 | License | MIT | MIT |
@@ -85,7 +102,7 @@ These bottlenecks determine which funding chains have pricing power and which ar
 - **Repo:** https://github.com/echo313unfolding/FGIP
 - **Mission:** https://github.com/echo313unfolding/FGIP#why-we-exist
 - **Geospatial layer:** https://github.com/echo313unfolding/fgip-globe
-- **Graph stats:** 2,100+ nodes, 2,800+ edges, 69K+ proposed edges, 24 ingest agents
+- **Graph stats:** 2,100+ nodes, 2,800+ edges, 80K+ proposed edges, 24 ingest agents
 - **Key findings:** Structural capital concentration (Big Three -0.08% delta, intent claim killed → reframed as passive indexing), M2 real inflation backtest (7/7, 3/3 adversarial attacks survived), defense funding chain tracing (NDAA → 5 hops → commodity)
 
 We're not proposing a merge — the architectures and focus areas are different enough that they should remain separate projects. We're proposing a defined integration layer so that users of either graph can query across both.
