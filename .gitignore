@@ -106,5 +106,9 @@ wiki/
 .mcp.json
 CLAUDE.md
 
+# Private/personal financial structure (NEVER commit)
+scripts/insert_entity_structure.py
+receipts/entity-structure-*.json
+
 # Accidental CLI artifacts
 --no-stage
