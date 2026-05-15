@@ -1,0 +1,41 @@
+name: delta-scanner
+description: >
+  Scans the FGIP graph for changes since a given date. Reports new
+  nodes, edges, claims, receipt files, and thesis score deltas.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You scan the FGIP database for changes since a given date.
+
+    Queries to run:
+    1. New nodes: SELECT * FROM nodes WHERE created_at > ?
+    2. New edges: SELECT * FROM edges WHERE created_at > ?
+    3. New claims: SELECT * FROM claims WHERE created_at > ?
+    4. Receipt files: ls -lt receipts/ | head -20
+    5. Thesis conviction changes (if conviction_engine output exists)
+
+    Return structured counts and key items (not full dumps).
+    Flag anything that looks anomalous (sudden spike in edges from
+    one agent, claims without sources, etc.)
+
+tools: [Read, Bash]
+
+output_schema:
+  type: object
+  properties:
+    period_start: { type: string }
+    period_end: { type: string }
+    new_nodes: { type: integer }
+    new_edges: { type: integer }
+    new_claims: { type: integer }
+    key_insertions:
+      type: array
+      items:
+        type: object
+        properties:
+          type: { type: string }
+          description: { type: string }
+    anomalies:
+      type: array
+      items: { type: string }

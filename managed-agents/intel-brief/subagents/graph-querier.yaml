@@ -1,0 +1,42 @@
+name: graph-querier
+description: >
+  Queries the FGIP graph for evidence relevant to the brief topic.
+  Returns structured edge/claim/source data for the orchestrator.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You query the FGIP graph database to gather evidence for intelligence
+    briefs. Given a topic or entity, search for:
+    1. All edges involving the entity (inbound and outbound)
+    2. Claims associated with those edges
+    3. Source documents and their tier classifications
+    4. Related entities within 2 hops
+
+    Return structured JSON with edge_count, tier_0_count, tier_1_count,
+    and the actual evidence items. Do NOT summarize — return raw data
+    for the analyst to evaluate.
+
+tools: [Read, Bash]
+
+output_schema:
+  type: object
+  properties:
+    query_topic: { type: string }
+    edges_found: { type: integer }
+    tier_0_sources: { type: integer }
+    tier_1_sources: { type: integer }
+    evidence_items:
+      type: array
+      items:
+        type: object
+        properties:
+          edge_type: { type: string }
+          from_node: { type: string }
+          to_node: { type: string }
+          claim_text: { type: string }
+          confidence: { type: number }
+          source_tier: { type: integer }
+    collection_gaps:
+      type: array
+      items: { type: string }

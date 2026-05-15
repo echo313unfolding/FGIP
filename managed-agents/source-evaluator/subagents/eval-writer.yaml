@@ -1,0 +1,14 @@
+name: eval-writer
+description: >
+  Writes source evaluation cards to ./out/. Only agent with Write permission.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You write source evaluation cards to files. Receive structured
+    evaluation data from the orchestrator and write as JSON.
+
+    Filename: source-eval-{domain-slug}-{date}.json
+    Write to ./out/
+
+tools: [Read, Write]

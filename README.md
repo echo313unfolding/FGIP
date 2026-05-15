@@ -19,6 +19,8 @@ FGIP is a forensic graph that maps public funding to commodity bottlenecks and p
 
 </div>
 
+Read the [mission statement](MISSION.md) for why this exists.
+
 ## What FGIP does
 
 FGIP maps where public funding is committed before it becomes recognized revenue, then traces the beneficiary chain.
@@ -142,6 +144,23 @@ Tier 0 agents (government sources) self-certify. Lower-tier agents require artif
 | nuclear_smr | NRC ADAMS | LICENSED_BY, PERMITTED_BY | 184 |
 | fara | FARA.gov | REGISTERED_AGENT, REPRESENTS | 450 |
 | And 12 more... | | | |
+
+### Analytical desks (managed agents)
+
+IC-style specialist desks that evaluate incoming intelligence through independent analytical lenses:
+
+| Desk | Function | IC Analog |
+|------|----------|-----------|
+| [thesis-war-room](managed-agents/thesis-war-room/) | MoE panel — 5 desks score a thesis simultaneously, arbiter synthesizes | War room / NIE |
+| [intel-brief](managed-agents/intel-brief/) | Produces PDB-style structured briefs with key judgments and confidence levels | PDB / finished intelligence |
+| [field-debrief](managed-agents/field-debrief/) | Structures raw field observations into graph-insertable JSON | HUMINT intake |
+| [source-evaluator](managed-agents/source-evaluator/) | ADMIRALTY-scale source reliability and tier classification | Source reliability desk |
+| [sitrep](managed-agents/sitrep/) | Periodic graph delta, thesis movements, signal alerts | SITREP |
+| [claim-verifier](managed-agents/claim-verifier/) | Adversarial verification of individual claims | Fact-checking / QC |
+| [tariff-analyzer](managed-agents/tariff-analyzer/) | Three-layer tariff decomposition (formula + gradient + lever) | Subject desk |
+| [entity-screener](managed-agents/entity-screener/) | Entity screening against graph for exposure and risk | Entity resolution |
+
+The war room runs all 5 specialist desks in parallel (funding, supply chain, regulatory, adversarial, timing) and synthesizes a verdict based on desk agreement. Disagreement between desks IS the intelligence.
 
 ## Investment theses
 

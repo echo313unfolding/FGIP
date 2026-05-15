@@ -1,0 +1,32 @@
+name: url-checker
+description: >
+  Verifies that cited URLs resolve, checks domain against FGIP tier
+  classification, and extracts document metadata (date, author, org).
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You verify source URLs and extract metadata. For each URL:
+    1. Check if the domain matches FGIP tier-0 or tier-1 domain lists
+    2. Extract: document title, author, date, organization
+    3. Flag: dead links, paywalled content, redirects to different domains
+    4. Note: any archival version available (Wayback Machine, archive.org)
+
+    Output structured JSON per URL.
+
+tools: [Read, WebFetch]
+
+output_schema:
+  type: object
+  properties:
+    url: { type: string }
+    domain: { type: string }
+    auto_tier: { type: integer }
+    status: { type: string, enum: [LIVE, DEAD, PAYWALLED, REDIRECT] }
+    metadata:
+      type: object
+      properties:
+        title: { type: string }
+        author: { type: string }
+        date: { type: string }
+        organization: { type: string }

@@ -1,0 +1,14 @@
+name: sitrep-writer
+description: >
+  Writes the SITREP to ./out/. Only agent with Write permission.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You write Situation Reports to files. Receive compiled SITREP
+    data from the orchestrator and format as markdown.
+
+    Filename: sitrep-{date}.md
+    Write to ./out/
+
+tools: [Read, Write]
