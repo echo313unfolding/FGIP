@@ -1,21 +1,21 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=8b949e&descAlignY=55">
-  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:f0f6fc,100:ba9a2a&height=200&section=header&text=FGIP&fontSize=42&fontColor=1f2328&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=656d76&descAlignY=55">
-  <img alt="FGIP" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Funding%20Graph%20Intelligence%20Pipeline&descSize=16&descColor=8b949e&descAlignY=55">
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Fifth%20Generation%20Institute%20for%20Prosperity&descSize=12&descColor=8b949e&descAlignY=55">
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:f0f6fc,100:ba9a2a&height=200&section=header&text=FGIP&fontSize=42&fontColor=1f2328&animation=fadeIn&fontAlignY=35&desc=Fifth%20Generation%20Institute%20for%20Prosperity&descSize=12&descColor=656d76&descAlignY=55">
+  <img alt="FGIP" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:6b5a1a&height=200&section=header&text=FGIP&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Fifth%20Generation%20Institute%20for%20Prosperity&descSize=12&descColor=8b949e&descAlignY=55">
 </picture>
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)](https://sqlite.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![2,070+ nodes](https://img.shields.io/badge/nodes-2%2C070%2B-brightgreen)]()
-[![2,750+ edges](https://img.shields.io/badge/edges-2%2C750%2B-blue)]()
+[![2,100+ nodes](https://img.shields.io/badge/nodes-2%2C100%2B-brightgreen)]()
+[![2,800+ edges](https://img.shields.io/badge/edges-2%2C800%2B-blue)]()
 [![69K+ proposed edges](https://img.shields.io/badge/proposed_edges-69K%2B-orange)]()
 
 **Track the money. Test the thesis. Present the documents.**
 
-FGIP is a research and evidence-mapping tool, not financial advice or an automated trading system.
+FGIP is a forensic graph that maps public funding to commodity bottlenecks and public tickers. Research tool, not financial advice.
 
 </div>
 
@@ -30,6 +30,20 @@ bill → appropriation → agency → contract/grant → company → supplier �
 Most trading systems look at price, volume, earnings, sentiment, and technical indicators. FGIP looks at where funding has been committed — in public government records — before the market headline says who benefits.
 
 A headline is downstream. The funding trail is upstream.
+
+## Verified findings
+
+### Real inflation is 6.3%, not 2.7%
+
+M2 money supply growth tracks actual purchasing power loss (housing +220%, S&P +411%). 25-year backtest against FRED data, 7/7 predictions confirmed, 3/3 adversarial attacks survived.
+
+### Structural capital concentration
+
+Big Three (Vanguard/BlackRock/State Street) own 18-20% of ALL large-cap firms — CHIPS recipients AND non-CHIPS control group. Difference: -0.08%. This is passive indexing, not strategic positioning. Structural concentration mechanically creates both-sides exposure regardless of intent.
+
+### Defense funding chains
+
+NDAA FY2025 ($895.2B) → 8 prime contractor AUTHORIZES_FUNDING edges. Ukraine supplemental ($60.84B) → 5 FUNDS_REPLENISHMENT edges. Columbia-class ($132B) → sole-source naval nuclear chain (GD → HII → BWXT → Cameco uranium). All traced from bill text to company to supplier to commodity.
 
 ## How it works
 
@@ -68,16 +82,18 @@ The graph traces these chains across 6 layers:
 +------------------------------------------------------------+
 |  CONVICTION ENGINE                                          |
 |  Signal collection → triangulation → adversarial testing    |
-|  → conviction scoring → position sizing                     |
+|  → conviction scoring                                       |
 +------------------------------------------------------------+
 |  GRAPH + PROPOSED EDGES                                     |
-|  2,070+ nodes · 2,750+ edges · 69K+ proposed · 24 agents   |
+|  2,100+ nodes · 2,800+ edges · 69K+ proposed · 24 agents   |
 +------------------------------------------------------------+
 |  DATA INGEST (Tier 0 / Tier 1)                              |
 |  Congress · EDGAR · USASpending · Federal Register · FEC    |
 |  FARA · NRC · SCOTUS · OpenSecrets · RSS · Options flow     |
 +------------------------------------------------------------+
 ```
+
+> **Note:** FGIP is the intelligence/research layer. The `fgip/agents/trading_agent.py` and `fgip/allocator/` modules are reference implementations of how the intelligence can be consumed downstream; they are not part of the core research product.
 
 ### Conviction engine
 
@@ -144,20 +160,6 @@ FGIP evaluates 15+ investment theses across sectors:
 | SMR endgame | Nuclear SMR | OKLO, SMR | NRC design approvals, utility PPAs |
 | Dollar resilience rails | Digital asset rails | — | GENIUS Act, OCC/FDIC rulemakings, Treasury reserve data |
 
-## Verified findings
-
-### Real inflation is 6.3%, not 2.7%
-
-M2 money supply growth tracks actual purchasing power loss (housing +220%, S&P +411%). 25-year backtest against FRED data, 7/7 predictions confirmed, 3/3 adversarial attacks survived.
-
-### Structural capital concentration
-
-Big Three (Vanguard/BlackRock/State Street) own 18-20% of ALL large-cap firms — CHIPS recipients AND non-CHIPS control group. Difference: -0.08%. This is passive indexing, not strategic positioning. Structural concentration mechanically creates both-sides exposure regardless of intent.
-
-### Defense funding chains
-
-NDAA FY2025 ($895.2B) → 8 prime contractor AUTHORIZES_FUNDING edges. Ukraine supplemental ($60.84B) → 5 FUNDS_REPLENISHMENT edges. Columbia-class ($132B) → sole-source naval nuclear chain (GD → HII → BWXT → Cameco uranium). All traced from bill text to company to supplier to commodity.
-
 ## Quick start
 
 ```bash
@@ -176,9 +178,6 @@ python3 tools/wire_defense_government.py
 # Run conviction engine
 python3 -m fgip.agents.conviction_engine
 
-# Run trading agent scan
-python3 -m fgip.agents.trading_agent --scan
-
 # Run adversarial testing
 python3 -m fgip.analysis.adversarial
 ```
@@ -188,8 +187,8 @@ python3 -m fgip.analysis.adversarial
 ```
 fgip-engine/
 ├── fgip/
-│   ├── agents/          # 24 analytical agents + conviction engine + trading agent
-│   ├── allocator/       # Portfolio allocation with policy constraints
+│   ├── agents/          # 24 analytical agents + conviction engine
+│   ├── allocator/       # Reference: downstream portfolio allocation consumer
 │   ├── analysis/        # Gap detection, adversarial testing, signal convergence
 │   ├── backtest/        # Portfolio backtesting and risk metrics
 │   ├── decisions/       # Evidence-gated decision framework
@@ -203,7 +202,7 @@ fgip-engine/
 ├── tools/               # Graph population and diagnostic tools
 ├── scripts/             # Graph insertion scripts
 ├── data/                # Source registry, extracted facts, candidate edges
-├── receipts/            # Thesis receipts (exportable to ReceiptGatedAsset)
+├── receipts/            # Thesis receipts (cryptographic, substrate-agnostic)
 ├── THESIS_PACK/         # Investment thesis claims + backtest receipts
 ├── articulations/       # Analytical write-ups on specific topics
 ├── tests/               # Test suite
@@ -231,7 +230,6 @@ fgip-engine/
 | [helix-substrate](https://github.com/echo313unfolding/helix-substrate) | HXQ tensor compression (4x from FP32, cos>0.999) |
 | [helix-codec](https://github.com/echo313unfolding/helix-codec) | Standalone C99 tensor codec library |
 | [sentinel-hybrid-stack](https://github.com/echo313unfolding/sentinel-hybrid-stack) | Security monitoring with SSM+Transformer hybrid |
-| [hxq-solana](https://github.com/echo313unfolding/hxq-solana) | Receipt-gated asset registry on Solana |
 
 ## Documentation
 
@@ -240,7 +238,6 @@ fgip-engine/
 | [SUPPORTING_FACTORS.md](docs/SUPPORTING_FACTORS.md) | Source-backed evidence packets for each thesis (claims, evidence, funding chains, counter-theses) |
 | [EVIDENCE_TIERS.md](docs/EVIDENCE_TIERS.md) | How data sources are classified (Tier 0 government → Tier 3 hypothesis) |
 | [THESIS_RECEIPT_SCHEMA.md](docs/THESIS_RECEIPT_SCHEMA.md) | Receipt format for thesis validation (evidence, conviction, graph state) |
-| [TRADING_AGENT_V0_SPEC.md](docs/TRADING_AGENT_V0_SPEC.md) | Trading agent architecture and risk parameters |
 | [SOURCE_AND_FACT_MODEL.md](docs/SOURCE_AND_FACT_MODEL.md) | How citations, extracted facts, and proposed edges are separated |
 | [DIGITAL_ASSET_RAILS.md](docs/DIGITAL_ASSET_RAILS.md) | Stablecoin, tokenization, and regulated settlement rail layer |
 | [DOLLAR_RESILIENCE_RAILS.md](docs/DOLLAR_RESILIENCE_RAILS.md) | Candidate thesis: stablecoin reserves as dollar-demand channel |

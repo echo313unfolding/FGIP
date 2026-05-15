@@ -164,15 +164,15 @@ fgip_receipts/
 
 Each receipt is immutable once generated. New evidence produces a new receipt with a new timestamp, not an edit of the old one.
 
-## Integration with ReceiptGatedAsset
+## Cryptographic verification
 
-Thesis receipts can be registered as `ReceiptGatedAsset` entries in the Solana registry:
+Thesis receipts are cryptographic and substrate-agnostic. Each receipt includes SHA256 hashes of its evidence state. Reference implementations exist as flat JSON files and optionally on external registries.
 
 ```
 FGIP thesis receipt
 → MorphSAT novelty/quality gate
-→ ReceiptGatedAsset state (Candidate / Active / Quarantined)
-→ On-chain record of evidence state at time of decision
+→ Evidence state hash (SHA256)
+→ Immutable record of evidence state at time of decision
 ```
 
 This creates an auditable, tamper-resistant record of what was known and when.

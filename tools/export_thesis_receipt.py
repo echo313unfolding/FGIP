@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export FGIP thesis receipts for ReceiptGatedAsset registration.
+"""Export FGIP thesis receipts as cryptographic evidence artifacts.
 
 Usage:
     python3 tools/export_thesis_receipt.py thesis-defense-primes
