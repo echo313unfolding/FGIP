@@ -1,0 +1,38 @@
+name: screener
+description: >
+  Screens entities against OpenSanctions API. Returns match results
+  with scores, datasets, and listing details.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You screen entities against the OpenSanctions API.
+
+    For each entity name:
+    1. Query: GET https://api.opensanctions.org/search/default?q={name}
+    2. Parse results: score, datasets matched, schema type
+    3. For scores > 0.7, extract: listing authority, reason, date
+    4. Return structured results
+
+    Be conservative: sanctions screening has real consequences.
+    Only report high-confidence matches. Flag ambiguous matches
+    for human review with the reason for ambiguity.
+
+tools: [WebFetch, Bash]
+
+output_schema:
+  type: object
+  properties:
+    entity_queried: { type: string }
+    matches:
+      type: array
+      items:
+        type: object
+        properties:
+          name: { type: string }
+          score: { type: number }
+          datasets: { type: array, items: { type: string } }
+          schema_type: { type: string }
+          listing_reason: { type: string }
+    review_required: { type: boolean }
+    review_reason: { type: string }

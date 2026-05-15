@@ -159,6 +159,9 @@ IC-style specialist desks that evaluate incoming intelligence through independen
 | [claim-verifier](managed-agents/claim-verifier/) | Adversarial verification of individual claims | Fact-checking / QC |
 | [tariff-analyzer](managed-agents/tariff-analyzer/) | Three-layer tariff decomposition (formula + gradient + lever) | Subject desk |
 | [entity-screener](managed-agents/entity-screener/) | Entity screening against graph for exposure and risk | Entity resolution |
+| [littlesis-ingest](managed-agents/littlesis-ingest/) | LittleSis relationship database (400K entities, 1.6M relationships) | HUMINT database |
+| [opensanctions-ingest](managed-agents/opensanctions-ingest/) | Sanctions screening against 320+ government watchlists | Sanctions desk |
+| [corporate-registry](managed-agents/corporate-registry/) | Shell LLC → parent company ownership chain tracing | Corporate intel |
 
 The war room runs all 5 specialist desks in parallel (funding, supply chain, regulatory, adversarial, timing) and synthesizes a verdict based on desk agreement. Disagreement between desks IS the intelligence.
 
@@ -260,6 +263,7 @@ fgip-engine/
 | [SOURCE_AND_FACT_MODEL.md](docs/SOURCE_AND_FACT_MODEL.md) | How citations, extracted facts, and proposed edges are separated |
 | [DIGITAL_ASSET_RAILS.md](docs/DIGITAL_ASSET_RAILS.md) | Stablecoin, tokenization, and regulated settlement rail layer |
 | [DOLLAR_RESILIENCE_RAILS.md](docs/DOLLAR_RESILIENCE_RAILS.md) | Candidate thesis: stablecoin reserves as dollar-demand channel |
+| [OSINT_LANDSCAPE.md](docs/OSINT_LANDSCAPE.md) | Competitive landscape: peers, agent frameworks, data sources |
 
 ## Source registry
 

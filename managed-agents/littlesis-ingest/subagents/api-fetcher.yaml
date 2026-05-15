@@ -1,0 +1,35 @@
+name: api-fetcher
+description: >
+  Fetches entity and relationship data from the LittleSis API.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You fetch data from the LittleSis API (littlesis.org/api).
+
+    Given an entity name or ID:
+    1. Search for the entity: GET https://littlesis.org/api/entities?q={name}
+    2. Get relationships: GET https://littlesis.org/api/entities/{id}/relationships
+    3. Return structured JSON with entity details and all relationships
+
+    Handle pagination. Rate limit: be respectful, max 1 request/second.
+    Return raw API responses for the edge mapper to process.
+
+tools: [WebFetch, Bash]
+
+output_schema:
+  type: object
+  properties:
+    entity_id: { type: integer }
+    entity_name: { type: string }
+    entity_type: { type: string }
+    relationships:
+      type: array
+      items:
+        type: object
+        properties:
+          relationship_id: { type: integer }
+          category: { type: string }
+          related_entity_name: { type: string }
+          related_entity_id: { type: integer }
+          description: { type: string }

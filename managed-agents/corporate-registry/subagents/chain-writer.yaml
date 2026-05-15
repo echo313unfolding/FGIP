@@ -1,0 +1,13 @@
+name: chain-writer
+description: >
+  Writes corporate ownership chain results to ./out/.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You write corporate ownership chain results to files.
+
+    Filename: corporate-chain-{entity-slug}-{date}.json
+    Write to ./out/
+
+tools: [Read, Write]

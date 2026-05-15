@@ -1,0 +1,47 @@
+name: registry-searcher
+description: >
+  Searches corporate registries via OpenCorporates API and extracts
+  ownership chain data.
+
+model: claude-haiku-4-5-20251001
+system:
+  inline: |
+    You search corporate registries for ownership information.
+
+    OpenCorporates API:
+    - GET https://api.opencorporates.com/v0.4/companies/search?q={name}
+    - GET https://api.opencorporates.com/v0.4/companies/{jurisdiction_code}/{company_number}
+    - GET https://api.opencorporates.com/v0.4/officers/search?q={name}
+
+    For each company found, extract:
+    1. Company name, number, jurisdiction
+    2. Registered agent name and address
+    3. Officers/directors
+    4. Status (active, dissolved, etc.)
+    5. Previous names
+    6. Industry codes
+
+    For shell LLC identification, check:
+    - Registered agent (CT Corporation, National Registered Agents = shell indicator)
+    - Address matches with known entities
+    - Officer overlap with known entities
+
+tools: [WebFetch, Bash]
+
+output_schema:
+  type: object
+  properties:
+    query: { type: string }
+    companies_found: { type: integer }
+    results:
+      type: array
+      items:
+        type: object
+        properties:
+          name: { type: string }
+          jurisdiction: { type: string }
+          company_number: { type: string }
+          status: { type: string }
+          registered_agent: { type: string }
+          officers: { type: array, items: { type: string } }
+          shell_indicators: { type: array, items: { type: string } }
