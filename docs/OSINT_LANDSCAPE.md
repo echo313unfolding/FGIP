@@ -95,8 +95,78 @@ Curated list of OSINT MCP servers. Notable tools:
 - **OpenOSINT** — OSINT agent with MCP server
 - **Voidly** — Internet censorship intelligence (116 tools, 119+ countries)
 
-**Action:** Evaluate StockScope and CompanyScope as MCP tool additions
-to FGIP's Claude Code integration.
+**Action:** ~~Evaluate StockScope and CompanyScope as MCP tool additions
+to FGIP's Claude Code integration.~~ **DONE** — StockScope registered as
+`stockscope` MCP (project scope, backed by CompanyScope endpoint).
+
+## Geospatial OSINT Platforms
+
+Real-time geospatial intelligence — *where things are physically right now*.
+FGIP is forensic financial-political graph — *where money flows through
+institutions*. The integration is the Palantir trinity: graph + geospatial +
+timeline, all cross-selected.
+
+### WorldView (kevtoe/worldview)
+**Status: Architecture reference for FGIP geospatial layer.**
+
+Real-time tactical intelligence platform — CesiumJS globe with flights,
+satellites, earthquakes, traffic & CCTV overlays. MAVEN-style dark tactical
+UI with GLSL post-processing (CRT scanlines, NVG, FLIR thermal palette).
+Imperative Cesium primitives for 27K+ entities at 60fps with dead-reckoning.
+
+Stack: React 19 + TypeScript 5.9 + CesiumJS 1.138 (Resium) + Tailwind v4 +
+Vite 7 + Express 5 backend + WebSocket.
+
+Key pattern: hook + layer component + proxy endpoint per data type.
+BillboardCollection/PointPrimitiveCollection (not JSX Entity) for scale.
+CallbackProperty for positions so React doesn't re-render the scene.
+
+- GitHub: github.com/kevtoe/worldview
+- License: **Educational/demo only — no commercial use.** Fork-to-learn, not fork-to-ship.
+
+### WorldView (imparpaulo01/worldview)
+**Status: Alternative reference — Google 3D Tiles variant.**
+
+Browser-based geospatial intelligence dashboard — CesiumJS + Google
+Photorealistic 3D Tiles, live flight & satellite tracking, GLSL visual
+filters. React 19, TypeScript, CesiumJS 1.124, Tailwind v4, Express server
+with background AIS/GDELT/MeteoAlarm/RSS collectors.
+
+- GitHub: github.com/imparpaulo01/worldview
+
+### Shadowbroker (BigBodyCobain/Shadowbroker)
+**Status: Monitor — most polished OSINT dashboard aesthetic.**
+
+MapLibre GL (flat map, not globe), Next.js + FastAPI, 15+ public feeds.
+GPS jamming detection via aircraft NAC-P values, KiwiSDR integration for
+live SDR tuning, private jet ownership cards. 300+ HN points.
+
+- GitHub: github.com/BigBodyCobain/Shadowbroker
+
+### OSIRIS (simplifaisoul/osiris)
+**Status: Monitor — "Palantir Alternative" positioning.**
+
+Next.js 15 + MapLibre GL, Vercel one-click deploy. "Open Source Global
+Intelligence Platform."
+
+- GitHub: github.com/simplifaisoul/osiris
+
+### OSINT War Room (Hue-Jhan/OSINT-War-Room)
+**Status: Monitor — data source variety.**
+
+War Tactical dashboard — GDELT conflict events, OpenSky aircraft, AISStream
+ships, Pentagon Pizza Index, Polymarket bets, VIX, CCTV feeds. FastAPI backend.
+
+- GitHub: github.com/Hue-Jhan/OSINT-War-Room
+
+### FGIP Geospatial Integration Plan
+
+Future `fgip-globe` repo — React 19 + CesiumJS, using WorldView's layer
+pattern. FGIP-specific layers: FacilityLayer (contractor HQs, mines, plants),
+FundingChainLayer (animated money-flow arcs), DistrictLayer (435 congressional
+districts by IES score), CommodityFlowLayer (pipelines, shipping, rail),
+ContractLayer (USASpending place-of-performance), LobbyingLayer (LDA/FARA).
+Cross-view selection: click entity in graph view -> highlights on globe.
 
 ## Congressional Trading Analysis
 
@@ -134,6 +204,8 @@ Already adapted for FGIP's claim-verifier, tariff-analyzer, entity-screener.
 | OpenSanctions | 0 | Built | HIGH — sanctions screening |
 | OpenCorporates | 1 | Built | HIGH — shell LLC tracing |
 | Quiver Quantitative | 1 | Not built | MEDIUM — congressional trades |
-| StockScope MCP | 1 | Not built | MEDIUM — SEC EDGAR via MCP |
+| StockScope MCP | 1 | Registered | DONE — SEC EDGAR via MCP |
 | OCCRP Aleph | 1 | Not built | LOW — cross-border only |
+| WorldView (kevtoe) | — | Reference | HIGH — geospatial layer pattern |
+| Shadowbroker | — | Reference | LOW — MapLibre aesthetic reference |
 | Sentinel Intelligence | — | Competitor | MONITOR — study ontology |
