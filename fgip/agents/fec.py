@@ -451,6 +451,7 @@ class FECAgent(FGIPAgent):
                 detail=f"PAC contributions totaling ${total_amount:,.0f}",
                 confidence=1.0,
                 reasoning=f"FEC records show PAC contributions from {company_id} to {member_id}",
+                source_url=f"https://www.fec.gov/data/disbursements/?committee_id={company_id}",
             ))
 
         print(f"Proposed {len(edges)} donation edges")

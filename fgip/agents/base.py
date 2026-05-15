@@ -140,11 +140,40 @@ class ProposedEdge:
     confidence: float = 0.5
     reasoning: Optional[str] = None
     promotion_requirement: Optional[str] = None
+    artifact_id: Optional[str] = None  # Links to artifact_queue
+    source_url: Optional[str] = None  # Source URL for provenance
     created_at: Optional[str] = None
 
     def __post_init__(self):
         if self.created_at is None:
             self.created_at = datetime.utcnow().isoformat() + "Z"
+
+    @classmethod
+    def from_fact(cls, fact: "StructuredFact", proposal_id: str,
+                  from_node: str, to_node: str, relationship: str,
+                  agent_name: str, **kwargs) -> "ProposedEdge":
+        """Create a ProposedEdge from a StructuredFact, preserving artifact linkage."""
+        artifact = fact.source_artifact
+        artifact_id = None
+        source_url = None
+        if artifact:
+            source_url = artifact.url
+            if artifact.content_hash:
+                artifact_id = f"{agent_name}-{artifact.content_hash[:16]}"
+        return cls(
+            proposal_id=proposal_id,
+            from_node=from_node,
+            to_node=to_node,
+            relationship=relationship,
+            agent_name=agent_name,
+            artifact_id=artifact_id,
+            source_url=source_url,
+            detail=kwargs.get("detail", fact.raw_text),
+            confidence=kwargs.get("confidence", fact.confidence),
+            reasoning=kwargs.get("reasoning"),
+            promotion_requirement=kwargs.get("promotion_requirement"),
+            proposed_claim_id=kwargs.get("proposed_claim_id"),
+        )
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -158,6 +187,8 @@ class ProposedEdge:
             "confidence": self.confidence,
             "reasoning": self.reasoning,
             "promotion_requirement": self.promotion_requirement,
+            "artifact_id": self.artifact_id,
+            "source_url": self.source_url,
             "created_at": self.created_at,
         }
 
@@ -405,6 +436,12 @@ class FGIPAgent(ABC):
             results["edges_proposed"] = len(edges)
             results["nodes_proposed"] = len(nodes)
 
+            # Auto-attach artifact linkage to edges missing it.
+            # Facts carry source_artifact; edges often don't carry artifact_id.
+            # Build a lookup from (from_node, to_node, relationship) → artifact.
+            if facts and edges:
+                self._attach_artifact_ids(facts, edges)
+
             # --- FSA gate: claim_formed → evidence_attached ---
             if self._fsa_enabled:
                 self._fsa.step(5)  # claim_formed → CITING
@@ -538,6 +575,35 @@ class FGIPAgent(ABC):
 
         return results
 
+    def _attach_artifact_ids(self, facts: List[StructuredFact], edges: List[ProposedEdge]):
+        """Auto-attach artifact_id and source_url to edges that lack them.
+
+        Uses the facts list to build a lookup from (subject, object) to artifact,
+        then fills in any edges missing artifact linkage.
+        """
+        # Build lookup: (from_node, to_node) → first matching artifact
+        fact_lookup: Dict[tuple, StructuredFact] = {}
+        for fact in facts:
+            key = (fact.subject, fact.object)
+            if key not in fact_lookup:
+                fact_lookup[key] = fact
+
+        attached = 0
+        for edge in edges:
+            if edge.artifact_id:
+                continue  # Already has artifact linkage
+
+            fact = fact_lookup.get((edge.from_node, edge.to_node))
+            if fact and fact.source_artifact:
+                artifact = fact.source_artifact
+                edge.source_url = artifact.url
+                if artifact.content_hash:
+                    edge.artifact_id = f"{self.name}-{artifact.content_hash[:16]}"
+                attached += 1
+
+        if attached:
+            log.info("%s: auto-attached artifact_id to %d/%d edges", self.name, attached, len(edges))
+
     def _write_proposals(self, claims: List[ProposedClaim], edges: List[ProposedEdge]):
         """Write proposals to staging tables.
 
@@ -563,11 +629,13 @@ class FGIPAgent(ABC):
                 """INSERT INTO proposed_edges
                    (proposal_id, from_node, to_node, relationship, detail,
                     proposed_claim_id, agent_name, confidence, reasoning,
-                    promotion_requirement, status, created_at)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'PENDING', ?)""",
+                    promotion_requirement, artifact_id, source_url, status, created_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'PENDING', ?)""",
                 (edge.proposal_id, edge.from_node, edge.to_node, edge.relationship,
                  edge.detail, edge.proposed_claim_id, edge.agent_name, edge.confidence,
-                 edge.reasoning, edge.promotion_requirement, edge.created_at)
+                 edge.reasoning, edge.promotion_requirement,
+                 getattr(edge, 'artifact_id', None),
+                 getattr(edge, 'source_url', None), edge.created_at)
             )
 
         conn.commit()

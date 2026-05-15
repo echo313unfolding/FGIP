@@ -509,6 +509,7 @@ class PrometheanAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=fact.confidence,
                     reasoning=f"Tier 2 policy analysis; keywords: {', '.join(fact.metadata.get('matched_keywords', [])[:5])}",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Confirm substantive policy analysis (not just news coverage)",
                 )
                 edges.append(edge)

@@ -413,6 +413,7 @@ class SCOTUSAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=fact.confidence,
                     reasoning="Supreme Court amicus brief filing",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Verify organization node exists; confirm amicus filing in docket",
                 )
                 edges.append(edge)
@@ -430,6 +431,7 @@ class SCOTUSAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=fact.confidence,
                     reasoning="Supreme Court opinion/order",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Verify case node exists; confirm ruling in official opinion",
                 )
                 edges.append(edge)

@@ -491,6 +491,7 @@ class PodcastAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=fact.confidence,
                     reasoning="Podcast guest appearance detected",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 )
                 edges.append(edge)
 

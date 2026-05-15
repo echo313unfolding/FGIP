@@ -478,6 +478,7 @@ class StablecoinAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=0.9,
                     reasoning="Stablecoin reserve attestation",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 ))
 
                 # Node: Stablecoin issuer
@@ -513,6 +514,7 @@ class StablecoinAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=0.85,
                     reasoning="Domestic holders have zero leverage capacity vs foreign governments",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 ))
 
             elif fact.fact_type == "mechanism" and "ENABLES" in fact.predicate:
@@ -537,6 +539,7 @@ class StablecoinAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=0.85,
                     reasoning="Without domestication, China/Japan can crash bond market in response to tariffs",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 ))
 
         # Add key domestication nodes

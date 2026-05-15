@@ -634,14 +634,13 @@ class CongressAgent(FGIPAgent):
             ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
             h = hashlib.md5(f"{member_id}{bill_id}{fact.predicate}".encode()).hexdigest()[:8]
 
-            edges.append(ProposedEdge(
+            edges.append(ProposedEdge.from_fact(
+                fact,
                 proposal_id=f"FGIP-PROPOSED-CONGRESS-{ts}-{h}",
                 from_node=member_id,
                 to_node=bill_id,
                 relationship=fact.predicate,
                 agent_name="congress",
-                detail=fact.raw_text,
-                confidence=1.0,
                 reasoning=f"Official roll call vote from Congress records. {fact.raw_text}",
             ))
 

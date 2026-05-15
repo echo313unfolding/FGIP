@@ -209,6 +209,7 @@ class CHIPSFacilityAgent(FGIPAgent):
                         "expected_operational": fact.metadata.get("expected_operational"),
                     }),
                     reasoning=f"CHIPS Act facility: ${fact.metadata.get('investment_usd', 0):,.0f} investment",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 )
                 edges.append(edge)
 
@@ -233,6 +234,7 @@ class CHIPSFacilityAgent(FGIPAgent):
                     agent_name=self.name,
                     confidence=fact.confidence,
                     reasoning="CHIPS Act facility location",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                 )
                 edges.append(edge)
 

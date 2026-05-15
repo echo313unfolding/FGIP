@@ -454,6 +454,7 @@ class FARAAgent(FGIPAgent):
                 proposed_claim_id=claim_id,
                 confidence=fact.confidence,
                 reasoning=f"FARA registration. Source: {fact.metadata.get('fara_url')}",
+                source_url=fact.metadata.get('fara_url'),
                 # Promotion requirements for HYPOTHESIS → INFERENCE → FACT
                 promotion_requirement="Attach FARA PDF artifact + verify entity resolution + confirm filing type",
             )

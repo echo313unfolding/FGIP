@@ -713,6 +713,7 @@ class FederalRegisterAgent(FGIPAgent):
                 proposed_claim_id=claim_id,
                 confidence=fact.confidence,
                 reasoning=f"Federal Register Tier 0. Source: {fact.metadata.get('source_url')}",
+                source_url=fact.metadata.get('source_url'),
                 promotion_requirement=None,
             )
             edges.append(edge)

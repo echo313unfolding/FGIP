@@ -488,6 +488,7 @@ class OptionsFlowAgent(FGIPAgent):
                 proposed_claim_id=proposal_id,
                 confidence=fact.confidence,
                 reasoning="Smart money positioning detected via options flow",
+                source_url=fact.source_artifact.url if fact.source_artifact else None,
                 promotion_requirement="Monitor for continuation or reversal in next 2 weeks",
             ))
 

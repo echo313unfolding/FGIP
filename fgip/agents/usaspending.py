@@ -608,6 +608,7 @@ class USASpendingAgent(FGIPAgent):
                 proposed_claim_id=claim_id,
                 confidence=fact.confidence,
                 reasoning=f"USASpending Tier {tier}. Source: {fact.metadata.get('source_url')}",
+                source_url=fact.metadata.get('source_url'),
                 promotion_requirement=promotion_req,
             )
             edges.append(edge)

@@ -712,6 +712,7 @@ class SignalGapEcosystemAgent(FGIPAgent):
                         detail=f"{commodity_data.get('name', commodity_id)} is upstream input for {entity_id}",
                         confidence=fact.confidence,
                         reasoning=f"Sector ecosystem mapping: {commodity_id} provides raw materials for {sector}",
+                        source_url=fact.source_artifact.url if fact.source_artifact else None,
                         promotion_requirement="Verify commodity dependency in 10-K Item 1 or supply chain disclosure",
                     )
                     edges.append(edge)
@@ -746,6 +747,7 @@ class SignalGapEcosystemAgent(FGIPAgent):
                             detail=f"{entity_id} potentially funded by {funder_id}",
                             confidence=0.60,  # Lower confidence - needs verification
                             reasoning=f"Sector ecosystem mapping: {funder_id} is typical funding source for {sector}",
+                            source_url=fact.source_artifact.url if fact.source_artifact else None,
                             promotion_requirement="Verify via USASpending.gov or company SEC filings",
                         )
                         edges.append(edge)

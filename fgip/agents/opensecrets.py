@@ -449,6 +449,7 @@ class OpenSecretsAgent(FGIPAgent):
                 proposed_claim_id=claim_id,
                 confidence=fact.confidence,
                 reasoning=f"OpenSecrets data. Source: {fact.metadata.get('opensecrets_url')}",
+                source_url=fact.metadata.get('opensecrets_url'),
                 promotion_requirement="Verify with primary FEC/LDA filing",
             )
             edges.append(edge)

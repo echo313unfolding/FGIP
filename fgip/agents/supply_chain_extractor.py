@@ -581,6 +581,7 @@ class SupplyChainExtractor(FGIPAgent):
                 proposed_claim_id=claim.proposal_id,
                 confidence=fact.confidence,
                 reasoning=f"10-K extraction: {fact.metadata.get('relationship_type', 'unknown')}",
+                source_url=fact.source_artifact.url if fact.source_artifact else None,
                 promotion_requirement="Verify against SEC filing",
             )
             edges.append(edge)

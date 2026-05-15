@@ -280,6 +280,7 @@ class CitationLoaderAgent(FGIPAgent):
                     proposed_claim_id=claim_id,
                     confidence=min(1.0, base_conf + tier_modifier),
                     reasoning=f"Relationship extracted from: \"{fact.raw_text}\"",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement=f"Verify edge with {tier_text} source" if meta.get('source_tier', 2) > 0 else None,
                 )
                 edges.append(edge)

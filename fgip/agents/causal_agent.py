@@ -498,6 +498,7 @@ class CausalAgent(FGIPAgent):
                 proposed_claim_id=claim.proposal_id,
                 confidence=fact.confidence,
                 reasoning=f"Causal claim: {fact.metadata.get('pattern_type', 'unknown')}",
+                source_url=fact.source_artifact.url if fact.source_artifact else None,
                 promotion_requirement="Causal claims require explicit mechanism and counter-argument consideration",
             )
             edges.append(edge)

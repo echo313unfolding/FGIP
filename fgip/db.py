@@ -141,6 +141,8 @@ CREATE TABLE IF NOT EXISTS proposed_edges (
     confidence REAL DEFAULT 0.5,
     reasoning TEXT,
     promotion_requirement TEXT,
+    artifact_id TEXT,
+    source_url TEXT,
     status TEXT DEFAULT 'PENDING',
     resolved_edge_id INTEGER,
     reviewer_notes TEXT,
@@ -477,6 +479,15 @@ class FGIPDatabase:
             conn.execute("""
                 ALTER TABLE proposed_edges
                 ADD COLUMN artifact_id TEXT REFERENCES artifact_queue(artifact_id)
+            """)
+        except sqlite3.OperationalError:
+            pass  # Column already exists
+
+        # Add source_url to proposed_edges
+        try:
+            conn.execute("""
+                ALTER TABLE proposed_edges
+                ADD COLUMN source_url TEXT
             """)
         except sqlite3.OperationalError:
             pass  # Column already exists

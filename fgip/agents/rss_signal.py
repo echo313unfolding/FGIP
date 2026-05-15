@@ -555,6 +555,7 @@ class RSSSignalAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=fact.confidence,
                     reasoning=f"Tier {fact.metadata.get('feed_tier')} source; keywords: {', '.join(fact.metadata.get('matched_keywords', []))}",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Verify media outlet node exists; confirm substantive coverage",
                 )
                 edges.append(edge)

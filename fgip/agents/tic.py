@@ -525,6 +525,7 @@ class TICAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=1.0,
                     reasoning="Official Treasury TIC data",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Verify holdings amount",
                 )
                 edges.append(edge)
@@ -558,6 +559,7 @@ class TICAgent(FGIPAgent):
                     proposed_claim_id=proposal_id,
                     confidence=0.9,
                     reasoning="Treasury dump mechanism - yields spike when foreign holders sell",
+                    source_url=fact.source_artifact.url if fact.source_artifact else None,
                     promotion_requirement="Document historical examples (2015 China scare)",
                 )
                 edges.append(edge)
