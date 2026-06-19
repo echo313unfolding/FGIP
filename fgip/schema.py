@@ -33,6 +33,18 @@ class NodeType(str, Enum):
     # Hypothesis / thesis node types
     THESIS = "THESIS"              # Investment thesis with falsifiability criteria
     HYPOTHESIS = "HYPOTHESIS"      # Testable prediction with expiration
+    # Agent Payments domain types
+    PROTOCOL = "PROTOCOL"          # Open standard/protocol (x402, AP2)
+    STABLECOIN = "STABLECOIN"      # Stablecoin asset (USDC, XO Cash)
+    TOKENIZED_FUND = "TOKENIZED_FUND"  # On-chain tokenized fund vehicle
+    # Disaster Jet Alert domain types
+    AIRCRAFT = "AIRCRAFT"          # Registered aircraft (tail number as key)
+    FLIGHT = "FLIGHT"              # Individual flight track
+    DISASTER = "DISASTER"          # FEMA disaster declaration
+    # Workforce / Skills Intelligence domain types
+    WORKFORCE_SECTOR = "WORKFORCE_SECTOR"  # Trade sector (construction, manufacturing, shipbuilding)
+    SKILL_DOMAIN = "SKILL_DOMAIN"          # Specific skill/trade (welding, pipefitting, CNC machining)
+    HISTORICAL_PRECEDENT = "HISTORICAL_PRECEDENT"  # Historical skill-loss event (Rome concrete, UK shipbuilding)
 
 
 class EdgeType(str, Enum):
@@ -121,9 +133,43 @@ class EdgeType(str, Enum):
     DID_NOT_MATERIALIZE = "DID_NOT_MATERIALIZE"  # expected event failed to occur
     FALSIFIED_BY = "FALSIFIED_BY"          # hypothesis falsified by observation
     EVALUATED_AT = "EVALUATED_AT"          # hypothesis evaluated in regime context (factual)
+    # Legal/judicial status edges (Tier-0 from court filings)
+    INDICTED_IN = "INDICTED_IN"            # person/org → court_case (named in indictment)
+    CONVICTED_IN = "CONVICTED_IN"          # person/org → court_case (verdict/plea guilty)
+    ACQUITTED_IN = "ACQUITTED_IN"          # person/org → court_case (verdict not guilty)
+    DISMISSED_IN = "DISMISSED_IN"          # person/org → court_case (charges dropped)
+    PLEA_BARGAINED_IN = "PLEA_BARGAINED_IN"  # person/org → court_case (pled to reduced charges)
+    INVESTIGATED_FOR = "INVESTIGATED_FOR"  # entity → economic_event (federal investigation)
+    # Funding/financial flow edges (990s, campaign finance)
+    FUNDED_BY = "FUNDED_BY"               # organization → donor (from IRS 990 / FEC)
+    AWARDED_TO = "AWARDED_TO"             # agency → recipient (USASpending)
+    PERFORMED_AT = "PERFORMED_AT"         # recipient → location (USASpending)
+    # Institutional outcome edges
+    FRAUD_AT = "FRAUD_AT"                 # fraud_entity → administering_agency (documented fraud)
     # Entity resolution edges
     SAME_AS = "SAME_AS"                    # proposed entity match (inferential - needs approval)
     MERGED_INTO = "MERGED_INTO"            # confirmed entity merge (factual - post-approval)
+    # Agent Payments domain edges
+    SETTLES_IN = "SETTLES_IN"              # product → stablecoin (settlement currency)
+    RUNS_ON_PROTOCOL = "RUNS_ON_PROTOCOL"  # product → protocol (technical backbone)
+    RESERVES_BACKED_BY = "RESERVES_BACKED_BY"  # stablecoin → treasury/reserve asset
+    LAUNCHED_PRODUCT = "LAUNCHED_PRODUCT"   # company → product (product launch)
+    # Disaster Jet Alert edges
+    REGISTERED_TO = "REGISTERED_TO"        # AIRCRAFT → PERSON/COMPANY (FAA registry, factual)
+    OPERATED_FLIGHT = "OPERATED_FLIGHT"    # AIRCRAFT → FLIGHT (factual)
+    DEPARTED_FROM = "DEPARTED_FROM"        # FLIGHT → LOCATION (factual)
+    ARRIVED_AT = "ARRIVED_AT"              # FLIGHT → LOCATION (factual)
+    DISASTER_OCCURRED_IN = "DISASTER_OCCURRED_IN"  # DISASTER → LOCATION (factual)
+    PROXIMATE_TO_DISASTER = "PROXIMATE_TO_DISASTER"  # FLIGHT → DISASTER (inferential)
+    FLIGHT_SPIKE_NEAR = "FLIGHT_SPIKE_NEAR"  # AIRCRAFT → DISASTER (inferential, anomaly)
+    # Workforce / Skills Intelligence edges
+    REQUIRES_SKILL = "REQUIRES_SKILL"          # sector/facility → skill_domain (workforce dependency)
+    SKILL_SHORTAGE_IN = "SKILL_SHORTAGE_IN"    # skill_domain → sector/location (documented gap)
+    APPRENTICESHIP_PIPELINE = "APPRENTICESHIP_PIPELINE"  # skill_domain → program (training pathway)
+    RETIREMENT_RISK = "RETIREMENT_RISK"        # workforce_sector → economic_event (aging-out risk)
+    SKILL_LOST_BY = "SKILL_LOST_BY"            # historical_precedent → civilization/entity (skill died)
+    PARALLELS = "PARALLELS"                    # historical_precedent → current workforce event (pattern match)
+    CONSTRAINS_CAPACITY = "CONSTRAINS_CAPACITY"  # skill_shortage → facility/project (can't build without workers)
 
 
 class SourceType(str, Enum):
@@ -180,6 +226,10 @@ INFERENTIAL_EDGE_TYPES = {
     'PREDICTS', 'DID_NOT_MATERIALIZE', 'FALSIFIED_BY',
     # Entity resolution (proposals require approval)
     'SAME_AS',
+    # Disaster Jet Alert (correlation-derived)
+    'PROXIMATE_TO_DISASTER', 'FLIGHT_SPIKE_NEAR',
+    # Workforce Intelligence (inferential)
+    'RETIREMENT_RISK', 'PARALLELS', 'CONSTRAINS_CAPACITY',
 }
 
 # Edge types that are factual by nature (reporting/documenting relationships)
@@ -204,6 +254,13 @@ FACTUAL_EDGE_TYPES = {
     'EVALUATED_AT',
     # Entity resolution (post-approval merges)
     'MERGED_INTO',
+    # Agent Payments (documented product launches and settlement)
+    'SETTLES_IN', 'RUNS_ON_PROTOCOL', 'RESERVES_BACKED_BY', 'LAUNCHED_PRODUCT',
+    # Disaster Jet Alert (FAA/FEMA/ADS-B documented)
+    'REGISTERED_TO', 'OPERATED_FLIGHT', 'DEPARTED_FROM', 'ARRIVED_AT',
+    'DISASTER_OCCURRED_IN',
+    # Workforce Intelligence (documented)
+    'REQUIRES_SKILL', 'SKILL_SHORTAGE_IN', 'APPRENTICESHIP_PIPELINE', 'SKILL_LOST_BY',
 }
 
 
@@ -219,6 +276,10 @@ TIER_0_DOMAINS = [
     'fara.gov', 'efile.fara.gov',
     # Other government sources
     'usaspending.gov', 'courtlistener.com', 'recap.law',
+    # Disaster Jet Alert - government aviation/emergency
+    'fema.gov', 'registry.faa.gov',
+    # Workforce Intelligence - government labor statistics
+    'bls.gov', 'dol.gov', 'gao.gov',
 ]
 
 TIER_1_DOMAINS = [
@@ -230,7 +291,13 @@ TIER_1_DOMAINS = [
     'ucdavis.edu', 'doi.org', 'yahoo.com', 'cnbc.com', 'foxnews.com',
     'thehill.com', 'politico.com', 'economist.com', 'ft.com',
     'wsj.com', 'bloomberg.com', 'newsweek.com', 'forbes.com',
-    'finance.yahoo.com', 'seekingalpha.com'
+    'finance.yahoo.com', 'seekingalpha.com',
+    # Company press / primary company documents (tier 1)
+    'prnewswire.com', 'businesswire.com', 'globenewswire.com',
+    'aws.amazon.com', 'cloud.google.com', 'circle.com', 'coinbase.com',
+    'stocktitan.net',
+    # Disaster Jet Alert - ADS-B data
+    'opensky-network.org',
 ]
 
 
