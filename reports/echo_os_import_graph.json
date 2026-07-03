@@ -1,0 +1,1126 @@
+{
+  "stats": {
+    "repos_crawled": 7,
+    "files_crawled": 6611,
+    "total_imports": 40619,
+    "total_instantiations": 470794,
+    "resolved_edges": 34,
+    "graph_edges": 95,
+    "confirmed": 24,
+    "arch_yes_code_no": 19,
+    "code_yes_arch_no": 6,
+    "untested": 34,
+    "duplicates": 17
+  },
+  "cost": {
+    "wall_time_s": 45.523,
+    "cpu_time_s": 45.518,
+    "peak_memory_mb": 125.7,
+    "python_version": "3.10.12",
+    "hostname": "Echo",
+    "timestamp": "2026-07-02T22:14:25"
+  },
+  "arch_yes_code_no": [
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_ghost_bridge",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "HXQ Codec",
+      "to_name": "Ghost Bridge",
+      "notes": "Ghost reads encoded bytes from HXQ output"
+    },
+    {
+      "from": "comp_ghost_bridge",
+      "to": "comp_hydra_router",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "Ghost Bridge",
+      "to_name": "Hydra Router",
+      "notes": "Ghost pre-screens, clears 53.8%"
+    },
+    {
+      "from": "comp_residual_contract",
+      "to": "comp_residual_router",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "Residual Contract",
+      "to_name": "Residual Router",
+      "notes": "Damage profile \u2192 routing decision"
+    },
+    {
+      "from": "comp_crystal_vault",
+      "to": "comp_ghost_classifier",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "Crystal Vault Invariant Basis",
+      "to_name": "Ghost Classifier",
+      "notes": "Invariant basis feeds classifier"
+    },
+    {
+      "from": "comp_ghost_classifier",
+      "to": "comp_ghost_bridge",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "Ghost Classifier",
+      "to_name": "Ghost Bridge",
+      "notes": "Classifier results inform bridge features"
+    },
+    {
+      "from": "comp_hydra_router",
+      "to": "comp_hxq_codec",
+      "type": "ROUTES_TO",
+      "from_name": "Hydra Router",
+      "to_name": "HXQ Codec",
+      "notes": "Routes to codec head selection (affine4/5/6, VQ, sidecar)"
+    },
+    {
+      "from": "comp_residual_router",
+      "to": "comp_hydra_router",
+      "type": "ROUTES_TO",
+      "from_name": "Residual Router",
+      "to_name": "Hydra Router",
+      "notes": "Post-reconstruction verification feeds back"
+    },
+    {
+      "from": "comp_se_depth_router",
+      "to": "comp_qwen_backend",
+      "type": "ROUTES_TO",
+      "from_name": "Se Depth Router",
+      "to_name": "Qwen-Coder Backend",
+      "notes": "Se routes prompt complexity to model tier"
+    },
+    {
+      "from": "comp_krisper_gate",
+      "to": "comp_krisper",
+      "type": "GATES",
+      "from_name": "KRISPER MorphSAT Gate",
+      "to_name": "KRISPER Engine",
+      "notes": "Every op checked before dispatch. Fail-closed."
+    },
+    {
+      "from": "comp_morphsat",
+      "to": "comp_agent_substrate",
+      "type": "GATES",
+      "from_name": "MorphSAT",
+      "to_name": "Agent Substrate",
+      "notes": "MorphSAT gates agent decisions"
+    },
+    {
+      "from": "comp_ghost_bridge",
+      "to": "comp_hxq_codec",
+      "type": "DEPENDS_ON",
+      "from_name": "Ghost Bridge",
+      "to_name": "HXQ Codec",
+      "notes": "Needs encoded tensor bytes as input"
+    },
+    {
+      "from": "comp_hydra_router",
+      "to": "comp_ghost_bridge",
+      "type": "DEPENDS_ON",
+      "from_name": "Hydra Router",
+      "to_name": "Ghost Bridge",
+      "notes": "Uses Ghost pre-screening for efficiency"
+    },
+    {
+      "from": "comp_residual_router",
+      "to": "comp_residual_contract",
+      "type": "DEPENDS_ON",
+      "from_name": "Residual Router",
+      "to_name": "Residual Contract",
+      "notes": "Needs damage profile to decide correction type"
+    },
+    {
+      "from": "comp_ggml_hxq",
+      "to": "comp_hxq_codec",
+      "type": "DEPENDS_ON",
+      "from_name": "GGML_TYPE_HXQ",
+      "to_name": "HXQ Codec",
+      "notes": "Native kernel implements HXQ codec in C/CUDA"
+    },
+    {
+      "from": "comp_specialist_pool",
+      "to": "comp_cell_runtime",
+      "type": "DEPENDS_ON",
+      "from_name": "Specialist Compute Pool",
+      "to_name": "cell-runtime",
+      "notes": "Pool runs inside cell-runtime"
+    },
+    {
+      "from": "comp_gauge_routing",
+      "to": "comp_residual_contract",
+      "type": "DEPENDS_ON",
+      "from_name": "Gauge-Only Routing",
+      "to_name": "Residual Contract",
+      "notes": "Gauge features derived from residual analysis"
+    },
+    {
+      "from": "comp_echo_nav",
+      "to": "comp_echo_memory",
+      "type": "DEPENDS_ON",
+      "from_name": "echo_nav MCP",
+      "to_name": "EchoMemory",
+      "notes": "MCP server reads/searches memory files"
+    },
+    {
+      "from": "comp_geometry_router",
+      "to": "comp_ghost_bridge",
+      "type": "DEPENDS_ON",
+      "from_name": "GeometryRouter v0.1",
+      "to_name": "Ghost Bridge",
+      "notes": "Uses ghost_features_from_bytes() from helix_substrate.ghost_bridge"
+    },
+    {
+      "from": "comp_geometry_router",
+      "to": "comp_hydra_router",
+      "type": "FEEDS_SIGNAL",
+      "from_name": "GeometryRouter v0.1",
+      "to_name": "Hydra Router",
+      "notes": "PLANNED: GeometryRouter route decisions feed Hydra Router. Not wired yet."
+    }
+  ],
+  "code_yes_arch_no": [
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_geometry_router",
+      "from_name": "HXQ Codec",
+      "to_name": "GeometryRouter v0.1",
+      "code_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_inheritance.py",
+      "line": 27,
+      "detail": "import route_decision (RetrievalMode, RouteDecision)"
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_fgip_graph",
+      "from_name": "HXQ Codec",
+      "to_name": "FGIP Knowledge Graph",
+      "code_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line": 134,
+      "detail": "import fgip.db (FGIPDatabase)"
+    },
+    {
+      "from": "comp_fgip_graph",
+      "to": "comp_geometry_router",
+      "from_name": "FGIP Knowledge Graph",
+      "to_name": "GeometryRouter v0.1",
+      "code_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/fgip-engine/fgip/regime/__init__.py",
+      "line": 35,
+      "detail": "import features_from_fred (FREDFeatures, extract_features, features_to_dict)"
+    },
+    {
+      "from": "comp_geometry_router",
+      "to": "comp_hxq_codec",
+      "from_name": "GeometryRouter v0.1",
+      "to_name": "HXQ Codec",
+      "code_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/echo-origin-gold/geometry_router/features.py",
+      "line": 15,
+      "detail": "import helix_substrate.ghost_bridge (ghost_features_from_bytes)"
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_geometry_router",
+      "from_name": "HXQ Codec",
+      "to_name": "GeometryRouter v0.1",
+      "code_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_decision.py",
+      "line": 186,
+      "detail": "RouteDecision()"
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_fgip_graph",
+      "from_name": "HXQ Codec",
+      "to_name": "FGIP Knowledge Graph",
+      "code_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line": 135,
+      "detail": "FGIPDatabase()"
+    }
+  ],
+  "untested": [
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_se_depth_router",
+      "from_name": "HXQ Codec",
+      "to_name": "Se Depth Router",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/cdna_reader.py",
+      "line": 1225
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_geometry_router",
+      "from_name": "HXQ Codec",
+      "to_name": "GeometryRouter v0.1",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_inheritance.py",
+      "line": 27
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_fgip_graph",
+      "from_name": "HXQ Codec",
+      "to_name": "FGIP Knowledge Graph",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line": 134
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_quant_router",
+      "from_name": "basin_server",
+      "to_name": "Quant Router",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line": 74
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_se_depth_router",
+      "from_name": "basin_server",
+      "to_name": "Se Depth Router",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line": 528
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_hxq_codec",
+      "from_name": "basin_server",
+      "to_name": "HXQ Codec",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line": 745
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_qwen_backend",
+      "from_name": "basin_server",
+      "to_name": "Qwen-Coder Backend",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line": 837
+    },
+    {
+      "from": "comp_krisper",
+      "to": "comp_biopoetica",
+      "from_name": "KRISPER Engine",
+      "to_name": "BioPoetica Compiler",
+      "source_file": "/home/voidstr3m33/helix-cdc/gitforest-repo/forest/krisper/__init__.py",
+      "line": 7
+    },
+    {
+      "from": "comp_se_depth_router",
+      "to": "comp_hxq_codec",
+      "from_name": "Se Depth Router",
+      "to_name": "HXQ Codec",
+      "source_file": "/home/voidstr3m33/helix-cdc/helix_cdc/regrow/cdna_reader.py",
+      "line": 17
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_biopoetica",
+      "from_name": "cell-runtime",
+      "to_name": "BioPoetica Compiler",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line": 20
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_krisper",
+      "from_name": "cell-runtime",
+      "to_name": "KRISPER Engine",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line": 21
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_quant_router",
+      "from_name": "cell-runtime",
+      "to_name": "Quant Router",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/orchestrator.py",
+      "line": 24
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_echo_sentry",
+      "from_name": "cell-runtime",
+      "to_name": "echo-sentry",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/specialists.py",
+      "line": 117
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_hxq_codec",
+      "from_name": "cell-runtime",
+      "to_name": "HXQ Codec",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/vault_shard.py",
+      "line": 1404
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_crystal_vault",
+      "from_name": "cell-runtime",
+      "to_name": "Crystal Vault Invariant Basis",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_cross_model_shadows.py",
+      "line": 34
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_weight_page_lib",
+      "from_name": "cell-runtime",
+      "to_name": "Weight Page Library",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_weight_page_manifest.py",
+      "line": 75
+    },
+    {
+      "from": "comp_fgip_graph",
+      "to": "comp_se_depth_router",
+      "from_name": "FGIP Knowledge Graph",
+      "to_name": "Se Depth Router",
+      "source_file": "/home/voidstr3m33/fgip-engine/cdna_server/app.py",
+      "line": 503
+    },
+    {
+      "from": "comp_fgip_graph",
+      "to": "comp_geometry_router",
+      "from_name": "FGIP Knowledge Graph",
+      "to_name": "GeometryRouter v0.1",
+      "source_file": "/home/voidstr3m33/fgip-engine/fgip/regime/__init__.py",
+      "line": 35
+    },
+    {
+      "from": "comp_fgip_web",
+      "to": "comp_fgip_graph",
+      "from_name": "FGIP Web UI",
+      "to_name": "FGIP Knowledge Graph",
+      "source_file": "/home/voidstr3m33/fgip-engine/web/app.py",
+      "line": 20
+    },
+    {
+      "from": "comp_morphsat",
+      "to": "comp_hxq_codec",
+      "from_name": "MorphSAT",
+      "to_name": "HXQ Codec",
+      "source_file": "/home/voidstr3m33/morphsat/tools/bridge_mamba_test.py",
+      "line": 88
+    },
+    {
+      "from": "comp_geometry_router",
+      "to": "comp_hxq_codec",
+      "from_name": "GeometryRouter v0.1",
+      "to_name": "HXQ Codec",
+      "source_file": "/home/voidstr3m33/echo-origin-gold/geometry_router/features.py",
+      "line": 15
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_morphsat",
+      "from_name": "HXQ Codec",
+      "to_name": "MorphSAT",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/lobe_scheduler.py",
+      "line": 469
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_geometry_router",
+      "from_name": "HXQ Codec",
+      "to_name": "GeometryRouter v0.1",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_decision.py",
+      "line": 186
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_fgip_graph",
+      "from_name": "HXQ Codec",
+      "to_name": "FGIP Knowledge Graph",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line": 135
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_residual_contract",
+      "from_name": "HXQ Codec",
+      "to_name": "Residual Contract",
+      "source_file": "/home/voidstr3m33/helix-substrate/helix_substrate/residual_contract.py",
+      "line": 179
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_quant_router",
+      "from_name": "basin_server",
+      "to_name": "Quant Router",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line": 1542
+    },
+    {
+      "from": "comp_krisper",
+      "to": "comp_biopoetica",
+      "from_name": "KRISPER Engine",
+      "to_name": "BioPoetica Compiler",
+      "source_file": "/home/voidstr3m33/helix-cdc/gitforest-repo/forest/krisper/bio_executor.py",
+      "line": 19
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_biopoetica",
+      "from_name": "cell-runtime",
+      "to_name": "BioPoetica Compiler",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line": 48
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_morphsat",
+      "from_name": "cell-runtime",
+      "to_name": "MorphSAT",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line": 60
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_krisper",
+      "from_name": "cell-runtime",
+      "to_name": "KRISPER Engine",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line": 65
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_agent_substrate",
+      "from_name": "cell-runtime",
+      "to_name": "Agent Substrate",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/cli_chat.py",
+      "line": 47
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_crystal_vault",
+      "from_name": "cell-runtime",
+      "to_name": "Crystal Vault Invariant Basis",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_cross_model_shadows.py",
+      "line": 264
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_weight_page_lib",
+      "from_name": "cell-runtime",
+      "to_name": "Weight Page Library",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_weight_page_manifest.py",
+      "line": 76
+    },
+    {
+      "from": "comp_fgip_web",
+      "to": "comp_fgip_graph",
+      "from_name": "FGIP Web UI",
+      "to_name": "FGIP Knowledge Graph",
+      "source_file": "/home/voidstr3m33/fgip-engine/web/app.py",
+      "line": 34
+    }
+  ],
+  "duplicates": [
+    {
+      "class": "HelixLinear",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc",
+        "helix-substrate",
+        "morphsat"
+      ],
+      "note": "'HelixLinear' used across 4 repos: echo-origin-gold, helix-cdc, helix-substrate, morphsat"
+    },
+    {
+      "class": "MorphSATGate",
+      "repos": [
+        "cell-runtime",
+        "helix-substrate",
+        "morphsat"
+      ],
+      "note": "'MorphSATGate' used across 3 repos: cell-runtime, helix-substrate, morphsat"
+    },
+    {
+      "class": "RouteDecision",
+      "repos": [
+        "echo-origin-gold",
+        "helix-substrate"
+      ],
+      "note": "'RouteDecision' used across 2 repos: echo-origin-gold, helix-substrate"
+    },
+    {
+      "class": "FGIPDatabase",
+      "repos": [
+        "fgip-engine",
+        "helix-substrate"
+      ],
+      "note": "'FGIPDatabase' used across 2 repos: fgip-engine, helix-substrate"
+    },
+    {
+      "class": "RouterDecision",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'RouterDecision' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "Node",
+      "repos": [
+        "echo-origin-gold",
+        "fgip-engine",
+        "helix-cdc"
+      ],
+      "note": "'Node' used across 3 repos: echo-origin-gold, fgip-engine, helix-cdc"
+    },
+    {
+      "class": "SeRouter",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'SeRouter' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "BioPoeticaCompiler",
+      "repos": [
+        "cell-runtime",
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'BioPoeticaCompiler' used across 3 repos: cell-runtime, echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "SeedStore",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'SeedStore' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "Genotype",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'Genotype' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "BloodType",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'BloodType' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "CapsuleManifest",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'CapsuleManifest' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "Edge",
+      "repos": [
+        "echo-origin-gold",
+        "fgip-engine",
+        "helix-cdc"
+      ],
+      "note": "'Edge' used across 3 repos: echo-origin-gold, fgip-engine, helix-cdc"
+    },
+    {
+      "class": "Claim",
+      "repos": [
+        "echo-origin-gold",
+        "fgip-engine",
+        "helix-cdc"
+      ],
+      "note": "'Claim' used across 3 repos: echo-origin-gold, fgip-engine, helix-cdc"
+    },
+    {
+      "class": "FibPiAnchor",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'FibPiAnchor' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "VaultClient",
+      "repos": [
+        "echo-origin-gold",
+        "helix-cdc"
+      ],
+      "note": "'VaultClient' used across 2 repos: echo-origin-gold, helix-cdc"
+    },
+    {
+      "class": "KrisperEngine",
+      "repos": [
+        "cell-runtime",
+        "echo-origin-gold"
+      ],
+      "note": "'KrisperEngine' used across 2 repos: cell-runtime, echo-origin-gold"
+    }
+  ],
+  "confirmed": [
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_se_depth_router",
+      "from_name": "HXQ Codec",
+      "to_name": "Se Depth Router",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_cdc.regrow.cdna_stream (CDNAStreamReader)"
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_quant_router",
+      "from_name": "basin_server",
+      "to_name": "Quant Router",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_cdc.echo.ops.models (EchoLoopReceipt, RouterDecision, SeMetrics, UncertaintyDispatchReceipt, AgentResultModel, ROUTER_SCHEMA_VERSION)"
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_se_depth_router",
+      "from_name": "basin_server",
+      "to_name": "Se Depth Router",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_cdc.regrow.stream_transformer_block (stream_transformer_block_forward)"
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_hxq_codec",
+      "from_name": "basin_server",
+      "to_name": "HXQ Codec",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_substrate.basin_runtime (validate_receipt)"
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_qwen_backend",
+      "from_name": "basin_server",
+      "to_name": "Qwen-Coder Backend",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import echo_cog.backend_llama_cpp (run_llama_cpp_timed)"
+    },
+    {
+      "from": "comp_krisper",
+      "to": "comp_biopoetica",
+      "from_name": "KRISPER Engine",
+      "to_name": "BioPoetica Compiler",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import bio_poetica (BioPoeticaParser, BioPoeticaCompiler)"
+    },
+    {
+      "from": "comp_se_depth_router",
+      "to": "comp_hxq_codec",
+      "from_name": "Se Depth Router",
+      "to_name": "HXQ Codec",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_substrate.cdna_reader (CDNAv2Reader)"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_biopoetica",
+      "from_name": "cell-runtime",
+      "to_name": "BioPoetica Compiler",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import cell.biopoetica (BioPoeticaCompiler, BioPoeticaEmitter)"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_quant_router",
+      "from_name": "cell-runtime",
+      "to_name": "Quant Router",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import cell.router (classify, route_model)"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_hxq_codec",
+      "from_name": "cell-runtime",
+      "to_name": "HXQ Codec",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_substrate.stream_matmul (stream_xw_from_cdna)"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_crystal_vault",
+      "from_name": "cell-runtime",
+      "to_name": "Crystal Vault Invariant Basis",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import cell.vault_shard (Ghost, GlyphDAR, LatentShape, MemoryEntry, Outcome, Shadow, ShadowMemory, _entropy_band, _hamming64, _structural_key)"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_weight_page_lib",
+      "from_name": "cell-runtime",
+      "to_name": "Weight Page Library",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import cell.weight_pages (WeightPageLibrary)"
+    },
+    {
+      "from": "comp_fgip_graph",
+      "to": "comp_se_depth_router",
+      "from_name": "FGIP Knowledge Graph",
+      "to_name": "Se Depth Router",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_cdc.regrow.stream_transformer_block (stream_multi_block_forward, rms_norm, load_norm_weights_from_gguf)"
+    },
+    {
+      "from": "comp_fgip_web",
+      "to": "comp_fgip_graph",
+      "from_name": "FGIP Web UI",
+      "to_name": "FGIP Knowledge Graph",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import fgip.db (FGIPDatabase)"
+    },
+    {
+      "from": "comp_morphsat",
+      "to": "comp_hxq_codec",
+      "from_name": "MorphSAT",
+      "to_name": "HXQ Codec",
+      "code_type": "CODE_IMPORTS",
+      "detail": "import helix_substrate.helix_linear (HelixLinear, load_cdna_factors, swap_to_helix, swap_summary)"
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_morphsat",
+      "from_name": "HXQ Codec",
+      "to_name": "MorphSAT",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "MorphSATGate()"
+    },
+    {
+      "from": "comp_hxq_codec",
+      "to": "comp_residual_contract",
+      "from_name": "HXQ Codec",
+      "to_name": "Residual Contract",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "ResidualProfile()"
+    },
+    {
+      "from": "comp_basin_server",
+      "to": "comp_quant_router",
+      "from_name": "basin_server",
+      "to_name": "Quant Router",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "RouterDecision()"
+    },
+    {
+      "from": "comp_krisper",
+      "to": "comp_biopoetica",
+      "from_name": "KRISPER Engine",
+      "to_name": "BioPoetica Compiler",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "BioPoeticaCompiler()"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_biopoetica",
+      "from_name": "cell-runtime",
+      "to_name": "BioPoetica Compiler",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "BioPoeticaCompiler()"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_agent_substrate",
+      "from_name": "cell-runtime",
+      "to_name": "Agent Substrate",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "Orchestrator()"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_crystal_vault",
+      "from_name": "cell-runtime",
+      "to_name": "Crystal Vault Invariant Basis",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "ShadowMemory()"
+    },
+    {
+      "from": "comp_cell_runtime",
+      "to": "comp_weight_page_lib",
+      "from_name": "cell-runtime",
+      "to_name": "Weight Page Library",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "WeightPageLibrary()"
+    },
+    {
+      "from": "comp_fgip_web",
+      "to": "comp_fgip_graph",
+      "from_name": "FGIP Web UI",
+      "to_name": "FGIP Knowledge Graph",
+      "code_type": "CODE_INSTANTIATES",
+      "detail": "FGIPDatabase()"
+    }
+  ],
+  "code_edges": [
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_se_depth_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/cdna_reader.py",
+      "line_number": 1225,
+      "detail": "import helix_cdc.regrow.cdna_stream (CDNAStreamReader)"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_geometry_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_inheritance.py",
+      "line_number": 27,
+      "detail": "import route_decision (RetrievalMode, RouteDecision)"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_fgip_graph",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line_number": 134,
+      "detail": "import fgip.db (FGIPDatabase)"
+    },
+    {
+      "from_component": "comp_basin_server",
+      "to_component": "comp_quant_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line_number": 74,
+      "detail": "import helix_cdc.echo.ops.models (EchoLoopReceipt, RouterDecision, SeMetrics, UncertaintyDispatchReceipt, AgentResultModel, ROUTER_SCHEMA_VERSION)"
+    },
+    {
+      "from_component": "comp_basin_server",
+      "to_component": "comp_se_depth_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line_number": 528,
+      "detail": "import helix_cdc.regrow.stream_transformer_block (stream_transformer_block_forward)"
+    },
+    {
+      "from_component": "comp_basin_server",
+      "to_component": "comp_hxq_codec",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line_number": 745,
+      "detail": "import helix_substrate.basin_runtime (validate_receipt)"
+    },
+    {
+      "from_component": "comp_basin_server",
+      "to_component": "comp_qwen_backend",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line_number": 837,
+      "detail": "import echo_cog.backend_llama_cpp (run_llama_cpp_timed)"
+    },
+    {
+      "from_component": "comp_krisper",
+      "to_component": "comp_biopoetica",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/gitforest-repo/forest/krisper/__init__.py",
+      "line_number": 7,
+      "detail": "import bio_poetica (BioPoeticaParser, BioPoeticaCompiler)"
+    },
+    {
+      "from_component": "comp_se_depth_router",
+      "to_component": "comp_hxq_codec",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/helix-cdc/helix_cdc/regrow/cdna_reader.py",
+      "line_number": 17,
+      "detail": "import helix_substrate.cdna_reader (CDNAv2Reader)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_biopoetica",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line_number": 20,
+      "detail": "import cell.biopoetica (BioPoeticaCompiler, BioPoeticaEmitter)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_krisper",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line_number": 21,
+      "detail": "import cell.krisper (KrisperEngine, KrisperGuards, MorphSATGate)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_quant_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/orchestrator.py",
+      "line_number": 24,
+      "detail": "import cell.router (classify, route_model)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_echo_sentry",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/specialists.py",
+      "line_number": 117,
+      "detail": "import sentinel.runtime.hybrid_stack (HybridStack)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_hxq_codec",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/vault_shard.py",
+      "line_number": 1404,
+      "detail": "import helix_substrate.stream_matmul (stream_xw_from_cdna)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_crystal_vault",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_cross_model_shadows.py",
+      "line_number": 34,
+      "detail": "import cell.vault_shard (Ghost, GlyphDAR, LatentShape, MemoryEntry, Outcome, Shadow, ShadowMemory, _entropy_band, _hamming64, _structural_key)"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_weight_page_lib",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_weight_page_manifest.py",
+      "line_number": 75,
+      "detail": "import cell.weight_pages (WeightPageLibrary)"
+    },
+    {
+      "from_component": "comp_fgip_graph",
+      "to_component": "comp_se_depth_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/fgip-engine/cdna_server/app.py",
+      "line_number": 503,
+      "detail": "import helix_cdc.regrow.stream_transformer_block (stream_multi_block_forward, rms_norm, load_norm_weights_from_gguf)"
+    },
+    {
+      "from_component": "comp_fgip_graph",
+      "to_component": "comp_geometry_router",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/fgip-engine/fgip/regime/__init__.py",
+      "line_number": 35,
+      "detail": "import features_from_fred (FREDFeatures, extract_features, features_to_dict)"
+    },
+    {
+      "from_component": "comp_fgip_web",
+      "to_component": "comp_fgip_graph",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/fgip-engine/web/app.py",
+      "line_number": 20,
+      "detail": "import fgip.db (FGIPDatabase)"
+    },
+    {
+      "from_component": "comp_morphsat",
+      "to_component": "comp_hxq_codec",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/morphsat/tools/bridge_mamba_test.py",
+      "line_number": 88,
+      "detail": "import helix_substrate.helix_linear (HelixLinear, load_cdna_factors, swap_to_helix, swap_summary)"
+    },
+    {
+      "from_component": "comp_geometry_router",
+      "to_component": "comp_hxq_codec",
+      "edge_type": "CODE_IMPORTS",
+      "source_file": "/home/voidstr3m33/echo-origin-gold/geometry_router/features.py",
+      "line_number": 15,
+      "detail": "import helix_substrate.ghost_bridge (ghost_features_from_bytes)"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_morphsat",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/lobe_scheduler.py",
+      "line_number": 469,
+      "detail": "MorphSATGate()"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_geometry_router",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/route_decision.py",
+      "line_number": 186,
+      "detail": "RouteDecision()"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_fgip_graph",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/build/lib/helix_substrate/trading_executors.py",
+      "line_number": 135,
+      "detail": "FGIPDatabase()"
+    },
+    {
+      "from_component": "comp_hxq_codec",
+      "to_component": "comp_residual_contract",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-substrate/helix_substrate/residual_contract.py",
+      "line_number": 179,
+      "detail": "ResidualProfile()"
+    },
+    {
+      "from_component": "comp_basin_server",
+      "to_component": "comp_quant_router",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-cdc/api/basin_server.py",
+      "line_number": 1542,
+      "detail": "RouterDecision()"
+    },
+    {
+      "from_component": "comp_krisper",
+      "to_component": "comp_biopoetica",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/helix-cdc/gitforest-repo/forest/krisper/bio_executor.py",
+      "line_number": 19,
+      "detail": "BioPoeticaCompiler()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_biopoetica",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line_number": 48,
+      "detail": "BioPoeticaCompiler()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_morphsat",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line_number": 60,
+      "detail": "MorphSATGate()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_krisper",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/examples/biopoetica_krisper/demo_allow.py",
+      "line_number": 65,
+      "detail": "KrisperEngine()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_agent_substrate",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/src/cell/cli_chat.py",
+      "line_number": 47,
+      "detail": "Orchestrator()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_crystal_vault",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_cross_model_shadows.py",
+      "line_number": 264,
+      "detail": "ShadowMemory()"
+    },
+    {
+      "from_component": "comp_cell_runtime",
+      "to_component": "comp_weight_page_lib",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/cell-runtime/tests/test_weight_page_manifest.py",
+      "line_number": 76,
+      "detail": "WeightPageLibrary()"
+    },
+    {
+      "from_component": "comp_fgip_web",
+      "to_component": "comp_fgip_graph",
+      "edge_type": "CODE_INSTANTIATES",
+      "source_file": "/home/voidstr3m33/fgip-engine/web/app.py",
+      "line_number": 34,
+      "detail": "FGIPDatabase()"
+    }
+  ]
+}
