@@ -100,9 +100,10 @@ COMPONENTS = [
     # --- Layer 2: Routing ---
     Node(node_id="comp_geometry_router", node_type=NodeType.COMPONENT,
          name="GeometryRouter v0.1",
-         description="Route tensors by codebook geometry in PCA-4D. 5 super-role basins, 3 handoff gauges. 30/30 tests.",
-         metadata={"repo": "echo-origin-gold", "tests": 30, "status": "PROVEN",
-                   "commit": "7174aa6", "checkpoint": "compressed_2000steps_model.pt"}),
+         description="Route tensors by codebook geometry in PCA-4D. 5 super-role basins, 3 handoff gauges. "
+                     "Gate policy: cross-basin→ESCALATE, OUTSIDE outlier→MONITOR. 67/67 tests.",
+         metadata={"repo": "echo-origin-gold", "tests": 67, "status": "PROVEN",
+                   "commit": "8a9b585", "checkpoint": "compressed_2000steps_model.pt"}),
     Node(node_id="comp_ghost_classifier", node_type=NodeType.COMPONENT,
          name="Ghost Classifier",
          description="k-NN on encoded bytes. Role 73.3% (8.1x random), Arch 92.8%.",
@@ -273,6 +274,9 @@ CLAIMS = [
     Claim(claim_id="ECHO-INT-009", claim_text="GeometryRouter v0.1 routes born-compressed tensors by codebook geometry in PCA-4D. 6 features, 5 super-role basins, 4 early ATTENTION_QO handoffs detected. PCA-3D hides L0 q_proj; PCA-4D is minimum routing dimensionality.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="30/30 tests. Commit 7174aa6. Phases 0.20-0.29. echo-origin-gold/geometry_router/."),
     Claim(claim_id="ECHO-GAP-009", claim_text="GeometryRouter is standalone — not wired into Hydra Router, Agent Substrate, or any production runtime", topic=TOPIC, status=ClaimStatus.MISSING, notes="Spec says 'do not wire into production runtime yet'. Planned: GeometryRouter feeds Hydra Router."),
 
+    # Vertical slice gate policy (2026-07-03)
+    Claim(claim_id="ECHO-INT-010", claim_text="GeometryRouter vertical slice gate policy correctly distinguishes cross-basin conflicts (ESCALATE) from home-basin OUTSIDE outliers (MONITOR). Hard escalations reduced 5→1. 67/67 tests.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="Commit 8a9b585. Patch: OUTSIDE + not cross-basin → MONITOR. L0 q_proj TRUE_CONFLICT preserved."),
+
     # Code-discovered dependencies (import crawler 2026-07-02)
     Claim(claim_id="ECHO-CRAWL-001", claim_text="Import crawler discovered 12 undocumented code-level dependencies across 7 repos (6610 files, 40605 imports)", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="tools/import_crawler.py. 46s, 122MB. Excludes 3 stale build/lib edges."),
 ]
@@ -442,6 +446,12 @@ def build_edges():
     add(ET.MISSING_INTEGRATION, "comp_geometry_router", "comp_agent_substrate",
         claim_id="ECHO-GAP-009", confidence=0.0,
         notes="GAP: GeometryRouter not wired into Agent Substrate or any runtime")
+
+    # === Vertical slice gate policy (commit 8a9b585) ===
+    add(ET.TESTED_WITH, "comp_geometry_router", "comp_morphsat",
+        claim_id="ECHO-INT-010", confidence=1.0,
+        notes="Gate policy patch: OUTSIDE+not-cross-basin→MONITOR. "
+              "Hard escalations 5→1. 67/67 tests. Commit 8a9b585.")
 
     # === Code-discovered dependencies (import crawler 2026-07-02) ===
     C = "ECHO-CRAWL-001"
