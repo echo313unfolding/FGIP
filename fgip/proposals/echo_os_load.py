@@ -101,8 +101,8 @@ COMPONENTS = [
     Node(node_id="comp_geometry_router", node_type=NodeType.COMPONENT,
          name="GeometryRouter v0.1",
          description="Route tensors by codebook geometry in PCA-4D. 5 super-role basins, 3 handoff gauges. "
-                     "Gate policy: cross-basin→ESCALATE, OUTSIDE outlier→MONITOR. 67/67 tests.",
-         metadata={"repo": "echo-origin-gold", "tests": 67, "status": "PROVEN",
+                     "Gate policy: cross-basin→ESCALATE, OUTSIDE outlier→MONITOR. Hydra bridge adapter. 90/90 tests.",
+         metadata={"repo": "echo-origin-gold", "tests": 90, "status": "PROVEN",
                    "commit": "8a9b585", "checkpoint": "compressed_2000steps_model.pt"}),
     Node(node_id="comp_ghost_classifier", node_type=NodeType.COMPONENT,
          name="Ghost Classifier",
@@ -277,6 +277,9 @@ CLAIMS = [
     # Vertical slice gate policy (2026-07-03)
     Claim(claim_id="ECHO-INT-010", claim_text="GeometryRouter vertical slice gate policy correctly distinguishes cross-basin conflicts (ESCALATE) from home-basin OUTSIDE outliers (MONITOR). Hard escalations reduced 5→1. 67/67 tests.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="Commit 8a9b585. Patch: OUTSIDE + not cross-basin → MONITOR. L0 q_proj TRUE_CONFLICT preserved."),
 
+    # Hydra bridge adapter (2026-07-03)
+    Claim(claim_id="ECHO-INT-011", claim_text="GeometryRouter route hints consumed by HydraBridgeAdapter. 4 Hydra actions mapped from gate verdicts. 7 tensors bridged, 64-tensor full-checkpoint sweep. Only L0 q_proj abstains. 90/90 tests.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="Thin adapter demo, NOT production Hydra wiring. RouteHint neutral interface. demos/geometry_router_hydra_bridge.py."),
+
     # Code-discovered dependencies (import crawler 2026-07-02)
     Claim(claim_id="ECHO-CRAWL-001", claim_text="Import crawler discovered 12 undocumented code-level dependencies across 7 repos (6610 files, 40605 imports)", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="tools/import_crawler.py. 46s, 122MB. Excludes 3 stale build/lib edges."),
 ]
@@ -438,11 +441,13 @@ def build_edges():
         claim_id="ECHO-INT-009", confidence=1.0,
         notes="30/30 tests use proven Ghost features. Commit 7174aa6.")
     add(ET.FEEDS_SIGNAL, "comp_geometry_router", "comp_hydra_router",
-        claim_id="ECHO-GAP-009", confidence=0.0,
-        notes="PLANNED: GeometryRouter route decisions feed Hydra Router. Not wired yet.")
+        claim_id="ECHO-INT-011", confidence=0.8,
+        notes="Bridge adapter maps RouteHint→HydraAction (tested). "
+              "Not yet production wiring — adapter demo only.")
     add(ET.MISSING_INTEGRATION, "comp_geometry_router", "comp_hydra_router",
         claim_id="ECHO-GAP-009", confidence=0.0,
-        notes="GAP: GeometryRouter standalone — not wired into Hydra Router")
+        notes="GAP: Bridge adapter proven (ECHO-INT-011) but not production Hydra wiring. "
+              "HydraBridgeAdapter does not call HydraRouter.route().")
     add(ET.MISSING_INTEGRATION, "comp_geometry_router", "comp_agent_substrate",
         claim_id="ECHO-GAP-009", confidence=0.0,
         notes="GAP: GeometryRouter not wired into Agent Substrate or any runtime")
@@ -452,6 +457,13 @@ def build_edges():
         claim_id="ECHO-INT-010", confidence=1.0,
         notes="Gate policy patch: OUTSIDE+not-cross-basin→MONITOR. "
               "Hard escalations 5→1. 67/67 tests. Commit 8a9b585.")
+
+    # === Hydra bridge adapter (2026-07-03) ===
+    add(ET.TESTED_WITH, "comp_geometry_router", "comp_hydra_router",
+        claim_id="ECHO-INT-011", confidence=1.0,
+        notes="Bridge adapter maps RouteHint→HydraAction. "
+              "4 actions, codec hints, 7 tensors + 64-tensor sweep. "
+              "90/90 tests. Thin adapter, not production wiring.")
 
     # === Code-discovered dependencies (import crawler 2026-07-02) ===
     C = "ECHO-CRAWL-001"
