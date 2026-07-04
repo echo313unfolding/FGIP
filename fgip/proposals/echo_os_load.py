@@ -268,7 +268,7 @@ CLAIMS = [
     Claim(claim_id="ECHO-GAP-005", claim_text="echo-sentry library not used by cell-runtime — SentinelTriageAgent reimplements verdict logic independently via model routing (qwen2.5-sentinel) instead of calling echo-sentry code", topic=TOPIC, status=ClaimStatus.PARTIAL, notes="cell/agents/sentinel_agent.py:48-81 works but bypasses the library."),
     Claim(claim_id="ECHO-GAP-006", claim_text="Gauge-only routing not validated downstream: does it improve PPL/task vs cosine-only?", topic=TOPIC, status=ClaimStatus.MISSING, notes="99.6% agreement proven but downstream effect unmeasured."),
     Claim(claim_id="ECHO-GAP-007", claim_text="KRISPER engine is complete (24 op handlers, 88 tests) but zero calls from cell-runtime orchestrator — orchestrator.py has no KrisperEngine import", topic=TOPIC, status=ClaimStatus.MISSING, notes="cell/orchestrator.py, cli_chat.py, gateway.py, tool_registry.py — none import KRISPER."),
-    Claim(claim_id="ECHO-GAP-008", claim_text="Born-compressed routing superiority not proven — architecture confound remains", topic=TOPIC, status=ClaimStatus.MISSING, notes="99.3% source discrimination but 182M hybrid vs 130M SSM not matched."),
+    Claim(claim_id="ECHO-GAP-008", claim_text="Born-compressed routing superiority not proven — architecture confound remains", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="RESOLVED by WO-MATCHED-BC-ROUTING-01: matched [T,T,M]x4, same config. Post-hoc VQ wins role accuracy 60.9% vs 26.6%. STE homogenizes codebooks."),
 
     # GeometryRouter v0.1
     Claim(claim_id="ECHO-INT-009", claim_text="GeometryRouter v0.1 routes born-compressed tensors by codebook geometry in PCA-4D. 6 features, 5 super-role basins, 4 early ATTENTION_QO handoffs detected. PCA-3D hides L0 q_proj; PCA-4D is minimum routing dimensionality.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="30/30 tests. Commit 7174aa6. Phases 0.20-0.29. echo-origin-gold/geometry_router/."),
@@ -282,6 +282,19 @@ CLAIMS = [
 
     # Agent substrate bridge adapter (2026-07-03)
     Claim(claim_id="ECHO-INT-012", claim_text="GeometryRouter/HydraBridgeResult consumed by AgentSubstrateAdapter. 4 agent actions mapped: EXECUTE_DIRECT, EXECUTE_WITH_MONITOR, VERIFY_THEN_EXECUTE, ABSTAIN_OR_FALLBACK. 64-tensor sweep: 32 direct, 30 monitored, 1 verified, 1 abstain. 116/116 tests.", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="Thin adapter demo, NOT production orchestrator wiring. demos/geometry_router_agent_substrate_bridge.py."),
+
+    # Matched born-compressed vs post-hoc VQ experiment (2026-07-04)
+    Claim(claim_id="ECHO-INT-013",
+          claim_text="Matched experiment shows current from-scratch HelixLinearSTE does not outperform "
+                     "dense→post-hoc VQ for role-geometry routing. Role accuracy: PH=60.9% (5.5x) vs "
+                     "BC=26.6% (2.4x). This WEAKENS the naive STE-from-scratch implementation. It does "
+                     "NOT falsify broader born-compressed/MoE-style routing. Dense→post-hoc VQ confirmed "
+                     "as current production baseline.",
+          topic=TOPIC, status=ClaimStatus.EVIDENCED,
+          notes="WO-MATCHED-BC-ROUTING-01. [T,T,M]x4, 167M, 2000 steps, RTX 3090, $0.52. "
+                "NOT tested: MoE-style trained router, expert load balancing, role-aware codebooks, "
+                "delayed quantization, dense warm-start, routing loss. "
+                "Receipt: echo-origin-gold/reports/matched_born_vs_posthoc_RECEIPT.json."),
 
     # Code-discovered dependencies (import crawler 2026-07-02)
     Claim(claim_id="ECHO-CRAWL-001", claim_text="Import crawler discovered 12 undocumented code-level dependencies across 7 repos (6610 files, 40605 imports)", topic=TOPIC, status=ClaimStatus.EVIDENCED, notes="tools/import_crawler.py. 46s, 122MB. Excludes 3 stale build/lib edges."),
@@ -475,6 +488,16 @@ def build_edges():
         notes="Bridge adapter maps HydraBridgeResult→AgentSubstrateDecision. "
               "4 agent actions, execution flags, agent selection. "
               "116/116 tests. Thin adapter, not production orchestrator wiring.")
+
+    # === Matched born-compressed vs post-hoc VQ (2026-07-04) ===
+    # Skeleton edge: experiment tested HelixLinearSTE routing vs post-hoc VQ routing
+    add(ET.TESTED_WITH, "comp_helix_linear_ste", "comp_geometry_router",
+        claim_id="ECHO-INT-013", confidence=1.0,
+        notes="WO-MATCHED-BC-ROUTING-01: current from-scratch HelixLinearSTE does not outperform "
+              "dense→post-hoc VQ for role-geometry routing. Role accuracy PH=60.9% vs BC=26.6%. "
+              "WEAKENS naive STE-from-scratch. Does NOT falsify broader born-compressed/MoE-style routing. "
+              "Not tested: expert load balancing, role-aware codebooks, delayed quantization, "
+              "dense warm-start, routing loss.")
 
     # === Code-discovered dependencies (import crawler 2026-07-02) ===
     C = "ECHO-CRAWL-001"
